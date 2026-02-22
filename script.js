@@ -71,22 +71,22 @@ if (glitchText) {
 }
 
 /* Play Background Video on First Interaction */
-const heroVideo = document.getElementById('hero-video');
-if (heroVideo) {
-    const playVideo = () => {
-        heroVideo.play().then(() => {
-            // Video started playing
-        }).catch(error => {
-            console.log("Video play failed:", error);
-        });
-        // Remove listeners after first interaction
-        document.removeEventListener('click', playVideo);
-        document.removeEventListener('touchstart', playVideo);
-    };
+const playVideo = () => {
+    const videos = document.querySelectorAll('video');
+    videos.forEach(video => {
+        if (video.paused) {
+            video.play().catch(error => {
+                console.log("Video play failed:", error);
+            });
+        }
+    });
+    // Remove listeners after first interaction
+    document.removeEventListener('click', playVideo);
+    document.removeEventListener('touchstart', playVideo);
+};
 
-    document.addEventListener('click', playVideo);
-    document.addEventListener('touchstart', playVideo);
-}
+document.addEventListener('click', playVideo);
+document.addEventListener('touchstart', playVideo);
 
 /* Services Scroll Effect */
 const servicesTrack = document.querySelector('.services-scroll-track');

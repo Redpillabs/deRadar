@@ -213,6 +213,17 @@ img {
     background-color: var(--bg-color); /* Fallback */
 }
 
+/* Hide native video controls globally */
+video::-webkit-media-controls {
+    display: none !important;
+}
+video::-webkit-media-controls-enclosure {
+    display: none !important;
+}
+video::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
+
 .hero-video {
     position: absolute;
     top: 0;
@@ -221,6 +232,7 @@ img {
     height: 100%;
     object-fit: cover;
     z-index: 0;
+    pointer-events: none; /* Prevent direct interaction/controls */
 }
 
 .hero-overlay {
