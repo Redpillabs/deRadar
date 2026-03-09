@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DeRadar Talent - Web3 Community</title>
+    <meta name="description" content="Join the premier Web3 talent community. Connect, learn, and grow with industry leaders.">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.postimg.cc/L61Qxn3D/Sin-titulo-1.png" type="image/png">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="talent.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="talent-theme">
+    <!-- Loading Screen -->
+    <div id="app-loader">
+        <div class="radar-scan">
+            <div class="radar-beam"></div>
+            <div class="radar-circle"></div>
+            <div class="radar-circle-sm"></div>
+        </div>
+        <div class="loader-content">
+            <div class="loader-logo">DeRadar</div>
+            <div class="loader-status">
+                <span class="status-text">INITIALIZING NETWORK</span>
+                <span class="status-dots">...</span>
+            </div>
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="btn-home-icon" title="Back to Home">
+                <i class="fas fa-home"></i>
+            </a>
+            <a href="index.html" class="logo">DeRadar <span style="color: var(--accent-mint)">Talent</span></a>
+            
+            <div class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#community" class="nav-link">Community</a></li>
+                    <li class="nav-item"><a href="#how-it-works" class="nav-link">Apply</a></li>
+                </ul>
+            </div>
+
+            <a href="https://t.me/deradar" class="btn btn-primary nav-cta" target="_blank"><i class="fab fa-telegram-plane"></i> Join Telegram</a>
+
+            <div class="nav-toggle" id="nav-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-container">
+            <h1 class="hero-title">
+                Web3 Talent Starts Here <br>
+                <span class="glitch-text">APPLY NOW</span>
+            </h1>
+            
+            <p class="hero-description">
+                Whether you are starting your Web3 journey or you are a seasoned professional, we connect you with top-tier projects and the best job offers in the ecosystem.
+            </p>
+            
+            <div class="hero-buttons">
+                <a href="#how-it-works" class="btn btn-white-glow">Apply Now</a>
+            </div>
+
+            <div class="guarantee-badge-container" style="margin-top: 3rem; display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; justify-content: center;">
+                <div class="guarantee-badge"><i class="fas fa-briefcase"></i> TOP TIER JOBS</div>
+                <div class="guarantee-badge"><i class="fas fa-chart-line"></i> CAREER GROWTH</div>
+                <div class="guarantee-badge"><i class="fas fa-check-circle"></i> VERIFIED PROJECTS</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Community Value Section -->
+    <section id="community" class="talent-features">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Your Ultimate Career Hub</h2>
+                <p class="section-subtitle">Bridging the gap between talent and top Web3 projects.</p>
+            </div>
+
+            <div class="talent-grid">
+                <!-- Feature 1 -->
+                <div class="talent-card">
+                    <div class="talent-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Direct Connections</h3>
+                    <p>Access exclusive job listings from verified Web3 projects looking for your specific skills.</p>
+                </div>
+
+                <!-- Feature 2 -->
+                <div class="talent-card">
+                    <div class="talent-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>For Beginners & Pros</h3>
+                    <p>Get guidance, portfolio reviews, and insider tips to land your dream role, regardless of your experience level.</p>
+                </div>
+
+                <!-- Feature 3 -->
+                <div class="talent-card">
+                    <div class="talent-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>High-Value Offers</h3>
+                    <p>From entry-level positions to executive roles, find the perfect match for your career stage with competitive compensation.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Educational/Curiosity Section -->
+    <section id="how-it-works" class="section">
+        <div class="container container-narrow">
+            
+            <div class="section-header-centered">
+                <h2 class="section-title">
+                    Stop Searching, Start Working
+                </h2>
+                
+                <p class="section-desc-large">
+                    Web3 landscape is vast. <strong>DeRadar</strong> aggregates the highest paying and most exciting opportunities in crypto, giving you the signal you need to advance your career.
+                </p>
+
+            </div>
+            
+            <!-- Talent Application Form (Inline) -->
+            <div class="form-wrapper-centered">
+                <div id="modal-worker-inline" class="modal-content modal-lg active">
+                    <div class="modal-header-minimal">
+                        <h3 class="modal-title">Join the Talent Pool</h3>
+                        <div class="wizard-progress">
+                            <div class="progress-bar-bg">
+                                <div class="progress-bar-fill" id="progress-bar"></div>
+                            </div>
+                            <div class="steps-count">Step <span id="current-step-num">1</span> of 5</div>
+                        </div>
+                    </div>
+                    
+                    <form id="form-worker" class="modal-form scrollable-form">
+                        <!-- Step 1: Profile Details -->
+                        <div class="wizard-step active" data-step="1">
+                            <div class="form-section minimal-section">
+                                <h4>Profile Details</h4>
+                                <p class="section-desc">Provide your core information.</p>
+                                
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="worker-twitter">X (Twitter) Handle</label>
+                                        <input type="text" id="worker-twitter" placeholder="@username" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="worker-telegram">Telegram Username</label>
+                                        <input type="text" id="worker-telegram" placeholder="@username" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="worker-email">Email (optional)</label>
+                                        <input type="email" id="worker-email" placeholder="you@example.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="worker-region">Region</label>
+                                        <select id="worker-region" required>
+                                            <option value="" disabled selected>Select Region</option>
+                                            <option value="North America">North America</option>
+                                            <option value="South America">South America</option>
+                                            <option value="Europe">Europe</option>
+                                            <option value="Asia">Asia</option>
+                                            <option value="Africa">Africa</option>
+                                            <option value="Oceania">Oceania</option>
+                                            <option value="Remote/Global">Remote / Global</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 2: Primary Niches -->
+                        <div class="wizard-step" data-step="2">
+                            <div class="form-section minimal-section">
+                                <h4>Primary Niches *</h4>
+                                <p class="section-desc">Select your strongest areas.</p>
+                                <div class="checkbox-grid">
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="DeFi"> DeFi</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="Trading"> Trading</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="Infrastructure"> Infrastructure</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="AI x Crypto"> AI x Crypto</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="Gaming"> Gaming</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="NFTs"> NFTs</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="RWA"> RWA</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="Security"> Security</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="SocialFi"> SocialFi</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="Dexes"> Dexes</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="Play2earn"> Play2earn</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="Yield Farming"> Yield Farming</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="Lending"> Lending</label>
+                                    <label class="checkbox-item"><input type="checkbox" name="niche" value="Other"> Other</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 3: Performance Snapshot -->
+                        <div class="wizard-step" data-step="3">
+                            <div class="form-section minimal-section">
+                                <h4>Performance Snapshot</h4>
+                                <p class="section-desc">Help us understand your real performance metrics.</p>
+                                <div class="form-group">
+                                    <label for="worker-best-post">Best Performing Post (link)</label>
+                                    <input type="url" id="worker-best-post" placeholder="https://x.com/..." required>
+                                </div>
+                                <div class="form-grid">
+                                    <div class="form-group">
+                                        <label for="worker-impressions">Avg Impressions per Post *</label>
+                                        <input type="text" id="worker-impressions" placeholder="e.g. 5k - 10k" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="worker-engagement">Engagement Rate (optional)</label>
+                                        <input type="text" id="worker-engagement" placeholder="e.g. 3.5%">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="worker-screenshot">Performance Screenshot (link)</label>
+                                    <input type="url" id="worker-screenshot" placeholder="Link to screenshot (Imgur/Drive) - Recommended">
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Collaboration & Contribution -->
+                        <div class="wizard-step" data-step="4">
+                            <div class="form-section minimal-section">
+                                <h4>Collaboration & Contribution</h4>
+                                <p class="section-desc">How do you prefer to work?</p>
+                                
+                                <div class="form-group" style="margin-bottom: 1.5rem;">
+                                    <label for="worker-collab">Collaboration Preference</label>
+                                    <select id="worker-collab" required>
+                                        <option value="" disabled selected>Select Preference</option>
+                                        <option value="Paid">Paid</option>
+                                        <option value="Performance-based">Performance-based</option>
+                                        <option value="Long-term">Long-term</option>
+                                        <option value="Case by case">Case by case</option>
+                                        <option value="Other">Other</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="worker-contribution">Your Contribution (optional)</label>
+                                    <textarea id="worker-contribution" rows="4" placeholder="How can you contribute to our ecosystem? Share your skills, experience, or unique value."></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 5: Required Actions -->
+                        <div class="wizard-step" data-step="5">
+                            <div class="form-section actions-section minimal-section">
+                                <h4>Required Actions</h4>
+                                <p class="section-desc">Complete all actions below to submit your application.</p>
+                                <div class="actions-list">
+                                    <label class="action-item">
+                                        <input type="checkbox" required> 
+                                        <span>Like our <a href="https://x.com/deRadar_" target="_blank" class="action-link" style="color: var(--accent-mint);">tweet</a></span>
+                                    </label>
+                                    <label class="action-item">
+                                        <input type="checkbox" required> 
+                                        <span>Reply to our <a href="https://x.com/deRadar_" target="_blank" class="action-link" style="color: var(--accent-mint);">tweet</a></span>
+                                    </label>
+                                    <label class="action-item">
+                                        <input type="checkbox" required> 
+                                        <span>Follow <a href="https://x.com/deRadar_" target="_blank" class="action-link" style="color: var(--accent-mint);">@DeRadar_</a></span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Wizard Navigation -->
+                        <div class="wizard-navigation">
+                            <button type="button" class="btn btn-outline nav-btn" id="prevBtn" style="display:none;">Back</button>
+                            <button type="button" class="btn btn-primary nav-btn" id="nextBtn">Next</button>
+                            <button type="submit" class="btn btn-primary nav-btn" id="submitBtn" style="display:none;">Submit Application</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section" id="ready-to-join">
+        <div class="container" style="text-align: center;">
+            <h2 class="section-title" style="margin-bottom: 1.5rem;">Ready to Join?</h2>
+            <p style="max-width: 600px; margin: 0 auto 2rem; color: var(--text-secondary);">
+                The best way to experience DeRadar is to jump in. Introduce yourself, ask questions, and start building your network today.
+            </p>
+            <a href="https://t.me/deradar" target="_blank" class="btn btn-white-glow" style="padding: 1rem 4rem; font-size: 1.2rem;">
+                <i class="fab fa-telegram-plane"></i> Open Telegram
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer section">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#" class="footer-logo">DeRadar</a>
+                <p>Empowering the decentralized workforce through community and connection.</p>
+            </div>
+            <div class="footer-links">
+                <h3>Explore</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#community">Community</a></li>
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h3>Connect</h3>
+                <ul class="social-links">
+                    <li><a href="https://x.com/deRadar_" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="https://t.me/deradar" target="_blank"><i class="fab fa-telegram-plane"></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="container footer-bottom" style="border:none; padding-top:0; text-align: center;">
+             <p>&copy; 2024 DeRadar. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div id="modal-success" class="modal-overlay">
+        <div class="modal-content modal-sm success-modal">
+            <div class="success-icon-container">
+                <div class="success-icon">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
+            <h3 class="success-title">Request Sent!</h3>
+            <p class="success-desc">We have received your information.</p>
+            <button class="btn btn-primary" id="btn-success-close">Close</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Initialize wizard step 1 explicitly
+            if (typeof showStep === 'function') {
+                showStep(1);
+            }
+        });
+    </script>
+</body>
+</html>

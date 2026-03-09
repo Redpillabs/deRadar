@@ -32,9 +32,64 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+    <!-- Loading Screen -->
+    <div id="app-loader">
+        <div class="radar-scan">
+            <div class="radar-beam"></div>
+            <div class="radar-circle"></div>
+            <div class="radar-circle-sm"></div>
+        </div>
+        <div class="loader-content">
+            <div class="loader-logo" data-text="DeRadar">DeRadar</div>
+            <div class="loader-status">
+                <span class="status-text">INITIALIZING SYSTEMS</span>
+                <span class="status-dots">...</span>
+            </div>
+            <div class="loader-progress-container">
+                <div class="loader-progress-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro Selection Screen -->
+    <div id="intro-overlay">
+        <div class="intro-background"></div>
+        <div class="intro-content">
+            <h2 class="intro-title">Choose Your Path</h2>
+            <p class="intro-subtitle">Select your role to enter the ecosystem</p>
+            
+            <div class="intro-cards">
+                <!-- Founder Card -->
+                <div class="intro-card" id="intro-btn-founder">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3 class="card-title">I'm a Founder</h3>
+                    <p class="card-desc">Save money and launch your MVP now.</p>
+                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+
+                <!-- Talent Card -->
+                <div class="intro-card" id="intro-btn-talent">
+                    <div class="card-glow"></div>
+                    <div class="card-icon">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                    <h3 class="card-title">Web3 Talent</h3>
+                    <p class="card-desc">Looking for opportunities in top tier projects.</p>
+                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
+            <a href="#" class="btn-home-icon" id="btn-reset-intro" title="Back to Selection">
+                <i class="fas fa-home"></i>
+            </a>
             <a href="#" class="logo">DeRadar</a>
             
             <div class="nav-menu" id="nav-menu">
@@ -57,27 +112,26 @@
     <!-- Hero Section -->
     <section class="hero" id="hero">
         <!-- Background Video -->
-        <video class="hero-video" id="hero-video" autoplay loop muted playsinline>
+        <video class="hero-video" id="hero-video" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
             <source src="video.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <div class="hero-overlay"></div>
 
         <div class="container hero-container">
-            <div class="hero-tag">WEB3 SOLUTIONS HUB</div>
+
             
             <h1 class="hero-title">
-                Ultimate Growth Stack for <br>
-                Crypto <span class="glitch-text" data-text="AI AGENTS">AI AGENTS</span>
+                Save Money & Launch with <br>
+                <span class="glitch-text" data-text="24/7 SUPPORT">24/7 SUPPORT</span>
             </h1>
             
             <p class="hero-description">
-                <span class="highlight-glow"><span class="text-highlight">Fast</span>, secure, and 24/7 support for founders and projects.</span> We provide fast, active, and top-tier talent solutions to scale your vision with <span class="word-glow">quality</span> and <span class="word-glow">excellence</span>.
+                <span class="highlight-glow"><span class="text-highlight">Get the best prices</span> and 24/7 attention.</span> Save budget and launch your product MVP now with fast, secure, and top-tier talent solutions.
             </p>
             
             <div class="hero-buttons">
-                <a href="#talent" class="btn btn-glow">Start Hiring</a>
-                <a href="#talent" class="btn btn-white-glow">I have a skill</a>
+                <a href="#categories" class="btn btn-glow" style="font-size: 1.2rem; font-weight: 700;">Get the best prices</a>
             </div>
 
         </div>
@@ -283,8 +337,7 @@
                 </p>
                 
                 <div class="value-buttons">
-                    <button id="btn-founder" class="btn btn-glow">I'm a founder</button>
-                    <button id="btn-worker" class="btn btn-white-glow">I want to work now</button>
+                    <button id="btn-founder" class="btn btn-xl">Contact Us</button>
                 </div>
             </div>
         </div>

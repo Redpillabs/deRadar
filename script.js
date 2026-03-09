@@ -1,4 +1,64 @@
 /* Menu Show Y Hidden */
+document.addEventListener('DOMContentLoaded', () => {
+    const loader = document.getElementById('app-loader');
+    const introOverlay = document.getElementById('intro-overlay');
+    
+    // Simulate loading for 0.8 seconds
+    setTimeout(() => {
+        if (loader) {
+            loader.style.opacity = '0';
+            loader.style.visibility = 'hidden';
+            document.body.classList.add('loaded');
+        }
+        
+        if (introOverlay) {
+            introOverlay.classList.add('active');
+        }
+    }, 800);
+    
+    // Intro Button Logic
+    const introBtnFounder = document.getElementById('intro-btn-founder');
+    const introBtnTalent = document.getElementById('intro-btn-talent');
+    
+    const closeIntro = () => {
+        if (introOverlay) {
+            introOverlay.style.opacity = '0';
+            introOverlay.style.visibility = 'hidden';
+            setTimeout(() => {
+                introOverlay.style.display = 'none'; // Fully remove from flow
+            }, 500);
+        }
+    };
+    
+    if (introBtnFounder) {
+        introBtnFounder.addEventListener('click', () => {
+            closeIntro();
+            // Just reveal the page (Founder info is the main page)
+        });
+    }
+    
+    if (introBtnTalent) {
+        introBtnTalent.addEventListener('click', () => {
+            // Redirect to Talent Page
+            window.location.href = 'talent.html';
+        });
+    }
+
+    // Reset Intro Logic (Back to Selection)
+    const btnResetIntro = document.getElementById('btn-reset-intro');
+    if (btnResetIntro && introOverlay) {
+        btnResetIntro.addEventListener('click', (e) => {
+            e.preventDefault();
+            introOverlay.style.display = 'flex';
+            // Slight delay to allow display:flex to apply before opacity transition
+            setTimeout(() => {
+                introOverlay.style.visibility = 'visible';
+                introOverlay.style.opacity = '1';
+            }, 10);
+        });
+    }
+});
+
 const navMenu = document.getElementById('nav-menu'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close')
@@ -59,7 +119,7 @@ window.addEventListener('scroll', scrollActive)
 /* Glitch Text Rotator */
 const glitchText = document.querySelector('.glitch-text');
 if (glitchText) {
-    const words = ["AI AGENTS", "MARKETING", "DEVELOPMENT", "SECURITY", "DESIGN"];
+    const words = ["APPLY NOW", "FIND OPPORTUNITIES", "GET DISCOVERED", "BUILD WITH FOUNDERS"];
     let wordIndex = 0;
     
     setInterval(() => {
@@ -569,7 +629,9 @@ if (submitBtnFounderGlobal) {
         const timeline = document.getElementById('founder-timeline').value;
         const urgency = document.querySelector('input[name="urgency"]:checked')?.value || 'N/A';
         
-        const text = `🚀 *New Project Inquiry*\n\n` +
+        const now = new Date().toLocaleString();
+        const text = `🚀 *New Project Inquiry*\n` +
+            `📅 *Date*: ${now}\n\n` +
             `👤 *Contact Info*\n` +
             `• Telegram: ${telegram}\n` +
             `• X (Twitter): ${twitter}\n` +
@@ -639,7 +701,9 @@ if (submitBtnWorkerGlobal) {
             const contribution = document.getElementById('worker-contribution').value || 'N/A';
 
             // Construct Message
-            const text = `🚀 *New Talent Application*\n\n` +
+            const now = new Date().toLocaleString();
+            const text = `🚀 *New Talent Application*\n` +
+                `📅 *Date*: ${now}\n\n` +
                 `👤 *Profile Details*\n` +
                 `• X (Twitter): ${twitter}\n` +
                 `• Telegram: ${telegram}\n` +

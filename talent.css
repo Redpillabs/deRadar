@@ -1,0 +1,845 @@
+/* White Minimalist Theme for Talent Page */
+:root {
+    --bg-white: #ffffff;
+    --bg-soft-gray: #f9fafb; /* Lighter, cleaner gray */
+    --text-primary: #1a202c; /* Slightly softer black */
+    --text-secondary: #718096; /* Cool gray */
+    --accent-mint: #38b2ac; /* More refined teal/mint */
+    --accent-mint-hover: #319795;
+    --accent-mint-light: #e6fffa;
+    --border-light: #edf2f7;
+    --shadow-soft: 0 4px 6px -1px rgba(0, 0, 0, 0.02), 0 2px 4px -1px rgba(0, 0, 0, 0.02);
+    --shadow-card: 0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 10px 10px -5px rgba(0, 0, 0, 0.01);
+    --shadow-hover: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
+    --transition-speed: 0.3s;
+    --font-family: 'Satoshi', system-ui, -apple-system, sans-serif;
+    --radius-lg: 24px;
+    --radius-md: 12px;
+}
+
+body.talent-theme {
+    background-color: var(--bg-white);
+    background-image: radial-gradient(circle at 50% 0%, #f7fafc 0%, #ffffff 100%);
+    background-attachment: fixed;
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Navbar */
+body.talent-theme .navbar {
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(0,0,0,0.03);
+    box-shadow: none;
+}
+
+body.talent-theme .logo {
+    color: var(--text-primary);
+    font-weight: 700;
+    letter-spacing: -0.03em;
+}
+
+body.talent-theme .nav-link {
+    color: var(--text-secondary);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: color 0.2s;
+}
+
+body.talent-theme .nav-link:hover {
+    color: var(--text-primary);
+}
+
+body.talent-theme .nav-cta {
+    background: var(--text-primary);
+    color: var(--bg-white);
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 100px;
+    padding: 0.6rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+body.talent-theme .nav-cta:hover {
+    background: var(--accent-mint);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(56, 178, 172, 0.3);
+}
+
+/* Navbar Scroll State for Light Theme */
+body.talent-theme .navbar.scroll-header {
+    background: rgba(255, 255, 255, 0.95) !important;
+    border-bottom: 1px solid rgba(0,0,0,0.05) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05) !important;
+    top: 0;
+}
+
+/* Mobile Adjustments for Talent Theme Navbar */
+@media (max-width: 768px) {
+    /* Better positioning for mobile pill navbar */
+    body.talent-theme .navbar {
+        top: 1rem !important; /* Move it up from default 3rem */
+        width: 92% !important;
+        padding: 0.5rem 1rem !important;
+    }
+    
+    /* Ensure scroll state is full width and top 0 */
+    body.talent-theme .navbar.scroll-header {
+        top: 0 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        border-radius: 0 !important;
+        padding: 0 1.5rem !important;
+        left: 0 !important;
+        transform: none !important;
+    }
+}
+
+/* Hero Section */
+body.talent-theme .hero {
+    background: transparent;
+    padding-top: 180px;
+    padding-bottom: 120px;
+}
+
+body.talent-theme .hero-title {
+    color: var(--text-primary);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1.1;
+    font-size: 4rem;
+}
+
+body.talent-theme .hero-description {
+    color: var(--text-secondary);
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    max-width: 650px;
+    margin: 2rem auto;
+}
+
+body.talent-theme .glitch-text {
+    color: var(--accent-mint);
+    text-shadow: none;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    position: relative;
+    display: inline-block;
+}
+
+body.talent-theme .glitch-text::before,
+body.talent-theme .glitch-text::after {
+    display: none;
+}
+
+/* Hero Buttons */
+body.talent-theme .btn-white-glow {
+    background: var(--text-primary);
+    color: var(--bg-white);
+    border: none;
+    box-shadow: var(--shadow-soft);
+    border-radius: 100px;
+    padding: 1rem 3.5rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: all var(--transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body.talent-theme .btn-white-glow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    background: var(--accent-mint);
+    color: white;
+}
+
+/* Features / Community Section - Redesigned Minimalist */
+body.talent-theme .talent-features {
+    padding: 8rem 0;
+    position: relative;
+    /* Subtle glow background */
+    background: 
+        radial-gradient(circle at 15% 50%, rgba(56, 178, 172, 0.03) 0%, transparent 25%),
+        radial-gradient(circle at 85% 30%, rgba(56, 178, 172, 0.03) 0%, transparent 25%);
+}
+
+body.talent-theme .section-title {
+    color: var(--text-primary);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    font-size: 3rem; /* Larger title */
+    margin-bottom: 1.5rem;
+}
+
+body.talent-theme .section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.25rem;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* New Grid Layout */
+body.talent-theme .talent-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 Columns by default */
+    gap: 2rem;
+    margin-top: 4rem;
+}
+
+/* Minimalist Card Design - Floating & Glow Animation */
+@keyframes float-card {
+    0% { transform: translateY(0); box-shadow: 0 10px 30px -10px rgba(56, 178, 172, 0.1); }
+    50% { transform: translateY(-10px); box-shadow: 0 20px 40px -5px rgba(56, 178, 172, 0.2); }
+    100% { transform: translateY(0); box-shadow: 0 10px 30px -10px rgba(56, 178, 172, 0.1); }
+}
+
+@keyframes glow-border {
+    0% { border-color: rgba(56, 178, 172, 0.1); }
+    50% { border-color: rgba(56, 178, 172, 0.4); }
+    100% { border-color: rgba(56, 178, 172, 0.1); }
+}
+
+body.talent-theme .talent-card {
+    background: #ffffff;
+    border: 1px solid rgba(56, 178, 172, 0.1);
+    border-radius: 24px;
+    padding: 3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    height: 100%;
+    position: relative;
+    /* Constant Floating Animation */
+    animation: float-card 6s ease-in-out infinite, glow-border 4s ease-in-out infinite;
+    /* Initial Glow */
+    box-shadow: 0 10px 30px -10px rgba(56, 178, 172, 0.15);
+}
+
+/* Stagger animations for a more organic feel */
+body.talent-theme .talent-card:nth-child(1) { animation-delay: 0s; }
+body.talent-theme .talent-card:nth-child(2) { animation-delay: 1.5s; }
+body.talent-theme .talent-card:nth-child(3) { animation-delay: 3s; }
+
+/* Enhanced Hover State */
+body.talent-theme .talent-card:hover {
+    animation-play-state: paused; /* Pause float on hover for stability */
+    transform: translateY(-12px);
+    border-color: rgba(56, 178, 172, 0.6);
+    box-shadow: 
+        0 25px 50px -12px rgba(56, 178, 172, 0.25),
+        0 0 20px rgba(56, 178, 172, 0.15);
+    transition: all 0.3s ease;
+}
+
+/* Icon Design Update */
+body.talent-theme .talent-icon {
+    background: transparent; /* Removed solid background */
+    color: var(--text-primary); /* Dark icon initially */
+    width: auto;
+    height: auto;
+    border-radius: 0;
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    transition: color 0.3s ease;
+}
+
+body.talent-theme .talent-card:hover .talent-icon {
+    color: var(--accent-mint); /* Teal icon on hover */
+    transform: scale(1.1); /* Subtle grow */
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+body.talent-theme .talent-card h3 {
+    color: var(--text-primary);
+    font-weight: 700;
+    font-size: 1.35rem;
+    margin-bottom: 1rem;
+    letter-spacing: -0.01em;
+}
+
+body.talent-theme .talent-card p {
+    color: var(--text-secondary);
+    font-size: 1.05rem;
+    line-height: 1.7;
+    margin: 0; /* Reset margin */
+}
+
+/* Responsive Grid */
+@media (max-width: 1024px) {
+    body.talent-theme .talent-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 Columns on tablet */
+    }
+}
+
+@media (max-width: 768px) {
+    body.talent-theme .talent-grid {
+        grid-template-columns: 1fr; /* 1 Column on mobile */
+        gap: 1.5rem;
+    }
+    
+    body.talent-theme .section-title {
+        font-size: 2.25rem;
+    }
+    
+    body.talent-theme .talent-card {
+        padding: 2.5rem 2rem;
+    }
+}
+
+/* Guarantee Badges */
+body.talent-theme .guarantee-badge {
+    background: white;
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.02em;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+body.talent-theme .guarantee-badge i {
+    color: var(--accent-mint) !important;
+}
+
+/* PROFESSIONAL FORM SECTION REDESIGN */
+#how-it-works {
+    position: relative;
+    padding: 4rem 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, var(--bg-soft-gray) 100%);
+}
+
+/* Helper Classes for Section Layout */
+body.talent-theme .container-narrow {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+body.talent-theme .section-header-centered {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+body.talent-theme .section-desc-large {
+    font-size: 1.15rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    max-width: 650px;
+    margin: 1rem auto 0;
+}
+
+body.talent-theme .form-wrapper-centered {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* Modal/Form Container - "The Card" */
+body.talent-theme .modal-content {
+    background: var(--bg-white);
+    border: 1px solid rgba(0,0,0,0.02); /* Almost invisible border */
+    box-shadow: var(--shadow-card);
+    border-radius: 32px; /* More rounded */
+    overflow: hidden; /* For header radius */
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+    /* Ensure it behaves like a normal block element now that inline styles are gone */
+    position: relative;
+    transform: none;
+    min-height: 600px;
+}
+
+/* Specific Override for Inline Modal to Remove Scroll */
+#modal-worker-inline.modal-content {
+    max-height: none !important;
+    height: auto !important;
+    overflow: visible !important;
+}
+
+#modal-worker-inline .scrollable-form {
+    max-height: none !important;
+    overflow: visible !important;
+    height: auto !important;
+}
+
+/* Modal Header */
+body.talent-theme .modal-header-minimal {
+    background: var(--bg-white);
+    border-bottom: 1px solid var(--border-light);
+    padding: 2rem 3rem 1.5rem;
+}
+
+body.talent-theme .modal-title {
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 1rem;
+}
+
+/* Progress Bar */
+body.talent-theme .wizard-progress {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+body.talent-theme .progress-bar-bg {
+    background: #edf2f7;
+    height: 6px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+body.talent-theme .progress-bar-fill {
+    background: var(--accent-mint);
+    height: 100%;
+    border-radius: 10px;
+    transition: width 0.5s ease-in-out;
+}
+
+body.talent-theme .steps-count {
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-align: right;
+}
+
+/* Form Layout */
+body.talent-theme .modal-form {
+    padding: 0;
+}
+
+body.talent-theme .minimal-section {
+    padding: 2rem 3rem;
+}
+
+body.talent-theme .minimal-section h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+body.talent-theme .section-desc {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+}
+
+/* Form Inputs */
+body.talent-theme .form-group {
+    margin-bottom: 1.5rem;
+}
+
+body.talent-theme .form-group label {
+    color: var(--text-primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+body.talent-theme .form-group input,
+body.talent-theme .form-group select,
+body.talent-theme .form-group textarea {
+    background: #f8fafc; /* Very light cool gray */
+    border: 1px solid transparent;
+    color: var(--text-primary);
+    border-radius: 12px;
+    padding: 0.8rem 1rem;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    width: 100%;
+    font-family: var(--font-family);
+}
+
+body.talent-theme .form-group input:hover,
+body.talent-theme .form-group select:hover,
+body.talent-theme .form-group textarea:hover {
+    background: #f1f5f9;
+}
+
+body.talent-theme .form-group input:focus,
+body.talent-theme .form-group select:focus,
+body.talent-theme .form-group textarea:focus {
+    background: var(--bg-white);
+    border-color: var(--accent-mint);
+    box-shadow: 0 0 0 4px rgba(56, 178, 172, 0.1);
+    outline: none;
+}
+
+/* Checkbox Grid - "Chips" Style */
+body.talent-theme .checkbox-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 0.75rem;
+}
+
+body.talent-theme .checkbox-item {
+    background: var(--bg-white);
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    border-radius: 12px;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+    user-select: none;
+}
+
+/* Hide actual checkbox visually but keep it accessible */
+body.talent-theme .checkbox-item input[type="checkbox"] {
+    appearance: none;
+    -webkit-appearance: none;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    margin: 0;
+    cursor: pointer;
+    opacity: 0;
+}
+
+/* Selected State for Chips */
+body.talent-theme .checkbox-item:has(input:checked),
+body.talent-theme .checkbox-item.checked {
+    background: var(--accent-mint-light);
+    border-color: var(--accent-mint);
+    color: var(--accent-mint-hover);
+    font-weight: 600;
+}
+
+body.talent-theme .checkbox-item:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+    border-color: #cbd5e0;
+}
+
+/* Action Items List */
+body.talent-theme .actions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+body.talent-theme .action-item {
+    background: var(--bg-soft-gray);
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+body.talent-theme .action-item:hover {
+    background: var(--bg-white);
+    border-color: var(--border-light);
+    box-shadow: var(--shadow-soft);
+}
+
+body.talent-theme .action-item input[type="checkbox"] {
+    width: 1.25rem;
+    height: 1.25rem;
+    accent-color: var(--accent-mint);
+    cursor: pointer;
+}
+
+body.talent-theme .action-item span {
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+body.talent-theme .action-link {
+    color: var(--accent-mint);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+body.talent-theme .action-link:hover {
+    text-decoration: underline;
+}
+
+/* Navigation Buttons */
+body.talent-theme .wizard-navigation {
+    background: var(--bg-white);
+    border-top: 1px solid var(--border-light);
+    padding: 2rem 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+body.talent-theme .nav-btn {
+    min-width: 200px;
+    padding: 1rem 2rem;
+    font-size: 1.05rem;
+    letter-spacing: 0.02em;
+}
+
+body.talent-theme .btn-primary {
+    background: var(--text-primary);
+    color: var(--bg-white);
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+body.talent-theme .btn-primary:hover {
+    background: var(--accent-mint);
+    transform: translateY(-1px);
+    box-shadow: 0 10px 15px rgba(56, 178, 172, 0.2);
+}
+
+body.talent-theme .btn-outline {
+    border: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    padding: 0.8rem 2rem;
+    border-radius: 12px;
+    font-weight: 600;
+    background: transparent;
+}
+
+body.talent-theme .btn-outline:hover {
+    border-color: var(--text-primary);
+    color: var(--text-primary);
+    background: var(--bg-soft-gray);
+}
+
+/* Ready to Join Section - Enhanced Background */
+#ready-to-join {
+    padding: 6rem 0;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(135deg, #ffffff 0%, #f0fdfc 100%);
+}
+
+/* Add a subtle mesh/grid pattern overlay */
+#ready-to-join::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 10% 20%, rgba(56, 178, 172, 0.05) 0%, transparent 40%),
+        radial-gradient(circle at 90% 80%, rgba(56, 178, 172, 0.05) 0%, transparent 40%),
+        linear-gradient(rgba(56, 178, 172, 0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(56, 178, 172, 0.03) 1px, transparent 1px);
+    background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
+    z-index: 0;
+    pointer-events: none;
+}
+
+#ready-to-join .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer */
+body.talent-theme .footer {
+    background: var(--bg-white);
+    border-top: 1px solid var(--border-light);
+    color: var(--text-secondary);
+    padding: 4rem 0;
+}
+
+body.talent-theme .footer-logo {
+    background: none;
+    -webkit-background-clip: initial;
+    background-clip: initial;
+    color: var(--text-primary);
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+body.talent-theme .social-links a {
+    background: var(--bg-soft-gray);
+    border: none;
+    color: var(--text-primary);
+    transition: all 0.2s;
+}
+
+body.talent-theme .social-links a:hover {
+    background: var(--accent-mint);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+body.talent-theme .hero-container > * {
+    opacity: 0;
+}
+
+body.talent-theme.loaded .hero-container > * {
+    animation: fadeInUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+body.talent-theme.loaded .hero-title { animation-delay: 0.1s; }
+body.talent-theme.loaded .hero-description { animation-delay: 0.2s; }
+body.talent-theme.loaded .hero-buttons { animation-delay: 0.3s; }
+
+/* ------------------------------------------------------------------
+   LOADER OVERRIDES - PROFESSIONAL WHITE & MINT/TEAL THEME
+   ------------------------------------------------------------------ */
+#app-loader {
+    background-color: #ffffff !important;
+    background-image: 
+        radial-gradient(circle at 50% 50%, rgba(56, 178, 172, 0.03) 0%, transparent 60%), /* Subtle center glow */
+        linear-gradient(rgba(0, 0, 0, 0.015) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 0, 0, 0.015) 1px, transparent 1px) !important; /* Very faint grid */
+    background-size: 100% 100%, 40px 40px, 40px 40px !important;
+}
+
+.radar-scan {
+    width: 320px;
+    height: 320px;
+    border: 1px solid rgba(56, 178, 172, 0.1);
+    background: radial-gradient(circle, rgba(56, 178, 172, 0.02) 0%, transparent 70%); /* Inner soft fill */
+    box-shadow: 0 0 60px rgba(56, 178, 172, 0.05); /* Outer glow */
+}
+
+/* Outer rotating ring */
+.radar-circle {
+    width: 260px;
+    height: 260px;
+    border: 1px solid rgba(56, 178, 172, 0.15); /* Solid light teal */
+    border-top-color: rgba(56, 178, 172, 0.6); /* Highlight section */
+    border-right-color: rgba(56, 178, 172, 0.3);
+    border-style: solid; /* Change from dashed to solid for cleaner look */
+    animation: radar-spin 3s linear infinite;
+    opacity: 0.8;
+}
+
+/* Inner dotted ring */
+.radar-circle-sm {
+    width: 180px;
+    height: 180px;
+    border: 1px dotted rgba(56, 178, 172, 0.4); /* Dotted inner */
+    border-radius: 50%;
+    box-shadow: none;
+    animation: radar-spin 8s linear infinite reverse; /* Spin opposite slow */
+}
+
+/* The "Sweep" effect */
+.radar-beam {
+    background: conic-gradient(from 0deg, transparent 75%, rgba(56, 178, 172, 0.15));
+    animation: radar-sweep 2.5s linear infinite;
+}
+
+/* Typography */
+.loader-logo {
+    color: #1a202c; /* Dark gray/black */
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    font-size: 3rem;
+    text-shadow: none;
+    margin-bottom: 1.5rem;
+}
+
+.loader-logo::before, .loader-logo::after {
+    display: none; /* Disable glitch for clean look */
+}
+
+.loader-status {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.status-text {
+    font-family: 'JetBrains Mono', 'Courier New', monospace;
+    color: var(--accent-mint); /* Teal */
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.status-dots {
+    color: var(--accent-mint);
+}
+
+/* Progress Bar */
+.loader-progress-container {
+    width: 180px; /* Shorter, more minimal */
+    height: 2px;
+    background: rgba(56, 178, 172, 0.15); /* Light teal track */
+    margin-top: 1.5rem;
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.loader-progress-bar {
+    background: var(--accent-mint);
+    box-shadow: 0 0 10px rgba(56, 178, 172, 0.4); /* Glow on bar */
+    border-radius: 100px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    body.talent-theme .hero-title {
+        font-size: 2.5rem;
+    }
+    body.talent-theme .talent-card {
+        padding: 2rem;
+    }
+    body.talent-theme .modal-header-minimal,
+    body.talent-theme .minimal-section,
+    body.talent-theme .wizard-navigation {
+        padding: 1.5rem;
+    }
+    body.talent-theme .btn-white-glow {
+        padding: 1rem 2rem;
+        width: 100%;
+    }
+    body.talent-theme .modal-content {
+        border-radius: 20px;
+    }
+}
