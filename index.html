@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO & Social Media Meta Tags -->
-    <title>DeRadar - Automation & AI</title>
-    <meta name="description" content="Ultimate Growth Stack for Crypto AI Agents. We provide fast, active, and top-tier talent solutions to scale your vision with quality and excellence.">
+    <title>DeRadar - AI Video Agency</title>
+    <meta name="description" content="Create viral AI videos, faceless channels, and cinematic ads. The ultimate AI video creation stack for Web2 and Web3 founders, creators, and brands.">
     
     <!-- Favicon -->
     <link rel="icon" href="https://i.postimg.cc/L61Qxn3D/Sin-titulo-1.png" type="image/png">
@@ -14,22 +14,836 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://deradar.ai/">
-    <meta property="og:title" content="DeRadar - Automation & AI">
-    <meta property="og:description" content="Ultimate Growth Stack for Crypto AI Agents. Fast, secure, and 24/7 support for founders and projects.">
+    <meta property="og:title" content="DeRadar - AI Video Agency">
+    <meta property="og:description" content="Create viral AI videos, faceless channels, and cinematic ads. The ultimate AI video creation stack for Web2 and Web3.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1600&auto=format&fit=crop">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://deradar.ai/">
-    <meta property="twitter:title" content="DeRadar - Automation & AI">
-    <meta property="twitter:description" content="Ultimate Growth Stack for Crypto AI Agents. Fast, secure, and 24/7 support for founders and projects.">
+    <meta property="twitter:title" content="DeRadar - AI Video Agency">
+    <meta property="twitter:description" content="Create viral AI videos, faceless channels, and cinematic ads. The ultimate AI video creation stack for Web2 and Web3.">
     <meta property="twitter:image" content="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1600&auto=format&fit=crop">
 
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --bg-color: #000000;
+            --text-color: #ffffff;
+            --text-light: #666666;
+            --primary-blue: #56BCAF;
+            --secondary-blue: #56BCAF; 
+            --accent-blue: #E6F2FF; 
+            --white: #FFFFFF;
+            --gray-100: #F3F4F6;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Satoshi', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .section-separator {
+            width: 100%;
+            height: 2px;
+            background: var(--secondary-blue);
+            box-shadow: 0 0 15px var(--secondary-blue);
+            opacity: 0.6;
+            margin: 0;
+            position: relative;
+            z-index: 10;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--secondary-blue);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow);
+        }
+
+        .btn-outline {
+            border-color: var(--primary-blue);
+            color: var(--primary-blue);
+            background-color: transparent;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-blue);
+            color: var(--white);
+        }
+
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 3rem;
+            left: 50%;
+            transform: translateX(-50%);
+            width: auto;
+            max-width: 90vw;
+            background-color: rgba(20, 20, 20, 0.4);
+            backdrop-filter: blur(12px);
+            z-index: 1000;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 100px;
+            padding: 0.5rem 1rem;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            position: relative;
+            max-width: 1200px;
+            margin: 0 auto;
+            gap: 2rem;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            letter-spacing: -0.5px;
+            z-index: 10;
+            margin-right: 1rem;
+            white-space: nowrap;
+            cursor: pointer;
+        }
+
+        .nav-menu {
+            position: relative;
+            left: auto;
+            transform: none;
+            display: flex;
+            align-items: center;
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 2rem;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .nav-item {
+            white-space: nowrap;
+        }
+
+        /* Nav Highlight Buttons */
+        .nav-cta-highlight {
+            padding: 0.6rem 1.5rem;
+            font-size: 0.95rem;
+            border-radius: 50px;
+            background: linear-gradient(90deg, #56BCAF, #3a8279, #56BCAF);
+            background-size: 200% auto;
+            color: var(--white);
+            font-weight: 700;
+            box-shadow: 0 0 20px rgba(86, 188, 175, 0.5);
+            transition: all 0.3s ease;
+            white-space: nowrap;
+            border: 1px solid rgba(255, 255, 255, 0.4);
+            animation: nav-pulse 2s infinite, gradient-shift 3s linear infinite;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .nav-cta-highlight i {
+            color: #FFF;
+            text-shadow: 0 0 5px #FFF;
+        }
+
+        .nav-cta-highlight:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 0 30px rgba(86, 188, 175, 0.9);
+            color: var(--white);
+        }
+
+        @keyframes gradient-shift {
+            0% { background-position: 0% center; }
+            100% { background-position: 200% center; }
+        }
+
+        .nav-text-blue {
+            color: var(--primary-blue) !important;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            cursor: pointer;
+        }
+
+        .nav-text-blue:hover {
+            color: var(--white) !important;
+            text-shadow: 0 0 10px var(--primary-blue);
+            transform: translateY(-2px);
+        }
+
+        @keyframes nav-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(86, 188, 175, 0.6); }
+            70% { box-shadow: 0 0 0 15px rgba(86, 188, 175, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(86, 188, 175, 0); }
+        }
+
+        .scroll-header {
+            top: 0;
+            width: 100%;
+            min-width: 100%;
+            max-width: 100%;
+            border-radius: 0;
+            background-color: rgba(10, 10, 10, 0.95);
+            backdrop-filter: blur(20px);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+            border: none;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            height: 80px;
+            padding: 0 2rem;
+        }
+
+        .scroll-header .nav-container {
+            justify-content: space-between;
+        }
+
+        .nav-toggle, .nav-close {
+            display: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            color: var(--white);
+        }
+
+        /* Hero Section */
+        .hero {
+            padding-top: 180px;
+            padding-bottom: 8rem;
+            position: relative;
+            overflow: hidden;
+            background-color: var(--bg-color);
+        }
+
+        video::-webkit-media-controls { display: none !important; }
+        video::-webkit-media-controls-enclosure { display: none !important; }
+
+        .hero-video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.75);
+            z-index: 1;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: -10%;
+            left: -10%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(86, 188, 175, 0.12) 0%, rgba(0, 0, 0, 0) 60%);
+            filter: blur(120px);
+            z-index: 2;
+            pointer-events: none;
+            opacity: 0.8;
+        }
+
+        .hero::after {
+            content: '';
+            position: absolute;
+            bottom: -20%;
+            right: -5%;
+            width: 900px;
+            height: 900px;
+            background: radial-gradient(circle, rgba(86, 188, 175, 0.08) 0%, rgba(0, 0, 0, 0) 60%);
+            filter: blur(150px);
+            z-index: 2;
+            pointer-events: none;
+            opacity: 0.6;
+        }
+
+        .hero-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            max-width: 900px;
+            position: relative;
+            z-index: 3;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            line-height: 1.1;
+            margin-bottom: 2rem;
+            font-weight: 500;
+            color: var(--white);
+            letter-spacing: -2px;
+        }
+
+        .glitch-text {
+            position: relative;
+            color: var(--primary-blue);
+            display: inline-block;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-weight: 600;
+            text-transform: lowercase;
+            letter-spacing: -1px;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--bg-color);
+            text-transform: lowercase;
+        }
+
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -1px 0 #ff00c1;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: -1px 0 #00fff9;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim { 0% { clip: rect(31px, 9999px, 94px, 0); transform: skew(0.85deg); } 100% { clip: rect(24px, 9999px, 8px, 0); transform: skew(0.95deg); } }
+        @keyframes glitch-anim2 { 0% { clip: rect(65px, 9999px, 100px, 0); transform: skew(0.12deg); } 100% { clip: rect(22px, 9999px, 9px, 0); transform: skew(0.99deg); } }
+
+        .highlight-glow {
+            color: var(--white);
+            text-shadow: 0 0 10px rgba(86, 188, 175, 0.6);
+            font-weight: 500;
+            position: relative;
+            display: inline-block;
+        }
+
+        .text-highlight {
+            color: var(--secondary-blue);
+            text-shadow: 0 0 15px rgba(86, 188, 175, 0.8), 0 0 30px rgba(86, 188, 175, 0.4);
+            font-weight: 600;
+        }
+
+        .hero-description {
+            font-size: 1.125rem;
+            color: #e0e0e0;
+            margin-bottom: 3rem;
+            max-width: 600px;
+            line-height: 1.7;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .hero-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 5rem;
+        }
+
+        .btn-glow {
+            display: inline-block;
+            padding: 1rem 3.5rem;
+            border-radius: 100px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            background-color: rgba(86, 188, 175, 0.8);
+            color: var(--white);
+            border: 1px solid rgba(86, 188, 175, 0.5);
+            box-shadow: 0 0 20px rgba(86, 188, 175, 0.2), inset 0 0 10px rgba(86, 188, 175, 0.1);
+            position: relative;
+            overflow: hidden;
+            backdrop-filter: blur(10px);
+            letter-spacing: 1px;
+            animation: pulse-glow 3s infinite ease-in-out;
+        }
+
+        .btn-xl {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 34px;
+            font-family: system-ui, Inter, Arial, sans-serif;
+            font-weight: 700;
+            font-size: 16px;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            background: transparent;
+            border: 1.5px solid rgba(255, 255, 255, 0.28);
+            border-radius: 999px;
+            transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+            cursor: pointer;
+        }
+
+        .btn-xl:hover {
+            background-color: rgba(255, 255, 255, 0.06);
+            border-color: rgba(127, 227, 212, 0.6);
+            box-shadow: 0 8px 24px rgba(127, 227, 212, 0.12);
+            transform: translateY(-1px);
+        }
+
+        .btn-white-glow {
+            display: inline-block;
+            padding: 1rem 3.5rem;
+            border-radius: 100px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+            background-color: var(--white);
+            color: #000;
+            border: 1px solid var(--white);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+            letter-spacing: 1px;
+        }
+
+        .btn-white-glow:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 0 50px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+            background-color: #fff;
+        }
+
+        @keyframes pulse-glow {
+            0% { box-shadow: 0 0 15px rgba(86, 188, 175, 0.1), inset 0 0 10px rgba(86, 188, 175, 0.05); border-color: rgba(86, 188, 175, 0.3); }
+            50% { box-shadow: 0 0 25px rgba(86, 188, 175, 0.3), inset 0 0 15px rgba(86, 188, 175, 0.1); border-color: rgba(86, 188, 175, 0.6); }
+            100% { box-shadow: 0 0 15px rgba(86, 188, 175, 0.1), inset 0 0 10px rgba(86, 188, 175, 0.05); border-color: rgba(86, 188, 175, 0.3); }
+        }
+
+        /* Brands Section */
+        .brands-section { width: 100%; display: flex; flex-direction: column; align-items: center; margin-top: 2rem; overflow: hidden; }
+        .brands-label { font-size: 0.7rem; font-weight: 700; color: #555; letter-spacing: 2px; text-transform: uppercase; padding: 0.5rem 1.5rem; border-radius: 50px; background: #0A0A0A; border: 1px solid #222; margin-bottom: 3rem; z-index: 5; }
+        .logo-carousel { width: 100%; overflow: hidden; position: relative; padding: 1rem 0; mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); }
+        .logo-track { display: flex; width: max-content; animation: scroll 30s linear infinite; gap: 4rem; }
+        .logo-carousel:hover .logo-track { animation-play-state: paused; }
+        .logo-item { display: flex; align-items: center; justify-content: center; width: 150px; opacity: 0.5; transition: all 0.3s ease; filter: grayscale(100%); }
+        .logo-item img { max-height: 40px; width: auto; max-width: 100%; object-fit: contain; }
+        .logo-item:hover { opacity: 1; filter: grayscale(0%); transform: scale(1.1); }
+        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+
+        /* Services Section */
+        .section-header { text-align: center; margin-bottom: 4rem; }
+        .section-title { font-size: 2.5rem; font-weight: 500; margin-bottom: 1rem; color: var(--text-color); }
+        .section-subtitle { font-size: 1.125rem; color: var(--text-light); max-width: 600px; margin: 0 auto; font-weight: 400; }
+        .badge-best-seller { position: absolute; top: 1rem; right: 1rem; background: var(--secondary-blue); color: var(--white); font-size: 0.75rem; font-weight: 700; padding: 0.35rem 0.85rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(86, 188, 175, 0.3); text-transform: uppercase; letter-spacing: 0.5px; z-index: 10; border: 1px solid rgba(255, 255, 255, 0.1); }
+        
+        .services-scroll-track { position: relative; height: 500vh; background-color: var(--bg-color); }
+        .services-sticky-container { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding: 2rem 0; z-index: 1; }
+        .services-sticky-container::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 0% 80%, rgba(86, 188, 175, 0.15), transparent 40%), radial-gradient(circle at 100% 80%, rgba(86, 188, 175, 0.15), transparent 40%), radial-gradient(circle at 50% 100%, rgba(86, 188, 175, 0.12), transparent 60%); filter: blur(80px); z-index: -1; pointer-events: none; }
+        .services-stack { position: relative; width: 100%; max-width: 600px; margin: 0 auto; height: 400px; display: flex; align-items: center; justify-content: center; margin-top: 2rem; }
+        .scroll-card { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: 1; background: rgba(10, 10, 10, 0.9); backdrop-filter: blur(20px); padding: 2.5rem 2rem 4rem; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.08); display: flex; flex-direction: column; align-items: center; text-align: center; opacity: 0; transform: translateY(40px) scale(0.95); pointer-events: none; transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); overflow: hidden; }
+        .scroll-card.active { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; z-index: 10; border-color: rgba(86, 188, 175, 0.4); box-shadow: 0 0 0 1px rgba(86, 188, 175, 0.1) inset, 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 40px rgba(86, 188, 175, 0.15); }
+
+        .scroll-card .service-icon { width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
+        .scroll-card.active .service-icon { border-color: rgba(86, 188, 175, 0.6); background: rgba(86, 188, 175, 0.08); color: var(--white); text-shadow: 0 0 15px var(--primary-blue); transform: translateY(-5px); animation: icon-float 3s ease-in-out infinite; }
+
+        @keyframes icon-float { 0%, 100% { transform: translateY(-5px); } 50% { transform: translateY(-10px); } }
+        .scroll-card .service-title { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--white); letter-spacing: -0.5px; }
+        .scroll-card .service-description { font-size: 1.05rem; color: #aaa; max-width: 450px; line-height: 1.6; }
+        .service-card.featured-pack .service-title { color: var(--primary-blue); font-size: 1.75rem; margin-bottom: 0.5rem; }
+        
+        .pack-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem 1.5rem; width: 100%; max-width: 500px; margin: 0 auto; padding: 0; list-style: none; text-align: left; }
+        .pack-features li { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #bbb; }
+        .pack-features li i { color: var(--primary-blue); font-size: 0.8rem; min-width: 1.2rem; text-align: center; }
+
+        .btn-want-this { position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); padding: 0.35rem 0.8rem; font-size: 0.6rem; background: rgba(86, 188, 175, 0.1); border: 1px solid rgba(86, 188, 175, 0.4); border-radius: 50px; color: var(--primary-blue); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); display: inline-flex; align-items: center; gap: 0.3rem; animation: btn-pulse 3s infinite ease-in-out; z-index: 20; }
+        .btn-want-this:hover { background: var(--primary-blue); color: #000; border-color: var(--primary-blue); box-shadow: 0 0 15px rgba(86, 188, 175, 0.6); transform: translateX(-50%) translateY(-1px) scale(1.05); }
+
+        @keyframes btn-pulse { 0% { box-shadow: 0 0 0 0 rgba(86, 188, 175, 0.4); transform: translateX(-50%) scale(1); } 50% { box-shadow: 0 0 10px 3px rgba(86, 188, 175, 0.1); transform: translateX(-50%) scale(1.02); } 100% { box-shadow: 0 0 0 0 rgba(86, 188, 175, 0); transform: translateX(-50%) scale(1); } }
+
+        .scroll-indicator { position: absolute; bottom: 1.5rem; right: 1.5rem; color: rgba(255, 255, 255, 0.3); font-size: 1.2rem; animation: bounce-small 2s infinite; opacity: 0; transition: opacity 0.5s ease 0.5s; z-index: 20; }
+        .scroll-card.active .scroll-indicator { opacity: 1; }
+        .scroll-card:last-child .scroll-indicator { display: none; }
+        @keyframes bounce-small { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-5px); } 60% { transform: translateY(-3px); } }
+
+        /* Value Section */
+        .value { background-color: var(--bg-color); position: relative; overflow: hidden; padding: 8rem 0; z-index: 1; }
+        .value-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
+        .floating-img { width: 100%; max-width: 512px; height: auto; border-radius: 24px; box-shadow: 0 0 30px rgba(86, 188, 175, 0.2); animation: float-img 6s ease-in-out infinite; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); }
+        @keyframes float-img { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
+        .value-content .section-title { text-align: left; margin-bottom: 1.5rem; font-size: 3rem; background: linear-gradient(90deg, #fff, #aaa); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .value-text { color: #e0e0e0; margin-bottom: 2.5rem; font-size: 1.1rem; line-height: 1.8; }
+        .value-buttons { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+
+        /* Footer */
+        .footer { background-color: #000; color: var(--white); padding: 6rem 0 0; position: relative; overflow: hidden; border-top: 1px solid rgba(86, 188, 175, 0.15); }
+        .footer-container { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; position: relative; z-index: 1; }
+        .footer-logo { font-size: 2.5rem; font-weight: 700; color: var(--white); display: inline-block; margin-bottom: 1.25rem; letter-spacing: -1px; background: linear-gradient(90deg, #fff, #ccc); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .footer-brand p { color: #999; margin-bottom: 2rem; max-width: 380px; line-height: 1.7; font-size: 1rem; }
+        .social-links { display: flex; gap: 1rem; }
+        .social-links a { width: 45px; height: 45px; background-color: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: center; border-radius: 12px; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); color: #aaa; font-size: 1.2rem; }
+        .social-links a:hover { background-color: rgba(86, 188, 175, 0.15); border-color: var(--primary-blue); color: var(--white); transform: translateY(-4px); box-shadow: 0 8px 20px rgba(86, 188, 175, 0.3); }
+        .footer-links h3, .footer-contact h3 { font-size: 1.15rem; margin-bottom: 1.75rem; color: var(--white); font-weight: 600; letter-spacing: 0.5px; position: relative; display: inline-block; }
+        .footer-links h3::after, .footer-contact h3::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 30px; height: 2px; background: var(--primary-blue); border-radius: 2px; }
+        .footer-links ul li, .footer-contact ul li { margin-bottom: 1.25rem; }
+        .footer-links a, .footer-contact a { color: #888; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .footer-links a:hover { color: var(--primary-blue); }
+        .footer-contact li i { color: var(--primary-blue); font-size: 1.1rem; }
+        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.08); padding: 2rem 0; position: relative; z-index: 1; background: rgba(0,0,0,0.3); }
+        .footer-bottom-content { display: flex; justify-content: space-between; align-items: center; color: #555; font-size: 0.9rem; }
+        .footer-legal { display: flex; gap: 2rem; }
+        .footer-legal a { color: #666; transition: color 0.3s ease; }
+        .footer-legal a:hover { color: var(--primary-blue); }
+
+        /* RESPONSIVE CSS */
+        @media screen and (max-width: 968px) {
+            .hero-container { padding: 0 1rem; }
+            .hero-title { font-size: 3.5rem; }
+            .nav-cta-highlight { display: block; padding: 0.5rem 1rem; font-size: 0.8rem; }
+            .footer-container { grid-template-columns: 1fr 1fr; gap: 3rem; }
+            .footer-brand { grid-column: 1 / -1; }
+        }
+
+        @media screen and (max-width: 768px) {
+            .navbar { left: 0; right: 0; margin: 0 auto; transform: none; width: 90%; max-width: 400px; justify-content: space-between; padding: 0.5rem 1.5rem; }
+            .nav-menu { position: fixed; top: -100vh; left: 50%; transform: translateX(-50%); width: 90%; max-width: 340px; background-color: rgba(15, 15, 15, 0.95); backdrop-filter: blur(20px); padding: 2.5rem 1.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); border-radius: 24px; transition: top 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease, visibility 0.3s; z-index: 999; display: flex; flex-direction: column; align-items: center; border: 1px solid rgba(255, 255, 255, 0.08); opacity: 0; visibility: hidden; }
+            .show-menu { top: 6.5rem; opacity: 1; visibility: visible; }
+            .nav-list { flex-direction: column; align-items: center; gap: 1.5rem; width: 100%; }
+            .nav-link { color: var(--white); font-size: 1.1rem; font-weight: 500; width: 100%; text-align: center; display: block; padding: 0.5rem; border-radius: 12px; }
+            .nav-toggle { display: flex; font-size: 1.25rem; cursor: pointer; color: var(--white); margin-left: 0.5rem; width: 36px; height: 36px; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 50%; }
+            .hero-title { font-size: 2.5rem; }
+            .hero-buttons { flex-direction: column; align-items: center; gap: 1rem; }
+            .btn-glow, .btn-white-glow { width: 100%; max-width: 280px; text-align: center; padding: 1rem; }
+            .nav-cta-highlight { display: flex; width: 100%; justify-content: center; margin-top: 0.5rem; }
+            .cta-nav-item { width: 100%; display: flex; justify-content: center; }
+            .services-scroll-track { height: 750vh; display: block; }
+            .services-sticky-container { position: sticky; top: 0; height: 100vh; overflow: hidden; display: flex; flex-direction: column; padding-top: 6rem; }
+            .services-sticky-container .container { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
+            .section-subtitle { display: none; }
+            .services-stack { height: auto; flex: 1; width: 100%; display: flex; align-items: center; justify-content: center; margin-top: 1rem; padding: 0 1rem; position: relative; }
+            .scroll-card { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) translateY(50px) scale(0.9); width: 90%; max-width: 400px; opacity: 0; padding: 2rem 1.5rem 4rem; }
+            .scroll-card.active { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            .value-container { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
+            .value-content .section-title { text-align: center; font-size: 2.5rem; }
+            .value-buttons { justify-content: center; flex-direction: column; align-items: center; }
+            .value-buttons button { width: 100%; max-width: 280px; }
+            .floating-img { max-width: 80%; margin: 0 auto; }
+            .footer-container { grid-template-columns: 1fr; text-align: center; }
+            .footer-brand { align-items: center; display: flex; flex-direction: column; }
+            .footer-links h3::after, .footer-contact h3::after { left: 50%; transform: translateX(-50%); }
+            .footer-links a, .footer-contact a, .footer-contact li { justify-content: center; }
+            .footer-bottom-content { flex-direction: column; gap: 1.5rem; }
+        }
+
+        .word-glow { position: relative; display: inline-block; background: linear-gradient(90deg, var(--primary-blue), #ffffff, var(--primary-blue)); background-size: 200%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: text-flow 3s linear infinite; filter: drop-shadow(0 0 8px rgba(86, 188, 175, 0.6)); font-weight: 700; }
+        @keyframes text-flow { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
+
+        /* Modal Styles */
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(12px); z-index: 2000; display: none; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
+        .modal-overlay.active { display: flex; opacity: 1; }
+        .modal-content { background: rgba(15, 15, 15, 0.95); border: 1px solid rgba(86, 188, 175, 0.2); border-radius: 24px; padding: 2.5rem; width: 90%; max-width: 450px; position: relative; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(86, 188, 175, 0.1); transform: translateY(20px) scale(0.95); transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); display: none; }
+        .modal-content.active { display: block; transform: translateY(0) scale(1); }
+        .modal-close { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 1.5rem; color: var(--text-light); cursor: pointer; transition: color 0.3s ease; z-index: 50; }
+        .modal-close:hover { color: var(--white); }
+        .modal-title { font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--white); font-weight: 600; text-align: center; letter-spacing: -0.5px; }
+
+        .modal-form { display: flex; flex-direction: column; gap: 1.5rem; }
+        .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+        .form-group label { font-size: 0.9rem; color: #ccc; font-weight: 500; }
+        .form-group input, .form-group select, .form-group textarea { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 1rem; color: var(--white); font-size: 1rem; transition: all 0.3s ease; font-family: inherit; width: 100%; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-blue); background: rgba(86, 188, 175, 0.05); box-shadow: 0 0 0 4px rgba(86, 188, 175, 0.1); }
+
+        .modal-content.modal-lg { max-width: 700px; width: 95%; height: 600px; max-height: 90vh; padding: 0; display: none; flex-direction: column; overflow: hidden; }
+        .modal-content.modal-lg.active { display: flex; }
+        .modal-content.modal-lg .modal-title { margin-top: 0; padding: 0; text-align: left; margin-bottom: 0.5rem;}
+        .modal-content.modal-lg .modal-close { top: 1rem; right: 1.5rem; z-index: 10; }
+
+        .scrollable-form { flex-grow: 1; display: flex; flex-direction: column; padding: 2rem 2.5rem; overflow-y: auto; }
+        .scrollable-form::-webkit-scrollbar { width: 6px; }
+        .scrollable-form::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.02); }
+        .scrollable-form::-webkit-scrollbar-thumb { background: rgba(86, 188, 175, 0.3); border-radius: 4px; }
+        
+        .form-section { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .minimal-section { border-bottom: none !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
+        .minimal-section h4 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--white); }
+        .minimal-section .section-desc { margin-bottom: 2rem; font-size: 0.95rem; color: var(--text-light); }
+        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
+        .form-group select option { background-color: #1a1a1a; color: var(--white); }
+
+        .checkbox-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.75rem; }
+        .checkbox-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #ccc; cursor: pointer; background: rgba(255, 255, 255, 0.02); padding: 0.5rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.2s ease; }
+        .checkbox-item:hover { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); }
+        .checkbox-item input[type="checkbox"] { accent-color: var(--primary-blue); width: 16px; height: 16px; }
+
+        .modal-header-minimal { padding: 2rem 2.5rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); background: rgba(20, 20, 20, 0.4); }
+        .wizard-progress { display: flex; align-items: center; gap: 1rem; margin-top: 1rem; }
+        .progress-bar-bg { flex-grow: 1; height: 4px; background: rgba(255, 255, 255, 0.1); border-radius: 2px; overflow: hidden; }
+        .progress-bar-fill { height: 100%; background: var(--primary-blue); width: 20%; transition: width 0.3s ease; }
+        .steps-count { font-size: 0.85rem; color: var(--text-light); font-weight: 500; white-space: nowrap; }
+
+        .wizard-step-founder { display: none; animation: fadeIn 0.4s ease; }
+        .wizard-step-founder.active { display: block; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .wizard-navigation { display: flex; justify-content: center; gap: 1.5rem; padding: 2rem 2.5rem 2.5rem; border-top: 1px solid rgba(255, 255, 255, 0.05); background: rgba(20, 20, 20, 0.4); margin-top: auto; }
+        .nav-btn { min-width: 180px; padding: 1rem 2rem; font-size: 1rem; letter-spacing: 0.5px; border-radius: 50px; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
+        .btn-primary.nav-btn { box-shadow: 0 4px 20px rgba(86, 188, 175, 0.25); }
+        .btn-primary.nav-btn:hover { box-shadow: 0 6px 25px rgba(86, 188, 175, 0.4); transform: translateY(-2px); }
+        .btn-outline.nav-btn { border-color: rgba(255, 255, 255, 0.15); color: #aaa; }
+        .btn-outline.nav-btn:hover { border-color: var(--white); color: var(--white); background: rgba(255, 255, 255, 0.05); transform: translateY(-2px); }
+
+        .modal-content.success-modal { text-align: center; padding: 3rem 2rem; max-width: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
+        .success-icon-container { width: 80px; height: 80px; border-radius: 50%; background: rgba(86, 188, 175, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 0 30px rgba(86, 188, 175, 0.2); animation: success-pulse 2s infinite; }
+        .success-icon { font-size: 2.5rem; color: var(--primary-blue); animation: check-bounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; transform: scale(0); }
+        .success-title { font-size: 1.75rem; color: var(--white); margin-bottom: 0.5rem; font-weight: 600; }
+        .success-desc { color: var(--text-light); margin-bottom: 2rem; font-size: 1rem; }
+        @keyframes success-pulse { 0% { box-shadow: 0 0 0 0 rgba(86, 188, 175, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(86, 188, 175, 0); } 100% { box-shadow: 0 0 0 0 rgba(86, 188, 175, 0); } }
+        @keyframes check-bounce { 0% { transform: scale(0); opacity: 0; } 60% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
+
+        /* Loader */
+        #app-loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #02060f; background-image: radial-gradient(circle at 50% 50%, rgba(86, 188, 175, 0.12) 0%, transparent 50%), linear-gradient(rgba(86, 188, 175, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(86, 188, 175, 0.03) 1px, transparent 1px); background-size: 100% 100%, 40px 40px, 40px 40px; z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column; transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s; overflow: hidden; }
+        #app-loader::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: conic-gradient(from 0deg at 50% 50%, transparent 0%, rgba(86, 188, 175, 0.03) 20%, transparent 40%); animation: radar-spin 12s linear infinite reverse; pointer-events: none; z-index: 1; }
+        .radar-scan { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; border-radius: 50%; border: 1px solid rgba(86, 188, 175, 0.1); display: flex; justify-content: center; align-items: center; box-shadow: inset 0 0 60px rgba(86, 188, 175, 0.05), 0 0 40px rgba(0, 0, 0, 0.5); z-index: 2; }
+        .radar-circle { position: absolute; width: 280px; height: 280px; border-radius: 50%; border: 1px solid rgba(86, 188, 175, 0.2); border-top-color: rgba(86, 188, 175, 0.8); border-right-color: rgba(86, 188, 175, 0.4); animation: radar-spin 4s linear infinite; box-shadow: 0 0 20px rgba(86, 188, 175, 0.1); }
+        .radar-circle-sm { position: absolute; width: 160px; height: 160px; border-radius: 50%; border: 1px dotted rgba(86, 188, 175, 0.4); animation: radar-spin 8s linear infinite reverse; }
+        .radar-beam { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background: conic-gradient(from 0deg, transparent 75%, rgba(86, 188, 175, 0.25) 100%); animation: radar-sweep 2s linear infinite; mask-image: radial-gradient(circle, transparent 35%, black 36%); -webkit-mask-image: radial-gradient(circle, transparent 35%, black 36%); }
+        .loader-content { position: relative; z-index: 10; text-align: center; display: flex; flex-direction: column; align-items: center; background: rgba(2, 6, 15, 0.6); padding: 2rem 4rem; border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(86, 188, 175, 0.1); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
+        .loader-logo { font-size: 3.5rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; letter-spacing: -1px; text-shadow: 0 0 20px rgba(86, 188, 175, 0.6); position: relative; overflow: hidden; }
+        .loader-logo::after { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); animation: text-sweep 3s ease-in-out infinite; }
+        @keyframes text-sweep { 0% { left: -100%; } 50% { left: 200%; } 100% { left: 200%; } }
+        .loader-status { font-family: 'Courier New', monospace; font-size: 0.85rem; color: var(--primary-blue); letter-spacing: 3px; margin-bottom: 1rem; text-transform: uppercase; font-weight: 600; }
+        .status-dots { animation: dots 1.5s infinite steps(4); }
+        @keyframes dots { 0%, 20% { content: "."; } 40% { content: ".."; } 60% { content: "..."; } 80%, 100% { content: ""; } }
+        .loader-progress-container { width: 280px; height: 4px; background: rgba(255, 255, 255, 0.05); border-radius: 4px; overflow: hidden; position: relative; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5); }
+        .loader-progress-bar { position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: var(--primary-blue); box-shadow: 0 0 15px var(--primary-blue); animation: load-progress-tech 1.8s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
+        @keyframes load-progress-tech { 0% { width: 0%; } 20% { width: 15%; } 40% { width: 45%; } 60% { width: 60%; } 80% { width: 85%; } 100% { width: 100%; } }
+        @keyframes radar-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        @keyframes radar-sweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+
+        /* ==============================================================
+           REWARDS PAGE SPECIFIC CSS
+           ============================================================== */
+        #rewards-page {
+            display: none;
+            min-height: 100vh;
+            padding-top: 120px;
+            padding-bottom: 6rem;
+            background-color: #050a0a;
+            position: relative;
+        }
+
+        #rewards-page::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at 50% -20%, rgba(86, 188, 175, 0.1) 0%, transparent 60%);
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .rewards-dashboard-container {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            padding: 0 1.5rem;
+        }
+
+        .dashboard-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 3rem;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+            padding-bottom: 2rem;
+        }
+
+        .points-pill {
+            background: rgba(86,188,175,0.1);
+            border: 1px solid rgba(86,188,175,0.3);
+            padding: 0.6rem 1.5rem;
+            border-radius: 50px;
+            color: var(--primary-blue);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            box-shadow: 0 0 15px rgba(86,188,175,0.15);
+            font-size: 1.2rem;
+        }
+
+        .raid-item {
+            background: #0b0e14;
+            border: 1px solid rgba(255,255,255,0.05);
+            border-radius: 16px;
+            margin-bottom: 1.5rem;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .raid-item:hover {
+            border-color: rgba(255,255,255,0.1);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .raid-header {
+            display: flex;
+            justify-content: space-between;
+            padding: 1.5rem 2rem;
+            cursor: pointer;
+            align-items: center;
+            transition: background 0.3s;
+        }
+
+        .raid-header:hover {
+            background: rgba(255,255,255,0.02);
+        }
+
+        .raid-tag {
+            background: rgba(86,188,175,0.1);
+            color: var(--primary-blue);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: inline-block;
+            margin-bottom: 0.5rem;
+        }
+
+        .raid-title {
+            font-size: 1.2rem;
+            color: #fff;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .raid-points {
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 12px;
+            color: #fff;
+            font-weight: bold;
+            background: rgba(255,255,255,0.03);
+            font-size: 1.1rem;
+        }
+
+        .raid-body {
+            display: none;
+            padding: 0 2rem 2rem 2rem;
+            border-top: 1px solid rgba(255,255,255,0.05);
+            background: rgba(0,0,0,0.2);
+            animation: fadeIn 0.3s ease;
+        }
+
+        .raid-body.active {
+            display: block;
+        }
+
+        .register-container {
+            background: rgba(15, 15, 15, 0.95);
+            border: 1px solid rgba(86, 188, 175, 0.2);
+            border-radius: 24px;
+            padding: 3rem;
+            max-width: 450px;
+            margin: 4rem auto;
+            position: relative;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(86, 188, 175, 0.1);
+            z-index: 10;
+        }
+
+        @media (max-width: 600px) {
+            .dashboard-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            .raid-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
+            .raid-points { align-self: flex-start; }
+            .register-container { padding: 2rem; width: 90%; }
+        }
+    </style>
 </head>
 <body>
     <!-- Loading Screen -->
@@ -40,9 +854,9 @@
             <div class="radar-circle-sm"></div>
         </div>
         <div class="loader-content">
-            <div class="loader-logo" data-text="DeRadar">DeRadar</div>
+            <div class="loader-logo">DeRadar</div>
             <div class="loader-status">
-                <span class="status-text">INITIALIZING SYSTEMS</span>
+                <span class="status-text">INITIALIZING SECURE PROTOCOLS</span>
                 <span class="status-dots">...</span>
             </div>
             <div class="loader-progress-container">
@@ -51,57 +865,27 @@
         </div>
     </div>
 
-    <!-- Intro Selection Screen -->
-    <div id="intro-overlay">
-        <div class="intro-background"></div>
-        <div class="intro-content">
-            <h2 class="intro-title">Choose Your Path</h2>
-            <p class="intro-subtitle">Select your role to enter the ecosystem</p>
-            
-            <div class="intro-cards">
-                <!-- Founder Card -->
-                <div class="intro-card" id="intro-btn-founder">
-                    <div class="card-glow"></div>
-                    <div class="card-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3 class="card-title">I'm a Founder</h3>
-                    <p class="card-desc">Save money and launch your MVP now.</p>
-                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-                </div>
-
-                <!-- Talent Card -->
-                <div class="intro-card" id="intro-btn-talent">
-                    <div class="card-glow"></div>
-                    <div class="card-icon">
-                        <i class="fas fa-user-astronaut"></i>
-                    </div>
-                    <h3 class="card-title">Web3 Talent</h3>
-                    <p class="card-desc">Looking for opportunities in top tier projects.</p>
-                    <div class="card-arrow"><i class="fas fa-arrow-right"></i></div>
-                </div>
-            </div>
-        </div>
-    </div>
-
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="btn-home-icon" id="btn-reset-intro" title="Back to Selection">
-                <i class="fas fa-home"></i>
-            </a>
-            <a href="#" class="logo">DeRadar</a>
+            <a href="#" class="logo" onclick="goToHome(event)">DeRadar</a>
             
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
-                    <li class="nav-item"><a href="#hero" class="nav-link">Home</a></li>
-                    <li class="nav-item"><a href="#categories" class="nav-link">Services</a></li>
-                    <li class="nav-item"><a href="#talent" class="nav-link">Join Us</a></li>
-                    <li class="nav-item"><a href="#contacto" class="nav-link">Contact</a></li>
+                    <li class="nav-item"><a href="#categories" class="nav-link" onclick="goToHomeAndScroll(event, 'categories')">Services</a></li>
+                    <li class="nav-item"><a href="#talent" class="nav-link" onclick="goToHomeAndScroll(event, 'talent')">Get in Touch</a></li>
+                    <li class="nav-item">
+                        <a href="#" id="btn-rewards" class="nav-link nav-text-blue" onclick="goToRewards(event)">
+                            <i class="fas fa-gift"></i> Rewards
+                        </a>
+                    </li>
+                    <li class="nav-item cta-nav-item">
+                        <a href="#work-with-us" class="nav-cta-highlight" onclick="goToHomeAndScroll(event, 'work-with-us')">
+                            <i class="fas fa-sign-in-alt"></i> Learn Free
+                        </a>
+                    </li>
                 </ul>
             </div>
-
-            <a href="https://t.me/deradar" class="btn btn-primary nav-cta" target="_blank"><i class="fab fa-telegram-plane"></i> Join Telegram</a>
 
             <div class="nav-toggle" id="nav-toggle">
                 <i class="fas fa-bars"></i>
@@ -109,577 +893,452 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section class="hero" id="hero">
-        <!-- Background Video -->
-        <video class="hero-video" id="hero-video" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
-            <source src="video.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div class="hero-overlay"></div>
+    <!-- ==============================================
+         HOME VIEW (Main Content)
+         ============================================== -->
+    <div id="home-view">
+        <!-- Hero Section -->
+        <section class="hero" id="hero">
+            <video class="hero-video" id="hero-video" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
+                <source src="video.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero-overlay"></div>
 
-        <div class="container hero-container">
-
-            
-            <h1 class="hero-title">
-                Save Money & Launch with <br>
-                <span class="glitch-text" data-text="24/7 SUPPORT">24/7 SUPPORT</span>
-            </h1>
-            
-            <p class="hero-description">
-                <span class="highlight-glow"><span class="text-highlight">Get the best prices</span> and 24/7 attention.</span> Save budget and launch your product MVP now with fast, secure, and top-tier talent solutions.
-            </p>
-            
-            <div class="hero-buttons">
-                <a href="#categories" class="btn btn-glow" style="font-size: 1.2rem; font-weight: 700;">Get the best prices</a>
-            </div>
-
-        </div>
-
-        <div class="brands-section" style="position: relative; z-index: 3; margin-top: 0;">
-            <div class="brands-label">TEAM EXPERT IN DIFFERENT BLOCKCHAINS</div>
-            
-            <!-- Infinite Scroll Logo Carousel -->
-            <div class="logo-carousel">
-                <div class="logo-track">
-                    <!-- Set 1 -->
-                    <div class="logo-item"><img src="https://cdn.simpleicons.org/ethereum/white" alt="Ethereum"></div>
-                    <div class="logo-item"><img src="https://cdn.simpleicons.org/solana/white" alt="Solana"></div>
-                    <div class="logo-item"><img src="https://cdn.simpleicons.org/binance/white" alt="Binance"></div>
-                    <div class="logo-item"><img src="https://i.postimg.cc/MGv9jHH9/Coinbase-Symbol.png" alt="Coinbase"></div>
-                    <div class="logo-item"><img src="https://cdn.simpleicons.org/chainlink/white" alt="Chainlink"></div>
-                    <div class="logo-item"><img src="https://cdn.simpleicons.org/polygon/white" alt="Polygon"></div>
-                    <div class="logo-item"><img src="https://i.postimg.cc/prDGXSrV/uniswap-uni-logo.png" alt="Uniswap"></div>
-                    <div class="logo-item"><img src="https://i.postimg.cc/zGPj5N7x/Aave-Crypto-Logo.png" alt="Aave"></div>
-                    
-                    <!-- Set 2 (Duplicate for infinite loop) -->
-                    <div class="logo-item"><img src="https://cdn.simpleicons.org/ethereum/white" alt="Ethereum"></div>
-                    <div class="logo-item"><img src="https://cdn.simpleicons.org/solana/white" alt="Solana"></div>
-                    <div class="logo-item"><img src="https://cdn.simpleicons.org/binance/white" alt="Binance"></div>
-                    <div class="logo-item"><img src="https://i.postimg.cc/MGv9jHH9/Coinbase-Symbol.png" alt="Coinbase"></div>
-                    <div class="logo-item"><img src="https://cdn.simpleicons.org/chainlink/white" alt="Chainlink"></div>
-                    <div class="logo-item"><img src="https://cdn.simpleicons.org/polygon/white" alt="Polygon"></div>
-                    <div class="logo-item"><img src="https://i.postimg.cc/prDGXSrV/uniswap-uni-logo.png" alt="Uniswap"></div>
-                    <div class="logo-item"><img src="https://i.postimg.cc/zGPj5N7x/Aave-Crypto-Logo.png" alt="Aave"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Horizontal Line Separator -->
-    <div class="section-separator"></div>
-
-    <!-- Job Categories / Stats Section -->
-    <section class="services section" id="categories">
-        <div class="services-scroll-track">
-            <div class="services-sticky-container">
-                <div class="container">
-                    <div class="section-header">
-                        <h2 class="section-title">Our Premium Services</h2>
-                        <p class="section-subtitle">Comprehensive solutions for Web3 founders and projects</p>
-                    </div>
-                    
-                    <div class="services-stack">
-                        <!-- Featured Pack -->
-                        <div class="service-card featured-pack scroll-card">
-                            <div class="service-icon">
-                                <i class="fas fa-rocket"></i>
-                            </div>
-                            <span class="badge-best-seller" style="background: var(--primary-blue); color: #fff; box-shadow: 0 4px 15px rgba(86, 188, 175, 0.4);">Top Choice</span>
-                            <h3 class="service-title">Next Gen Pack</h3>
-                            <p class="service-description">
-                                All-in-one growth: Content, branding & management.
-                            </p>
-                            <ul class="pack-features">
-                                <li><i class="fas fa-check"></i> YouTube Channel</li>
-                                <li><i class="fas fa-check"></i> 10+ Daily Reels</li>
-                                <li><i class="fas fa-check"></i> 3-5m Tutorials</li>
-                                <li><i class="fas fa-check"></i> Custom Mascot</li>
-                                <li><i class="fas fa-check"></i> Landing Page</li>
-                                <li><i class="fas fa-check"></i> 15-Day Mgmt</li>
-                                <li><i class="fas fa-check"></i> 24/7 Support</li>
-                            </ul>
-                            <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20the%20Next%20Gen%20Pack" class="btn-want-this" target="_blank">WANT THIS</a>
-                        </div>
-
-                        <!-- Best Seller 1 -->
-                        <div class="service-card scroll-card">
-                            <span class="badge-best-seller">Best Seller</span>
-                            <div class="service-icon">
-                                <i class="fas fa-robot"></i>
-                            </div>
-                            <h3 class="service-title">AI Agents</h3>
-                            <p class="service-description">
-                                Custom agents for scheduling, client finding, and 24/7 networking outreach.
-                            </p>
-                            <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20AI%20Agents" class="btn-want-this" target="_blank">WANT THIS</a>
-                        </div>
-
-                        <!-- Best Seller 2 -->
-                        <div class="service-card scroll-card">
-                            <span class="badge-best-seller">Best Seller</span>
-                            <div class="service-icon">
-                                <i class="fas fa-wand-magic-sparkles"></i>
-                            </div>
-                            <h3 class="service-title">AI Designers</h3>
-                            <p class="service-description">
-                                Hyper-realistic visuals by expert prompt engineers. Faster & more economical.
-                            </p>
-                            <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20AI%20Designers" class="btn-want-this" target="_blank">WANT THIS</a>
-                        </div>
-
-                        <!-- Best Seller 3 -->
-                        <div class="service-card scroll-card">
-                            <span class="badge-best-seller">Best Seller</span>
-                            <div class="service-icon">
-                                <i class="fas fa-shield-halved"></i>
-                            </div>
-                            <h3 class="service-title">Security Bot</h3>
-                            <p class="service-description">
-                                Top-tier Telegram/Discord security. Auto-removes scams with detailed ban logs.
-                            </p>
-                            <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20the%20Security%20Bot" class="btn-want-this" target="_blank">WANT THIS</a>
-                        </div>
-
-                        <!-- Service 4 -->
-                        <div class="service-card scroll-card">
-                            <div class="service-icon">
-                                <i class="fas fa-users"></i>
-                            </div>
-                            <h3 class="service-title">Community Growth</h3>
-                            <p class="service-description">
-                                Social media management & 100% active engagement for your community.
-                            </p>
-                            <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20Community%20Growth" class="btn-want-this" target="_blank">WANT THIS</a>
-                        </div>
-
-                        <!-- Service 5 -->
-                        <div class="service-card scroll-card">
-                            <div class="service-icon">
-                                <i class="fas fa-bullhorn"></i>
-                            </div>
-                            <h3 class="service-title">KOLs & Marketing</h3>
-                            <p class="service-description">
-                                Strategic partnerships & influencer campaigns to maximize your project's reach.
-                            </p>
-                            <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20KOLs%20%26%20Marketing" class="btn-want-this" target="_blank">WANT THIS</a>
-                        </div>
-
-                        <!-- Service 6 -->
-                        <div class="service-card scroll-card">
-                            <div class="service-icon">
-                                <i class="fab fa-discord"></i>
-                            </div>
-                            <h3 class="service-title">Discord/Telegram Ops</h3>
-                            <p class="service-description">
-                                Professional setup & management for smooth, engaging community experiences.
-                            </p>
-                            <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20Discord%2FTelegram%20Ops" class="btn-want-this" target="_blank">WANT THIS</a>
-                        </div>
-
-                        <!-- Service 7 -->
-                        <div class="service-card scroll-card">
-                            <div class="service-icon">
-                                <i class="fas fa-layer-group"></i>
-                            </div>
-                            <h3 class="service-title">UI/UX & 3D Design</h3>
-                            <p class="service-description">
-                                Crypto-focused designs, 3D visuals, and flyers for a stunning project identity.
-                            </p>
-                            <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20UI%2FUX%20%26%203D%20Design" class="btn-want-this" target="_blank">WANT THIS</a>
-                        </div>
-
-                        <!-- Service 8 -->
-                        <div class="service-card scroll-card">
-                            <div class="service-icon">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <h3 class="service-title">Blockchain Devs</h3>
-                            <p class="service-description">
-                                Expert developers to build your smart contracts and dApps.
-                            </p>
-                            <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20Blockchain%20Devs" class="btn-want-this" target="_blank">WANT THIS</a>
-                        </div>
-
-                        <!-- Service 9 -->
-                        <div class="service-card scroll-card">
-                            <div class="service-icon">
-                                <i class="fas fa-film"></i>
-                            </div>
-                            <h3 class="service-title">Motion Editors</h3>
-                            <p class="service-description">
-                                High-quality motion graphics and editing for SaaS & blockchain promos.
-                            </p>
-                            <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20Motion%20Editors" class="btn-want-this" target="_blank">WANT THIS</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Horizontal Line Separator -->
-    <div class="section-separator"></div>
-
-    <!-- Work or Hire Section -->
-    <section class="value section" id="talent">
-        <div class="container value-container">
-            <div class="value-image">
-                <video class="floating-img" autoplay loop muted playsinline>
-                    <source src="footer.mp4" type="video/mp4">
-                    Your browser does not support the video tag.
-                </video>
-            </div>
-            <div class="value-content">
-                <h2 class="section-title">Join the <span class="word-glow">Revolution</span></h2>
-                <p class="value-text">
-                    Whether you are a visionary founder building the next unicorn or a top-tier talent looking for your dream role, DeRadar is your ecosystem. Connect, build, and scale with the best in Web3.
+            <div class="container hero-container">
+                <h1 class="hero-title">
+                    Scale Your Brand with <br>
+                    <span class="glitch-text" data-text="ai videos">ai videos</span>
+                </h1>
+                <p class="hero-description">
+                    <span class="highlight-glow"><span class="text-highlight">Create viral content instantly.</span></span> We build hyper-realistic AI videos, automated faceless channels, and cinematic ads for founders, creators, and Web2/Web3 brands.
                 </p>
-                
-                <div class="value-buttons">
-                    <button id="btn-founder" class="btn btn-xl">Contact Us</button>
+                <div class="hero-buttons">
+                    <a href="#categories" class="btn btn-glow" style="font-size: 1.2rem; font-weight: 700;">Check our services</a>
+                    <a href="#work-with-us" class="btn btn-white-glow" style="font-size: 1.2rem; font-weight: 700;">Explore our courses</a>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Modal Overlay -->
+            <div class="brands-section" style="position: relative; z-index: 3; margin-top: 0;">
+                <div class="brands-label">POWERING CONTENT FOR WEB2 & WEB3 BRANDS</div>
+                <div class="logo-carousel">
+                    <div class="logo-track">
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/ethereum/white" alt="Ethereum"></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/solana/white" alt="Solana"></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/binance/white" alt="Binance"></div>
+                        <div class="logo-item"><img src="https://i.postimg.cc/MGv9jHH9/Coinbase-Symbol.png" alt="Coinbase"></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/chainlink/white" alt="Chainlink"></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/polygon/white" alt="Polygon"></div>
+                        <div class="logo-item"><img src="https://i.postimg.cc/prDGXSrV/uniswap-uni-logo.png" alt="Uniswap"></div>
+                        <div class="logo-item"><img src="https://i.postimg.cc/zGPj5N7x/Aave-Crypto-Logo.png" alt="Aave"></div>
+                        
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/ethereum/white" alt="Ethereum"></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/solana/white" alt="Solana"></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/binance/white" alt="Binance"></div>
+                        <div class="logo-item"><img src="https://i.postimg.cc/MGv9jHH9/Coinbase-Symbol.png" alt="Coinbase"></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/chainlink/white" alt="Chainlink"></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/polygon/white" alt="Polygon"></div>
+                        <div class="logo-item"><img src="https://i.postimg.cc/prDGXSrV/uniswap-uni-logo.png" alt="Uniswap"></div>
+                        <div class="logo-item"><img src="https://i.postimg.cc/zGPj5N7x/Aave-Crypto-Logo.png" alt="Aave"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-separator"></div>
+
+        <!-- AI Video Categories Section -->
+        <section class="services section" id="categories">
+            <div class="services-scroll-track">
+                <div class="services-sticky-container">
+                    <div class="container">
+                        <div class="section-header">
+                            <h2 class="section-title">Our AI Video Services</h2>
+                            <p class="section-subtitle">High-converting content creation for brands, founders, and creators</p>
+                        </div>
+                        
+                        <div class="services-stack">
+                            <div class="service-card featured-pack scroll-card">
+                                <div class="service-icon"><i class="fas fa-play-circle"></i></div>
+                                <span class="badge-best-seller" style="background: var(--primary-blue); color: #fff; box-shadow: 0 4px 15px rgba(86, 188, 175, 0.4);">Top Choice</span>
+                                <h3 class="service-title">Full branding pack</h3>
+                                <p class="service-description">Complete brand kit and content automation: Visuals, videos & assets.</p>
+                                <ul class="pack-features">
+                                    <li><i class="fas fa-check"></i> Logo & Banner Design</li>
+                                    <li><i class="fas fa-check"></i> 50 Pack Videos</li>
+                                    <li><i class="fas fa-check"></i> Custom Thumbnails</li>
+                                    <li><i class="fas fa-check"></i> Emotes & Stickers</li>
+                                    <li><i class="fas fa-check"></i> 24/7 Support</li>
+                                </ul>
+                                <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20the%20Full%20branding%20pack" class="btn-want-this" target="_blank">WANT THIS</a>
+                            </div>
+
+                            <div class="service-card scroll-card">
+                                <span class="badge-best-seller">Best Seller</span>
+                                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+                                <h3 class="service-title">Viral AI Shorts</h3>
+                                <p class="service-description">Automated short-form content tailored for storytelling, fruit facts, and story channels.</p>
+                                <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20Viral%20AI%20Shorts" class="btn-want-this" target="_blank">WANT THIS</a>
+                            </div>
+
+                            <div class="service-card scroll-card">
+                                <span class="badge-best-seller">Best Seller</span>
+                                <div class="service-icon"><i class="fas fa-laptop"></i></div>
+                                <h3 class="service-title">SaaS / Product Presentation</h3>
+                                <p class="service-description">Showcase your platform with high-quality AI video presentations, dynamic screencasts, and professional voiceovers.</p>
+                                <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20SaaS%20%2F%20Product%20Presentation" class="btn-want-this" target="_blank">WANT THIS</a>
+                            </div>
+
+                            <div class="service-card scroll-card">
+                                <span class="badge-best-seller">Best Seller</span>
+                                <div class="service-icon"><i class="fas fa-user-ninja"></i></div>
+                                <h3 class="service-title">Custom Anime Content</h3>
+                                <p class="service-description">Create your own animes, characters, and chapters. The all-in-one solution for Anime lovers.</p>
+                                <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20Custom%20Anime%20Content" class="btn-want-this" target="_blank">WANT THIS</a>
+                            </div>
+
+                            <div class="service-card scroll-card">
+                                <span class="badge-best-seller">Best Seller</span>
+                                <div class="service-icon"><i class="fas fa-video"></i></div>
+                                <h3 class="service-title">Cinematic Ad Creatives</h3>
+                                <p class="service-description">High-converting AI-generated video ads tailored for Meta, Twitter, and Web3 audiences.</p>
+                                <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20Cinematic%20Ad%20Creatives" class="btn-want-this" target="_blank">WANT THIS</a>
+                            </div>
+
+                            <div class="service-card scroll-card">
+                                <span class="badge-best-seller">Best Seller</span>
+                                <div class="service-icon"><i class="fas fa-shapes"></i></div>
+                                <h3 class="service-title">Web3 Explainers</h3>
+                                <p class="service-description">Simplify your dApp or tokenomics with engaging, easy-to-understand animated videos.</p>
+                                <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20Web3%20Explainers" class="btn-want-this" target="_blank">WANT THIS</a>
+                            </div>
+
+                            <div class="service-card scroll-card">
+                                <span class="badge-best-seller">Best Seller</span>
+                                <div class="service-icon"><i class="fas fa-laugh-squint"></i></div>
+                                <h3 class="service-title">Memes for Web3 & Memecoins</h3>
+                                <p class="service-description">Custom, highly-engaging meme content designed specifically for Web3 brands, crypto projects, and memecoins.</p>
+                                <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20Memes%20for%20Web3" class="btn-want-this" target="_blank">WANT THIS</a>
+                            </div>
+
+                            <div class="service-card scroll-card">
+                                <span class="badge-best-seller">Best Seller</span>
+                                <div class="service-icon"><i class="fas fa-magic"></i></div>
+                                <h3 class="service-title">Pixar & Animated Style</h3>
+                                <p class="service-description">High-quality, Pixar-style 3D animated content perfect for storytelling, brand mascots, and projects.</p>
+                                <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20Pixar%20%26%20Animated%20Style" class="btn-want-this" target="_blank">WANT THIS</a>
+                            </div>
+
+                            <div class="service-card scroll-card">
+                                <div class="service-icon"><i class="fas fa-star"></i></div>
+                                <h3 class="service-title">UGC Influencer Content</h3>
+                                <p class="service-description">Authentic, AI-generated User Generated Content that feels human, builds trust, and converts like crazy for ads.</p>
+                                <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20UGC%20Influencer%20Content" class="btn-want-this" target="_blank">WANT THIS</a>
+                            </div>
+
+                            <div class="service-card scroll-card">
+                                <div class="service-icon"><i class="fas fa-cube"></i></div>
+                                <h3 class="service-title">3D & Motion Promos</h3>
+                                <p class="service-description">Showcase your SaaS or protocol with stunning AI-assisted 3D animations and motion graphics.</p>
+                                <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%203D%20%26%20Motion%20Promos" class="btn-want-this" target="_blank">WANT THIS</a>
+                            </div>
+
+                            <div class="service-card scroll-card">
+                                <div class="service-icon"><i class="fas fa-music"></i></div>
+                                <h3 class="service-title">AI Music & Trailers</h3>
+                                <p class="service-description">Custom AI-generated cinematic sequences synced perfectly to audio for your drops.</p>
+                                <a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20AI%20Music%20%26%20Trailers" class="btn-want-this" target="_blank">WANT THIS</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-separator"></div>
+
+        <!-- Join Era Section -->
+        <section class="value section" id="talent">
+            <div class="container value-container">
+                <div class="value-image">
+                    <video class="floating-img" autoplay loop muted playsinline>
+                        <source src="footer.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="value-content">
+                    <h2 class="section-title">Join the <span class="word-glow">Content Era</span></h2>
+                    <p class="value-text">
+                        Whether you are a Web3 visionary, a Web2 brand, or a solo creator, DeRadar is your AI video powerhouse. Stand out, go viral, and scale your audience faster than ever without studio costs.
+                    </p>
+                    <div class="value-buttons">
+                        <button id="btn-founder" class="btn btn-xl">Start Creating</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="section-separator"></div>
+
+        <!-- Work With Us Section -->
+        <section class="work-with-us section" id="work-with-us" style="text-align: center; position: relative; overflow: hidden; padding: 8rem 0; background: linear-gradient(180deg, var(--bg-color) 0%, #050a0a 100%);">
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1000px; height: 1000px; background: radial-gradient(circle, rgba(86, 188, 175, 0.06) 0%, transparent 60%); z-index: 0; pointer-events: none;"></div>
+            <div class="container" style="position: relative; z-index: 1; max-width: 800px;">
+                <h2 class="section-title" style="font-size: 3.5rem; margin-bottom: 1.25rem; letter-spacing: -1px;">Join Our <span class="word-glow">Creator Roster</span></h2>
+                <p style="font-size: 1.15rem; color: #aaa; margin-bottom: 3rem; line-height: 1.7;">
+                    Are you a talented AI video creator, prompt engineer, or animator? We are constantly looking for elite talent to build hyper-realistic and high-converting content for top Web2 and Web3 brands.
+                    <br><br>
+                    <span style="color: var(--white); font-weight: 500;">Want to learn? We offer free training to help you master the skill. If you already have a basic foundation, joining our team will be a breeze!</span>
+                </p>
+                <div class="hero-buttons" style="margin-bottom: 0;">
+                    <a href="https://t.me/deradar" target="_blank" class="btn btn-glow" style="font-size: 1.2rem; font-weight: 700; padding: 1rem 3.5rem; text-decoration: none;">Join our Telegram Channel</a>
+                </div>
+            </div>
+        </section>
+    </div> <!-- END HOME VIEW -->
+
+    <!-- ==============================================
+         REWARDS VIEW (SPA Page)
+         ============================================== -->
+    <main id="rewards-page">
+        <!-- Register View (Shown if not registered) -->
+        <div id="rewards-register-view" class="register-container">
+            <div style="text-align: center; margin-bottom: 2rem;">
+                <div style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 1rem; text-shadow: 0 0 20px rgba(86,188,175,0.4);">
+                    <i class="fas fa-id-card"></i>
+                </div>
+                <h3 class="modal-title" style="margin-bottom: 0.5rem; font-size: 2rem;">Join Rewards</h3>
+                <p style="color: #aaa; font-size: 0.95rem;">Register once to access Raids and earn surprise rewards in the future.</p>
+            </div>
+            
+            <form id="form-rewards-register" class="modal-form">
+                <div class="form-group">
+                    <label>Telegram Username</label>
+                    <input type="text" id="reg-telegram" required placeholder="@username">
+                </div>
+                <div class="form-group">
+                    <label>Solana Wallet Address</label>
+                    <input type="text" id="reg-solana" required placeholder="Enter your SPL address">
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; padding: 1rem; font-weight: 700; letter-spacing: 1px;">
+                    ENTER DASHBOARD
+                </button>
+            </form>
+        </div>
+
+        <!-- Dashboard View (Shown if registered) -->
+        <div id="rewards-dashboard-view" class="rewards-dashboard-container" style="display: none;">
+            <!-- Header -->
+            <div class="dashboard-header">
+                <div>
+                    <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 0; text-align: left;">Raids Center</h2>
+                    <p style="color: #888; font-size: 1.1rem; margin-top: 0.5rem;">Complete tasks. Earn surprise rewards.</p>
+                </div>
+                <div class="points-pill">
+                    <i class="fas fa-star"></i> <span id="user-points-display">0</span> Pts
+                </div>
+            </div>
+
+            <!-- Active Raids List -->
+            <div>
+                <h4 style="color: white; margin-bottom: 2rem; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
+                    <i class="fas fa-crosshairs" style="color: var(--primary-blue);"></i> Active Raids
+                </h4>
+                
+                <!-- Raid Task 1 -->
+                <div class="raid-item" id="raid-1">
+                    <div class="raid-header" onclick="toggleRaid('raid-1')">
+                        <div>
+                            <span class="raid-tag">Engagement Task</span>
+                            <h3 class="raid-title">Like & Reply to Support</h3>
+                        </div>
+                        <div class="raid-points">+50 Pts</div>
+                    </div>
+                    <div class="raid-body" id="raid-1-body">
+                        <div style="padding-top: 1rem;">
+                            <!-- Tweet Preview -->
+                            <div style="background: #000; border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem;">
+                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                    <div style="width: 48px; height: 48px; border-radius: 50%; background: #222; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+                                        <i class="fas fa-video" style="color: var(--primary-blue);"></i>
+                                    </div>
+                                    <div>
+                                        <div style="color: white; font-weight: 700; font-size: 1rem;">DeRadar AI <i class="fas fa-check-circle" style="color: var(--primary-blue); font-size: 0.85rem; margin-left: 4px;"></i></div>
+                                        <div style="color: #666; font-size: 0.9rem;">@deRadar_</div>
+                                    </div>
+                                    <div style="margin-left: auto; color: #444;"><i class="fab fa-twitter"></i></div>
+                                </div>
+                                <p style="color: #e1e1e1; font-size: 1.05rem; line-height: 1.5; margin-bottom: 1rem;">
+                                    Balloonmorphism with a new look
+                                </p>
+                                <div style="color: #555; font-size: 0.85rem; display: flex; gap: 1.5rem;">
+                                    <span><i class="far fa-comment"></i> 142</span>
+                                    <span><i class="fas fa-retweet"></i> 56</span>
+                                    <span><i class="far fa-heart"></i> 389</span>
+                                </div>
+                            </div>
+
+                            <!-- Actions -->
+                            <div id="raid-1-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <a href="https://x.com/deRadar_" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #ccc;" onclick="startRaid('raid-1')">
+                                    <i class="fas fa-external-link-alt" style="margin-right: 0.5rem;"></i> 1. Go to Post
+                                </a>
+                            </div>
+
+                            <!-- Verify Buttons -->
+                            <div id="raid-1-verify" style="display: none; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                                <button class="btn btn-outline" id="raid-1-like" onclick="verifyTask('raid-1', 'like')" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #fff;">Confirm Like</button>
+                                <button class="btn btn-outline" id="raid-1-reply" onclick="verifyTask('raid-1', 'reply')" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #fff;">Confirm Reply</button>
+                            </div>
+
+                            <!-- Claim Button -->
+                            <div id="raid-1-claim" style="display: none; margin-top: 1rem;">
+                                <button class="btn btn-primary" id="btn-claim-raid-1" style="width: 100%; text-align: center;" onclick="claimRaid('raid-1', 50)">
+                                    <i class="fas fa-bolt" style="margin-right: 0.5rem;"></i> Claim 50 Pts
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Raid Task 2 -->
+                <div class="raid-item" id="raid-2">
+                    <div class="raid-header" onclick="toggleRaid('raid-2')">
+                        <div>
+                            <span class="raid-tag">Social Task</span>
+                            <h3 class="raid-title">Follow @deRadar_</h3>
+                        </div>
+                        <div class="raid-points">+30 Pts</div>
+                    </div>
+                    <div class="raid-body" id="raid-2-body">
+                        <div style="padding-top: 1rem;">
+                            <p style="color: #999; font-size: 0.95rem; margin-bottom: 1.5rem;">Follow our official X (Twitter) account to stay updated with the latest AI video news and platform updates.</p>
+                            
+                            <div id="raid-2-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <a href="https://x.com/deRadar_" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #ccc;" onclick="startRaid('raid-2')">
+                                    <i class="fab fa-twitter" style="margin-right: 0.5rem;"></i> 1. Follow Account
+                                </a>
+                            </div>
+
+                            <div id="raid-2-verify" style="display: none; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                                <button class="btn btn-outline" id="raid-2-follow" onclick="verifyTask('raid-2', 'follow')" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #fff;">Confirm Follow</button>
+                            </div>
+
+                            <div id="raid-2-claim" style="display: none; margin-top: 1rem;">
+                                <button class="btn btn-primary" id="btn-claim-raid-2" style="width: 100%; text-align: center;" onclick="claimRaid('raid-2', 30)">
+                                    <i class="fas fa-bolt" style="margin-right: 0.5rem;"></i> Claim 30 Pts
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Raid Task 3 -->
+                <div class="raid-item" id="raid-3">
+                    <div class="raid-header" onclick="toggleRaid('raid-3')">
+                        <div>
+                            <span class="raid-tag">Community Task</span>
+                            <h3 class="raid-title">Join our Telegram</h3>
+                        </div>
+                        <div class="raid-points">+40 Pts</div>
+                    </div>
+                    <div class="raid-body" id="raid-3-body">
+                        <div style="padding-top: 1rem;">
+                            <p style="color: #999; font-size: 0.95rem; margin-bottom: 1.5rem;">Join our Telegram creator network. You will be able to find daily gigs and coordinate projects securely.</p>
+
+                            <div id="raid-3-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <a href="https://t.me/deradar" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #ccc;" onclick="startRaid('raid-3')">
+                                    <i class="fab fa-telegram-plane" style="margin-right: 0.5rem;"></i> 1. Join Group
+                                </a>
+                            </div>
+
+                            <div id="raid-3-verify" style="display: none; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                                <button class="btn btn-outline" id="raid-3-join" onclick="verifyTask('raid-3', 'join')" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #fff;">Confirm Join</button>
+                            </div>
+
+                            <div id="raid-3-claim" style="display: none; margin-top: 1rem;">
+                                <button class="btn btn-primary" id="btn-claim-raid-3" style="width: 100%; text-align: center;" onclick="claimRaid('raid-3', 40)">
+                                    <i class="fas fa-bolt" style="margin-right: 0.5rem;"></i> Claim 40 Pts
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Modals Overlay -->
     <div id="modal-overlay" class="modal-overlay">
         <!-- Founder Modal -->
         <div id="modal-founder" class="modal-content modal-lg">
             <span class="modal-close" id="close-founder">&times;</span>
             <div class="modal-header-minimal">
-                <h3 class="modal-title">Project Application</h3>
+                <h3 class="modal-title">Video Project Application</h3>
                 <div class="wizard-progress">
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" id="progress-bar-founder"></div>
-                    </div>
+                    <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-bar-founder"></div></div>
                     <div class="steps-count">Step <span id="current-step-num-founder">1</span> of 5</div>
                 </div>
             </div>
-            
             <form id="form-founder" class="modal-form scrollable-form">
-                <!-- Step 1: Contact Info -->
                 <div class="wizard-step-founder active" data-step="1">
                     <div class="form-section minimal-section">
                         <h4>Contact</h4>
-                        <p class="section-desc">Provide your core contact details.</p>
-                        
                         <div class="form-grid">
-                            <div class="form-group">
-                                <label for="founder-telegram">Telegram Username *</label>
-                                <input type="text" id="founder-telegram" placeholder="@username" required>
-                                <small style="color: #666; font-size: 0.75rem; margin-top: 4px;">Best contact for fast coordination</small>
-                            </div>
-                            <div class="form-group">
-                                <label for="founder-twitter">Project Twitter Handle *</label>
-                                <input type="text" id="founder-twitter" placeholder="@ProjectHandle" required>
-                                <small style="color: #666; font-size: 0.75rem; margin-top: 4px;">Official project X account</small>
-                            </div>
-                        </div>
-                        
-                        <div class="form-group" style="margin-top: 1rem;">
-                            <label for="founder-email">Email (optional)</label>
-                            <input type="email" id="founder-email" placeholder="you@example.com">
-                            <small style="color: #666; font-size: 0.75rem; margin-top: 4px;">Backup contact email</small>
+                            <div class="form-group"><label>Telegram Username *</label><input type="text" id="founder-telegram" required></div>
+                            <div class="form-group"><label>Brand/Project Twitter *</label><input type="text" id="founder-twitter" required></div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Step 2: Project Details -->
                 <div class="wizard-step-founder" data-step="2">
                     <div class="form-section minimal-section">
-                        <h4>Project</h4>
-                        <p class="section-desc">Tell us about what you're building.</p>
-                        
+                        <h4>Brand / Project</h4>
                         <div class="form-grid">
-                            <div class="form-group">
-                                <label for="founder-project-name">Project Name *</label>
-                                <input type="text" id="founder-project-name" placeholder="Enter your project name" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="founder-website">Website (optional)</label>
-                                <input type="url" id="founder-website" placeholder="https://yourproject.xyz">
-                            </div>
-                        </div>
-
-                        <div class="form-group" style="margin-top: 1rem;">
-                            <label for="founder-category">Category *</label>
-                            <select id="founder-category" required>
-                                <option value="" disabled selected>Select your project category</option>
-                                <option value="DeFi">DeFi</option>
-                                <option value="Infrastructure">Infrastructure</option>
-                                <option value="AI x Crypto">AI x Crypto</option>
-                                <option value="Gaming">Gaming</option>
-                                <option value="NFTs">NFTs</option>
-                                <option value="RWA">RWA</option>
-                                <option value="L1 / L2">L1 / L2</option>
-                                <option value="SocialFi">SocialFi</option>
-                                <option value="Tools">Tools</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group" style="margin-top: 1rem;">
-                            <label for="founder-description">What are you building? *</label>
-                            <textarea id="founder-description" rows="4" placeholder="Briefly explain your product, target users, and current stage. Include links if relevant." required></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 3: Services Needed -->
-                <div class="wizard-step-founder" data-step="3">
-                    <div class="form-section minimal-section">
-                        <h4>Services Needed</h4>
-                        <p class="section-desc">What do you need from DeRadar *</p>
-                        <div class="checkbox-grid">
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Content"> Content</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Creators"> Creators</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Community"> Community</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Strategy"> Strategy</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Design"> Design</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Other"> Other</label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 4: Budget & Outcome -->
-                <div class="wizard-step-founder" data-step="4">
-                    <div class="form-section minimal-section">
-                        <h4>Budget & Outcome</h4>
-                        <p class="section-desc">Help us tailor the right strategy.</p>
-                        
-                        <div class="form-group">
-                            <label for="founder-budget">Campaign Budget (USD) *</label>
-                            <select id="founder-budget" required>
-                                <option value="" disabled selected>Select budget range</option>
-                                <option value="Under $1,000">Under $1,000</option>
-                                <option value="$1,000 – $3,000">$1,000 – $3,000</option>
-                                <option value="$3,000 – $10,000">$3,000 – $10,000</option>
-                                <option value="$10,000 – $25,000">$10,000 – $25,000</option>
-                                <option value="$25,000+">$25,000+</option>
-                                <option value="Flexible">Flexible</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group" style="margin-top: 1rem;">
-                            <label for="founder-outcome">Expected Outcome *</label>
-                            <select id="founder-outcome" required>
-                                <option value="" disabled selected>Select expected outcome</option>
-                                <option value="Brand Awareness">Brand Awareness</option>
-                                <option value="User Acquisition">User Acquisition</option>
-                                <option value="Community Growth">Community Growth</option>
-                                <option value="Token / TGE Promotion">Token / TGE Promotion</option>
-                                <option value="Product Launch">Product Launch</option>
-                                <option value="Long-term Presence">Long-term Presence</option>
-                                <option value="Not sure yet">Not sure yet</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 5: Timeline & Urgency -->
-                <div class="wizard-step-founder" data-step="5">
-                    <div class="form-section minimal-section">
-                        <h4>Timeline & Urgency</h4>
-                        <p class="section-desc">Help us prioritize your request.</p>
-                        
-                        <div class="form-group">
-                            <label for="founder-timeline">Timeline *</label>
-                            <select id="founder-timeline" required>
-                                <option value="" disabled selected>Select timeline</option>
-                                <option value="ASAP">ASAP</option>
-                                <option value="Within 2 weeks">Within 2 weeks</option>
-                                <option value="Within 1 month">Within 1 month</option>
-                                <option value="1–3 months">1–3 months</option>
-                                <option value="Flexible">Flexible</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group" style="margin-top: 1.5rem;">
-                            <label>Campaign Urgency *</label>
-                            <div class="radio-list" style="display: flex; flex-direction: column; gap: 0.75rem; margin-top: 0.5rem;">
-                                <label class="checkbox-item" style="justify-content: flex-start;">
-                                    <input type="radio" name="urgency" value="High" required> 
-                                    <span>🔴 High — need to start immediately</span>
-                                </label>
-                                <label class="checkbox-item" style="justify-content: flex-start;">
-                                    <input type="radio" name="urgency" value="Medium"> 
-                                    <span>🟡 Medium — planning soon</span>
-                                </label>
-                                <label class="checkbox-item" style="justify-content: flex-start;">
-                                    <input type="radio" name="urgency" value="Low"> 
-                                    <span>🔵 Low — just exploring</span>
-                                </label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Wizard Navigation -->
-                <div class="wizard-navigation">
-                    <button type="button" class="btn btn-outline nav-btn" id="prevBtnFounder" style="display:none;">Back</button>
-                    <button type="button" class="btn btn-primary nav-btn" id="nextBtnFounder">Next</button>
-                    <button type="submit" class="btn btn-primary nav-btn" id="submitBtnFounder" style="display:none;">Submit Application</button>
-                </div>
-            </form>
-        </div>
-
-        <!-- Worker Modal -->
-        <div id="modal-worker" class="modal-content modal-lg">
-            <span class="modal-close">&times;</span>
-            <div class="modal-header-minimal">
-                <h3 class="modal-title">Talent Application</h3>
-                <div class="wizard-progress">
-                    <div class="progress-bar-bg">
-                        <div class="progress-bar-fill" id="progress-bar"></div>
-                    </div>
-                    <div class="steps-count">Step <span id="current-step-num">1</span> of 5</div>
-                </div>
-            </div>
-            
-            <form id="form-worker" class="modal-form scrollable-form">
-                <!-- Step 1: Profile Details -->
-                <div class="wizard-step active" data-step="1">
-                    <div class="form-section minimal-section">
-                        <h4>Profile Details</h4>
-                        <p class="section-desc">Provide your core information.</p>
-                        
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="worker-twitter">X (Twitter) Handle</label>
-                                <input type="text" id="worker-twitter" placeholder="@username" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="worker-telegram">Telegram Username</label>
-                                <input type="text" id="worker-telegram" placeholder="@username" required>
-                            </div>
-                        </div>
-                        
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="worker-email">Email (optional)</label>
-                                <input type="email" id="worker-email" placeholder="you@example.com">
-                            </div>
-                            <div class="form-group">
-                                <label for="worker-region">Region</label>
-                                <select id="worker-region" required>
-                                    <option value="" disabled selected>Select Region</option>
-                                    <option value="North America">North America</option>
-                                    <option value="South America">South America</option>
-                                    <option value="Europe">Europe</option>
-                                    <option value="Asia">Asia</option>
-                                    <option value="Africa">Africa</option>
-                                    <option value="Oceania">Oceania</option>
-                                    <option value="Remote/Global">Remote / Global</option>
+                            <div class="form-group"><label>Brand Name *</label><input type="text" id="founder-project-name" required></div>
+                            <div class="form-group"><label>Category *</label>
+                                <select id="founder-category" required>
+                                    <option value="" disabled selected>Select category</option>
+                                    <option value="Web3 / Crypto">Web3 / Crypto</option>
+                                    <option value="Web2 SaaS">Web2 SaaS</option>
+                                    <option value="Creator">Creator</option>
                                 </select>
                             </div>
                         </div>
+                        <div class="form-group" style="margin-top: 1rem;"><label>Vision *</label><textarea id="founder-description" rows="4" required></textarea></div>
                     </div>
                 </div>
-
-                <!-- Step 2: Primary Niches -->
-                <div class="wizard-step" data-step="2">
+                <div class="wizard-step-founder" data-step="3">
                     <div class="form-section minimal-section">
-                        <h4>Primary Niches *</h4>
-                        <p class="section-desc">Select your strongest areas.</p>
+                        <h4>AI Video Services</h4>
                         <div class="checkbox-grid">
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="DeFi"> DeFi</label>
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="Trading"> Trading</label>
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="Infrastructure"> Infrastructure</label>
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="AI x Crypto"> AI x Crypto</label>
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="Gaming"> Gaming</label>
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="NFTs"> NFTs</label>
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="RWA"> RWA</label>
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="Security"> Security</label>
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="SocialFi"> SocialFi</label>
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="Dexes"> Dexes</label>
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="Play2earn"> Play2earn</label>
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="Yield Farming"> Yield Farming</label>
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="Lending"> Lending</label>
-                            <label class="checkbox-item"><input type="checkbox" name="niche" value="Other"> Other</label>
+                            <label class="checkbox-item"><input type="checkbox" name="service" value="AI Shorts/Reels"> AI Shorts</label>
+                            <label class="checkbox-item"><input type="checkbox" name="service" value="Full branding pack"> Full branding pack</label>
                         </div>
                     </div>
                 </div>
-
-                <!-- Step 3: Performance Snapshot -->
-                <div class="wizard-step" data-step="3">
+                <div class="wizard-step-founder" data-step="4">
                     <div class="form-section minimal-section">
-                        <h4>Performance Snapshot</h4>
-                        <p class="section-desc">Help us understand your real performance metrics.</p>
-                        <div class="form-group">
-                            <label for="worker-best-post">Best Performing Post (link)</label>
-                            <input type="url" id="worker-best-post" placeholder="https://x.com/..." required>
-                        </div>
-                        <div class="form-grid">
-                            <div class="form-group">
-                                <label for="worker-impressions">Avg Impressions per Post *</label>
-                                <input type="text" id="worker-impressions" placeholder="e.g. 5k - 10k" required>
-                            </div>
-                            <div class="form-group">
-                                <label for="worker-engagement">Engagement Rate (optional)</label>
-                                <input type="text" id="worker-engagement" placeholder="e.g. 3.5%">
+                        <h4>Budget & Outcome</h4>
+                        <div class="form-group"><label>Campaign Budget (USD) *</label><select id="founder-budget" required><option value="Flexible">Flexible</option></select></div>
+                        <div class="form-group"><label>Expected Outcome *</label><select id="founder-outcome" required><option value="Brand Awareness">Brand Awareness</option></select></div>
+                    </div>
+                </div>
+                <div class="wizard-step-founder" data-step="5">
+                    <div class="form-section minimal-section">
+                        <h4>Timeline & Urgency</h4>
+                        <div class="form-group"><label>Timeline *</label><select id="founder-timeline" required><option value="ASAP">ASAP</option></select></div>
+                        <div class="form-group" style="margin-top: 1.5rem;"><label>Production Urgency *</label>
+                            <div class="radio-list">
+                                <label class="checkbox-item"><input type="radio" name="urgency" value="High" required> <span>🔴 High</span></label>
                             </div>
                         </div>
-                        <div class="form-group">
-                            <label for="worker-screenshot">Performance Screenshot (link)</label>
-                            <input type="url" id="worker-screenshot" placeholder="Link to screenshot (Imgur/Drive) - Recommended">
-                        </div>
                     </div>
                 </div>
-
-                <!-- Step 4: Collaboration & Contribution -->
-                <div class="wizard-step" data-step="4">
-                    <div class="form-section minimal-section">
-                        <h4>Collaboration & Contribution</h4>
-                        <p class="section-desc">How do you prefer to work?</p>
-                        
-                        <div class="form-group" style="margin-bottom: 1.5rem;">
-                            <label for="worker-collab">Collaboration Preference</label>
-                            <select id="worker-collab" required>
-                                <option value="" disabled selected>Select Preference</option>
-                                <option value="Paid">Paid</option>
-                                <option value="Performance-based">Performance-based</option>
-                                <option value="Long-term">Long-term</option>
-                                <option value="Case by case">Case by case</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="worker-contribution">Your Contribution (optional)</label>
-                            <textarea id="worker-contribution" rows="4" placeholder="How can you contribute to our ecosystem? Share your skills, experience, or unique value."></textarea>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Step 5: Required Actions -->
-                <div class="wizard-step" data-step="5">
-                    <div class="form-section actions-section minimal-section">
-                        <h4>Required Actions</h4>
-                        <p class="section-desc">Complete all actions below to submit your application.</p>
-                        <div class="actions-list">
-                            <label class="action-item">
-                                <input type="checkbox" required> 
-                                <span>Like our <a href="https://x.com/deRadar_" target="_blank" class="action-link">tweet</a></span>
-                            </label>
-                            <label class="action-item">
-                                <input type="checkbox" required> 
-                                <span>Reply to our <a href="https://x.com/deRadar_" target="_blank" class="action-link">tweet</a></span>
-                            </label>
-                            <label class="action-item">
-                                <input type="checkbox" required> 
-                                <span>Follow <a href="https://x.com/deRadar_" target="_blank" class="action-link">@DeRadar_</a></span>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Wizard Navigation -->
                 <div class="wizard-navigation">
-                    <button type="button" class="btn btn-outline nav-btn" id="prevBtn" style="display:none;">Back</button>
-                    <button type="button" class="btn btn-primary nav-btn" id="nextBtn">Next</button>
-                    <button type="submit" class="btn btn-primary nav-btn" id="submitBtn" style="display:none;">Submit Application</button>
+                    <button type="button" class="btn btn-outline nav-btn" id="prevBtnFounder" style="display:none;">Back</button>
+                    <button type="button" class="btn btn-primary nav-btn" id="nextBtnFounder">Next</button>
+                    <button type="submit" class="btn btn-primary nav-btn" id="submitBtnFounder" style="display:none;">Submit Project</button>
                 </div>
             </form>
         </div>
@@ -699,41 +1358,586 @@
         </div>
     </div>
 
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer section">
         <div class="container footer-container">
             <div class="footer-brand">
                 <a href="#" class="footer-logo">DeRadar</a>
-                <p>The premier job board for the decentralized web.</p>
+                <p>The ultimate AI video powerhouse for the digital era. We turn your ideas into viral visual experiences without studio costs.</p>
                 <div class="social-links">
-                    <a href="https://x.com/deRadar_" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://x.com/deRadar_" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="https://t.me/deradar" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+                    <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
             
             <div class="footer-links">
-                <h3>For Candidates</h3>
+                <h3>Our Services</h3>
                 <ul>
-                    <li><a href="https://t.me/xswapderadar?text=I'm%20interested%20in%20Browsing%20Jobs" target="_blank">Browse Jobs</a></li>
-                    <li><a href="https://t.me/xswapderadar?text=I%20want%20to%20Upload%20Resume" target="_blank">Upload Resume</a></li>
-                    <li><a href="https://t.me/xswapderadar?text=I%20want%20to%20subscribe%20to%20Job%20Alerts" target="_blank">Job Alerts</a></li>
+                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')"><i class="fas fa-angle-right"></i> AI Shorts</a></li>
+                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')"><i class="fas fa-angle-right"></i> Faceless Channels</a></li>
+                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')"><i class="fas fa-angle-right"></i> Video Ads</a></li>
+                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')"><i class="fas fa-angle-right"></i> Custom Anime</a></li>
                 </ul>
             </div>
             
-
-            
             <div class="footer-contact" id="contacto">
-                <h3>Support</h3>
+                <h3>Support & Contact</h3>
                 <ul>
-                    <li><a href="https://t.me/deradar" target="_blank"><i class="fab fa-telegram-plane"></i> Join Telegram</a></li>
-                    <li><a href="https://t.me/xswapderadar" target="_blank"><i class="fab fa-telegram-plane"></i> Contact Team</a></li>
+                    <li><a href="https://t.me/deradar" target="_blank"><i class="fab fa-telegram-plane"></i> Join Community</a></li>
+                    <li><a href="https://t.me/xswapderadar" target="_blank"><i class="fas fa-headset"></i> Contact Team</a></li>
+                    <li><a href="mailto:hello@deradar.ai"><i class="fas fa-envelope"></i> hello@deradar.ai</a></li>
                 </ul>
             </div>
         </div>
-        <div class="footer-bottom container">
-            <p>&copy; 2024 DeRadar. All rights reserved.</p>
+        
+        <div class="footer-bottom">
+            <div class="container footer-bottom-content">
+                <p>&copy; 2024 DeRadar. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script>
+        /* Loader & Base UI */
+        document.addEventListener('DOMContentLoaded', () => {
+            const loader = document.getElementById('app-loader');
+            setTimeout(() => {
+                if (loader) {
+                    loader.style.opacity = '0';
+                    loader.style.visibility = 'hidden';
+                    document.body.classList.add('loaded');
+                }
+            }, 1800);
+            
+            // Check active page on load
+            if(window.location.hash === '#rewards') {
+                showRewardsPage();
+            } else {
+                showHomePage();
+            }
+        });
+
+        /* --- SPA ROUTING LOGIC --- */
+        const homeView = document.getElementById('home-view');
+        const rewardsView = document.getElementById('rewards-page');
+        const navMenu = document.getElementById('nav-menu');
+        const navToggle = document.getElementById('nav-toggle');
+        const navClose = document.getElementById('nav-close');
+
+        function showHomePage() {
+            homeView.style.display = 'block';
+            rewardsView.style.display = 'none';
+        }
+
+        function showRewardsPage() {
+            homeView.style.display = 'none';
+            rewardsView.style.display = 'block';
+            checkRewardsAuth();
+        }
+
+        window.goToHome = function(e) {
+            if(e) e.preventDefault();
+            window.location.hash = '';
+            showHomePage();
+            window.scrollTo(0, 0);
+            if(navMenu.classList.contains('show-menu')) navMenu.classList.remove('show-menu');
+        };
+
+        window.goToHomeAndScroll = function(e, sectionId) {
+            if(e) e.preventDefault();
+            window.location.hash = '';
+            showHomePage();
+            if(navMenu.classList.contains('show-menu')) navMenu.classList.remove('show-menu');
+            setTimeout(() => {
+                const target = document.getElementById(sectionId);
+                if (target) {
+                    const y = target.getBoundingClientRect().top + window.pageYOffset - 80;
+                    window.scrollTo({top: y, behavior: 'smooth'});
+                }
+            }, 50);
+        };
+
+        window.goToRewards = function(e) {
+            if(e) e.preventDefault();
+            window.location.hash = '#rewards';
+            showRewardsPage();
+            window.scrollTo(0, 0);
+            if(navMenu.classList.contains('show-menu')) navMenu.classList.remove('show-menu');
+        };
+
+        /* Menu Handling */
+        if(navToggle){ navToggle.addEventListener('click', () => navMenu.classList.toggle('show-menu')) }
+        if(navClose){ navClose.addEventListener('click', () => navMenu.classList.remove('show-menu')) }
+
+        function scrollHeader(){
+            const nav = document.querySelector('.navbar')
+            if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+        }
+        window.addEventListener('scroll', scrollHeader)
+
+        const sections = document.querySelectorAll('section[id]')
+        function scrollActive(){
+            if(homeView.style.display === 'none') return; // Don't run active scroll logic if hidden
+
+            const scrollY = window.pageYOffset
+            sections.forEach(current =>{
+                const sectionHeight = current.offsetHeight
+                const sectionTop = current.offsetTop - 100;
+                const sectionId = current.getAttribute('id')
+                const navL = document.querySelector('.nav-menu a[onclick*="' + sectionId + '"]');
+                if(navL) {
+                    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) navL.classList.add('active-link');
+                    else navL.classList.remove('active-link');
+                }
+            })
+        }
+        window.addEventListener('scroll', scrollActive)
+
+        /* General UI Effects */
+        const glitchText = document.querySelector('.glitch-text');
+        if (glitchText) {
+            const words = ["ai videos", "faceless channels", "viral shorts", "cinematic ads"];
+            let wordIndex = 0;
+            setInterval(() => {
+                wordIndex = (wordIndex + 1) % words.length;
+                glitchText.setAttribute('data-text', words[wordIndex]);
+                glitchText.textContent = words[wordIndex];
+            }, 3000);
+        }
+
+        const playVideo = () => {
+            const videos = document.querySelectorAll('video');
+            videos.forEach(video => {
+                if (video.paused) video.play().catch(e => console.log("Video play failed:", e));
+            });
+            document.removeEventListener('click', playVideo);
+            document.removeEventListener('touchstart', playVideo);
+        };
+        document.addEventListener('click', playVideo);
+        document.addEventListener('touchstart', playVideo);
+
+        /* Services Scroll Animation */
+        const servicesTrack = document.querySelector('.services-scroll-track');
+        const serviceCards = document.querySelectorAll('.scroll-card');
+
+        if (servicesTrack && serviceCards.length > 0) {
+            const totalCards = serviceCards.length;
+            serviceCards.forEach((card, index) => {
+                if (index < totalCards - 1) {
+                    const indicator = document.createElement('div');
+                    indicator.className = 'scroll-indicator';
+                    indicator.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                    card.appendChild(indicator);
+                }
+            });
+            
+            const updateActiveCard = () => {
+                if (homeView.style.display === 'none') return;
+                const trackRect = servicesTrack.getBoundingClientRect();
+                const viewportHeight = window.innerHeight;
+                const trackHeight = servicesTrack.offsetHeight;
+                const scrollDistance = -trackRect.top;
+                const totalScrollableDistance = trackHeight - viewportHeight;
+                
+                if (totalScrollableDistance <= 0) return; 
+                let progress = scrollDistance / totalScrollableDistance;
+                progress = Math.max(0, Math.min(0.99, progress));
+                const activeIndex = Math.floor(progress * totalCards);
+                
+                serviceCards.forEach((card, index) => {
+                    if (index === activeIndex) card.classList.add('active');
+                    else card.classList.remove('active');
+                });
+            };
+            window.addEventListener('scroll', updateActiveCard);
+            window.addEventListener('resize', updateActiveCard);
+            updateActiveCard();
+        }
+
+        /* MODALS LOGIC */
+        const modalOverlay = document.getElementById('modal-overlay');
+        const btnFounder = document.getElementById('btn-founder');
+        const modalFounder = document.getElementById('modal-founder');
+        const closeButtons = document.querySelectorAll('.modal-close');
+
+        function openModal(modal) {
+            if (modalOverlay && modal) {
+                modalOverlay.classList.add('active');
+                document.querySelectorAll('.modal-content').forEach(c => c.classList.remove('active'));
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden'; 
+            }
+        }
+
+        function closeModal() {
+            if (modalOverlay) {
+                modalOverlay.classList.remove('active');
+                document.querySelectorAll('.modal-content').forEach(c => c.classList.remove('active'));
+                document.body.style.overflow = '';
+            }
+        }
+
+        closeButtons.forEach(btn => btn.addEventListener('click', closeModal));
+        if (modalOverlay) {
+            modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
+        }
+
+
+        /* ==============================================
+           REWARDS SYSTEM LOGIC
+           ============================================== */
+        
+        // Session state to track sub-tasks completion for raids
+        const raidStates = {
+            'raid-1': { required: ['like', 'reply'], completed: [] },
+            'raid-2': { required: ['follow'], completed: [] },
+            'raid-3': { required: ['join'], completed: [] }
+        };
+
+        function checkRewardsAuth() {
+            const isRegistered = localStorage.getItem('deradar_user_registered');
+            if (isRegistered === 'true') {
+                document.getElementById('rewards-register-view').style.display = 'none';
+                document.getElementById('rewards-dashboard-view').style.display = 'block';
+                updatePointsUI();
+            } else {
+                document.getElementById('rewards-register-view').style.display = 'block';
+                document.getElementById('rewards-dashboard-view').style.display = 'none';
+            }
+        }
+
+        // Carga los puntos visualmente en el dashboard y actualiza botones
+        function updatePointsUI() {
+            const pointsDisplay = document.getElementById('user-points-display');
+            if (pointsDisplay) {
+                const pts = localStorage.getItem('deradar_raid_points') || '0';
+                pointsDisplay.textContent = pts;
+            }
+            
+            // Revisa si ya reclamó los raids y oculta / muestra botones
+            const activeRaids = ['raid-1', 'raid-2', 'raid-3'];
+            activeRaids.forEach(raidId => {
+                const actionsDiv = document.getElementById(raidId + '-actions');
+                const verifyDiv = document.getElementById(raidId + '-verify');
+                const claimDiv = document.getElementById(raidId + '-claim');
+
+                if (localStorage.getItem(raidId + '_claimed') === 'true') {
+                    if(actionsDiv) actionsDiv.style.display = 'none';
+                    if(verifyDiv) verifyDiv.style.display = 'none';
+                    if(claimDiv) {
+                        claimDiv.style.display = 'block';
+                        const btnClaim = document.getElementById('btn-claim-' + raidId);
+                        if(btnClaim) {
+                            btnClaim.innerHTML = '<i class="fas fa-check-circle"></i> Claimed';
+                            btnClaim.style.background = 'rgba(86, 188, 175, 0.2)';
+                            btnClaim.style.color = 'var(--primary-blue)';
+                            btnClaim.style.pointerEvents = 'none';
+                            btnClaim.style.borderColor = 'transparent';
+                            btnClaim.style.boxShadow = 'none';
+                        }
+                    }
+                } else if (localStorage.getItem(raidId + '_started') === 'true') {
+                    // It was started but not claimed
+                    if(actionsDiv) actionsDiv.style.display = 'none';
+                    if(verifyDiv) verifyDiv.style.display = 'flex';
+                }
+            });
+        }
+
+        // Accordion functionality for Raids
+        window.toggleRaid = function(raidId) {
+            const body = document.getElementById(raidId + '-body');
+            if(body.style.display === 'none' || body.style.display === '') {
+                body.style.display = 'block';
+            } else {
+                body.style.display = 'none';
+            }
+        };
+
+        // Procesa el registro inicial (Se guarda individualmente para siempre)
+        const formRegRewards = document.getElementById('form-rewards-register');
+        if (formRegRewards) {
+            formRegRewards.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const tg = document.getElementById('reg-telegram').value;
+                const sol = document.getElementById('reg-solana').value;
+                
+                if(tg && sol) {
+                    localStorage.setItem('deradar_user_registered', 'true');
+                    localStorage.setItem('deradar_user_tg', tg);
+                    localStorage.setItem('deradar_user_sol', sol);
+                    checkRewardsAuth();
+                }
+            });
+        }
+
+        // Simula la acción de abrir X/Twitter e inicia el proceso de verificación
+        window.startRaid = function(raidId) {
+            localStorage.setItem(raidId + '_started', 'true');
+            // Timeout para dejar que se abra la otra pestaña antes de cambiar la UI
+            setTimeout(() => {
+                const actionsDiv = document.getElementById(raidId + '-actions');
+                const verifyDiv = document.getElementById(raidId + '-verify');
+                if(actionsDiv) actionsDiv.style.display = 'none';
+                if(verifyDiv) verifyDiv.style.display = 'flex';
+            }, 500);
+        };
+
+        // Verifica sub-tareas (Ej: Confirm Like, Confirm Follow)
+        window.verifyTask = function(raidId, task) {
+            const btn = document.getElementById(`${raidId}-${task}`);
+            if(!btn) return;
+            
+            // UI de carga
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verifying...';
+            btn.style.pointerEvents = 'none';
+
+            // Simular tiempo de verificación en red (1.5s)
+            setTimeout(() => {
+                btn.innerHTML = '<i class="fas fa-check-circle"></i> Confirmed';
+                btn.style.background = 'rgba(86, 188, 175, 0.2)';
+                btn.style.color = 'var(--primary-blue)';
+                btn.style.borderColor = 'transparent';
+                
+                // Track internally
+                if (!raidStates[raidId].completed.includes(task)) {
+                    raidStates[raidId].completed.push(task);
+                }
+
+                // Chequea si completo todas las sub-tareas del raid
+                if (raidStates[raidId].completed.length === raidStates[raidId].required.length) {
+                    setTimeout(() => {
+                        document.getElementById(raidId + '-verify').style.display = 'none';
+                        document.getElementById(raidId + '-claim').style.display = 'block';
+                    }, 500); // Pequeño retraso visual
+                }
+            }, 1500); 
+        };
+
+        // Finaliza y reclama puntos
+        window.claimRaid = function(raidId, points) {
+            if (localStorage.getItem(raidId + '_claimed') === 'true') return;
+
+            // Suma puntos al localStorage del usuario
+            let currentPoints = parseInt(localStorage.getItem('deradar_raid_points') || '0');
+            currentPoints += points;
+            localStorage.setItem('deradar_raid_points', currentPoints.toString());
+            localStorage.setItem(raidId + '_claimed', 'true');
+            
+            updatePointsUI();
+            
+            // Colapsa la tarjeta despues de reclamar
+            setTimeout(() => {
+                const body = document.getElementById(raidId + '-body');
+                if(body) body.style.display = 'none';
+            }, 1000);
+        };
+
+        /* --- FOUNDER WIZARD FORM --- */
+
+        let currentStepFounder = 1;
+        const totalStepsFounder = 5;
+
+        function resetWizardFounder() {
+            currentStepFounder = 1;
+            showStepFounder(currentStepFounder);
+        }
+
+        function showStepFounder(step) {
+            const steps = document.querySelectorAll('.wizard-step-founder');
+            steps.forEach(s => {
+                s.classList.remove('active');
+                if (parseInt(s.dataset.step) === step) {
+                    s.classList.add('active');
+                }
+            });
+
+            const progressBar = document.getElementById('progress-bar-founder');
+            const stepNum = document.getElementById('current-step-num-founder');
+            if (progressBar && stepNum) {
+                const progress = (step / totalStepsFounder) * 100;
+                progressBar.style.width = `${progress}%`;
+                stepNum.textContent = step;
+            }
+
+            const prevBtn = document.getElementById('prevBtnFounder');
+            const nextBtn = document.getElementById('nextBtnFounder');
+            const submitBtn = document.getElementById('submitBtnFounder');
+
+            if (prevBtn && nextBtn && submitBtn) {
+                if (step === 1) { prevBtn.style.display = 'none'; } else { prevBtn.style.display = 'block'; }
+                if (step === totalStepsFounder) {
+                    if (nextBtn) nextBtn.style.display = 'none';
+                    if (submitBtn) submitBtn.style.display = 'block';
+                } else {
+                    if (nextBtn) nextBtn.style.display = 'block';
+                    if (submitBtn) submitBtn.style.display = 'none';
+                }
+            }
+        }
+
+        function validateStepFounder(step) {
+            const activeStep = document.querySelector(`.wizard-step-founder[data-step="${step}"]`);
+            if (!activeStep) return true;
+
+            const inputs = activeStep.querySelectorAll('input, select, textarea');
+            let isValid = true;
+            let missingField = false;
+
+            inputs.forEach(input => {
+                if (input.hasAttribute('required')) {
+                    if (input.type === 'radio') {
+                        const name = input.name;
+                        const isChecked = activeStep.querySelector(`input[name="${name}"]:checked`);
+                        if (!isChecked) {
+                            isValid = false;
+                            missingField = true;
+                            const container = input.closest('.radio-list') || input.parentElement;
+                            if (container) {
+                                container.style.border = '1px solid #ff4d4d';
+                                container.style.padding = '5px';
+                                container.style.borderRadius = '4px';
+                                const radios = activeStep.querySelectorAll(`input[name="${name}"]`);
+                                radios.forEach(r => {
+                                    r.addEventListener('change', () => {
+                                        container.style.border = '';
+                                        container.style.padding = '';
+                                        container.style.borderRadius = '';
+                                    }, { once: true });
+                                });
+                            }
+                        }
+                    } else if (input.type === 'checkbox') {
+                         if (!input.checked) { isValid = false; missingField = true; }
+                    } else {
+                        if (!input.value.trim()) {
+                            isValid = false;
+                            missingField = true;
+                            input.style.borderColor = '#ff4d4d';
+                            input.addEventListener('input', () => {
+                                input.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+                            }, { once: true });
+                        }
+                    }
+                }
+            });
+
+            if (step === 3) {
+                const checkedServices = activeStep.querySelectorAll('input[name="service"]:checked');
+                if (checkedServices.length === 0) {
+                    isValid = false;
+                    alert("Please select at least one service needed.");
+                    return false;
+                }
+            }
+
+            if (!isValid && missingField) {
+                alert("Please fill in all required fields.");
+            }
+
+            return isValid;
+        }
+
+        const nextBtnFounder = document.getElementById('nextBtnFounder');
+        const prevBtnFounder = document.getElementById('prevBtnFounder');
+
+        if (nextBtnFounder) {
+            nextBtnFounder.addEventListener('click', () => {
+                if (validateStepFounder(currentStepFounder)) {
+                    if (currentStepFounder < totalStepsFounder) {
+                        currentStepFounder++;
+                        showStepFounder(currentStepFounder);
+                    }
+                }
+            });
+        }
+
+        if (prevBtnFounder) {
+            prevBtnFounder.addEventListener('click', () => {
+                if (currentStepFounder > 1) {
+                    currentStepFounder--;
+                    showStepFounder(currentStepFounder);
+                }
+            });
+        }
+
+        if (btnFounder) {
+            btnFounder.addEventListener('click', (e) => {
+                e.preventDefault();
+                resetWizardFounder();
+                openModal(modalFounder);
+            });
+        }
+
+        /* Success Modal Helper */
+        const modalSuccess = document.getElementById('modal-success');
+        const btnSuccessClose = document.getElementById('btn-success-close');
+        function showSuccessModal() { if (modalSuccess) modalSuccess.classList.add('active'); }
+        if (btnSuccessClose) btnSuccessClose.addEventListener('click', () => { if (modalSuccess) modalSuccess.classList.remove('active'); });
+
+        const submitBtnFounderGlobal = document.getElementById('submitBtnFounder');
+        if (submitBtnFounderGlobal) {
+            submitBtnFounderGlobal.addEventListener('click', (e) => {
+                e.preventDefault(); 
+                if (!validateStepFounder(currentStepFounder)) return;
+
+                const telegram = document.getElementById('founder-telegram').value;
+                const twitter = document.getElementById('founder-twitter').value;
+                const email = document.getElementById('founder-email').value || 'N/A';
+                
+                const projectName = document.getElementById('founder-project-name').value;
+                const website = document.getElementById('founder-website').value || 'N/A';
+                const category = document.getElementById('founder-category').value;
+                const description = document.getElementById('founder-description').value;
+
+                const services = Array.from(document.querySelectorAll('input[name="service"]:checked'))
+                    .map(cb => cb.value)
+                    .join(', ');
+
+                const budget = document.getElementById('founder-budget').value;
+                const outcome = document.getElementById('founder-outcome').value;
+
+                const timeline = document.getElementById('founder-timeline').value;
+                const urgency = document.querySelector('input[name="urgency"]:checked')?.value || 'N/A';
+                
+                const now = new Date().toLocaleString();
+                const text = `🚀 *New Video Project Inquiry*\n` +
+                    `📅 *Date*: ${now}\n\n` +
+                    `👤 *Contact Info*\n` +
+                    `• Telegram: ${telegram}\n` +
+                    `• Brand Twitter: ${twitter}\n` +
+                    `• Email: ${email}\n\n` +
+                    `🏢 *Brand / Project Details*\n` +
+                    `• Name: ${projectName}\n` +
+                    `• Website: ${website}\n` +
+                    `• Category: ${category}\n` +
+                    `• Vision: ${description}\n\n` +
+                    `🛠 *AI Video Services Needed*\n${services || 'Not specified'}\n\n` +
+                    `💰 *Budget & Goals*\n` +
+                    `• Budget: ${budget}\n` +
+                    `• Goal: ${outcome}\n\n` +
+                    `⏳ *Timeline & Urgency*\n` +
+                    `• Timeline: ${timeline}\n` +
+                    `• Urgency: ${urgency}`;
+                    
+                const encodedText = encodeURIComponent(text);
+                const url = `https://t.me/xswapderadar?text=${encodedText}`;
+                
+                const win = window.open(url, '_blank');
+                if (win) {
+                    win.focus();
+                    closeModal();
+                    showSuccessModal();
+                } else {
+                     window.location.href = url;
+                }
+            });
+        }
+    </script>
 </body>
 </html>
