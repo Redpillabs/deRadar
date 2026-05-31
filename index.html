@@ -27,8 +27,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <!-- Main Sans-Serif Font -->
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
+    <!-- Luxury Serif Font Update (Bodoni Moda) -->
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
@@ -252,7 +254,7 @@
 
         .nav-list {
             display: flex;
-            gap: 2.5rem;
+            gap: 1.8rem; /* Reducido de 2.5rem para que quepan más opciones */
             align-items: center;
         }
 
@@ -261,11 +263,37 @@
             font-weight: 500;
             color: var(--text-secondary);
             transition: color 0.3s ease;
+            white-space: nowrap; /* Evita que el texto baje a una segunda línea */
         }
 
         .nav-link:hover, .active-link {
             color: var(--text-primary);
             text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        .nav-link-rewards {
+            color: var(--text-primary) !important;
+            font-weight: 600;
+            text-shadow: 0 0 12px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
+            position: relative;
+            animation: pulse-rewards 2s infinite alternate;
+            padding: 0.3rem 0.8rem;
+            border-radius: 50px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        .nav-link-rewards:hover {
+            background: rgba(255, 255, 255, 0.15);
+            text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 25px rgba(255, 255, 255, 0.6);
+            transform: translateY(-2px);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
+        }
+
+        @keyframes pulse-rewards {
+            0% { text-shadow: 0 0 8px rgba(255, 255, 255, 0.4); box-shadow: 0 0 0 rgba(255, 255, 255, 0); }
+            100% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.5); box-shadow: 0 0 12px rgba(255, 255, 255, 0.15); }
         }
 
         .nav-right {
@@ -403,9 +431,9 @@
         .luxury-fade-text {
             display: inline-block;
             color: var(--text-primary);
-            font-family: 'Playfair Display', serif;
+            font-family: 'Bodoni Moda', serif;
             font-style: italic;
-            font-weight: 500;
+            font-weight: 700;
             letter-spacing: -0.02em;
             text-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
             transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s cubic-bezier(0.22, 1, 0.36, 1);
@@ -884,7 +912,16 @@
         .value-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
         .floating-img { width: 100%; max-width: 512px; height: auto; border-radius: var(--radius); filter: grayscale(100%); border: 1px solid var(--border-color); box-shadow: var(--glow-white); }
         .value-content .section-title { text-align: left; margin-bottom: 1.5rem; font-size: 3rem; color: var(--text-primary); letter-spacing: -0.04em; }
-        .word-glow { color: var(--text-primary); font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em; text-shadow: 0 0 20px rgba(255, 255, 255, 0.4); }
+        
+        .word-glow { 
+            color: var(--text-primary); 
+            font-family: 'Bodoni Moda', serif; 
+            font-style: italic; 
+            font-weight: 700; 
+            letter-spacing: -0.02em; 
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4); 
+        }
+
         .value-text { color: var(--text-secondary); margin-bottom: 2.5rem; font-size: 1.1rem; line-height: 1.8; }
         .value-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
         .btn-xl { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.5px; text-transform: uppercase; color: #000; background: var(--text-primary); border: none; border-radius: var(--radius); cursor: pointer; transition: var(--transition); box-shadow: var(--glow-white); }
@@ -896,7 +933,18 @@
         /* Footer */
         .footer { background-color: var(--bg-color); color: var(--text-primary); padding: 6rem 0 0; position: relative; overflow: hidden; border-top: 1px solid var(--border-color); }
         .footer-container { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; position: relative; z-index: 1; }
-        .footer-logo { font-family: 'Playfair Display', serif; font-style: italic; font-size: 2rem; font-weight: 600; color: var(--text-primary); display: inline-block; margin-bottom: 1.25rem; letter-spacing: -0.5px; }
+        
+        .footer-logo { 
+            font-family: 'Bodoni Moda', serif; 
+            font-style: italic; 
+            font-size: 2.5rem; 
+            font-weight: 700; 
+            color: var(--text-primary); 
+            display: inline-block; 
+            margin-bottom: 1.25rem; 
+            letter-spacing: -0.5px; 
+        }
+
         .footer-brand p { color: var(--text-secondary); margin-bottom: 2rem; max-width: 380px; line-height: 1.7; font-size: 0.95rem; }
         .social-links { display: flex; gap: 1rem; }
         .social-links a { width: 40px; height: 40px; background-color: transparent; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; border-radius: var(--radius); transition: var(--transition); color: var(--text-secondary); font-size: 1.1rem; }
@@ -934,6 +982,13 @@
             .show-menu { top: 0; }
             .nav-list { flex-direction: column; align-items: flex-start; gap: 2rem; width: 100%; }
             .nav-link { font-size: 1.5rem; font-weight: 600; }
+            
+            .nav-link-rewards {
+                font-size: 1.5rem; /* Match mobile nav link size */
+                padding: 0.5rem 1rem;
+                display: inline-block;
+            }
+
             .nav-toggle, .nav-close { display: block; z-index: 1001; }
             .nav-close { position: absolute; top: 1.5rem; right: 1.5rem; }
             .nav-right .nav-cta { display: none; } 
@@ -944,6 +999,17 @@
             .brands-title { font-size: 1.5rem; margin-bottom: 2rem; padding: 0 1rem; }
             .hero-buttons { flex-direction: column; align-items: center; gap: 1rem; }
             .btn-glow, .btn-white-glow { width: 100%; max-width: 280px; text-align: center; }
+            
+            /* --- MODIFICACIONES PARA MOBILE: Reducción 30% en descripciones de servicios --- */
+            .service-title-new { font-size: 1.5rem; }
+            .service-desc-new {
+                font-size: 0.8rem !important; /* Aproximadamente 30% menos que 1.15rem */
+                line-height: 1.5 !important;
+                margin-bottom: 1.25rem !important;
+            }
+            .pack-features-new li { font-size: 0.75rem !important; }
+            /* -------------------------------------------------------------------------------- */
+
             .pack-features-new { grid-template-columns: 1fr; gap: 0.75rem; }
             .services-scroll-track { height: 1100vh; display: block; }
             .services-sticky-container { padding-top: 6rem; }
@@ -1176,9 +1242,10 @@
                 <div class="nav-close" id="nav-close"><i class="fas fa-times"></i></div>
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#categories" class="nav-link" onclick="goToHomeAndScroll(event, 'categories')">Services</a></li>
-                    <li class="nav-item"><a href="#talent" class="nav-link" onclick="goToHomeAndScroll(event, 'talent')">Case Studies</a></li>
-                    <li class="nav-item"><a href="#" id="btn-rewards" class="nav-link" onclick="goToRewards(event)">Rewards</a></li>
-                    <li class="nav-item"><a href="#work-with-us" class="nav-link" onclick="goToHomeAndScroll(event, 'work-with-us')">Community</a></li>
+                    <li class="nav-item"><a href="#infrastructure" class="nav-link" onclick="goToHomeAndScroll(event, 'infrastructure')">Infrastructure</a></li>
+                    <li class="nav-item"><a href="#talent" class="nav-link" onclick="goToHomeAndScroll(event, 'talent')">Book a service</a></li>
+                    <li class="nav-item"><a href="#work-with-us" class="nav-link" onclick="goToHomeAndScroll(event, 'work-with-us')">Join our team</a></li>
+                    <li class="nav-item"><a href="#" id="btn-rewards" class="nav-link nav-link-rewards" onclick="goToRewards(event)"><i class="fas fa-gift" style="margin-right: 5px; font-size: 0.8em;"></i>Rewards</a></li>
                     
                     <!-- Mobile CTA -->
                     <li class="nav-item mobile-only">
@@ -1452,7 +1519,7 @@
         </section>
 
         <!-- Agentic Technology Section -->
-        <section class="agentic-tech section" style="padding: 8rem 0; position: relative; overflow: hidden; background: var(--bg-surface); border-top: 1px solid var(--border-color);">
+        <section class="agentic-tech section" id="infrastructure" style="padding: 8rem 0; position: relative; overflow: hidden; background: var(--bg-surface); border-top: 1px solid var(--border-color);">
             <!-- Subtle background glow -->
             <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(255,255,255,0.02) 0%, transparent 60%); z-index: 0; pointer-events: none;"></div>
             
