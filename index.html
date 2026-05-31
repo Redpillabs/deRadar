@@ -5,45 +5,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- SEO & Social Media Meta Tags -->
-    <title>DeRadar - AI Video Agency</title>
-    <meta name="description" content="Create viral AI videos, faceless channels, and cinematic ads. The ultimate AI video creation stack for Web2 and Web3 founders, creators, and brands.">
+    <title>DeRadar - Elite Web3 Services Studio</title>
+    <meta name="description" content="The ultimate development, growth, and creative studio for Web3 protocols, DeFi, NFTs, and DAOs. Build and scale your decentralized future.">
     
     <!-- Favicon -->
-    <link rel="icon" href="https://i.postimg.cc/L61Qxn3D/Sin-titulo-1.png" type="image/png">
+    <link rel="icon" href="https://i.postimg.cc/Dz7CnbDj/Sin-titulo-1.png" type="image/png">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://deradar.ai/">
-    <meta property="og:title" content="DeRadar - AI Video Agency">
-    <meta property="og:description" content="Create viral AI videos, faceless channels, and cinematic ads. The ultimate AI video creation stack for Web2 and Web3.">
+    <meta property="og:title" content="DeRadar - Web3 Development Studio">
+    <meta property="og:description" content="Smart contracts, Tokenomics, Marketing, and Community Growth for elite Web3 projects.">
     <meta property="og:image" content="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1600&auto=format&fit=crop">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://deradar.ai/">
-    <meta property="twitter:title" content="DeRadar - AI Video Agency">
-    <meta property="twitter:description" content="Create viral AI videos, faceless channels, and cinematic ads. The ultimate AI video creation stack for Web2 and Web3.">
+    <meta property="twitter:title" content="DeRadar - Web3 Development Studio">
+    <meta property="twitter:description" content="Smart contracts, Tokenomics, Marketing, and Community Growth for elite Web3 projects.">
     <meta property="twitter:image" content="https://images.unsplash.com/photo-1639322537228-f710d846310a?q=80&w=1600&auto=format&fit=crop">
 
-    <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <style>
+        /* CRYPTic WEB3 STYLES -> AP COLLECTIVE MONOCHROME GLOW STYLES */
         :root {
             --bg-color: #000000;
-            --text-color: #ffffff;
-            --text-light: #666666;
-            --primary-blue: #56BCAF;
-            --secondary-blue: #56BCAF; 
-            --accent-blue: #E6F2FF; 
-            --white: #FFFFFF;
-            --gray-100: #F3F4F6;
-            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-            --transition: all 0.3s ease;
+            --bg-surface: #0a0a0a;
+            --text-primary: #FFFFFF;
+            --text-secondary: #a0a0a0;
+            --accent: #FFFFFF; /* Pure White Accent */
+            --accent-hover: #E0E0E0; 
+            --border-color: rgba(255, 255, 255, 0.1);
+            --border-light: rgba(255, 255, 255, 0.2);
+            --glow-white: 0 0 20px rgba(255, 255, 255, 0.15);
+            --glow-white-strong: 0 0 30px rgba(255, 255, 255, 0.4);
+            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            --radius: 4px; /* Brutalist/Minimal sharp corners */
         }
 
         * {
@@ -59,9 +61,10 @@
         body {
             font-family: 'Satoshi', sans-serif;
             background-color: var(--bg-color);
-            color: var(--text-color);
+            color: var(--text-primary);
             line-height: 1.6;
             font-weight: 400;
+            -webkit-font-smoothing: antialiased;
         }
 
         a {
@@ -86,72 +89,130 @@
         }
 
         .section {
-            padding: 5rem 0;
+            padding: 6rem 0;
         }
 
         .section-separator {
             width: 100%;
-            height: 2px;
-            background: var(--secondary-blue);
-            box-shadow: 0 0 15px var(--secondary-blue);
-            opacity: 0.6;
+            height: 1px;
+            background: var(--border-color);
             margin: 0;
             position: relative;
             z-index: 10;
         }
 
+        /* Fade Edges Effect for Text */
+        .fade-edges {
+            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+            mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+        }
+
+        /* Brutalist Buttons */
         .btn {
             display: inline-block;
-            padding: 0.75rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 500;
+            padding: 0.85rem 1.75rem;
+            border-radius: var(--radius);
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
             cursor: pointer;
             transition: var(--transition);
-            border: 2px solid transparent;
+            border: 1px solid transparent;
         }
 
         .btn-primary {
-            background-color: var(--primary-blue);
-            color: var(--white);
+            background-color: var(--text-primary);
+            color: #000;
         }
 
         .btn-primary:hover {
-            background-color: var(--secondary-blue);
+            background-color: var(--accent);
+            color: #000;
+            box-shadow: var(--glow-white-strong);
             transform: translateY(-2px);
-            box-shadow: var(--shadow);
         }
 
         .btn-outline {
-            border-color: var(--primary-blue);
-            color: var(--primary-blue);
+            border-color: var(--border-color);
+            color: var(--text-primary);
             background-color: transparent;
         }
 
         .btn-outline:hover {
-            background-color: var(--primary-blue);
-            color: var(--white);
+            background-color: rgba(255, 255, 255, 0.05);
+            border-color: var(--text-primary);
         }
 
-        /* Navbar */
+        /* Glowing Request Buttons */
+        .btn-request-glowing {
+            position: relative;
+            background: rgba(255, 255, 255, 0.95) !important;
+            color: #000000 !important;
+            border: none !important;
+            font-weight: 700;
+            z-index: 1;
+            overflow: visible;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+            transition: all 0.3s ease;
+            margin-right: 35px; /* Espacio reservado para que el círculo quepa perfectamente */
+        }
+
+        .btn-request-glowing:hover {
+            background: #ffffff !important;
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
+        }
+
+        .btn-request-glowing::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -35px; /* Posicionado totalmente a la derecha, fuera del botón */
+            left: auto; 
+            width: 22px; /* Tamaño del círculo más pequeño y nítido */
+            height: 22px;
+            margin-top: -11px; /* Centrado vertical */
+            background: conic-gradient(from 0deg, transparent 0%, rgba(255, 255, 255, 0.2) 30%, #ffffff 80%, transparent 100%);
+            animation: rotateGlowAnim 1.2s linear infinite; /* Rotación ágil */
+            z-index: 10; /* Por encima para asegurar visibilidad */
+            border-radius: 50%;
+            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Glow sutil alrededor del círculo */
+            pointer-events: none;
+        }
+
+        @keyframes rotateGlowAnim {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Apple Glass Pill Navbar */
         .navbar {
             position: fixed;
-            top: 3rem;
+            top: 2rem;
             left: 50%;
             transform: translateX(-50%);
-            width: auto;
-            max-width: 90vw;
-            background-color: rgba(20, 20, 20, 0.4);
-            backdrop-filter: blur(12px);
+            width: 92%;
+            max-width: 1200px;
+            background: rgba(5, 5, 5, 0.35); 
+            backdrop-filter: blur(20px) saturate(180%);
+            -webkit-backdrop-filter: blur(20px) saturate(180%);
             z-index: 1000;
-            height: 60px;
+            height: 70px;
             display: flex;
-            justify-content: center;
             align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 100px; 
+            padding: 0 2.5rem;
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .scroll-header {
+            top: 1rem;
+            background: rgba(5, 5, 5, 0.55); 
             border: 1px solid rgba(255, 255, 255, 0.15);
-            border-radius: 100px;
-            padding: 0.5rem 1rem;
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
         }
 
         .nav-container {
@@ -160,187 +221,162 @@
             align-items: center;
             width: 100%;
             position: relative;
-            max-width: 1200px;
-            margin: 0 auto;
-            gap: 2rem;
+            padding: 0; 
+            max-width: 100%;
         }
 
         .logo {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--white);
-            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
             z-index: 10;
-            margin-right: 1rem;
-            white-space: nowrap;
-            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .logo img {
+            max-height: 44px; 
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
         }
 
         .nav-menu {
-            position: relative;
-            left: auto;
-            transform: none;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
             display: flex;
             align-items: center;
         }
 
         .nav-list {
             display: flex;
-            gap: 2rem;
+            gap: 2.5rem;
             align-items: center;
-            margin: 0;
-            padding: 0;
         }
 
-        .nav-item {
-            white-space: nowrap;
-        }
-
-        /* Nav Highlight Buttons */
-        .nav-cta-highlight {
-            padding: 0.6rem 1.5rem;
+        .nav-link {
             font-size: 0.95rem;
-            border-radius: 50px;
-            background: linear-gradient(90deg, #56BCAF, #3a8279, #56BCAF);
-            background-size: 200% auto;
-            color: var(--white);
-            font-weight: 700;
-            box-shadow: 0 0 20px rgba(86, 188, 175, 0.5);
-            transition: all 0.3s ease;
-            white-space: nowrap;
-            border: 1px solid rgba(255, 255, 255, 0.4);
-            animation: nav-pulse 2s infinite, gradient-shift 3s linear infinite;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
+            font-weight: 500;
+            color: var(--text-secondary);
+            transition: color 0.3s ease;
+        }
+
+        .nav-link:hover, .active-link {
+            color: var(--text-primary);
+            text-shadow: 0 0 10px rgba(255,255,255,0.3);
+        }
+
+        .nav-right {
             display: flex;
             align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
+            gap: 1.5rem;
+            z-index: 10;
         }
 
-        .nav-cta-highlight i {
-            color: #FFF;
-            text-shadow: 0 0 5px #FFF;
-        }
-
-        .nav-cta-highlight:hover {
-            transform: translateY(-2px) scale(1.05);
-            box-shadow: 0 0 30px rgba(86, 188, 175, 0.9);
-            color: var(--white);
-        }
-
-        @keyframes gradient-shift {
-            0% { background-position: 0% center; }
-            100% { background-position: 200% center; }
-        }
-
-        .nav-text-blue {
-            color: var(--primary-blue) !important;
+        .nav-cta {
+            padding: 0.7rem 1.5rem;
+            font-size: 0.85rem;
+            border-radius: var(--radius);
+            background: var(--text-primary);
+            color: #000;
             font-weight: 600;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.4rem;
-            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: var(--glow-white);
+            transition: var(--transition);
         }
 
-        .nav-text-blue:hover {
-            color: var(--white) !important;
-            text-shadow: 0 0 10px var(--primary-blue);
+        .nav-cta:hover { 
+            background: var(--accent); 
+            box-shadow: var(--glow-white-strong);
             transform: translateY(-2px);
         }
 
-        @keyframes nav-pulse {
-            0% { box-shadow: 0 0 0 0 rgba(86, 188, 175, 0.6); }
-            70% { box-shadow: 0 0 0 15px rgba(86, 188, 175, 0); }
-            100% { box-shadow: 0 0 0 0 rgba(86, 188, 175, 0); }
+        .nav-cta-disabled {
+            background: rgba(255, 255, 255, 0.05) !important;
+            color: var(--text-secondary) !important;
+            border: 1px solid var(--border-color);
+            cursor: not-allowed;
+            position: relative;
+        }
+        .nav-cta-disabled:hover {
+            box-shadow: none !important;
+            transform: none !important;
+        }
+        .badge-soon {
+            position: absolute;
+            top: -8px;
+            right: -12px;
+            background: var(--bg-color);
+            color: var(--text-primary);
+            font-size: 0.55rem;
+            padding: 2px 6px;
+            border-radius: 8px;
+            border: 1px solid var(--border-light);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 700;
+            box-shadow: var(--glow-white);
+            pointer-events: none;
         }
 
-        .scroll-header {
-            top: 0;
-            width: 100%;
-            min-width: 100%;
-            max-width: 100%;
-            border-radius: 0;
-            background-color: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(20px);
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-            border: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-            height: 80px;
-            padding: 0 2rem;
-        }
-
-        .scroll-header .nav-container {
-            justify-content: space-between;
+        .mobile-only {
+            display: none;
         }
 
         .nav-toggle, .nav-close {
             display: none;
             font-size: 1.5rem;
             cursor: pointer;
-            color: var(--white);
+            color: var(--text-primary);
         }
 
-        /* Hero Section */
+        /* Hero Section - Cryptic Style */
         .hero {
-            padding-top: 180px;
+            padding-top: 200px;
             padding-bottom: 8rem;
             position: relative;
             overflow: hidden;
             background-color: var(--bg-color);
         }
 
-        video::-webkit-media-controls { display: none !important; }
-        video::-webkit-media-controls-enclosure { display: none !important; }
-
-        .hero-video {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: 0;
-            pointer-events: none;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.75);
-            z-index: 1;
-        }
-
         .hero::before {
             content: '';
             position: absolute;
-            top: -10%;
-            left: -10%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(86, 188, 175, 0.12) 0%, rgba(0, 0, 0, 0) 60%);
-            filter: blur(120px);
-            z-index: 2;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 40px 40px;
+            z-index: 1;
             pointer-events: none;
-            opacity: 0.8;
         }
 
         .hero::after {
             content: '';
             position: absolute;
-            bottom: -20%;
-            right: -5%;
-            width: 900px;
-            height: 900px;
-            background: radial-gradient(circle, rgba(86, 188, 175, 0.08) 0%, rgba(0, 0, 0, 0) 60%);
-            filter: blur(150px);
-            z-index: 2;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80vw; height: 80vh;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
+            z-index: 1; pointer-events: none;
+        }
+
+        .hero-video {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            object-fit: cover;
+            z-index: 0;
+            opacity: 0.15;
+            filter: grayscale(100%) contrast(120%);
             pointer-events: none;
-            opacity: 0.6;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, transparent 0%, var(--bg-color) 100%);
+            z-index: 2;
         }
 
         .hero-container {
@@ -357,372 +393,650 @@
             font-size: 4.5rem;
             line-height: 1.1;
             margin-bottom: 2rem;
-            font-weight: 500;
-            color: var(--white);
-            letter-spacing: -2px;
+            font-weight: 700;
+            color: var(--text-primary);
+            letter-spacing: -0.04em;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5); 
+            display: inline-block;
         }
 
-        .glitch-text {
-            position: relative;
-            color: var(--primary-blue);
+        .luxury-fade-text {
             display: inline-block;
+            color: var(--text-primary);
             font-family: 'Playfair Display', serif;
             font-style: italic;
-            font-weight: 600;
-            text-transform: lowercase;
-            letter-spacing: -1px;
+            font-weight: 500;
+            letter-spacing: -0.02em;
+            text-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+            transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+            will-change: opacity, transform, filter;
         }
 
-        .glitch-text::before,
-        .glitch-text::after {
-            content: attr(data-text);
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--bg-color);
-            text-transform: lowercase;
+        .luxury-fade-text.fade-out {
+            opacity: 0;
+            transform: translateY(10px);
+            filter: blur(6px);
         }
 
-        .glitch-text::before {
-            left: 2px;
-            text-shadow: -1px 0 #ff00c1;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim 5s infinite linear alternate-reverse;
+        .luxury-fade-text.fade-in {
+            opacity: 1;
+            transform: translateY(0);
+            filter: blur(0px);
         }
-
-        .glitch-text::after {
-            left: -2px;
-            text-shadow: -1px 0 #00fff9;
-            clip: rect(44px, 450px, 56px, 0);
-            animation: glitch-anim2 5s infinite linear alternate-reverse;
-        }
-
-        @keyframes glitch-anim { 0% { clip: rect(31px, 9999px, 94px, 0); transform: skew(0.85deg); } 100% { clip: rect(24px, 9999px, 8px, 0); transform: skew(0.95deg); } }
-        @keyframes glitch-anim2 { 0% { clip: rect(65px, 9999px, 100px, 0); transform: skew(0.12deg); } 100% { clip: rect(22px, 9999px, 9px, 0); transform: skew(0.99deg); } }
 
         .highlight-glow {
-            color: var(--white);
-            text-shadow: 0 0 10px rgba(86, 188, 175, 0.6);
-            font-weight: 500;
-            position: relative;
-            display: inline-block;
-        }
-
-        .text-highlight {
-            color: var(--secondary-blue);
-            text-shadow: 0 0 15px rgba(86, 188, 175, 0.8), 0 0 30px rgba(86, 188, 175, 0.4);
-            font-weight: 600;
+            color: var(--text-primary);
+            border-bottom: 1px solid rgba(255,255,255,0.5);
+            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
         }
 
         .hero-description {
-            font-size: 1.125rem;
-            color: #e0e0e0;
+            font-size: 1.15rem;
+            color: var(--text-secondary);
             margin-bottom: 3rem;
-            max-width: 600px;
-            line-height: 1.7;
-            text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            max-width: 650px;
+            line-height: 1.6;
         }
 
         .hero-buttons {
             display: flex;
             justify-content: center;
-            gap: 1.5rem;
+            gap: 1rem;
             margin-bottom: 5rem;
         }
 
         .btn-glow {
-            display: inline-block;
-            padding: 1rem 3.5rem;
-            border-radius: 100px;
-            font-weight: 500;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-            background-color: rgba(86, 188, 175, 0.8);
-            color: var(--white);
-            border: 1px solid rgba(86, 188, 175, 0.5);
-            box-shadow: 0 0 20px rgba(86, 188, 175, 0.2), inset 0 0 10px rgba(86, 188, 175, 0.1);
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(10px);
-            letter-spacing: 1px;
-            animation: pulse-glow 3s infinite ease-in-out;
-        }
-
-        .btn-xl {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            padding: 18px 34px;
-            font-family: system-ui, Inter, Arial, sans-serif;
-            font-weight: 700;
-            font-size: 16px;
-            letter-spacing: 0.08em;
+            background-color: var(--text-primary);
+            color: #000;
+            border: none;
+            font-weight: 600;
             text-transform: uppercase;
-            color: #FFFFFF;
-            background: transparent;
-            border: 1.5px solid rgba(255, 255, 255, 0.28);
-            border-radius: 999px;
-            transition: border-color 180ms ease, color 180ms ease, background-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
-            cursor: pointer;
+            box-shadow: var(--glow-white);
+            transition: var(--transition);
         }
-
-        .btn-xl:hover {
-            background-color: rgba(255, 255, 255, 0.06);
-            border-color: rgba(127, 227, 212, 0.6);
-            box-shadow: 0 8px 24px rgba(127, 227, 212, 0.12);
-            transform: translateY(-1px);
+        .btn-glow:hover { 
+            background-color: var(--accent); 
+            color: #000; 
+            box-shadow: var(--glow-white-strong);
+            transform: translateY(-2px);
         }
 
         .btn-white-glow {
-            display: inline-block;
-            padding: 1rem 3.5rem;
-            border-radius: 100px;
+            background-color: transparent;
+            color: var(--text-primary);
+            border: 1px solid var(--border-color);
             font-weight: 600;
-            cursor: pointer;
-            transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
-            background-color: var(--white);
-            color: #000;
-            border: 1px solid var(--white);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
-            position: relative;
-            overflow: hidden;
-            letter-spacing: 1px;
+            text-transform: uppercase;
         }
-
-        .btn-white-glow:hover {
-            transform: translateY(-3px) scale(1.05);
-            box-shadow: 0 0 50px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
-            background-color: #fff;
-        }
-
-        @keyframes pulse-glow {
-            0% { box-shadow: 0 0 15px rgba(86, 188, 175, 0.1), inset 0 0 10px rgba(86, 188, 175, 0.05); border-color: rgba(86, 188, 175, 0.3); }
-            50% { box-shadow: 0 0 25px rgba(86, 188, 175, 0.3), inset 0 0 15px rgba(86, 188, 175, 0.1); border-color: rgba(86, 188, 175, 0.6); }
-            100% { box-shadow: 0 0 15px rgba(86, 188, 175, 0.1), inset 0 0 10px rgba(86, 188, 175, 0.05); border-color: rgba(86, 188, 175, 0.3); }
+        .btn-white-glow:hover { 
+            background-color: rgba(255,255,255,0.05); 
+            border-color: var(--text-primary); 
+            box-shadow: var(--glow-white);
         }
 
         /* Brands Section */
-        .brands-section { width: 100%; display: flex; flex-direction: column; align-items: center; margin-top: 2rem; overflow: hidden; }
-        .brands-label { font-size: 0.7rem; font-weight: 700; color: #555; letter-spacing: 2px; text-transform: uppercase; padding: 0.5rem 1.5rem; border-radius: 50px; background: #0A0A0A; border: 1px solid #222; margin-bottom: 3rem; z-index: 5; }
-        .logo-carousel { width: 100%; overflow: hidden; position: relative; padding: 1rem 0; mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); }
-        .logo-track { display: flex; width: max-content; animation: scroll 30s linear infinite; gap: 4rem; }
+        .brands-section { width: 100%; display: flex; flex-direction: column; align-items: center; margin-top: 2rem; overflow: hidden; position: relative; z-index: 3; }
+        
+        .logo-carousel { width: 100%; overflow: hidden; position: relative; padding: 1rem 0; mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); background: var(--bg-color); }
+        .logo-track { display: flex; width: max-content; animation: scroll 30s linear infinite; gap: 5rem; }
         .logo-carousel:hover .logo-track { animation-play-state: paused; }
-        .logo-item { display: flex; align-items: center; justify-content: center; width: 150px; opacity: 0.5; transition: all 0.3s ease; filter: grayscale(100%); }
-        .logo-item img { max-height: 40px; width: auto; max-width: 100%; object-fit: contain; }
-        .logo-item:hover { opacity: 1; filter: grayscale(0%); transform: scale(1.1); }
+        .logo-item { display: flex; align-items: center; justify-content: center; width: 140px; filter: brightness(0) invert(1) opacity(0.3); transition: var(--transition); }
+        .logo-item img { max-height: 35px; width: auto; max-width: 100%; object-fit: contain; }
+        .logo-item i { font-size: 35px; line-height: 1; }
+        .logo-item:hover { filter: brightness(0) invert(1) opacity(1); }
         @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
 
-        /* Services Section */
-        .section-header { text-align: center; margin-bottom: 4rem; }
-        .section-title { font-size: 2.5rem; font-weight: 500; margin-bottom: 1rem; color: var(--text-color); }
-        .section-subtitle { font-size: 1.125rem; color: var(--text-light); max-width: 600px; margin: 0 auto; font-weight: 400; }
-        .badge-best-seller { position: absolute; top: 1rem; right: 1rem; background: var(--secondary-blue); color: var(--white); font-size: 0.75rem; font-weight: 700; padding: 0.35rem 0.85rem; border-radius: 8px; box-shadow: 0 4px 10px rgba(86, 188, 175, 0.3); text-transform: uppercase; letter-spacing: 0.5px; z-index: 10; border: 1px solid rgba(255, 255, 255, 0.1); }
+        /* Services Section (Large Apple Glass Scroll Effect) */
+        .section-header { text-align: center; margin-bottom: 3rem; }
+        .section-title { font-size: 2.75rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-primary); letter-spacing: -0.03em; }
+        .section-subtitle { font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-weight: 400; }
         
-        .services-scroll-track { position: relative; height: 500vh; background-color: var(--bg-color); }
+        /* Contenedores para el efecto de Scroll */
+        .services-scroll-track { position: relative; height: 1100vh; background-color: var(--bg-color); }
         .services-sticky-container { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding: 2rem 0; z-index: 1; }
-        .services-sticky-container::before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 0% 80%, rgba(86, 188, 175, 0.15), transparent 40%), radial-gradient(circle at 100% 80%, rgba(86, 188, 175, 0.15), transparent 40%), radial-gradient(circle at 50% 100%, rgba(86, 188, 175, 0.12), transparent 60%); filter: blur(80px); z-index: -1; pointer-events: none; }
-        .services-stack { position: relative; width: 100%; max-width: 600px; margin: 0 auto; height: 400px; display: flex; align-items: center; justify-content: center; margin-top: 2rem; }
-        .scroll-card { position: absolute; top: 0; left: 0; width: 100%; height: auto; z-index: 1; background: rgba(10, 10, 10, 0.9); backdrop-filter: blur(20px); padding: 2.5rem 2rem 4rem; border-radius: 24px; border: 1px solid rgba(255, 255, 255, 0.08); display: flex; flex-direction: column; align-items: center; text-align: center; opacity: 0; transform: translateY(40px) scale(0.95); pointer-events: none; transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); overflow: hidden; }
-        .scroll-card.active { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; z-index: 10; border-color: rgba(86, 188, 175, 0.4); box-shadow: 0 0 0 1px rgba(86, 188, 175, 0.1) inset, 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 40px rgba(86, 188, 175, 0.15); }
-
-        .scroll-card .service-icon { width: 80px; height: 80px; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-size: 2rem; background: rgba(255, 255, 255, 0.02); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1); position: relative; overflow: hidden; }
-        .scroll-card.active .service-icon { border-color: rgba(86, 188, 175, 0.6); background: rgba(86, 188, 175, 0.08); color: var(--white); text-shadow: 0 0 15px var(--primary-blue); transform: translateY(-5px); animation: icon-float 3s ease-in-out infinite; }
-
-        @keyframes icon-float { 0%, 100% { transform: translateY(-5px); } 50% { transform: translateY(-10px); } }
-        .scroll-card .service-title { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--white); letter-spacing: -0.5px; }
-        .scroll-card .service-description { font-size: 1.05rem; color: #aaa; max-width: 450px; line-height: 1.6; }
-        .service-card.featured-pack .service-title { color: var(--primary-blue); font-size: 1.75rem; margin-bottom: 0.5rem; }
+        .services-stack { position: relative; width: 100%; max-width: 1600px; margin: 0 auto; height: 580px; display: flex; align-items: center; justify-content: center; margin-top: 1rem; }
         
-        .pack-features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem 1.5rem; width: 100%; max-width: 500px; margin: 0 auto; padding: 0; list-style: none; text-align: left; }
-        .pack-features li { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #bbb; }
-        .pack-features li i { color: var(--primary-blue); font-size: 0.8rem; min-width: 1.2rem; text-align: center; }
+        /* Tarjetas de Servicio Grandes Apple Glass */
+        .scroll-card { 
+            position: absolute; 
+            top: 0; left: 0; 
+            width: 100%; 
+            height: 100%; 
+            z-index: 1; 
+            background: rgba(12, 12, 12, 0.45); 
+            backdrop-filter: blur(30px) saturate(180%); 
+            -webkit-backdrop-filter: blur(30px) saturate(180%); 
+            border: 1px solid rgba(255, 255, 255, 0.08); 
+            border-radius: 36px; 
+            padding: 4rem 6rem; 
+            display: flex; 
+            align-items: center; 
+            gap: 8rem; 
+            opacity: 0; 
+            transform: translateY(60px) scale(0.95); 
+            pointer-events: none; 
+            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); 
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); 
+            overflow: hidden; 
+        }
+        
+        .scroll-card.active { 
+            opacity: 1; 
+            transform: translateY(0) scale(1); 
+            pointer-events: auto; 
+            z-index: 10; 
+            border-color: rgba(255, 255, 255, 0.2); 
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(255,255,255,0.05), var(--glow-white); 
+        }
+        
+        /* Alternar Izquierda/Derecha */
+        .scroll-card:nth-child(even) { flex-direction: row-reverse; }
 
-        .btn-want-this { position: absolute; bottom: 1.5rem; left: 50%; transform: translateX(-50%); padding: 0.35rem 0.8rem; font-size: 0.6rem; background: rgba(86, 188, 175, 0.1); border: 1px solid rgba(86, 188, 175, 0.4); border-radius: 50px; color: var(--primary-blue); font-weight: 700; text-transform: uppercase; letter-spacing: 1px; cursor: pointer; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); display: inline-flex; align-items: center; gap: 0.3rem; animation: btn-pulse 3s infinite ease-in-out; z-index: 20; }
-        .btn-want-this:hover { background: var(--primary-blue); color: #000; border-color: var(--primary-blue); box-shadow: 0 0 15px rgba(86, 188, 175, 0.6); transform: translateX(-50%) translateY(-1px) scale(1.05); }
+        .card-content { flex: 1.15; text-align: left; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+        .card-visual { flex: 0.85; height: 100%; min-height: 480px; border-radius: 24px; overflow: hidden; position: relative; border: 1px solid rgba(255, 255, 255, 0.05); background: #050505; }
+        .card-visual img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease; }
+        .scroll-card.active .card-visual img { transform: scale(1.08); opacity: 0.9; }
+        .visual-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(0,0,0,0.5) 100%); pointer-events: none; }
 
-        @keyframes btn-pulse { 0% { box-shadow: 0 0 0 0 rgba(86, 188, 175, 0.4); transform: translateX(-50%) scale(1); } 50% { box-shadow: 0 0 10px 3px rgba(86, 188, 175, 0.1); transform: translateX(-50%) scale(1.02); } 100% { box-shadow: 0 0 0 0 rgba(86, 188, 175, 0); transform: translateX(-50%) scale(1); } }
+        .service-badge {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 0.5rem 1.25rem;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            margin-bottom: 1.75rem;
+            display: inline-block;
+        }
 
-        .scroll-indicator { position: absolute; bottom: 1.5rem; right: 1.5rem; color: rgba(255, 255, 255, 0.3); font-size: 1.2rem; animation: bounce-small 2s infinite; opacity: 0; transition: opacity 0.5s ease 0.5s; z-index: 20; }
-        .scroll-card.active .scroll-indicator { opacity: 1; }
-        .scroll-card:last-child .scroll-indicator { display: none; }
-        @keyframes bounce-small { 0%, 20%, 50%, 80%, 100% { transform: translateY(0); } 40% { transform: translateY(-5px); } 60% { transform: translateY(-3px); } }
+        .service-badge.featured {
+            background: var(--text-primary);
+            color: #000;
+            border-color: var(--text-primary);
+            box-shadow: var(--glow-white);
+        }
+
+        .service-icon-new {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 1.75rem;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .service-title-new {
+            font-size: 2.75rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 1rem;
+            letter-spacing: -0.02em;
+            line-height: 1.2;
+        }
+
+        .service-desc-new {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+            max-width: 95%;
+        }
+
+        .pack-features-new {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 2.5rem 0;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.2rem;
+            width: 100%;
+        }
+
+        .pack-features-new li {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+        }
+
+        .pack-features-new li i {
+            color: var(--text-primary);
+            text-shadow: var(--glow-white);
+            font-size: 0.85rem;
+        }
+
+        /* Agentic Tech Section */
+        .agentic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+        .agentic-badge { display: inline-block; padding: 0.4rem 1rem; border: 1px solid var(--border-light); border-radius: 50px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; background: rgba(255,255,255,0.05); color: var(--text-primary); }
+        .agentic-feature-list { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2.5rem; }
+        .agentic-feature { display: flex; gap: 1rem; align-items: flex-start; }
+        .agentic-feature-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: var(--text-primary); border: 1px solid var(--border-light); font-size: 1.2rem; flex-shrink: 0; box-shadow: var(--glow-white); }
+        .agentic-feature-text h4 { color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.25rem; font-weight: 600; letter-spacing: -0.01em; }
+        .agentic-feature-text p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0; }
+        
+        /* Apple Glass Core Engine Visual */
+        .agentic-visual { position: relative; height: auto; min-height: 480px; display: flex; align-items: center; justify-content: center; width: 100%; perspective: 1000px; }
+        .agent-network { 
+            position: relative; 
+            width: 100%; 
+            height: auto; 
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.08); 
+            background: rgba(8, 8, 8, 0.7); /* Darker background for contrast */
+            backdrop-filter: blur(20px) saturate(120%);
+            -webkit-backdrop-filter: blur(20px) saturate(120%);
+            overflow: hidden; 
+            display: flex; 
+            flex-direction: column; 
+            padding: 2.5rem; 
+            box-shadow: 0 30px 60px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.05); 
+            transform-style: preserve-3d;
+            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        
+        .agent-network:hover {
+            transform: translateY(-5px) rotateX(2deg) rotateY(-2deg);
+            border-color: rgba(255,255,255,0.15);
+            box-shadow: 0 40px 80px rgba(0,0,0,0.9), inset 0 1px 0 rgba(255,255,255,0.1), 0 0 40px rgba(255,255,255,0.05);
+        }
+
+        .agent-network::before { 
+            content: ''; 
+            position: absolute; 
+            inset: 0; 
+            background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.05) 0%, transparent 70%); 
+            pointer-events: none; 
+        }
+
+        .network-header { 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            margin-bottom: 2.5rem; 
+            padding-bottom: 1.5rem; 
+            border-bottom: 1px solid rgba(255,255,255,0.05); 
+            position: relative; 
+            z-index: 2; 
+        }
+        
+        .network-title { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 1rem; 
+            color: var(--text-primary); 
+            display: flex; 
+            align-items: center; 
+            gap: 0.75rem; 
+            font-weight: 600; 
+            letter-spacing: -0.01em; 
+        }
+        
+        .network-title i {
+            font-size: 1.1rem;
+            opacity: 0.7;
+        }
+
+        .status-pill {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 50px;
+            padding: 0.3rem 0.8rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .status-indicator { 
+            width: 6px; 
+            height: 6px; 
+            background: #ffffff; 
+            border-radius: 50%; 
+            box-shadow: 0 0 8px #ffffff; 
+            animation: pulse-apple 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; 
+        }
+        
+        @keyframes pulse-apple { 
+            0%, 100% { opacity: 1; transform: scale(1); } 
+            50% { opacity: 0.3; transform: scale(0.8); } 
+        }
+        
+        .status-text {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.65rem; 
+            color: var(--text-secondary); 
+            letter-spacing: 0.5px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        
+        .agent-cards { display: flex; flex-direction: column; gap: 1rem; position: relative; z-index: 2; }
+        
+        .agent-card { 
+            background: linear-gradient(180deg, rgba(20,20,20,0.8) 0%, rgba(10,10,10,0.9) 100%); 
+            border: 1px solid rgba(255,255,255,0.06); 
+            border-radius: 16px; 
+            padding: 1.25rem; 
+            display: flex; 
+            align-items: center; 
+            gap: 1.25rem; 
+            transform: translateX(20px); 
+            opacity: 0; 
+            animation: slideInRightApple 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+        
+        .agent-card:hover {
+            border-color: rgba(255,255,255,0.12);
+            transform: translateX(0) scale(1.02) !important;
+            background: linear-gradient(180deg, rgba(25,25,25,0.9) 0%, rgba(15,15,15,1) 100%); 
+        }
+
+        .agent-card:nth-child(1) { animation-delay: 0.1s; }
+        .agent-card:nth-child(2) { animation-delay: 0.25s; }
+        .agent-card:nth-child(3) { animation-delay: 0.4s; }
+        
+        @keyframes slideInRightApple { to { transform: translateX(0); opacity: 1; } }
+        
+        .ac-icon { 
+            width: 48px; 
+            height: 48px; 
+            border-radius: 14px; 
+            background: linear-gradient(135deg, rgba(30,30,30,1) 0%, rgba(15,15,15,1) 100%); 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 1.25rem; 
+            color: rgba(255,255,255,0.9); 
+            border: 1px solid rgba(255,255,255,0.08); 
+            box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 4px 10px rgba(0,0,0,0.5);
+            flex-shrink: 0;
+        }
+        
+        .ac-info { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+        
+        .ac-title { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-size: 0.95rem; 
+            color: rgba(255,255,255,0.95); 
+            margin-bottom: 0.6rem; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+        }
+        
+        /* Nuevos estilos para los Gráficos de Trading Animados */
+        .ac-chart { 
+            width: 100%; 
+            height: 35px; 
+            margin-top: 2px; 
+            position: relative; 
+        }
+        
+        .trading-chart { 
+            width: 100%; 
+            height: 100%; 
+            overflow: visible; 
+            display: block; 
+        }
+        
+        .chart-line { 
+            stroke-dasharray: 200; 
+            stroke-dashoffset: 200; 
+            filter: drop-shadow(0 0 5px rgba(255,255,255,0.7)); 
+        }
+        
+        .chart-area { 
+            opacity: 0; 
+        }
+        
+        .chart-arrow { 
+            opacity: 0; 
+            filter: drop-shadow(0 0 6px #ffffff); 
+            transform-origin: center; 
+        }
+        
+        /* Diferentes velocidades para simular comportamientos independientes */
+        .agent-card:nth-child(1) .chart-line { animation: drawChart 3.5s 0.2s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
+        .agent-card:nth-child(1) .chart-area { animation: revealArea 3.5s 0.2s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
+        .agent-card:nth-child(1) .chart-arrow { animation: pulseArrow 3.5s 0.2s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
+        
+        .agent-card:nth-child(2) .chart-line { animation: drawChart 3.2s 0.6s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
+        .agent-card:nth-child(2) .chart-area { animation: revealArea 3.2s 0.6s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
+        .agent-card:nth-child(2) .chart-arrow { animation: pulseArrow 3.2s 0.6s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
+        
+        .agent-card:nth-child(3) .chart-line { animation: drawChart 3.8s 0.9s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
+        .agent-card:nth-child(3) .chart-area { animation: revealArea 3.8s 0.9s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
+        .agent-card:nth-child(3) .chart-arrow { animation: pulseArrow 3.8s 0.9s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
+        
+        @keyframes drawChart {
+            0% { stroke-dashoffset: 200; opacity: 0; }
+            5% { opacity: 1; stroke-dashoffset: 200; }
+            55% { stroke-dashoffset: 0; opacity: 1; }
+            85% { stroke-dashoffset: 0; opacity: 1; }
+            100% { stroke-dashoffset: 0; opacity: 0; }
+        }
+
+        @keyframes revealArea {
+            0%, 20% { opacity: 0; }
+            55% { opacity: 1; }
+            85% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes pulseArrow {
+            0%, 50% { opacity: 0; transform: scale(0.5); }
+            55% { opacity: 1; transform: scale(1); }
+            65% { opacity: 1; transform: scale(1.3); }
+            85% { opacity: 1; transform: scale(1); }
+            100% { opacity: 0; transform: scale(0.5); }
+        }
+        
+        .ac-perf { 
+            color: #ffffff; 
+            font-size: 0.8rem; 
+            font-family: 'Satoshi', sans-serif; 
+            font-weight: 700; 
+            letter-spacing: 0.5px; 
+            text-shadow: 0 0 10px rgba(255,255,255,0.5); 
+            display: flex; 
+            align-items: center; 
+            gap: 0.25rem; 
+        }
+        
+        .ac-perf i {
+            font-size: 0.75rem;
+        }
+
+        /* Elegant background accents for the Engine */
+        .engine-glow-1 {
+            position: absolute;
+            top: -20%; right: -10%;
+            width: 300px; height: 300px;
+            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(40px);
+            z-index: 1;
+        }
+        .engine-glow-2 {
+            position: absolute;
+            bottom: -20%; left: -10%;
+            width: 250px; height: 250px;
+            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
+            border-radius: 50%;
+            filter: blur(30px);
+            z-index: 1;
+        }
 
         /* Value Section */
-        .value { background-color: var(--bg-color); position: relative; overflow: hidden; padding: 8rem 0; z-index: 1; }
+        .value { background-color: var(--bg-color); position: relative; overflow: hidden; padding: 8rem 0; z-index: 1; border-top: 1px solid var(--border-color); }
         .value-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
-        .floating-img { width: 100%; max-width: 512px; height: auto; border-radius: 24px; box-shadow: 0 0 30px rgba(86, 188, 175, 0.2); animation: float-img 6s ease-in-out infinite; filter: drop-shadow(0 10px 20px rgba(0,0,0,0.5)); }
-        @keyframes float-img { 0% { transform: translateY(0px); } 50% { transform: translateY(-20px); } 100% { transform: translateY(0px); } }
-        .value-content .section-title { text-align: left; margin-bottom: 1.5rem; font-size: 3rem; background: linear-gradient(90deg, #fff, #aaa); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .value-text { color: #e0e0e0; margin-bottom: 2.5rem; font-size: 1.1rem; line-height: 1.8; }
-        .value-buttons { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+        .floating-img { width: 100%; max-width: 512px; height: auto; border-radius: var(--radius); filter: grayscale(100%); border: 1px solid var(--border-color); box-shadow: var(--glow-white); }
+        .value-content .section-title { text-align: left; margin-bottom: 1.5rem; font-size: 3rem; color: var(--text-primary); letter-spacing: -0.04em; }
+        .word-glow { color: var(--text-primary); font-family: 'Playfair Display', serif; font-style: italic; font-weight: 400; letter-spacing: -0.02em; text-shadow: 0 0 20px rgba(255, 255, 255, 0.4); }
+        .value-text { color: var(--text-secondary); margin-bottom: 2.5rem; font-size: 1.1rem; line-height: 1.8; }
+        .value-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
+        .btn-xl { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.5px; text-transform: uppercase; color: #000; background: var(--text-primary); border: none; border-radius: var(--radius); cursor: pointer; transition: var(--transition); box-shadow: var(--glow-white); }
+        .btn-xl:hover { background: var(--accent); color: #000; box-shadow: var(--glow-white-strong); transform: translateY(-2px); }
+
+        /* Work With Us Section */
+        .work-with-us { text-align: center; position: relative; overflow: hidden; padding: 8rem 0; background: var(--bg-surface); border-top: 1px solid var(--border-color); }
 
         /* Footer */
-        .footer { background-color: #000; color: var(--white); padding: 6rem 0 0; position: relative; overflow: hidden; border-top: 1px solid rgba(86, 188, 175, 0.15); }
+        .footer { background-color: var(--bg-color); color: var(--text-primary); padding: 6rem 0 0; position: relative; overflow: hidden; border-top: 1px solid var(--border-color); }
         .footer-container { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; position: relative; z-index: 1; }
-        .footer-logo { font-size: 2.5rem; font-weight: 700; color: var(--white); display: inline-block; margin-bottom: 1.25rem; letter-spacing: -1px; background: linear-gradient(90deg, #fff, #ccc); -webkit-background-clip: text; background-clip: text; color: transparent; }
-        .footer-brand p { color: #999; margin-bottom: 2rem; max-width: 380px; line-height: 1.7; font-size: 1rem; }
+        .footer-logo { font-family: 'Playfair Display', serif; font-style: italic; font-size: 2rem; font-weight: 600; color: var(--text-primary); display: inline-block; margin-bottom: 1.25rem; letter-spacing: -0.5px; }
+        .footer-brand p { color: var(--text-secondary); margin-bottom: 2rem; max-width: 380px; line-height: 1.7; font-size: 0.95rem; }
         .social-links { display: flex; gap: 1rem; }
-        .social-links a { width: 45px; height: 45px; background-color: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); display: flex; align-items: center; justify-content: center; border-radius: 12px; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); color: #aaa; font-size: 1.2rem; }
-        .social-links a:hover { background-color: rgba(86, 188, 175, 0.15); border-color: var(--primary-blue); color: var(--white); transform: translateY(-4px); box-shadow: 0 8px 20px rgba(86, 188, 175, 0.3); }
-        .footer-links h3, .footer-contact h3 { font-size: 1.15rem; margin-bottom: 1.75rem; color: var(--white); font-weight: 600; letter-spacing: 0.5px; position: relative; display: inline-block; }
-        .footer-links h3::after, .footer-contact h3::after { content: ''; position: absolute; bottom: -8px; left: 0; width: 30px; height: 2px; background: var(--primary-blue); border-radius: 2px; }
-        .footer-links ul li, .footer-contact ul li { margin-bottom: 1.25rem; }
-        .footer-links a, .footer-contact a { color: #888; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
-        .footer-links a:hover { color: var(--primary-blue); }
-        .footer-contact li i { color: var(--primary-blue); font-size: 1.1rem; }
-        .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.08); padding: 2rem 0; position: relative; z-index: 1; background: rgba(0,0,0,0.3); }
-        .footer-bottom-content { display: flex; justify-content: space-between; align-items: center; color: #555; font-size: 0.9rem; }
+        .social-links a { width: 40px; height: 40px; background-color: transparent; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; border-radius: var(--radius); transition: var(--transition); color: var(--text-secondary); font-size: 1.1rem; }
+        .social-links a:hover { background-color: var(--text-primary); border-color: var(--text-primary); color: #000; }
+        .footer-links h3, .footer-contact h3 { font-size: 1rem; margin-bottom: 1.75rem; color: var(--text-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .footer-links ul li, .footer-contact ul li { margin-bottom: 1rem; }
+        .footer-links a, .footer-contact a { color: var(--text-secondary); transition: var(--transition); display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; }
+        .footer-links a:hover { color: var(--text-primary); }
+        .footer-contact li i { color: var(--text-secondary); font-size: 1rem; }
+        .footer-bottom { border-top: 1px solid var(--border-color); padding: 2rem 0; background: var(--bg-color); }
+        .footer-bottom-content { display: flex; justify-content: space-between; align-items: center; color: var(--text-secondary); font-size: 0.85rem; }
         .footer-legal { display: flex; gap: 2rem; }
-        .footer-legal a { color: #666; transition: color 0.3s ease; }
-        .footer-legal a:hover { color: var(--primary-blue); }
+        .footer-legal a { color: var(--text-secondary); transition: var(--transition); }
+        .footer-legal a:hover { color: var(--text-primary); }
 
         /* RESPONSIVE CSS */
         @media screen and (max-width: 968px) {
-            .hero-container { padding: 0 1rem; }
             .hero-title { font-size: 3.5rem; }
-            .nav-cta-highlight { display: block; padding: 0.5rem 1rem; font-size: 0.8rem; }
+            .scroll-card { flex-direction: column !important; gap: 2rem; padding: 2rem; height: auto; max-height: 85vh; overflow-y: auto; }
+            .card-visual { display: none !important; }
+            .card-content { flex: none; max-width: 100%; width: 100%; justify-content: center; }
+            .services-stack { height: auto; min-height: 600px; padding: 0 1rem; }
+            .service-title-new { font-size: 1.8rem; }
+            .agentic-grid { grid-template-columns: 1fr; gap: 3rem; }
+            .agentic-content .section-title { font-size: 2.75rem !important; }
+            .agentic-visual { height: auto; min-height: 400px; }
             .footer-container { grid-template-columns: 1fr 1fr; gap: 3rem; }
             .footer-brand { grid-column: 1 / -1; }
         }
 
         @media screen and (max-width: 768px) {
-            .navbar { left: 0; right: 0; margin: 0 auto; transform: none; width: 90%; max-width: 400px; justify-content: space-between; padding: 0.5rem 1.5rem; }
-            .nav-menu { position: fixed; top: -100vh; left: 50%; transform: translateX(-50%); width: 90%; max-width: 340px; background-color: rgba(15, 15, 15, 0.95); backdrop-filter: blur(20px); padding: 2.5rem 1.5rem; box-shadow: 0 10px 40px rgba(0, 0, 0, 0.6); border-radius: 24px; transition: top 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.3s ease, visibility 0.3s; z-index: 999; display: flex; flex-direction: column; align-items: center; border: 1px solid rgba(255, 255, 255, 0.08); opacity: 0; visibility: hidden; }
-            .show-menu { top: 6.5rem; opacity: 1; visibility: visible; }
-            .nav-list { flex-direction: column; align-items: center; gap: 1.5rem; width: 100%; }
-            .nav-link { color: var(--white); font-size: 1.1rem; font-weight: 500; width: 100%; text-align: center; display: block; padding: 0.5rem; border-radius: 12px; }
-            .nav-toggle { display: flex; font-size: 1.25rem; cursor: pointer; color: var(--white); margin-left: 0.5rem; width: 36px; height: 36px; align-items: center; justify-content: center; background: rgba(255,255,255,0.05); border-radius: 50%; }
-            .hero-title { font-size: 2.5rem; }
+            .navbar { top: 1rem; height: 60px; padding: 0 1.5rem; width: 95%; border-radius: 100px; }
+            .scroll-header { top: 0.5rem; }
+            .nav-menu { position: fixed; top: -100vh; left: 0; transform: none; width: 100%; background-color: var(--bg-color); padding: 6rem 2rem 4rem; border-bottom: 1px solid var(--border-color); transition: top 0.4s ease; z-index: 999; flex-direction: column; align-items: flex-start; }
+            .show-menu { top: 0; }
+            .nav-list { flex-direction: column; align-items: flex-start; gap: 2rem; width: 100%; }
+            .nav-link { font-size: 1.5rem; font-weight: 600; }
+            .nav-toggle, .nav-close { display: block; z-index: 1001; }
+            .nav-close { position: absolute; top: 1.5rem; right: 1.5rem; }
+            .nav-right .nav-cta { display: none; } 
+            .mobile-only { display: block; width: 100%; margin-top: 1rem; }
+            .mobile-only .nav-cta { display: block; text-align: center; padding: 1rem; font-size: 1rem; }
+            .hero { padding-top: 150px; }
+            .hero-title { font-size: 2.75rem; }
+            .brands-title { font-size: 1.5rem; margin-bottom: 2rem; padding: 0 1rem; }
             .hero-buttons { flex-direction: column; align-items: center; gap: 1rem; }
-            .btn-glow, .btn-white-glow { width: 100%; max-width: 280px; text-align: center; padding: 1rem; }
-            .nav-cta-highlight { display: flex; width: 100%; justify-content: center; margin-top: 0.5rem; }
-            .cta-nav-item { width: 100%; display: flex; justify-content: center; }
-            .services-scroll-track { height: 750vh; display: block; }
-            .services-sticky-container { position: sticky; top: 0; height: 100vh; overflow: hidden; display: flex; flex-direction: column; padding-top: 6rem; }
-            .services-sticky-container .container { height: 100%; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; }
-            .section-subtitle { display: none; }
-            .services-stack { height: auto; flex: 1; width: 100%; display: flex; align-items: center; justify-content: center; margin-top: 1rem; padding: 0 1rem; position: relative; }
-            .scroll-card { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) translateY(50px) scale(0.9); width: 90%; max-width: 400px; opacity: 0; padding: 2rem 1.5rem 4rem; }
-            .scroll-card.active { opacity: 1; transform: translate(-50%, -50%) scale(1); }
+            .btn-glow, .btn-white-glow { width: 100%; max-width: 280px; text-align: center; }
+            .pack-features-new { grid-template-columns: 1fr; gap: 0.75rem; }
+            .services-scroll-track { height: 1100vh; display: block; }
+            .services-sticky-container { padding-top: 6rem; }
+            .scroll-card { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) translateY(50px) scale(0.95); width: 92%; padding: 1.5rem; border-radius: 24px; }
+            .scroll-card.active { transform: translate(-50%, -50%) scale(1); }
             .value-container { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
             .value-content .section-title { text-align: center; font-size: 2.5rem; }
             .value-buttons { justify-content: center; flex-direction: column; align-items: center; }
             .value-buttons button { width: 100%; max-width: 280px; }
-            .floating-img { max-width: 80%; margin: 0 auto; }
-            .footer-container { grid-template-columns: 1fr; text-align: center; }
-            .footer-brand { align-items: center; display: flex; flex-direction: column; }
-            .footer-links h3::after, .footer-contact h3::after { left: 50%; transform: translateX(-50%); }
-            .footer-links a, .footer-contact a, .footer-contact li { justify-content: center; }
-            .footer-bottom-content { flex-direction: column; gap: 1.5rem; }
+            .footer-container { grid-template-columns: 1fr; text-align: left; }
+            .footer-brand { align-items: flex-start; display: flex; flex-direction: column; }
+            .footer-bottom-content { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+            .fade-edges {
+                -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+                mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
+            }
         }
 
-        .word-glow { position: relative; display: inline-block; background: linear-gradient(90deg, var(--primary-blue), #ffffff, var(--primary-blue)); background-size: 200%; -webkit-background-clip: text; background-clip: text; color: transparent; animation: text-flow 3s linear infinite; filter: drop-shadow(0 0 8px rgba(86, 188, 175, 0.6)); font-weight: 700; }
-        @keyframes text-flow { 0% { background-position: 0% 50%; } 100% { background-position: 200% 50%; } }
-
         /* Modal Styles */
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(12px); z-index: 2000; display: none; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
+        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(5px); z-index: 2000; display: none; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
         .modal-overlay.active { display: flex; opacity: 1; }
-        .modal-content { background: rgba(15, 15, 15, 0.95); border: 1px solid rgba(86, 188, 175, 0.2); border-radius: 24px; padding: 2.5rem; width: 90%; max-width: 450px; position: relative; box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(86, 188, 175, 0.1); transform: translateY(20px) scale(0.95); transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); display: none; }
-        .modal-content.active { display: block; transform: translateY(0) scale(1); }
-        .modal-close { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 1.5rem; color: var(--text-light); cursor: pointer; transition: color 0.3s ease; z-index: 50; }
-        .modal-close:hover { color: var(--white); }
-        .modal-title { font-size: 1.75rem; margin-bottom: 0.5rem; color: var(--white); font-weight: 600; text-align: center; letter-spacing: -0.5px; }
+        .modal-content { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 2.5rem; width: 90%; max-width: 450px; position: relative; transform: translateY(20px); transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); display: none; }
+        .modal-content.active { display: block; transform: translateY(0); }
+        .modal-close { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 1.5rem; color: var(--text-secondary); cursor: pointer; transition: color 0.3s ease; z-index: 50; }
+        .modal-close:hover { color: var(--text-primary); }
+        .modal-title { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.02em; }
 
         .modal-form { display: flex; flex-direction: column; gap: 1.5rem; }
         .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-        .form-group label { font-size: 0.9rem; color: #ccc; font-weight: 500; }
-        .form-group input, .form-group select, .form-group textarea { background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 1rem; color: var(--white); font-size: 1rem; transition: all 0.3s ease; font-family: inherit; width: 100%; }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--primary-blue); background: rgba(86, 188, 175, 0.05); box-shadow: 0 0 0 4px rgba(86, 188, 175, 0.1); }
+        .form-group label { font-size: 0.85rem; color: var(--text-secondary); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
+        .form-group input, .form-group select, .form-group textarea { background: var(--bg-color); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 1rem; color: var(--text-primary); font-size: 0.95rem; transition: var(--transition); font-family: inherit; width: 100%; }
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--text-primary); }
 
         .modal-content.modal-lg { max-width: 700px; width: 95%; height: 600px; max-height: 90vh; padding: 0; display: none; flex-direction: column; overflow: hidden; }
         .modal-content.modal-lg.active { display: flex; }
         .modal-content.modal-lg .modal-title { margin-top: 0; padding: 0; text-align: left; margin-bottom: 0.5rem;}
-        .modal-content.modal-lg .modal-close { top: 1rem; right: 1.5rem; z-index: 10; }
+        .modal-content.modal-lg .modal-close { top: 1.5rem; right: 1.5rem; z-index: 10; }
 
         .scrollable-form { flex-grow: 1; display: flex; flex-direction: column; padding: 2rem 2.5rem; overflow-y: auto; }
-        .scrollable-form::-webkit-scrollbar { width: 6px; }
-        .scrollable-form::-webkit-scrollbar-track { background: rgba(255, 255, 255, 0.02); }
-        .scrollable-form::-webkit-scrollbar-thumb { background: rgba(86, 188, 175, 0.3); border-radius: 4px; }
+        .scrollable-form::-webkit-scrollbar { width: 4px; }
+        .scrollable-form::-webkit-scrollbar-track { background: transparent; }
+        .scrollable-form::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
         
-        .form-section { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); }
+        .form-section { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); }
         .minimal-section { border-bottom: none !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
-        .minimal-section h4 { font-size: 1.25rem; margin-bottom: 0.5rem; color: var(--white); }
-        .minimal-section .section-desc { margin-bottom: 2rem; font-size: 0.95rem; color: var(--text-light); }
+        .minimal-section h4 { font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.5px; }
         .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
         @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
-        .form-group select option { background-color: #1a1a1a; color: var(--white); }
+        .form-group select option { background-color: var(--bg-color); color: var(--text-primary); }
 
         .checkbox-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.75rem; }
-        .checkbox-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: #ccc; cursor: pointer; background: rgba(255, 255, 255, 0.02); padding: 0.5rem 0.75rem; border-radius: 8px; border: 1px solid rgba(255, 255, 255, 0.05); transition: all 0.2s ease; }
-        .checkbox-item:hover { background: rgba(255, 255, 255, 0.05); border-color: rgba(255, 255, 255, 0.1); }
-        .checkbox-item input[type="checkbox"] { accent-color: var(--primary-blue); width: 16px; height: 16px; }
+        .checkbox-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-secondary); cursor: pointer; background: var(--bg-color); padding: 0.75rem 1rem; border-radius: var(--radius); border: 1px solid var(--border-color); transition: var(--transition); }
+        .checkbox-item:hover { border-color: var(--text-primary); color: var(--text-primary); }
+        .checkbox-item input[type="checkbox"], .checkbox-item input[type="radio"] { accent-color: var(--text-primary); width: 14px; height: 14px; }
 
-        .modal-header-minimal { padding: 2rem 2.5rem 1.5rem; border-bottom: 1px solid rgba(255, 255, 255, 0.05); background: rgba(20, 20, 20, 0.4); }
+        .modal-header-minimal { padding: 2rem 2.5rem 1.5rem; border-bottom: 1px solid var(--border-color); background: transparent; }
         .wizard-progress { display: flex; align-items: center; gap: 1rem; margin-top: 1rem; }
-        .progress-bar-bg { flex-grow: 1; height: 4px; background: rgba(255, 255, 255, 0.1); border-radius: 2px; overflow: hidden; }
-        .progress-bar-fill { height: 100%; background: var(--primary-blue); width: 20%; transition: width 0.3s ease; }
-        .steps-count { font-size: 0.85rem; color: var(--text-light); font-weight: 500; white-space: nowrap; }
+        .progress-bar-bg { flex-grow: 1; height: 2px; background: var(--border-color); overflow: hidden; }
+        .progress-bar-fill { height: 100%; background: var(--text-primary); width: 20%; transition: width 0.3s ease; }
+        .steps-count { font-size: 0.8rem; color: var(--text-secondary); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
 
         .wizard-step-founder { display: none; animation: fadeIn 0.4s ease; }
         .wizard-step-founder.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
 
-        .wizard-navigation { display: flex; justify-content: center; gap: 1.5rem; padding: 2rem 2.5rem 2.5rem; border-top: 1px solid rgba(255, 255, 255, 0.05); background: rgba(20, 20, 20, 0.4); margin-top: auto; }
-        .nav-btn { min-width: 180px; padding: 1rem 2rem; font-size: 1rem; letter-spacing: 0.5px; border-radius: 50px; transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); }
-        .btn-primary.nav-btn { box-shadow: 0 4px 20px rgba(86, 188, 175, 0.25); }
-        .btn-primary.nav-btn:hover { box-shadow: 0 6px 25px rgba(86, 188, 175, 0.4); transform: translateY(-2px); }
-        .btn-outline.nav-btn { border-color: rgba(255, 255, 255, 0.15); color: #aaa; }
-        .btn-outline.nav-btn:hover { border-color: var(--white); color: var(--white); background: rgba(255, 255, 255, 0.05); transform: translateY(-2px); }
+        .wizard-navigation { display: flex; justify-content: center; gap: 1rem; padding: 1.5rem 2.5rem 2rem; border-top: 1px solid var(--border-color); background: transparent; margin-top: auto; }
+        .nav-btn { min-width: 140px; }
 
         .modal-content.success-modal { text-align: center; padding: 3rem 2rem; max-width: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .success-icon-container { width: 80px; height: 80px; border-radius: 50%; background: rgba(86, 188, 175, 0.1); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; box-shadow: 0 0 30px rgba(86, 188, 175, 0.2); animation: success-pulse 2s infinite; }
-        .success-icon { font-size: 2.5rem; color: var(--primary-blue); animation: check-bounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; transform: scale(0); }
-        .success-title { font-size: 1.75rem; color: var(--white); margin-bottom: 0.5rem; font-weight: 600; }
-        .success-desc { color: var(--text-light); margin-bottom: 2rem; font-size: 1rem; }
-        @keyframes success-pulse { 0% { box-shadow: 0 0 0 0 rgba(86, 188, 175, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(86, 188, 175, 0); } 100% { box-shadow: 0 0 0 0 rgba(86, 188, 175, 0); } }
+        .success-icon-container { width: 64px; height: 64px; border-radius: var(--radius); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; background: var(--bg-surface); box-shadow: var(--glow-white); }
+        .success-icon { font-size: 1.5rem; color: var(--text-primary); animation: check-bounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; transform: scale(0); text-shadow: 0 0 15px rgba(255,255,255,0.5); }
+        .success-title { font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600; }
+        .success-desc { color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.95rem; }
         @keyframes check-bounce { 0% { transform: scale(0); opacity: 0; } 60% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
 
-        /* Loader */
-        #app-loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: #02060f; background-image: radial-gradient(circle at 50% 50%, rgba(86, 188, 175, 0.12) 0%, transparent 50%), linear-gradient(rgba(86, 188, 175, 0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(86, 188, 175, 0.03) 1px, transparent 1px); background-size: 100% 100%, 40px 40px, 40px 40px; z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column; transition: opacity 0.8s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.8s; overflow: hidden; }
-        #app-loader::after { content: ''; position: absolute; top: -50%; left: -50%; width: 200%; height: 200%; background: conic-gradient(from 0deg at 50% 50%, transparent 0%, rgba(86, 188, 175, 0.03) 20%, transparent 40%); animation: radar-spin 12s linear infinite reverse; pointer-events: none; z-index: 1; }
-        .radar-scan { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 400px; height: 400px; border-radius: 50%; border: 1px solid rgba(86, 188, 175, 0.1); display: flex; justify-content: center; align-items: center; box-shadow: inset 0 0 60px rgba(86, 188, 175, 0.05), 0 0 40px rgba(0, 0, 0, 0.5); z-index: 2; }
-        .radar-circle { position: absolute; width: 280px; height: 280px; border-radius: 50%; border: 1px solid rgba(86, 188, 175, 0.2); border-top-color: rgba(86, 188, 175, 0.8); border-right-color: rgba(86, 188, 175, 0.4); animation: radar-spin 4s linear infinite; box-shadow: 0 0 20px rgba(86, 188, 175, 0.1); }
-        .radar-circle-sm { position: absolute; width: 160px; height: 160px; border-radius: 50%; border: 1px dotted rgba(86, 188, 175, 0.4); animation: radar-spin 8s linear infinite reverse; }
-        .radar-beam { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border-radius: 50%; background: conic-gradient(from 0deg, transparent 75%, rgba(86, 188, 175, 0.25) 100%); animation: radar-sweep 2s linear infinite; mask-image: radial-gradient(circle, transparent 35%, black 36%); -webkit-mask-image: radial-gradient(circle, transparent 35%, black 36%); }
-        .loader-content { position: relative; z-index: 10; text-align: center; display: flex; flex-direction: column; align-items: center; background: rgba(2, 6, 15, 0.6); padding: 2rem 4rem; border-radius: 20px; backdrop-filter: blur(10px); border: 1px solid rgba(86, 188, 175, 0.1); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); }
-        .loader-logo { font-size: 3.5rem; font-weight: 700; color: var(--white); margin-bottom: 1rem; letter-spacing: -1px; text-shadow: 0 0 20px rgba(86, 188, 175, 0.6); position: relative; overflow: hidden; }
-        .loader-logo::after { content: ''; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent); animation: text-sweep 3s ease-in-out infinite; }
-        @keyframes text-sweep { 0% { left: -100%; } 50% { left: 200%; } 100% { left: 200%; } }
-        .loader-status { font-family: 'Courier New', monospace; font-size: 0.85rem; color: var(--primary-blue); letter-spacing: 3px; margin-bottom: 1rem; text-transform: uppercase; font-weight: 600; }
-        .status-dots { animation: dots 1.5s infinite steps(4); }
-        @keyframes dots { 0%, 20% { content: "."; } 40% { content: ".."; } 60% { content: "..."; } 80%, 100% { content: ""; } }
-        .loader-progress-container { width: 280px; height: 4px; background: rgba(255, 255, 255, 0.05); border-radius: 4px; overflow: hidden; position: relative; box-shadow: inset 0 1px 3px rgba(0,0,0,0.5); }
-        .loader-progress-bar { position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: var(--primary-blue); box-shadow: 0 0 15px var(--primary-blue); animation: load-progress-tech 1.8s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
-        @keyframes load-progress-tech { 0% { width: 0%; } 20% { width: 15%; } 40% { width: 45%; } 60% { width: 60%; } 80% { width: 85%; } 100% { width: 100%; } }
-        @keyframes radar-spin { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
-        @keyframes radar-sweep { from { transform: rotate(0deg); } to { transform: rotate(360deg); } }
+        /* Luxury Minimalist Loader */
+        #app-loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--bg-color); z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column; transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s; }
+        .loader-content { display: flex; flex-direction: column; align-items: center; gap: 2.5rem; }
+        .loader-logo-img { width: 60px; height: auto; animation: spin-radar 2s linear infinite; filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2)); }
+        @keyframes spin-radar { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+        .loader-progress-container { width: 220px; height: 1px; background: rgba(255, 255, 255, 0.1); position: relative; overflow: hidden; }
+        .loader-progress-bar { position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: var(--text-primary); box-shadow: 0 0 15px rgba(255,255,255,1); animation: luxury-progress-bar 3s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
+        @keyframes luxury-progress-bar { 0% { width: 0%; } 40% { width: 50%; } 70% { width: 80%; } 100% { width: 100%; } }
 
         /* ==============================================================
-           REWARDS PAGE SPECIFIC CSS
+           REWARDS PAGE SPECIFIC CSS (CRYPTIC STYLE)
            ============================================================== */
         #rewards-page {
             display: none;
             min-height: 100vh;
-            padding-top: 120px;
+            padding-top: 150px;
             padding-bottom: 6rem;
-            background-color: #050a0a;
-            position: relative;
-        }
-
-        #rewards-page::before {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: radial-gradient(circle at 50% -20%, rgba(86, 188, 175, 0.1) 0%, transparent 60%);
-            pointer-events: none;
-            z-index: 0;
+            background-color: var(--bg-color);
         }
 
         .rewards-dashboard-container {
@@ -738,36 +1052,35 @@
             justify-content: space-between;
             align-items: center;
             margin-bottom: 3rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
+            border-bottom: 1px solid var(--border-color);
             padding-bottom: 2rem;
         }
 
         .points-pill {
-            background: rgba(86,188,175,0.1);
-            border: 1px solid rgba(86,188,175,0.3);
-            padding: 0.6rem 1.5rem;
-            border-radius: 50px;
-            color: var(--primary-blue);
-            font-weight: bold;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            padding: 0.6rem 1.25rem;
+            border-radius: var(--radius);
+            color: var(--text-primary);
+            font-weight: 600;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            box-shadow: 0 0 15px rgba(86,188,175,0.15);
-            font-size: 1.2rem;
+            font-size: 1rem;
+            box-shadow: var(--glow-white);
         }
 
         .raid-item {
-            background: #0b0e14;
-            border: 1px solid rgba(255,255,255,0.05);
-            border-radius: 16px;
-            margin-bottom: 1.5rem;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
             overflow: hidden;
-            transition: all 0.3s ease;
+            transition: var(--transition);
         }
 
         .raid-item:hover {
-            border-color: rgba(255,255,255,0.1);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            border-color: var(--border-light);
         }
 
         .raid-header {
@@ -776,48 +1089,44 @@
             padding: 1.5rem 2rem;
             cursor: pointer;
             align-items: center;
-            transition: background 0.3s;
-        }
-
-        .raid-header:hover {
-            background: rgba(255,255,255,0.02);
         }
 
         .raid-tag {
-            background: rgba(86,188,175,0.1);
-            color: var(--primary-blue);
-            padding: 4px 12px;
-            border-radius: 50px;
-            font-size: 0.7rem;
-            font-weight: 700;
+            background: transparent;
+            color: var(--text-secondary);
+            border: 1px solid var(--border-color);
+            padding: 4px 10px;
+            border-radius: 2px;
+            font-size: 0.65rem;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
             display: inline-block;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.75rem;
         }
 
         .raid-title {
-            font-size: 1.2rem;
-            color: #fff;
+            font-size: 1.15rem;
+            color: var(--text-primary);
             margin: 0;
             font-weight: 600;
         }
 
         .raid-points {
-            border: 1px solid rgba(255,255,255,0.1);
-            padding: 8px 16px;
-            border-radius: 12px;
-            color: #fff;
-            font-weight: bold;
-            background: rgba(255,255,255,0.03);
-            font-size: 1.1rem;
+            border: 1px solid var(--border-color);
+            padding: 6px 12px;
+            border-radius: 2px;
+            color: var(--text-primary);
+            font-weight: 600;
+            background: transparent;
+            font-size: 0.9rem;
         }
 
         .raid-body {
             display: none;
             padding: 0 2rem 2rem 2rem;
-            border-top: 1px solid rgba(255,255,255,0.05);
-            background: rgba(0,0,0,0.2);
+            border-top: 1px solid var(--border-color);
+            background: var(--bg-color);
             animation: fadeIn 0.3s ease;
         }
 
@@ -826,15 +1135,13 @@
         }
 
         .register-container {
-            background: rgba(15, 15, 15, 0.95);
-            border: 1px solid rgba(86, 188, 175, 0.2);
-            border-radius: 24px;
+            background: var(--bg-surface);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
             padding: 3rem;
             max-width: 450px;
             margin: 4rem auto;
             position: relative;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.6), 0 0 30px rgba(86, 188, 175, 0.1);
-            z-index: 10;
         }
 
         @media (max-width: 600px) {
@@ -848,17 +1155,8 @@
 <body>
     <!-- Loading Screen -->
     <div id="app-loader">
-        <div class="radar-scan">
-            <div class="radar-beam"></div>
-            <div class="radar-circle"></div>
-            <div class="radar-circle-sm"></div>
-        </div>
         <div class="loader-content">
-            <div class="loader-logo">DeRadar</div>
-            <div class="loader-status">
-                <span class="status-text">INITIALIZING SECURE PROTOCOLS</span>
-                <span class="status-dots">...</span>
-            </div>
+            <img src="https://i.postimg.cc/Dz7CnbDj/Sin-titulo-1.png" alt="DeRadar" class="loader-logo-img">
             <div class="loader-progress-container">
                 <div class="loader-progress-bar"></div>
             </div>
@@ -868,27 +1166,39 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="container nav-container">
-            <a href="#" class="logo" onclick="goToHome(event)">DeRadar</a>
+            <!-- Left: Logo -->
+            <a href="#" class="logo" onclick="goToHome(event)">
+                <img src="https://i.postimg.cc/Dz7CnbDj/Sin-titulo-1.png" alt="DeRadar">
+            </a>
             
+            <!-- Center: Links -->
             <div class="nav-menu" id="nav-menu">
+                <div class="nav-close" id="nav-close"><i class="fas fa-times"></i></div>
                 <ul class="nav-list">
                     <li class="nav-item"><a href="#categories" class="nav-link" onclick="goToHomeAndScroll(event, 'categories')">Services</a></li>
-                    <li class="nav-item"><a href="#talent" class="nav-link" onclick="goToHomeAndScroll(event, 'talent')">Get in Touch</a></li>
-                    <li class="nav-item">
-                        <a href="#" id="btn-rewards" class="nav-link nav-text-blue" onclick="goToRewards(event)">
-                            <i class="fas fa-gift"></i> Rewards
-                        </a>
-                    </li>
-                    <li class="nav-item cta-nav-item">
-                        <a href="#work-with-us" class="nav-cta-highlight" onclick="goToHomeAndScroll(event, 'work-with-us')">
-                            <i class="fas fa-sign-in-alt"></i> Learn Free
-                        </a>
+                    <li class="nav-item"><a href="#talent" class="nav-link" onclick="goToHomeAndScroll(event, 'talent')">Case Studies</a></li>
+                    <li class="nav-item"><a href="#" id="btn-rewards" class="nav-link" onclick="goToRewards(event)">Rewards</a></li>
+                    <li class="nav-item"><a href="#work-with-us" class="nav-link" onclick="goToHomeAndScroll(event, 'work-with-us')">Community</a></li>
+                    
+                    <!-- Mobile CTA -->
+                    <li class="nav-item mobile-only">
+                        <div class="nav-cta nav-cta-disabled" style="cursor: not-allowed;">
+                            Open App
+                            <span class="badge-soon">Soon</span>
+                        </div>
                     </li>
                 </ul>
             </div>
 
-            <div class="nav-toggle" id="nav-toggle">
-                <i class="fas fa-bars"></i>
+            <!-- Right: CTA & Menu Toggle -->
+            <div class="nav-right">
+                <div class="nav-cta nav-cta-disabled" style="cursor: not-allowed;">
+                    Open App
+                    <span class="badge-soon">Soon</span>
+                </div>
+                <div class="nav-toggle" id="nav-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
             </div>
         </div>
     </nav>
@@ -899,199 +1209,448 @@
     <div id="home-view">
         <!-- Hero Section -->
         <section class="hero" id="hero">
-            <video class="hero-video" id="hero-video" autoplay loop muted playsinline webkit-playsinline disablePictureInPicture controlsList="nodownload nofullscreen noremoteplayback">
-                <source src="video.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
+            <!-- Using a solid color or placeholder if video fails in preview -->
+            <div class="hero-video" style="background: #111;"></div>
             <div class="hero-overlay"></div>
 
             <div class="container hero-container">
-                <h1 class="hero-title">
-                    Scale Your Brand with <br>
-                    <span class="glitch-text" data-text="ai videos">ai videos</span>
+                <h1 class="hero-title fade-edges">
+                    Launch Your MVP In <br>
+                    <span class="luxury-fade-text fade-in" id="rotating-text">record time</span>
                 </h1>
-                <p class="hero-description">
-                    <span class="highlight-glow"><span class="text-highlight">Create viral content instantly.</span></span> We build hyper-realistic AI videos, automated faceless channels, and cinematic ads for founders, creators, and Web2/Web3 brands.
+                <p class="hero-description fade-edges">
+                    We engineer smart contracts, tokenomics, and top-tier UI/UX. Accelerated by Agentic Technology, autonomous AI Agents, and 24/7 expert support.
                 </p>
                 <div class="hero-buttons">
-                    <a href="#categories" class="btn btn-glow" style="font-size: 1.2rem; font-weight: 700;">Check our services</a>
-                    <a href="#work-with-us" class="btn btn-white-glow" style="font-size: 1.2rem; font-weight: 700;">Explore our courses</a>
+                    <a href="#categories" class="btn btn-glow" style="font-size: 1.2rem; font-weight: 700;">Explore Services</a>
+                    <a href="#work-with-us" class="btn btn-white-glow" style="font-size: 1.2rem; font-weight: 700;">Join Dev Roster</a>
                 </div>
             </div>
 
             <div class="brands-section" style="position: relative; z-index: 3; margin-top: 0;">
-                <div class="brands-label">POWERING CONTENT FOR WEB2 & WEB3 BRANDS</div>
                 <div class="logo-carousel">
                     <div class="logo-track">
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/ethereum/white" alt="Ethereum"></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/solana/white" alt="Solana"></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/binance/white" alt="Binance"></div>
-                        <div class="logo-item"><img src="https://i.postimg.cc/MGv9jHH9/Coinbase-Symbol.png" alt="Coinbase"></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/chainlink/white" alt="Chainlink"></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/polygon/white" alt="Polygon"></div>
-                        <div class="logo-item"><img src="https://i.postimg.cc/prDGXSrV/uniswap-uni-logo.png" alt="Uniswap"></div>
-                        <div class="logo-item"><img src="https://i.postimg.cc/zGPj5N7x/Aave-Crypto-Logo.png" alt="Aave"></div>
+                        <!-- Primer grupo de logos -->
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/telegram/white" alt="Telegram"></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/discord/white" alt="Discord"></div>
+                        <div class="logo-item"><i class="fas fa-globe" title="Website"></i></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/python/white" alt="Python"></div>
+                        <div class="logo-item"><i class="fas fa-robot" title="Bots"></i></div>
+                        <div class="logo-item"><i class="fas fa-pen-nib" title="Design"></i></div>
+                        <div class="logo-item"><i class="fas fa-leaf" title="Organic"></i></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/x/white" alt="X"></div>
                         
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/ethereum/white" alt="Ethereum"></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/solana/white" alt="Solana"></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/binance/white" alt="Binance"></div>
-                        <div class="logo-item"><img src="https://i.postimg.cc/MGv9jHH9/Coinbase-Symbol.png" alt="Coinbase"></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/chainlink/white" alt="Chainlink"></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/polygon/white" alt="Polygon"></div>
-                        <div class="logo-item"><img src="https://i.postimg.cc/prDGXSrV/uniswap-uni-logo.png" alt="Uniswap"></div>
-                        <div class="logo-item"><img src="https://i.postimg.cc/zGPj5N7x/Aave-Crypto-Logo.png" alt="Aave"></div>
+                        <!-- Segundo grupo de logos (Duplicado para el loop infinito) -->
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/telegram/white" alt="Telegram"></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/discord/white" alt="Discord"></div>
+                        <div class="logo-item"><i class="fas fa-globe" title="Website"></i></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/python/white" alt="Python"></div>
+                        <div class="logo-item"><i class="fas fa-robot" title="Bots"></i></div>
+                        <div class="logo-item"><i class="fas fa-pen-nib" title="Design"></i></div>
+                        <div class="logo-item"><i class="fas fa-leaf" title="Organic"></i></div>
+                        <div class="logo-item"><img src="https://cdn.simpleicons.org/x/white" alt="X"></div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="section-separator"></div>
-
-        <!-- AI Video Categories Section -->
+        <!-- Web3 Services Categories Section -->
         <section class="services section" id="categories">
             <div class="services-scroll-track">
                 <div class="services-sticky-container">
-                    <div class="container">
+                    <div class="container" style="max-width: 1650px; width: 96%;">
                         <div class="section-header">
-                            <h2 class="section-title">Our AI Video Services</h2>
-                            <p class="section-subtitle">High-converting content creation for brands, founders, and creators</p>
+                            <h2 class="section-title">Our Services</h2>
+                            <p class="section-subtitle">End-to-end decentralized solutions for protocols, founders, and DAOs</p>
                         </div>
                         
                         <div class="services-stack">
-                            <div class="service-card featured-pack scroll-card">
-                                <div class="service-icon"><i class="fas fa-play-circle"></i></div>
-                                <span class="badge-best-seller" style="background: var(--primary-blue); color: #fff; box-shadow: 0 4px 15px rgba(86, 188, 175, 0.4);">Top Choice</span>
-                                <h3 class="service-title">Full branding pack</h3>
-                                <p class="service-description">Complete brand kit and content automation: Visuals, videos & assets.</p>
-                                <ul class="pack-features">
-                                    <li><i class="fas fa-check"></i> Logo & Banner Design</li>
-                                    <li><i class="fas fa-check"></i> 50 Pack Videos</li>
-                                    <li><i class="fas fa-check"></i> Custom Thumbnails</li>
-                                    <li><i class="fas fa-check"></i> Emotes & Stickers</li>
-                                    <li><i class="fas fa-check"></i> 24/7 Support</li>
-                                </ul>
-                                <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20the%20Full%20branding%20pack" class="btn-want-this" target="_blank">WANT THIS</a>
+                            
+                            <!-- Service 1 -->
+                            <div class="scroll-card">
+                                <div class="card-content">
+                                    <span class="service-badge featured">Ultimate Suite</span>
+                                    <div class="service-icon-new" style="margin-bottom: 0.5rem;"><i class="fas fa-hard-hat"></i></div>
+                                    <h3 class="service-title-new" style="font-size: 1.5rem; margin-bottom: 0.2rem;">Builder Starter Pack</h3>
+                                    
+                                    <p class="service-desc-new" style="font-size: 0.85rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.75rem;">
+                                        A complete 50+ elite builder ecosystem.
+                                    </p>
+                                    
+                                    <ul class="pack-features-new" style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); gap: 0.5rem; margin-bottom: 1.5rem;">
+                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Smart Contracts</strong> <span style="color:var(--text-secondary);">(Solidity/Rust)</span></li>
+                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">High-Perf Frontends</strong> <span style="color:var(--text-secondary);">(Next.js)</span></li>
+                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Tokenomics & Architecture</strong></li>
+                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Expert UI/UX Design</strong></li>
+                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Artists & Creatives</strong></li>
+                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Business Developers</strong></li>
+                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Ambassador Programs</strong></li>
+                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Organic Engagement</strong></li>
+                                    </ul>
+                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20End-to-End%20Web3%20Dev" class="btn btn-request-glowing" target="_blank" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">Request Service</a>
+                                </div>
+                                <div class="card-visual">
+                                    <img src="https://i.postimg.cc/T350VvLS/banner1.png" alt="Web3 Development">
+                                    <div class="visual-overlay"></div>
+                                </div>
                             </div>
 
-                            <div class="service-card scroll-card">
-                                <span class="badge-best-seller">Best Seller</span>
-                                <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
-                                <h3 class="service-title">Viral AI Shorts</h3>
-                                <p class="service-description">Automated short-form content tailored for storytelling, fruit facts, and story channels.</p>
-                                <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Viral%20AI%20Shorts" class="btn-want-this" target="_blank">WANT THIS</a>
+                            <!-- Service 2 -->
+                            <div class="scroll-card">
+                                <div class="card-content">
+                                    <span class="service-badge">Core Integration</span>
+                                    <div class="service-icon-new"><i class="fas fa-chart-pie"></i></div>
+                                    <h3 class="service-title-new">Tokenomics & Strategy</h3>
+                                    <p class="service-desc-new">Mathematical modeling, emission schedules, and utility design to ensure sustainable and robust token economies. We craft mathematical foundations that prevent inflation and drive value accumulation.</p>
+                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Tokenomics" class="btn btn-request-glowing" target="_blank">Request Service</a>
+                                </div>
+                                <div class="card-visual">
+                                    <img src="https://i.postimg.cc/3wMspBRW/banner2.png" alt="Tokenomics Strategy">
+                                    <div class="visual-overlay"></div>
+                                </div>
                             </div>
 
-                            <div class="service-card scroll-card">
-                                <span class="badge-best-seller">Best Seller</span>
-                                <div class="service-icon"><i class="fas fa-laptop"></i></div>
-                                <h3 class="service-title">SaaS / Product Presentation</h3>
-                                <p class="service-description">Showcase your platform with high-quality AI video presentations, dynamic screencasts, and professional voiceovers.</p>
-                                <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20SaaS%20%2F%20Product%20Presentation" class="btn-want-this" target="_blank">WANT THIS</a>
+                            <!-- Service 3 -->
+                            <div class="scroll-card">
+                                <div class="card-content">
+                                    <span class="service-badge">Community & Growth</span>
+                                    <div class="service-icon-new"><i class="fas fa-users"></i></div>
+                                    <h3 class="service-title-new">Community Growth & Mgmt</h3>
+                                    <p class="service-desc-new">Setup and growth hacking for Twitter, Discord, and Telegram. Cultivating organic activity and ambassador programs to drive rapid MVP growth and validate your idea in less than 3 days.</p>
+                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Community%20Growth" class="btn btn-request-glowing" target="_blank">Request Service</a>
+                                </div>
+                                <div class="card-visual">
+                                    <img src="https://i.postimg.cc/mkQvm15H/banner3.png" alt="Community Growth">
+                                    <div class="visual-overlay"></div>
+                                </div>
                             </div>
 
-                            <div class="service-card scroll-card">
-                                <span class="badge-best-seller">Best Seller</span>
-                                <div class="service-icon"><i class="fas fa-user-ninja"></i></div>
-                                <h3 class="service-title">Custom Anime Content</h3>
-                                <p class="service-description">Create your own animes, characters, and chapters. The all-in-one solution for Anime lovers.</p>
-                                <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Custom%20Anime%20Content" class="btn-want-this" target="_blank">WANT THIS</a>
+                            <!-- Service 4 -->
+                            <div class="scroll-card">
+                                <div class="card-content">
+                                    <span class="service-badge">Design & Creative</span>
+                                    <div class="service-icon-new"><i class="fas fa-laptop-code"></i></div>
+                                    <h3 class="service-title-new">dApp UI/UX Design</h3>
+                                    <p class="service-desc-new">Frictionless, beautiful interfaces for Web3 applications. Connecting complex blockchain logic to intuitive user flows that maximize retention and Total Value Locked (TVL).</p>
+                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20dApp%20UI/UX" class="btn btn-request-glowing" target="_blank">Request Service</a>
+                                </div>
+                                <div class="card-visual">
+                                    <img src="https://i.postimg.cc/J04N29T7/banner4.png" alt="UI UX Design">
+                                    <div class="visual-overlay"></div>
+                                </div>
                             </div>
 
-                            <div class="service-card scroll-card">
-                                <span class="badge-best-seller">Best Seller</span>
-                                <div class="service-icon"><i class="fas fa-video"></i></div>
-                                <h3 class="service-title">Cinematic Ad Creatives</h3>
-                                <p class="service-description">High-converting AI-generated video ads tailored for Meta, Twitter, and Web3 audiences.</p>
-                                <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Cinematic%20Ad%20Creatives" class="btn-want-this" target="_blank">WANT THIS</a>
+                            <!-- Service 5 -->
+                            <div class="scroll-card">
+                                <div class="card-content">
+                                    <span class="service-badge">AI Automation</span>
+                                    <div class="service-icon-new"><i class="fas fa-robot"></i></div>
+                                    <h3 class="service-title-new">AI Content & Marketing</h3>
+                                    <p class="service-desc-new">High-converting cinematic trailers, meme-creation, and AI shorts optimized for Web3 Twitter and viral campaigns, delivering unparalleled reach and engagement.</p>
+                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20AI%20Content" class="btn btn-request-glowing" target="_blank">Request Service</a>
+                                </div>
+                                <div class="card-visual">
+                                    <img src="https://i.postimg.cc/XqY58mLz/banner5.png" alt="AI Content Marketing">
+                                    <div class="visual-overlay"></div>
+                                </div>
                             </div>
 
-                            <div class="service-card scroll-card">
-                                <span class="badge-best-seller">Best Seller</span>
-                                <div class="service-icon"><i class="fas fa-shapes"></i></div>
-                                <h3 class="service-title">Web3 Explainers</h3>
-                                <p class="service-description">Simplify your dApp or tokenomics with engaging, easy-to-understand animated videos.</p>
-                                <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Web3%20Explainers" class="btn-want-this" target="_blank">WANT THIS</a>
+                            <!-- Service 6 -->
+                            <div class="scroll-card">
+                                <div class="card-content">
+                                    <span class="service-badge">Engineering</span>
+                                    <div class="service-icon-new"><i class="fas fa-server"></i></div>
+                                    <h3 class="service-title-new">Full-Stack Web3 Dev</h3>
+                                    <p class="service-desc-new">Comprehensive end-to-end dApp engineering. Our complete dev stack includes robust Smart Contracts (Solidity & Rust), scalable backends, custom indexers (TheGraph), and high-performance frontends (React/Next.js) with seamless Web3 integration.</p>
+                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Full-Stack%20Web3" class="btn btn-request-glowing" target="_blank">Request Service</a>
+                                </div>
+                                <div class="card-visual">
+                                    <img src="https://i.postimg.cc/vHqNyd6j/bannr6.png" alt="Full Stack Web3">
+                                    <div class="visual-overlay"></div>
+                                </div>
                             </div>
 
-                            <div class="service-card scroll-card">
-                                <span class="badge-best-seller">Best Seller</span>
-                                <div class="service-icon"><i class="fas fa-laugh-squint"></i></div>
-                                <h3 class="service-title">Memes for Web3 & Memecoins</h3>
-                                <p class="service-description">Custom, highly-engaging meme content designed specifically for Web3 brands, crypto projects, and memecoins.</p>
-                                <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Memes%20for%20Web3" class="btn-want-this" target="_blank">WANT THIS</a>
+                            <!-- Service 7 -->
+                            <div class="scroll-card">
+                                <div class="card-content">
+                                    <span class="service-badge">24/7 Support</span>
+                                    <div class="service-icon-new"><i class="fas fa-brain"></i></div>
+                                    <h3 class="service-title-new">AI Agent Deployment</h3>
+                                    <p class="service-desc-new">Deploy 24/7 autonomous AI agents across Discord, Telegram, or your website. They continuously learn from feedback, evolving to deliver increasingly accurate and intelligent community support.</p>
+                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20AI%20Agent%20Deployment" class="btn btn-request-glowing" target="_blank">Request Service</a>
+                                </div>
+                                <div class="card-visual">
+                                    <img src="https://i.postimg.cc/nLVD3YKf/banner7.png" alt="AI Agent Deployment">
+                                    <div class="visual-overlay"></div>
+                                </div>
                             </div>
 
-                            <div class="service-card scroll-card">
-                                <span class="badge-best-seller">Best Seller</span>
-                                <div class="service-icon"><i class="fas fa-magic"></i></div>
-                                <h3 class="service-title">Pixar & Animated Style</h3>
-                                <p class="service-description">High-quality, Pixar-style 3D animated content perfect for storytelling, brand mascots, and projects.</p>
-                                <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Pixar%20%26%20Animated%20Style" class="btn-want-this" target="_blank">WANT THIS</a>
+                            <!-- Service 8 -->
+                            <div class="scroll-card">
+                                <div class="card-content">
+                                    <span class="service-badge">Digital Assets</span>
+                                    <div class="service-icon-new"><i class="fas fa-coins"></i></div>
+                                    <h3 class="service-title-new">Memecoins & DeFi Tokens</h3>
+                                    <p class="service-desc-new">End-to-end creation and launch of highly liquid tokens. Our expert team specializes in crafting viral memecoins and robust DeFi utility tokens, complete with strategic liquidity pool setups, fair launches, and anti-snipe mechanisms to ensure market dominance.</p>
+                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Memecoins%20and%20DeFi%20Tokens" class="btn btn-request-glowing" target="_blank">Request Service</a>
+                                </div>
+                                <div class="card-visual">
+                                    <img src="https://i.postimg.cc/bJ4YpDYZ/banner8.png" alt="Memecoins and DeFi Tokens">
+                                    <div class="visual-overlay"></div>
+                                </div>
                             </div>
 
-                            <div class="service-card scroll-card">
-                                <div class="service-icon"><i class="fas fa-star"></i></div>
-                                <h3 class="service-title">UGC Influencer Content</h3>
-                                <p class="service-description">Authentic, AI-generated User Generated Content that feels human, builds trust, and converts like crazy for ads.</p>
-                                <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20UGC%20Influencer%20Content" class="btn-want-this" target="_blank">WANT THIS</a>
+                            <!-- Service 9 -->
+                            <div class="scroll-card">
+                                <div class="card-content">
+                                    <span class="service-badge">Networking</span>
+                                    <div class="service-icon-new"><i class="fas fa-bullhorn"></i></div>
+                                    <h3 class="service-title-new">KOL & Influencer Outreach</h3>
+                                    <p class="service-desc-new">Direct connections to top Web3 Alpha groups, Twitter Spaces hosts, and ecosystem influencers to boost your narrative and dominate the timeline.</p>
+                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20KOL%20Outreach" class="btn btn-request-glowing" target="_blank">Request Service</a>
+                                </div>
+                                <div class="card-visual">
+                                    <img src="https://i.postimg.cc/PqqcXdq5/banner9.png" alt="KOL Outreach">
+                                    <div class="visual-overlay"></div>
+                                </div>
                             </div>
 
-                            <div class="service-card scroll-card">
-                                <div class="service-icon"><i class="fas fa-cube"></i></div>
-                                <h3 class="service-title">3D & Motion Promos</h3>
-                                <p class="service-description">Showcase your SaaS or protocol with stunning AI-assisted 3D animations and motion graphics.</p>
-                                <a href="https://t.me/xswapeth?text=I'm%20interested%20in%203D%20%26%20Motion%20Promos" class="btn-want-this" target="_blank">WANT THIS</a>
+                            <!-- Service 10 -->
+                            <div class="scroll-card">
+                                <div class="card-content">
+                                    <span class="service-badge">Security</span>
+                                    <div class="service-icon-new"><i class="fas fa-shield-alt"></i></div>
+                                    <h3 class="service-title-new">Protocol Audits</h3>
+                                    <p class="service-desc-new">Rigorous security assessments, penetration testing, and formal verification to protect your Total Value Locked (TVL) against critical vulnerabilities. We connect you directly with top-tier Web3 auditors, guaranteeing the highest standard of security to generate absolute trust with your investors.</p>
+                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Protocol%20Audits" class="btn btn-request-glowing" target="_blank">Request Service</a>
+                                </div>
+                                <div class="card-visual">
+                                    <img src="https://i.postimg.cc/43bdgbmd/banner10.png" alt="Protocol Audits">
+                                    <div class="visual-overlay"></div>
+                                </div>
                             </div>
 
-                            <div class="service-card scroll-card">
-                                <div class="service-icon"><i class="fas fa-music"></i></div>
-                                <h3 class="service-title">AI Music & Trailers</h3>
-                                <p class="service-description">Custom AI-generated cinematic sequences synced perfectly to audio for your drops.</p>
-                                <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20AI%20Music%20%26%20Trailers" class="btn-want-this" target="_blank">WANT THIS</a>
+                            <!-- Service 11 -->
+                            <div class="scroll-card">
+                                <div class="card-content">
+                                    <span class="service-badge">Media Production</span>
+                                    <div class="service-icon-new"><i class="fas fa-video"></i></div>
+                                    <h3 class="service-title-new">Elite Video Editing</h3>
+                                    <p class="service-desc-new">Our elite video editors adapt to the latest viral trends, combining AI-accelerated workflows con real-world expertise to craft high-retention, conversion-driven footage that captivates your audience and sells.</p>
+                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Video%20Editing" class="btn btn-request-glowing" target="_blank">Request Service</a>
+                                </div>
+                                <div class="card-visual">
+                                    <img src="https://i.postimg.cc/G2j9RPgY/banner11.png" alt="Elite Video Editing">
+                                    <div class="visual-overlay"></div>
+                                </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="section-separator"></div>
+        <!-- Agentic Technology Section -->
+        <section class="agentic-tech section" style="padding: 8rem 0; position: relative; overflow: hidden; background: var(--bg-surface); border-top: 1px solid var(--border-color);">
+            <!-- Subtle background glow -->
+            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(255,255,255,0.02) 0%, transparent 60%); z-index: 0; pointer-events: none;"></div>
+            
+            <div class="container agentic-grid" style="position: relative; z-index: 1;">
+                
+                <!-- Left: Text Content -->
+                <div class="agentic-content">
+                    <div class="agentic-badge">Agentic Infrastructure</div>
+                    <h2 class="section-title" style="font-size: 3.5rem; margin-bottom: 1.25rem; line-height: 1.1; text-align: left;">Build scalable dApps <span class="word-glow">instantly.</span></h2>
+                    <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 0;">
+                        We engineer smart contracts, tokenomics, and top-tier UI/UX for elite Web3 founders. Orchestrated by expert operators and powered by autonomous workflows.
+                    </p>
+                    
+                    <div class="agentic-feature-list">
+                        <div class="agentic-feature">
+                            <div class="agentic-feature-icon"><i class="fas fa-bolt"></i></div>
+                            <div class="agentic-feature-text">
+                                <h4>Hyper-Accelerated Delivery</h4>
+                                <p>Tasks that traditionally take 1 hour take our specialized AI agents just 10 minutes. Go to market before the competition.</p>
+                            </div>
+                        </div>
+                        <div class="agentic-feature">
+                            <div class="agentic-feature-icon"><i class="fas fa-layer-group"></i></div>
+                            <div class="agentic-feature-text">
+                                <h4>Autonomous Orchestration</h4>
+                                <p>Our proprietary infrastructure handles redundant coding, testing, and deployment, leaving human experts to perfect the strategy.</p>
+                            </div>
+                        </div>
+                        <div class="agentic-feature">
+                            <div class="agentic-feature-icon"><i class="fas fa-gem"></i></div>
+                            <div class="agentic-feature-text">
+                                <h4>Flawless Execution</h4>
+                                <p>Scale your protocol without friction. We blend the speed of machines with the precision of top 1% Web3 native operators.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-        <!-- Join Era Section -->
+                <!-- Right: Visual Graphic (Apple Glass Engine) -->
+                <div class="agentic-visual">
+                    <div class="agent-network">
+                        <div class="engine-glow-1"></div>
+                        <div class="engine-glow-2"></div>
+                        
+                        <div class="network-header">
+                            <div class="network-title">
+                                <i class="fab fa-hubspot"></i> Recent MVP Results
+                            </div>
+                        </div>
+                        
+                        <div class="agent-cards">
+                            <!-- Agent 1 -->
+                            <div class="agent-card">
+                                <div class="ac-icon"><i class="fas fa-chart-line"></i></div>
+                                <div class="ac-info">
+                                    <div class="ac-title">
+                                        <span>Growth Hacking</span>
+                                        <span class="ac-perf"><i class="fas fa-arrow-trend-up"></i> +800%</span>
+                                    </div>
+                                    <div class="ac-chart">
+                                        <svg viewBox="0 0 100 30" class="trading-chart">
+                                            <defs>
+                                                <linearGradient id="gradChart1" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                    <stop offset="0%" stop-color="rgba(255,255,255,0.25)" />
+                                                    <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                                                </linearGradient>
+                                            </defs>
+                                            <path class="chart-area" d="M0,30 L0,25 L20,22 L35,26 L55,15 L75,18 L100,5 L100,30 Z" fill="url(#gradChart1)" />
+                                            <path class="chart-line" d="M0,25 L20,22 L35,26 L55,15 L75,18 L100,5" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <polygon class="chart-arrow" points="94,8 100,5 96,2" fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Agent 2 -->
+                            <div class="agent-card">
+                                <div class="ac-icon"><i class="fas fa-rocket"></i></div>
+                                <div class="ac-info">
+                                    <div class="ac-title">
+                                        <span>Full Launch Strategy</span>
+                                        <span class="ac-perf"><i class="fas fa-arrow-trend-up"></i> +1,250%</span>
+                                    </div>
+                                    <div class="ac-chart">
+                                        <svg viewBox="0 0 100 30" class="trading-chart">
+                                            <defs>
+                                                <linearGradient id="gradChart2" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                    <stop offset="0%" stop-color="rgba(255,255,255,0.25)" />
+                                                    <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                                                </linearGradient>
+                                            </defs>
+                                            <path class="chart-area" d="M0,30 L0,20 L15,12 L30,25 L50,22 L70,10 L85,15 L100,2 L100,30 Z" fill="url(#gradChart2)" />
+                                            <path class="chart-line" d="M0,20 L15,12 L30,25 L50,22 L70,10 L85,15 L100,2" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <polygon class="chart-arrow" points="94,5 100,2 96,-1" fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Agent 3 -->
+                            <div class="agent-card">
+                                <div class="ac-icon"><i class="fas fa-robot"></i></div>
+                                <div class="ac-info">
+                                    <div class="ac-title">
+                                        <span>AI Agents Process</span>
+                                        <span class="ac-perf"><i class="fas fa-arrow-trend-up"></i> +610%</span>
+                                    </div>
+                                    <div class="ac-chart">
+                                        <svg viewBox="0 0 100 30" class="trading-chart">
+                                            <defs>
+                                                <linearGradient id="gradChart3" x1="0%" y1="0%" x2="0%" y2="100%">
+                                                    <stop offset="0%" stop-color="rgba(255,255,255,0.25)" />
+                                                    <stop offset="100%" stop-color="rgba(255,255,255,0)" />
+                                                </linearGradient>
+                                            </defs>
+                                            <path class="chart-area" d="M0,30 L0,25 L20,10 L40,18 L60,8 L80,15 L100,4 L100,30 Z" fill="url(#gradChart3)" />
+                                            <path class="chart-line" d="M0,25 L20,10 L40,18 L60,8 L80,15 L100,4" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                            <polygon class="chart-arrow" points="94,7 100,4 96,1" fill="#ffffff" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Value Section -->
         <section class="value section" id="talent">
             <div class="container value-container">
                 <div class="value-image">
-                    <video class="floating-img" autoplay loop muted playsinline>
-                        <source src="footer.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                    <!-- Placeholder in case video doesn't load -->
+                    <div class="floating-img" style="background: #222; height: 350px;"></div>
                 </div>
                 <div class="value-content">
-                    <h2 class="section-title">Join the <span class="word-glow">Content Era</span></h2>
-                    <p class="value-text">
-                        Whether you are a Web3 visionary, a Web2 brand, or a solo creator, DeRadar is your AI video powerhouse. Stand out, go viral, and scale your audience faster than ever without studio costs.
+                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
+                        <span class="agentic-badge" style="margin-bottom: 0; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.3);"><i class="fas fa-coins" style="margin-right: 5px;"></i> Memecoin Dev</span>
+                        <span class="agentic-badge" style="margin-bottom: 0; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.3);"><i class="fas fa-landmark" style="margin-right: 5px;"></i> DeFi Founder</span>
+                        <span class="agentic-badge" style="margin-bottom: 0; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.3);"><i class="fas fa-building" style="margin-right: 5px;"></i> RWA Creator</span>
+                    </div>
+                    <h2 class="section-title" style="font-size: 2.8rem; margin-bottom: 1rem;">Scale to the <span class="word-glow">Next Level</span></h2>
+                    <p class="value-text" style="font-size: 1.15rem;">
+                        Whether you are launching a viral narrative, architecting complex decentralized finance protocols, or tokenizing Real World Assets, DeRadar is your elite execution partner. 
+                        <br><br>
+                        <span style="color: var(--text-primary); font-weight: 500;">Ready to dominate the timeline?</span> The next step is to start a <strong style="color: #fff; text-shadow: 0 0 15px rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px dashed rgba(255,255,255,0.6);">FREE TRIAL</strong> with our core team. Experience hyper-accelerated engineering and aggressive go-to-market strategies today.
                     </p>
-                    <div class="value-buttons">
-                        <button id="btn-founder" class="btn btn-xl">Start Creating</button>
+                    <div class="value-buttons" style="margin-top: 2rem;">
+                        <button id="btn-founder" class="btn btn-xl" style="box-shadow: 0 0 25px rgba(255, 255, 255, 0.4); border: 1px solid #fff;"><i class="fas fa-hard-hat" style="margin-right: 8px;"></i> Start Building</button>
+                        <a href="https://calendly.com/" target="_blank" class="btn btn-xl btn-white-glow" style="display: inline-flex; align-items: center; gap: 0.5rem; backdrop-filter: blur(5px);"><i class="fas fa-calendar-alt"></i> Book a Call</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <div class="section-separator"></div>
-
         <!-- Work With Us Section -->
-        <section class="work-with-us section" id="work-with-us" style="text-align: center; position: relative; overflow: hidden; padding: 8rem 0; background: linear-gradient(180deg, var(--bg-color) 0%, #050a0a 100%);">
-            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 1000px; height: 1000px; background: radial-gradient(circle, rgba(86, 188, 175, 0.06) 0%, transparent 60%); z-index: 0; pointer-events: none;"></div>
-            <div class="container" style="position: relative; z-index: 1; max-width: 800px;">
-                <h2 class="section-title" style="font-size: 3.5rem; margin-bottom: 1.25rem; letter-spacing: -1px;">Join Our <span class="word-glow">Creator Roster</span></h2>
-                <p style="font-size: 1.15rem; color: #aaa; margin-bottom: 3rem; line-height: 1.7;">
-                    Are you a talented AI video creator, prompt engineer, or animator? We are constantly looking for elite talent to build hyper-realistic and high-converting content for top Web2 and Web3 brands.
-                    <br><br>
-                    <span style="color: var(--white); font-weight: 500;">Want to learn? We offer free training to help you master the skill. If you already have a basic foundation, joining our team will be a breeze!</span>
+        <section class="work-with-us section" id="work-with-us">
+            <div class="container" style="position: relative; z-index: 1; max-width: 850px;">
+                <h2 class="section-title" style="font-size: 3rem; margin-bottom: 1.25rem;">Join Our <span class="word-glow">Builder Roster</span></h2>
+                
+                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7;">
+                    We selectively recruit top-tier professionals to collaborate on high-level Web3 and DeFi protocols. Our private Telegram network serves as our primary talent pool, where we frequently scout and hire experts for our upcoming projects and overflow work.
                 </p>
+                
+                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2.5rem; margin-bottom: 2.5rem; text-align: left; box-shadow: inset 0 0 20px rgba(0,0,0,0.5);">
+                    <h4 style="color: var(--text-primary); font-size: 1.05rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">Eligible Roles for Application:</h4>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem;">
+                        <!-- Technical -->
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-code" style="color: #666; width: 24px;"></i> Smart Contract Devs</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-laptop-code" style="color: #666; width: 24px;"></i> Full-Stack Web3 Devs</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-shield-alt" style="color: #666; width: 24px;"></i> Security Auditors</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-database" style="color: #666; width: 24px;"></i> Data / Indexer Engs</div>
+                        
+                        <!-- Design & Strategy -->
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-paint-brush" style="color: #666; width: 24px;"></i> UI/UX dApp Designers</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-chart-pie" style="color: #666; width: 24px;"></i> Tokenomics Architects</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-lightbulb" style="color: #666; width: 24px;"></i> Protocol Strategists</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-briefcase" style="color: #666; width: 24px;"></i> Business Developers</div>
+
+                        <!-- Growth & Community -->
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-rocket" style="color: #666; width: 24px;"></i> Growth Hackers</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-users" style="color: #666; width: 24px;"></i> Community Managers</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-user-shield" style="color: #666; width: 24px;"></i> Discord/TG Moderators</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-handshake" style="color: #666; width: 24px;"></i> Brand Ambassadors</div>
+                        
+                        <!-- Marketing & Media -->
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-video" style="color: #666; width: 24px;"></i> Elite Video Editors</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-brain" style="color: #666; width: 24px;"></i> AI Content Creators</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-comment-dots" style="color: #666; width: 24px;"></i> Professional Reply Guys</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-pen-nib" style="color: #666; width: 24px;"></i> Meme/Graphic Artists</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-cut" style="color: #666; width: 24px;"></i> Content Clippers</div>
+                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-headset" style="color: #666; width: 24px;"></i> Virtual Assistants</div>
+                    </div>
+                </div>
+
                 <div class="hero-buttons" style="margin-bottom: 0;">
-                    <a href="https://t.me/deradar" target="_blank" class="btn btn-glow" style="font-size: 1.2rem; font-weight: 700; padding: 1rem 3.5rem; text-decoration: none;">Join our Telegram Channel</a>
+                    <a href="https://t.me/deradar" target="_blank" class="btn" style="background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; box-shadow: 0 4px 15px rgba(0,0,0,0.5); transition: all 0.3s ease; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 1px; padding: 1rem 2.5rem;" onmouseover="this.style.background='#3a3a3a'; this.style.color='#fff'; this.style.borderColor='#666';" onmouseout="this.style.background='#2a2a2a'; this.style.color='#e0e0e0'; this.style.borderColor='#444';"><i class="fab fa-telegram-plane" style="margin-right: 8px;"></i> Apply for Access</a>
                 </div>
             </div>
         </section>
@@ -1101,132 +1660,165 @@
          REWARDS VIEW (SPA Page)
          ============================================== -->
     <main id="rewards-page">
-        <!-- Register View (Shown if not registered) -->
+        <!-- Register View -->
         <div id="rewards-register-view" class="register-container">
-            <div style="text-align: center; margin-bottom: 2rem;">
-                <div style="font-size: 2.5rem; color: var(--primary-blue); margin-bottom: 1rem; text-shadow: 0 0 20px rgba(86,188,175,0.4);">
-                    <i class="fas fa-id-card"></i>
-                </div>
-                <h3 class="modal-title" style="margin-bottom: 0.5rem; font-size: 2rem;">Join Rewards</h3>
-                <p style="color: #aaa; font-size: 0.95rem;">Register once to access Raids and earn surprise rewards in the future.</p>
+            <div style="margin-bottom: 2rem;">
+                <h3 class="modal-title" style="margin-bottom: 0.5rem; font-size: 1.75rem;">Enter the Raids Center</h3>
+                <p style="color: var(--text-secondary); font-size: 0.95rem;">Register your wallet once to access Bounties and earn surprise airdrops.</p>
             </div>
             
             <form id="form-rewards-register" class="modal-form">
                 <div class="form-group">
-                    <label>Telegram Username</label>
+                    <label>Telegram / Discord Username</label>
                     <input type="text" id="reg-telegram" required placeholder="@username">
                 </div>
                 <div class="form-group">
-                    <label>Solana Wallet Address</label>
-                    <input type="text" id="reg-solana" required placeholder="Enter your SPL address">
+                    <label>Solana or EVM Wallet</label>
+                    <input type="text" id="reg-solana" required placeholder="0x... or SPL address">
                 </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1.5rem; padding: 1rem; font-weight: 700; letter-spacing: 1px;">
+                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
                     ENTER DASHBOARD
                 </button>
             </form>
         </div>
 
-        <!-- Dashboard View (Shown if registered) -->
+        <!-- Dashboard View -->
         <div id="rewards-dashboard-view" class="rewards-dashboard-container" style="display: none;">
-            <!-- Header -->
             <div class="dashboard-header">
                 <div>
-                    <h2 class="hero-title" style="font-size: 2.5rem; margin-bottom: 0; text-align: left;">Raids Center</h2>
-                    <p style="color: #888; font-size: 1.1rem; margin-top: 0.5rem;">Complete tasks. Earn surprise rewards.</p>
+                    <h2 class="hero-title" style="font-size: 2rem; margin-bottom: 0; text-align: left; letter-spacing: -0.02em;">Raids Center</h2>
+                    <p style="color: var(--text-secondary); font-size: 1rem; margin-top: 0.5rem;">Complete tasks. Farm Ecosystem Points.</p>
                 </div>
                 <div class="points-pill">
-                    <i class="fas fa-star"></i> <span id="user-points-display">0</span> Pts
+                    <span id="user-points-display">0</span> XP
                 </div>
             </div>
 
-            <!-- Active Raids List -->
             <div>
-                <h4 style="color: white; margin-bottom: 2rem; font-size: 1.4rem; display: flex; align-items: center; gap: 0.8rem;">
-                    <i class="fas fa-crosshairs" style="color: var(--primary-blue);"></i> Active Raids
+                <h4 style="color: var(--text-primary); margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 500;">
+                    Active Bounties
                 </h4>
                 
-                <!-- Raid Task 1 -->
-                <div class="raid-item" id="raid-1">
-                    <div class="raid-header" onclick="toggleRaid('raid-1')">
+                <!-- NEW Raid 4 (Added based on user request) -->
+                <div class="raid-item" id="raid-4">
+                    <div class="raid-header" onclick="toggleRaid('raid-4')">
                         <div>
-                            <span class="raid-tag">Engagement Task</span>
-                            <h3 class="raid-title">Like & Reply to Support</h3>
+                            <span class="raid-tag" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.3);">Priority Task</span>
+                            <h3 class="raid-title">Like & Retweet Latest Update</h3>
                         </div>
-                        <div class="raid-points">+50 Pts</div>
+                        <div class="raid-points" style="border-color: var(--text-primary);">+60 XP</div>
                     </div>
-                    <div class="raid-body" id="raid-1-body">
+                    <div class="raid-body" id="raid-4-body">
                         <div style="padding-top: 1rem;">
-                            <!-- Tweet Preview -->
-                            <div style="background: #000; border: 1px solid rgba(255,255,255,0.15); border-radius: 16px; padding: 1.5rem; margin-bottom: 2rem;">
+                            <!-- Tweet Preview Context -->
+                            <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 2rem;">
                                 <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                    <div style="width: 48px; height: 48px; border-radius: 50%; background: #222; overflow: hidden; display: flex; align-items: center; justify-content: center;">
-                                        <i class="fas fa-video" style="color: var(--primary-blue);"></i>
+                                    <div style="width: 40px; height: 40px; border-radius: 4px; background: var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-primary);">
+                                        <i class="fab fa-twitter"></i>
                                     </div>
                                     <div>
-                                        <div style="color: white; font-weight: 700; font-size: 1rem;">DeRadar AI <i class="fas fa-check-circle" style="color: var(--primary-blue); font-size: 0.85rem; margin-left: 4px;"></i></div>
-                                        <div style="color: #666; font-size: 0.9rem;">@deRadar_</div>
+                                        <div style="color: var(--text-primary); font-weight: 600; font-size: 0.95rem;">DeRadar Studio</div>
+                                        <div style="color: var(--text-secondary); font-size: 0.85rem;">@DeRadar_</div>
                                     </div>
-                                    <div style="margin-left: auto; color: #444;"><i class="fab fa-twitter"></i></div>
                                 </div>
-                                <p style="color: #e1e1e1; font-size: 1.05rem; line-height: 1.5; margin-bottom: 1rem;">
-                                    Balloonmorphism with a new look
+                                <p style="color: #ccc; font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">
+                                    Engage with our newest announcement to earn ecosystem points.
                                 </p>
-                                <div style="color: #555; font-size: 0.85rem; display: flex; gap: 1.5rem;">
-                                    <span><i class="far fa-comment"></i> 142</span>
-                                    <span><i class="fas fa-retweet"></i> 56</span>
-                                    <span><i class="far fa-heart"></i> 389</span>
-                                </div>
                             </div>
 
-                            <!-- Actions -->
-                            <div id="raid-1-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                                <a href="https://x.com/deRadar_" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #ccc;" onclick="startRaid('raid-1')">
-                                    <i class="fas fa-external-link-alt" style="margin-right: 0.5rem;"></i> 1. Go to Post
+                            <div id="raid-4-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <a href="https://x.com/deRadar_/status/2060594550742077685?s=20" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center;" onclick="startRaid('raid-4')">
+                                    1. Go to Tweet
                                 </a>
                             </div>
 
-                            <!-- Verify Buttons -->
-                            <div id="raid-1-verify" style="display: none; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                                <button class="btn btn-outline" id="raid-1-like" onclick="verifyTask('raid-1', 'like')" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #fff;">Confirm Like</button>
-                                <button class="btn btn-outline" id="raid-1-reply" onclick="verifyTask('raid-1', 'reply')" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #fff;">Confirm Reply</button>
+                            <div id="raid-4-verify" style="display: none; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                                <button class="btn btn-outline" id="raid-4-like" onclick="verifyTask('raid-4', 'like')" style="flex: 1; text-align: center;"><i class="fas fa-heart"></i> Confirm Like</button>
+                                <button class="btn btn-outline" id="raid-4-retweet" onclick="verifyTask('raid-4', 'retweet')" style="flex: 1; text-align: center;"><i class="fas fa-retweet"></i> Confirm Retweet</button>
                             </div>
 
-                            <!-- Claim Button -->
-                            <div id="raid-1-claim" style="display: none; margin-top: 1rem;">
-                                <button class="btn btn-primary" id="btn-claim-raid-1" style="width: 100%; text-align: center;" onclick="claimRaid('raid-1', 50)">
-                                    <i class="fas fa-bolt" style="margin-right: 0.5rem;"></i> Claim 50 Pts
+                            <div id="raid-4-claim" style="display: none; margin-top: 1rem;">
+                                <button class="btn btn-primary" id="btn-claim-raid-4" style="width: 100%; text-align: center;" onclick="claimRaid('raid-4', 60)">
+                                    Claim 60 XP
                                 </button>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Raid Task 2 -->
+                <!-- Raid 1 -->
+                <div class="raid-item" id="raid-1">
+                    <div class="raid-header" onclick="toggleRaid('raid-1')">
+                        <div>
+                            <span class="raid-tag">Ecosystem Task</span>
+                            <h3 class="raid-title">Like & Reply to Protocol Update</h3>
+                        </div>
+                        <div class="raid-points">+50 XP</div>
+                    </div>
+                    <div class="raid-body" id="raid-1-body">
+                        <div style="padding-top: 1rem;">
+                            <!-- Tweet Preview -->
+                            <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 2rem;">
+                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
+                                    <div style="width: 40px; height: 40px; border-radius: 4px; background: var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-primary);">
+                                        <i class="fas fa-cube"></i>
+                                    </div>
+                                    <div>
+                                        <div style="color: var(--text-primary); font-weight: 600; font-size: 0.95rem;">DeRadar Studio</div>
+                                        <div style="color: var(--text-secondary); font-size: 0.85rem;">@DeRadarStudio</div>
+                                    </div>
+                                </div>
+                                <p style="color: #ccc; font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">
+                                    Shipping highly optimized smart contracts for the next generation of DeFi. 🚀
+                                </p>
+                            </div>
+
+                            <div id="raid-1-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                                <a href="https://x.com/deRadar_" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center;" onclick="startRaid('raid-1')">
+                                    1. Go to Post
+                                </a>
+                            </div>
+
+                            <div id="raid-1-verify" style="display: none; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
+                                <button class="btn btn-outline" id="raid-1-like" onclick="verifyTask('raid-1', 'like')" style="flex: 1; text-align: center;">Confirm Like</button>
+                                <button class="btn btn-outline" id="raid-1-reply" onclick="verifyTask('raid-1', 'reply')" style="flex: 1; text-align: center;">Confirm Reply</button>
+                            </div>
+
+                            <div id="raid-1-claim" style="display: none; margin-top: 1rem;">
+                                <button class="btn btn-primary" id="btn-claim-raid-1" style="width: 100%; text-align: center;" onclick="claimRaid('raid-1', 50)">
+                                    Claim 50 XP
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Raid 2 -->
                 <div class="raid-item" id="raid-2">
                     <div class="raid-header" onclick="toggleRaid('raid-2')">
                         <div>
                             <span class="raid-tag">Social Task</span>
-                            <h3 class="raid-title">Follow @deRadar_</h3>
+                            <h3 class="raid-title">Follow @DeRadarStudio</h3>
                         </div>
-                        <div class="raid-points">+30 Pts</div>
+                        <div class="raid-points">+30 XP</div>
                     </div>
                     <div class="raid-body" id="raid-2-body">
                         <div style="padding-top: 1rem;">
-                            <p style="color: #999; font-size: 0.95rem; margin-bottom: 1.5rem;">Follow our official X (Twitter) account to stay updated with the latest AI video news and platform updates.</p>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">Follow our official X (Twitter) account to stay updated with the latest Web3 dev news and platform updates.</p>
                             
                             <div id="raid-2-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                                <a href="https://x.com/deRadar_" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #ccc;" onclick="startRaid('raid-2')">
-                                    <i class="fab fa-twitter" style="margin-right: 0.5rem;"></i> 1. Follow Account
+                                <a href="https://x.com/deRadar_" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center;" onclick="startRaid('raid-2')">
+                                    1. Follow Account
                                 </a>
                             </div>
 
                             <div id="raid-2-verify" style="display: none; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                                <button class="btn btn-outline" id="raid-2-follow" onclick="verifyTask('raid-2', 'follow')" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #fff;">Confirm Follow</button>
+                                <button class="btn btn-outline" id="raid-2-follow" onclick="verifyTask('raid-2', 'follow')" style="flex: 1; text-align: center;">Confirm Follow</button>
                             </div>
 
                             <div id="raid-2-claim" style="display: none; margin-top: 1rem;">
                                 <button class="btn btn-primary" id="btn-claim-raid-2" style="width: 100%; text-align: center;" onclick="claimRaid('raid-2', 30)">
-                                    <i class="fas fa-bolt" style="margin-right: 0.5rem;"></i> Claim 30 Pts
+                                    Claim 30 XP
                                 </button>
                             </div>
                         </div>
@@ -1238,27 +1830,27 @@
                     <div class="raid-header" onclick="toggleRaid('raid-3')">
                         <div>
                             <span class="raid-tag">Community Task</span>
-                            <h3 class="raid-title">Join our Telegram</h3>
+                            <h3 class="raid-title">Join our Dev Network</h3>
                         </div>
-                        <div class="raid-points">+40 Pts</div>
+                        <div class="raid-points">+40 XP</div>
                     </div>
                     <div class="raid-body" id="raid-3-body">
                         <div style="padding-top: 1rem;">
-                            <p style="color: #999; font-size: 0.95rem; margin-bottom: 1.5rem;">Join our Telegram creator network. You will be able to find daily gigs and coordinate projects securely.</p>
+                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">Join our Telegram builder network. Find daily Web3 gigs, discuss architecture, and coordinate projects securely.</p>
 
                             <div id="raid-3-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                                <a href="https://t.me/deradar" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #ccc;" onclick="startRaid('raid-3')">
-                                    <i class="fab fa-telegram-plane" style="margin-right: 0.5rem;"></i> 1. Join Group
+                                <a href="https://t.me/deradar" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center;" onclick="startRaid('raid-3')">
+                                    1. Join Group
                                 </a>
                             </div>
 
                             <div id="raid-3-verify" style="display: none; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                                <button class="btn btn-outline" id="raid-3-join" onclick="verifyTask('raid-3', 'join')" style="flex: 1; text-align: center; border-color: rgba(255,255,255,0.2); color: #fff;">Confirm Join</button>
+                                <button class="btn btn-outline" id="raid-3-join" onclick="verifyTask('raid-3', 'join')" style="flex: 1; text-align: center;">Confirm Join</button>
                             </div>
 
                             <div id="raid-3-claim" style="display: none; margin-top: 1rem;">
                                 <button class="btn btn-primary" id="btn-claim-raid-3" style="width: 100%; text-align: center;" onclick="claimRaid('raid-3', 40)">
-                                    <i class="fas fa-bolt" style="margin-right: 0.5rem;"></i> Claim 40 Pts
+                                    Claim 40 XP
                                 </button>
                             </div>
                         </div>
@@ -1275,7 +1867,7 @@
         <div id="modal-founder" class="modal-content modal-lg">
             <span class="modal-close" id="close-founder">&times;</span>
             <div class="modal-header-minimal">
-                <h3 class="modal-title">Video Project Application</h3>
+                <h3 class="modal-title">Web3 Project Application</h3>
                 <div class="wizard-progress">
                     <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-bar-founder"></div></div>
                     <div class="steps-count">Step <span id="current-step-num-founder">1</span> of 5</div>
@@ -1286,51 +1878,88 @@
                     <div class="form-section minimal-section">
                         <h4>Contact</h4>
                         <div class="form-grid">
-                            <div class="form-group"><label>Telegram Username *</label><input type="text" id="founder-telegram" required></div>
-                            <div class="form-group"><label>Brand/Project Twitter *</label><input type="text" id="founder-twitter" required></div>
+                            <div class="form-group"><label>Telegram / Discord Handle *</label><input type="text" id="founder-telegram" required></div>
+                            <div class="form-group"><label>Protocol Twitter *</label><input type="text" id="founder-twitter" required></div>
                         </div>
+                        <div class="form-group" style="margin-top: 1rem;"><label>Email (Optional)</label><input type="email" id="founder-email"></div>
                     </div>
                 </div>
                 <div class="wizard-step-founder" data-step="2">
                     <div class="form-section minimal-section">
-                        <h4>Brand / Project</h4>
+                        <h4>Protocol Details</h4>
                         <div class="form-grid">
-                            <div class="form-group"><label>Brand Name *</label><input type="text" id="founder-project-name" required></div>
+                            <div class="form-group"><label>Project Name *</label><input type="text" id="founder-project-name" required></div>
                             <div class="form-group"><label>Category *</label>
                                 <select id="founder-category" required>
                                     <option value="" disabled selected>Select category</option>
-                                    <option value="Web3 / Crypto">Web3 / Crypto</option>
-                                    <option value="Web2 SaaS">Web2 SaaS</option>
-                                    <option value="Creator">Creator</option>
+                                    <option value="DeFi / DEX">DeFi / DEX</option>
+                                    <option value="GameFi / Metaverse">GameFi / Metaverse</option>
+                                    <option value="NFT Collection">NFT Collection</option>
+                                    <option value="Infrastructure / L1 / L2">Infrastructure / L1 / L2</option>
+                                    <option value="Meme / SocialFi">Meme / SocialFi</option>
                                 </select>
                             </div>
                         </div>
-                        <div class="form-group" style="margin-top: 1rem;"><label>Vision *</label><textarea id="founder-description" rows="4" required></textarea></div>
+                        <div class="form-group" style="margin-top: 1rem;"><label>Website or Docs Link (Optional)</label><input type="text" id="founder-website"></div>
+                        <div class="form-group" style="margin-top: 1rem;"><label>Vision & Mechanics *</label><textarea id="founder-description" rows="4" required placeholder="What are you building?"></textarea></div>
                     </div>
                 </div>
                 <div class="wizard-step-founder" data-step="3">
                     <div class="form-section minimal-section">
-                        <h4>AI Video Services</h4>
+                        <h4>Required Services</h4>
                         <div class="checkbox-grid">
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="AI Shorts/Reels"> AI Shorts</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Full branding pack"> Full branding pack</label>
+                            <label class="checkbox-item"><input type="checkbox" name="service" value="Builder Starter Pack"> Builder Starter Pack</label>
+                            <label class="checkbox-item"><input type="checkbox" name="service" value="Tokenomics & Strategy"> Tokenomics & Strategy</label>
+                            <label class="checkbox-item"><input type="checkbox" name="service" value="Community Growth"> Community Growth</label>
+                            <label class="checkbox-item"><input type="checkbox" name="service" value="dApp UI/UX Design"> dApp UI/UX Design</label>
+                            <label class="checkbox-item"><input type="checkbox" name="service" value="AI Content & Marketing"> AI Content & Marketing</label>
+                            <label class="checkbox-item"><input type="checkbox" name="service" value="Full-Stack Web3 Dev"> Full-Stack Web3 Dev</label>
+                            <label class="checkbox-item"><input type="checkbox" name="service" value="AI Agent Deployment"> AI Agent Deployment</label>
+                            <label class="checkbox-item"><input type="checkbox" name="service" value="Memecoins & Tokens"> Memecoins & Tokens</label>
+                            <label class="checkbox-item"><input type="checkbox" name="service" value="KOL & Outreach"> KOL & Outreach</label>
+                            <label class="checkbox-item"><input type="checkbox" name="service" value="Protocol Audits"> Protocol Audits</label>
+                            <label class="checkbox-item"><input type="checkbox" name="service" value="Elite Video Editing"> Elite Video Editing</label>
                         </div>
                     </div>
                 </div>
                 <div class="wizard-step-founder" data-step="4">
                     <div class="form-section minimal-section">
-                        <h4>Budget & Outcome</h4>
-                        <div class="form-group"><label>Campaign Budget (USD) *</label><select id="founder-budget" required><option value="Flexible">Flexible</option></select></div>
-                        <div class="form-group"><label>Expected Outcome *</label><select id="founder-outcome" required><option value="Brand Awareness">Brand Awareness</option></select></div>
+                        <h4>Budget & Scale</h4>
+                        <div class="form-group"><label>Estimated Budget (USD) *</label>
+                            <select id="founder-budget" required>
+                                <option value="" disabled selected>Select range</option>
+                                <option value="$1k - $5k">$1,000 - $5,000</option>
+                                <option value="$5k - $15k">$5k - $15k</option>
+                                <option value="$15k - $50k">$15k - $50k</option>
+                                <option value="$50k+">$50k+</option>
+                            </select>
+                        </div>
+                        <div class="form-group" style="margin-top: 1rem;"><label>Target Chain/Ecosystem *</label>
+                            <select id="founder-outcome" required>
+                                <option value="" disabled selected>Select chain</option>
+                                <option value="Ethereum / L2s">Ethereum / L2s</option>
+                                <option value="Solana">Solana</option>
+                                <option value="Cosmos">Cosmos</option>
+                                <option value="Multi-chain / Other">Multi-chain / Other</option>
+                            </select>
+                        </div>
                     </div>
                 </div>
                 <div class="wizard-step-founder" data-step="5">
                     <div class="form-section minimal-section">
                         <h4>Timeline & Urgency</h4>
-                        <div class="form-group"><label>Timeline *</label><select id="founder-timeline" required><option value="ASAP">ASAP</option></select></div>
+                        <div class="form-group"><label>Timeline *</label>
+                            <select id="founder-timeline" required>
+                                <option value="" disabled selected>Select expected delivery</option>
+                                <option value="< 1 Month">&lt; 1 Month</option>
+                                <option value="1-3 Months">1-3 Months</option>
+                                <option value="3+ Months">3+ Months</option>
+                            </select>
+                        </div>
                         <div class="form-group" style="margin-top: 1.5rem;"><label>Production Urgency *</label>
-                            <div class="radio-list">
-                                <label class="checkbox-item"><input type="radio" name="urgency" value="High" required> <span>🔴 High</span></label>
+                            <div class="radio-list" style="display:flex; gap: 1rem;">
+                                <label class="checkbox-item"><input type="radio" name="urgency" value="Standard" required> <span>Standard</span></label>
+                                <label class="checkbox-item"><input type="radio" name="urgency" value="Priority" required> <span>Priority</span></label>
                             </div>
                         </div>
                     </div>
@@ -1338,7 +1967,7 @@
                 <div class="wizard-navigation">
                     <button type="button" class="btn btn-outline nav-btn" id="prevBtnFounder" style="display:none;">Back</button>
                     <button type="button" class="btn btn-primary nav-btn" id="nextBtnFounder">Next</button>
-                    <button type="submit" class="btn btn-primary nav-btn" id="submitBtnFounder" style="display:none;">Submit Project</button>
+                    <button type="submit" class="btn btn-primary nav-btn" id="submitBtnFounder" style="display:none;">Submit Protocol</button>
                 </div>
             </form>
         </div>
@@ -1353,7 +1982,7 @@
                 </div>
             </div>
             <h3 class="success-title">Request Sent!</h3>
-            <p class="success-desc">We have received your information.</p>
+            <p class="success-desc">Our technical leads will review your info and reach out shortly.</p>
             <button class="btn btn-primary" id="btn-success-close">Close</button>
         </div>
     </div>
@@ -1363,7 +1992,7 @@
         <div class="container footer-container">
             <div class="footer-brand">
                 <a href="#" class="footer-logo">DeRadar</a>
-                <p>The ultimate AI video powerhouse for the digital era. We turn your ideas into viral visual experiences without studio costs.</p>
+                <p>The ultimate Web3 powerhouse for the decentralized era. We turn your whitepapers into reality without friction.</p>
                 <div class="social-links">
                     <a href="https://x.com/deRadar_" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="https://t.me/deradar" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
@@ -1374,26 +2003,27 @@
             <div class="footer-links">
                 <h3>Our Services</h3>
                 <ul>
-                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')"><i class="fas fa-angle-right"></i> AI Shorts</a></li>
-                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')"><i class="fas fa-angle-right"></i> Faceless Channels</a></li>
-                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')"><i class="fas fa-angle-right"></i> Video Ads</a></li>
-                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')"><i class="fas fa-angle-right"></i> Custom Anime</a></li>
+                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')">Builder Starter Pack</a></li>
+                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')">Tokenomics & Strategy</a></li>
+                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')">Community & Growth</a></li>
+                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')">Full-Stack Web3 Dev</a></li>
+                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')">AI Content & Marketing</a></li>
                 </ul>
             </div>
             
             <div class="footer-contact" id="contacto">
                 <h3>Support & Contact</h3>
                 <ul>
-                    <li><a href="https://t.me/deradar" target="_blank"><i class="fab fa-telegram-plane"></i> Join Community</a></li>
-                    <li><a href="https://t.me/xswapeth" target="_blank"><i class="fas fa-headset"></i> Contact Team</a></li>
-                    <li><a href="mailto:hello@deradar.ai"><i class="fas fa-envelope"></i> deradarcontact@gmail.com</a></li>
+                    <li><a href="https://t.me/deradar" target="_blank">Join Community</a></li>
+                    <li><a href="https://t.me/xswapeth" target="_blank">Contact Team</a></li>
+                    <li><a href="mailto:deradarcontact@gmail.com">deradarcontact@gmail.com</a></li>
                 </ul>
             </div>
         </div>
         
         <div class="footer-bottom">
             <div class="container footer-bottom-content">
-                <p>&copy; 2024 DeRadar. All rights reserved.</p>
+                <p>&copy; 2026 DeRadar Studio. All rights reserved.</p>
                 <div class="footer-legal">
                     <a href="#">Privacy Policy</a>
                     <a href="#">Terms of Service</a>
@@ -1412,9 +2042,8 @@
                     loader.style.visibility = 'hidden';
                     document.body.classList.add('loaded');
                 }
-            }, 1800);
+            }, 3000);
             
-            // Check active page on load
             if(window.location.hash === '#rewards') {
                 showRewardsPage();
             } else {
@@ -1470,7 +2099,6 @@
             if(navMenu.classList.contains('show-menu')) navMenu.classList.remove('show-menu');
         };
 
-        /* Menu Handling */
         if(navToggle){ navToggle.addEventListener('click', () => navMenu.classList.toggle('show-menu')) }
         if(navClose){ navClose.addEventListener('click', () => navMenu.classList.remove('show-menu')) }
 
@@ -1499,15 +2127,23 @@
         window.addEventListener('scroll', scrollActive)
 
         /* General UI Effects */
-        const glitchText = document.querySelector('.glitch-text');
-        if (glitchText) {
-            const words = ["ai videos", "faceless channels", "viral shorts", "cinematic ads"];
+        const rotatingText = document.getElementById('rotating-text');
+        if (rotatingText) {
+            const words = ["record time", "under 3 days", "lightning speed"];
             let wordIndex = 0;
+            
             setInterval(() => {
-                wordIndex = (wordIndex + 1) % words.length;
-                glitchText.setAttribute('data-text', words[wordIndex]);
-                glitchText.textContent = words[wordIndex];
-            }, 3000);
+                rotatingText.classList.remove('fade-in');
+                rotatingText.classList.add('fade-out');
+                
+                setTimeout(() => {
+                    wordIndex = (wordIndex + 1) % words.length;
+                    rotatingText.textContent = words[wordIndex];
+                    
+                    rotatingText.classList.remove('fade-out');
+                    rotatingText.classList.add('fade-in');
+                }, 600); 
+            }, 2500); 
         }
 
         const playVideo = () => {
@@ -1521,20 +2157,12 @@
         document.addEventListener('click', playVideo);
         document.addEventListener('touchstart', playVideo);
 
-        /* Services Scroll Animation */
+        /* Services Sticky Scroll Animation */
         const servicesTrack = document.querySelector('.services-scroll-track');
         const serviceCards = document.querySelectorAll('.scroll-card');
 
         if (servicesTrack && serviceCards.length > 0) {
             const totalCards = serviceCards.length;
-            serviceCards.forEach((card, index) => {
-                if (index < totalCards - 1) {
-                    const indicator = document.createElement('div');
-                    indicator.className = 'scroll-indicator';
-                    indicator.innerHTML = '<i class="fas fa-chevron-down"></i>';
-                    card.appendChild(indicator);
-                }
-            });
             
             const updateActiveCard = () => {
                 if (homeView.style.display === 'none') return;
@@ -1546,12 +2174,15 @@
                 
                 if (totalScrollableDistance <= 0) return; 
                 let progress = scrollDistance / totalScrollableDistance;
-                progress = Math.max(0, Math.min(0.99, progress));
+                progress = Math.max(0, Math.min(0.999, progress));
                 const activeIndex = Math.floor(progress * totalCards);
                 
                 serviceCards.forEach((card, index) => {
-                    if (index === activeIndex) card.classList.add('active');
-                    else card.classList.remove('active');
+                    if (index === activeIndex) {
+                        card.classList.add('active');
+                    } else {
+                        card.classList.remove('active');
+                    }
                 });
             };
             window.addEventListener('scroll', updateActiveCard);
@@ -1592,8 +2223,8 @@
            REWARDS SYSTEM LOGIC
            ============================================== */
         
-        // Session state to track sub-tasks completion for raids
         const raidStates = {
+            'raid-4': { required: ['like', 'retweet'], completed: [] }, // NEW TASK Added at top
             'raid-1': { required: ['like', 'reply'], completed: [] },
             'raid-2': { required: ['follow'], completed: [] },
             'raid-3': { required: ['join'], completed: [] }
@@ -1611,7 +2242,6 @@
             }
         }
 
-        // Carga los puntos visualmente en el dashboard y actualiza botones
         function updatePointsUI() {
             const pointsDisplay = document.getElementById('user-points-display');
             if (pointsDisplay) {
@@ -1619,8 +2249,8 @@
                 pointsDisplay.textContent = pts;
             }
             
-            // Revisa si ya reclamó los raids y oculta / muestra botones
-            const activeRaids = ['raid-1', 'raid-2', 'raid-3'];
+            // Added raid-4 here
+            const activeRaids = ['raid-4', 'raid-1', 'raid-2', 'raid-3'];
             activeRaids.forEach(raidId => {
                 const actionsDiv = document.getElementById(raidId + '-actions');
                 const verifyDiv = document.getElementById(raidId + '-verify');
@@ -1633,23 +2263,20 @@
                         claimDiv.style.display = 'block';
                         const btnClaim = document.getElementById('btn-claim-' + raidId);
                         if(btnClaim) {
-                            btnClaim.innerHTML = '<i class="fas fa-check-circle"></i> Claimed';
-                            btnClaim.style.background = 'rgba(86, 188, 175, 0.2)';
-                            btnClaim.style.color = 'var(--primary-blue)';
+                            btnClaim.innerHTML = 'Claimed';
+                            btnClaim.style.background = 'transparent';
+                            btnClaim.style.color = 'var(--text-secondary)';
                             btnClaim.style.pointerEvents = 'none';
-                            btnClaim.style.borderColor = 'transparent';
-                            btnClaim.style.boxShadow = 'none';
+                            btnClaim.style.borderColor = 'var(--border-color)';
                         }
                     }
                 } else if (localStorage.getItem(raidId + '_started') === 'true') {
-                    // It was started but not claimed
                     if(actionsDiv) actionsDiv.style.display = 'none';
                     if(verifyDiv) verifyDiv.style.display = 'flex';
                 }
             });
         }
 
-        // Accordion functionality for Raids
         window.toggleRaid = function(raidId) {
             const body = document.getElementById(raidId + '-body');
             if(body.style.display === 'none' || body.style.display === '') {
@@ -1659,7 +2286,6 @@
             }
         };
 
-        // Procesa el registro inicial (Se guarda individualmente para siempre)
         const formRegRewards = document.getElementById('form-rewards-register');
         if (formRegRewards) {
             formRegRewards.addEventListener('submit', (e) => {
@@ -1676,10 +2302,8 @@
             });
         }
 
-        // Simula la acción de abrir X/Twitter e inicia el proceso de verificación
         window.startRaid = function(raidId) {
             localStorage.setItem(raidId + '_started', 'true');
-            // Timeout para dejar que se abra la otra pestaña antes de cambiar la UI
             setTimeout(() => {
                 const actionsDiv = document.getElementById(raidId + '-actions');
                 const verifyDiv = document.getElementById(raidId + '-verify');
@@ -1688,42 +2312,35 @@
             }, 500);
         };
 
-        // Verifica sub-tareas (Ej: Confirm Like, Confirm Follow)
         window.verifyTask = function(raidId, task) {
             const btn = document.getElementById(`${raidId}-${task}`);
             if(!btn) return;
             
-            // UI de carga
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Verifying...';
+            btn.innerHTML = 'Verifying...';
             btn.style.pointerEvents = 'none';
 
-            // Simular tiempo de verificación en red (1.5s)
             setTimeout(() => {
-                btn.innerHTML = '<i class="fas fa-check-circle"></i> Confirmed';
-                btn.style.background = 'rgba(86, 188, 175, 0.2)';
-                btn.style.color = 'var(--primary-blue)';
-                btn.style.borderColor = 'transparent';
+                btn.innerHTML = 'Confirmed';
+                btn.style.background = 'transparent';
+                btn.style.color = 'var(--text-secondary)';
+                btn.style.borderColor = 'var(--border-color)';
                 
-                // Track internally
                 if (!raidStates[raidId].completed.includes(task)) {
                     raidStates[raidId].completed.push(task);
                 }
 
-                // Chequea si completo todas las sub-tareas del raid
                 if (raidStates[raidId].completed.length === raidStates[raidId].required.length) {
                     setTimeout(() => {
                         document.getElementById(raidId + '-verify').style.display = 'none';
                         document.getElementById(raidId + '-claim').style.display = 'block';
-                    }, 500); // Pequeño retraso visual
+                    }, 500); 
                 }
             }, 1500); 
         };
 
-        // Finaliza y reclama puntos
         window.claimRaid = function(raidId, points) {
             if (localStorage.getItem(raidId + '_claimed') === 'true') return;
 
-            // Suma puntos al localStorage del usuario
             let currentPoints = parseInt(localStorage.getItem('deradar_raid_points') || '0');
             currentPoints += points;
             localStorage.setItem('deradar_raid_points', currentPoints.toString());
@@ -1731,7 +2348,6 @@
             
             updatePointsUI();
             
-            // Colapsa la tarjeta despues de reclamar
             setTimeout(() => {
                 const body = document.getElementById(raidId + '-body');
                 if(body) body.style.display = 'none';
@@ -1820,7 +2436,7 @@
                             missingField = true;
                             input.style.borderColor = '#ff4d4d';
                             input.addEventListener('input', () => {
-                                input.style.borderColor = 'rgba(255, 255, 255, 0.15)';
+                                input.style.borderColor = 'rgba(255, 255, 255, 0.1)';
                             }, { once: true });
                         }
                     }
@@ -1906,21 +2522,21 @@
                 const urgency = document.querySelector('input[name="urgency"]:checked')?.value || 'N/A';
                 
                 const now = new Date().toLocaleString();
-                const text = `🚀 *New Video Project Inquiry*\n` +
+                const text = `🚀 *New Web3 Protocol Inquiry*\n` +
                     `📅 *Date*: ${now}\n\n` +
                     `👤 *Contact Info*\n` +
                     `• Telegram: ${telegram}\n` +
                     `• Brand Twitter: ${twitter}\n` +
                     `• Email: ${email}\n\n` +
-                    `🏢 *Brand / Project Details*\n` +
+                    `🏢 *Protocol / Project Details*\n` +
                     `• Name: ${projectName}\n` +
                     `• Website: ${website}\n` +
                     `• Category: ${category}\n` +
                     `• Vision: ${description}\n\n` +
-                    `🛠 *AI Video Services Needed*\n${services || 'Not specified'}\n\n` +
-                    `💰 *Budget & Goals*\n` +
+                    `🛠 *Web3 Services Needed*\n${services || 'Not specified'}\n\n` +
+                    `💰 *Budget & Chain*\n` +
                     `• Budget: ${budget}\n` +
-                    `• Goal: ${outcome}\n\n` +
+                    `• Chain: ${outcome}\n\n` +
                     `⏳ *Timeline & Urgency*\n` +
                     `• Timeline: ${timeline}\n` +
                     `• Urgency: ${urgency}`;
