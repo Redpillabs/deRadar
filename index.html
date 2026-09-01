@@ -5,637 +5,387 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeRadar | Gigs</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        brand: {
-                            light: '#e0e0e0',
-                            DEFAULT: '#027B88',
-                            dark: '#015c66',
-                        },
-                        glass: {
-                            bg: 'rgba(2, 123, 136, 0.05)',
-                            border: 'rgba(2, 123, 136, 0.15)',
-                            highlight: 'rgba(255, 255, 255, 0.8)',
-                        }
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
         
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #027B88;
-            color: #ffffff;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            background: 
-                radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
-                radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
-                #027B88;
-            min-height: 100vh;
-        }
-
-        .liquid-glass {
-            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
-            backdrop-filter: blur(25px) saturate(180%);
-            -webkit-backdrop-filter: blur(25px) saturate(180%);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 
-                0 15px 35px 0 rgba(0, 0, 0, 0.2),
-                inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
-            position: relative;
-            overflow: hidden;
-        }
-
-        /* Subtle inner glow for the liquid glass */
-        .liquid-glass::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            border-radius: inherit;
-            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05);
-            pointer-events: none;
-            z-index: 1;
-        }
-
-        /* Animated gradient reflection */
-        .liquid-glass::after {
-            content: '';
-            position: absolute;
-            top: -50%;
-            left: -50%;
-            width: 200%;
-            height: 200%;
-            background: conic-gradient(
-                from 0deg,
-                transparent 0%,
-                rgba(255, 255, 255, 0.1) 25%,
-                transparent 50%,
-                rgba(255, 255, 255, 0.1) 75%,
-                transparent 100%
-            );
-            animation: rotateReflection 20s linear infinite;
-            pointer-events: none;
-            z-index: 0;
-            opacity: 0.8;
-        }
-
-        @keyframes rotateReflection {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-
-        .content-z {
-            position: relative;
-            z-index: 10;
-        }
-
-        .text-gradient {
-            background: linear-gradient(to right, #ffffff, rgba(255,255,255,0.7));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-
-        .nav-link {
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 50%;
-            width: 0;
-            height: 2px;
-            background: #ffffff;
-            transition: all 0.3s ease;
-            transform: translateX(-50%);
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        /* Custom Scrollbar */
+        /* Minimalist Scrollbar for the modal */
         ::-webkit-scrollbar {
-            width: 8px;
+            width: 4px;
         }
         ::-webkit-scrollbar-track {
-            background: rgba(0,0,0,0.1);
+            background: transparent;
         }
         ::-webkit-scrollbar-thumb {
-            background: rgba(255,255,255,0.2);
-            border-radius: 4px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: rgba(255,255,255,0.4);
+        
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
-
-        /* Specific scrollbar for the modal to protect rounded corners */
-        .custom-modal-scrollbar::-webkit-scrollbar {
-            width: 6px;
-        }
-        .custom-modal-scrollbar::-webkit-scrollbar-track {
-            background: transparent;
-            margin: 1.5rem 0;
-        }
-        .custom-modal-scrollbar::-webkit-scrollbar-thumb {
-            background: rgba(255,255,255,0.2);
-            border-radius: 3px;
-        }
-        .custom-modal-scrollbar::-webkit-scrollbar-thumb:hover {
-            background: rgba(255,255,255,0.4);
+        .animate-fadeIn {
+            animation: fadeIn 0.4s ease-out forwards;
         }
     </style>
 </head>
-<body class="antialiased flex flex-col min-h-screen">
+<body class="bg-[#027B88] text-white min-h-screen selection:bg-white/30 overflow-x-hidden relative font-light">
+    
+    <!-- Background Ambient Glow for Glass Effect -->
+    <div class="fixed inset-0 z-0 pointer-events-none">
+        <div class="absolute top-[-15%] left-[-10%] w-[50%] h-[50%] rounded-full bg-white/10 blur-[120px]"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[40%] h-[40%] rounded-full bg-teal-300/10 blur-[100px]"></div>
+    </div>
 
-    <nav class="fixed top-0 w-full z-50 border-b border-white/10 bg-[#027B88]/70 backdrop-blur-md shadow-sm">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <!-- Logo -->
-            <div class="flex items-center gap-2 cursor-pointer soon-trigger">
-                <img src="https://i.imgur.com/LqzmLQ8.jpeg" alt="DeRadar Logo" class="w-8 h-8 rounded-full object-cover">
-                <span class="text-xl font-medium tracking-tight text-white">DeRadar</span>
-            </div>
-
-            <!-- Desktop Menu -->
-            <div class="hidden md:flex space-x-8 text-sm font-medium text-white/70">
-                <a href="#" class="nav-link hover:text-white soon-trigger">Discover</a>
-                <a href="#" class="nav-link text-white font-semibold soon-trigger">Gigs</a>
-                <a href="#" class="nav-link hover:text-white soon-trigger">Talent</a>
-                <a href="#" class="nav-link hover:text-white soon-trigger">Intelligence</a>
-            </div>
-
-            <!-- Actions -->
-            <div class="flex items-center gap-4">
-                <button class="hidden md:block text-sm font-medium text-white/70 hover:text-white transition-colors soon-trigger">Sign In</button>
-                <button class="px-5 py-2 rounded-full bg-white text-[#027B88] text-sm font-medium hover:bg-white/90 transition-colors shadow-[0_4px_15px_rgba(0,0,0,0.1)] soon-trigger">
-                    Connect Wallet
-                </button>
-            </div>
+    <nav class="relative z-10 w-full px-6 py-5 flex items-center justify-between max-w-7xl mx-auto">
+        <a href="#" class="soon-trigger transition-transform hover:scale-105 duration-300">
+            <img src="https://i.imgur.com/LqzmLQ8.png" alt="DeRadar" class="h-8 object-contain">
+        </a>
+        <div class="hidden md:flex gap-10 items-center bg-white/[0.03] border border-white/10 px-10 py-3 rounded-full backdrop-blur-2xl shadow-[inset_0_1px_1px_rgba(255,255,255,0.1)]">
+            <a href="#" class="text-sm font-light text-white/70 hover:text-white transition-colors soon-trigger">Home</a>
+            <a href="#" class="text-sm font-light text-white/70 hover:text-white transition-colors soon-trigger">Dashboard</a>
+            <a href="#" class="text-sm font-medium text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.3)] soon-trigger">Gigs</a>
+            <a href="#" class="text-sm font-light text-white/70 hover:text-white transition-colors soon-trigger">About</a>
         </div>
+        <button class="px-6 py-2.5 bg-white text-[#027B88] rounded-full text-sm font-medium hover:bg-white/90 transition-all shadow-[0_4px_20px_0_rgba(255,255,255,0.15)] soon-trigger">
+            Connect Wallet
+        </button>
     </nav>
 
-    <main class="flex-grow flex flex-col items-center justify-start pt-32 pb-20 px-4 md:px-8">
+    <main class="relative z-10 flex flex-col items-center justify-center pt-16 pb-20 px-4">
+        <h1 class="text-6xl md:text-8xl font-light tracking-tighter mb-4 text-transparent bg-clip-text bg-gradient-to-b from-white to-white/70">Gigs</h1>
+        <p class="text-lg text-white/70 font-light max-w-md text-center">Exclusive short-term bounties and freelance missions.</p>
+    </main>
+
+    <section class="relative z-10 max-w-4xl mx-auto px-4 pb-32 flex flex-col gap-12">
         
-        <!-- Hero Section with Giant Liquid Glass Window -->
-        <section class="w-full max-w-5xl mx-auto flex flex-col items-center justify-center min-h-[50vh] mb-24 relative">
+        <!-- Active Gigs -->
+        <div>
+            <div class="flex items-center justify-between mb-5 px-2">
+                <h2 class="text-2xl font-light tracking-wide">Active Gigs</h2>
+                <span class="px-4 py-1.5 rounded-full bg-white/10 border border-white/20 text-xs font-medium backdrop-blur-xl">1 Available</span>
+            </div>
             
-            <!-- Background Glow for emphasis -->
-            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-white/5 blur-[120px] rounded-full pointer-events-none"></div>
-
-            <!-- The Giant Glass Window -->
-            <div class="liquid-glass w-full rounded-[3rem] p-16 md:p-24 flex items-center justify-center transform transition-transform duration-700 hover:scale-[1.01]">
-                <div class="content-z text-center flex flex-col items-center">
-                    <p class="text-white/70 uppercase tracking-[0.3em] text-sm font-bold mb-6">Opportunities</p>
-                    <h1 class="text-7xl md:text-9xl font-extrabold tracking-tighter text-gradient mb-8 drop-shadow-sm">
-                        Gigs
-                    </h1>
-                    <p class="text-lg md:text-xl text-white/80 font-medium max-w-lg mx-auto leading-relaxed">
-                        Discover exclusive, high-value opportunities in the decentralized ecosystem.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <section class="w-full max-w-4xl mx-auto flex flex-col gap-6 relative z-20 mt-8">
-            <div class="flex justify-between items-end mb-4 border-b border-white/20 pb-4">
-                <div class="flex flex-col">
-                    <h2 class="text-3xl font-medium tracking-tight text-white mb-1">Active Gigs</h2>
-                    <p class="text-white/60 text-sm">Short-term bounties and freelance missions.</p>
-                </div>
-                <span class="text-sm text-white font-semibold bg-white/10 px-4 py-1.5 rounded-full border border-white/20 backdrop-blur-sm">1 Available</span>
-            </div>
-
-            <!-- Gig Card 1 -->
-            <div class="liquid-glass rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 transition-all duration-300 hover:bg-white/10 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] cursor-pointer group border border-white/20">
-                <div class="content-z flex items-start gap-6 flex-grow w-full">
-                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/20 to-transparent border border-white/20 flex items-center justify-center flex-shrink-0 group-hover:border-white/50 transition-all shadow-sm backdrop-blur-sm relative overflow-hidden">
-                        <div class="absolute inset-0 bg-white/5 group-hover:bg-transparent transition-colors"></div>
-                        <svg class="w-7 h-7 text-white relative z-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
-                    </div>
+            <div class="p-[1px] rounded-[2.5rem] bg-gradient-to-b from-white/30 to-white/5 shadow-[0_8px_32px_0_rgba(0,0,0,0.1)] backdrop-blur-3xl transition-transform duration-500 hover:scale-[1.01]">
+                <div class="bg-white/[0.08] rounded-[2.5rem] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] relative overflow-hidden">
+                    <!-- Glass inner reflection -->
+                    <div class="absolute inset-0 bg-gradient-to-tr from-transparent via-white/[0.02] to-transparent pointer-events-none"></div>
                     
-                    <div class="flex flex-col gap-2 w-full">
-                        <div class="flex flex-wrap items-center gap-3">
-                            <h3 class="text-xl font-semibold text-white group-hover:text-white/90 transition-colors">Looking for Crypto Twitter Account</h3>
-                            <span class="px-3 py-0.5 rounded-full bg-red-500/20 border border-red-500/30 text-xs text-red-300 font-bold tracking-wide uppercase">ASAP</span>
+                    <div class="flex items-center gap-6 relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-white/10 border border-white/20 flex items-center justify-center shrink-0 backdrop-blur-md shadow-[inset_0_1px_2px_rgba(255,255,255,0.3)]">
+                            <svg class="w-7 h-7 text-white" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
                         </div>
-                        <p class="text-white/70 text-sm font-medium">Click "Apply" to securely submit your profile link and asking price directly through our platform. We need it asap!</p>
-                        <div class="flex flex-wrap items-center gap-2 mt-2">
-                            <span class="text-xs text-white/60 bg-white/5 px-2 py-1 rounded border border-white/10">Social Media</span>
-                            <span class="text-xs text-white/60 bg-white/5 px-2 py-1 rounded border border-white/10">Twitter</span>
-                            <span class="text-xs text-white/60 bg-white/5 px-2 py-1 rounded border border-white/10">Marketing</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="content-z w-full md:w-auto flex justify-end">
-                    <button id="apply-btn" class="px-8 py-3 rounded-full bg-white/10 hover:bg-white text-white hover:text-[#027B88] text-sm font-bold transition-all duration-300 border border-white/30 shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.4)] w-full md:w-auto whitespace-nowrap flex items-center justify-center gap-2">
-                        <span>Apply</span>
-                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <section class="w-full max-w-4xl mx-auto mt-32 mb-12 relative z-20">
-            <!-- Distinct Liquid Glass Window for Full-Time Jobs -->
-            <div class="liquid-glass rounded-[2.5rem] p-8 md:p-12 border-2 border-white/20 relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
-                
-                <!-- SOON Badge -->
-                <div class="absolute top-0 right-8 bg-gradient-to-b from-white/40 to-white/10 backdrop-blur-md border-x border-b border-white/30 text-white font-extrabold tracking-[0.2em] text-xs uppercase px-6 py-3 rounded-b-2xl shadow-xl z-30">
-                    Coming Soon
-                </div>
-
-                <!-- Window Inner Glow -->
-                <div class="absolute top-0 left-1/4 w-1/2 h-32 bg-white/10 blur-[60px] rounded-full pointer-events-none"></div>
-
-                <div class="content-z flex flex-col mb-10 border-b border-white/10 pb-8">
-                    <h2 class="text-4xl font-bold tracking-tight text-white mb-3">Careers & Jobs</h2>
-                    <p class="text-white/70 text-base max-w-lg">Full-time roles at top-tier organizations. Our dedicated jobs portal is launching soon. Here is a sneak peek.</p>
-                </div>
-
-                <!-- Premium Job Card (Disabled/Soon state) -->
-                <div class="content-z bg-white/5 border border-white/20 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 transition-all duration-300 hover:bg-white/10 relative overflow-hidden group">
-                    
-                    <!-- Subtle diagonal scanline effect for "locked" feel -->
-                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPjxwYXRoIGQ9Ik0tMjAgNjAgNjAgLTIwIi8+PC9nPjwvc3ZnPg==')] opacity-50 pointer-events-none"></div>
-
-                    <div class="flex items-start gap-6 flex-grow w-full relative z-10 opacity-80 group-hover:opacity-100 transition-opacity">
-                        <!-- Upgraded Company Logo -->
-                        <div class="w-16 h-16 rounded-xl bg-[#015c66] border border-white/30 flex items-center justify-center flex-shrink-0 shadow-inner">
-                            <svg class="w-8 h-8 text-white/90" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
-                        </div>
-                        
-                        <!-- Job Details -->
-                        <div class="flex flex-col gap-1.5 w-full">
-                            <h3 class="text-xl font-bold text-white group-hover:text-white/90 transition-colors">Business Development Lead</h3>
-                            <p class="text-white/70 text-sm font-medium">Tier 1 Web3 Protocol • $120k - $150k + Equity</p>
-                            <div class="flex flex-wrap items-center gap-2 mt-2">
-                                <span class="text-xs text-white/60 bg-white/5 px-2 py-1 rounded border border-white/10">Full-Time</span>
-                                <span class="text-xs text-white/60 bg-white/5 px-2 py-1 rounded border border-white/10">Remote</span>
-                                <span class="text-xs text-white/60 bg-white/5 px-2 py-1 rounded border border-white/10">Sales</span>
+                        <div>
+                            <div class="flex items-center gap-3 mb-1.5">
+                                <h3 class="text-xl font-medium tracking-tight">Looking for Crypto Twitter Account</h3>
+                                <span class="px-2.5 py-0.5 rounded-full bg-red-400/20 text-red-200 text-[10px] font-medium uppercase tracking-wider border border-red-400/30">ASAP</span>
+                            </div>
+                            <p class="text-white/70 font-light text-sm mb-4">If you're interested, please apply here. We need it asap!</p>
+                            <div class="flex flex-wrap gap-2">
+                                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-light text-white/80">Social Media</span>
+                                <span class="px-3 py-1 rounded-lg bg-white/5 border border-white/10 text-xs font-light text-white/80">Twitter</span>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Action Button (Disabled replaced with Soon Trigger) -->
-                    <div class="relative z-10 w-full md:w-auto flex justify-end">
-                        <button class="px-8 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white/80 text-sm font-bold border border-white/20 shadow-sm transition-colors w-full md:w-auto flex items-center justify-center gap-2 soon-trigger">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                            Opens Soon
-                        </button>
-                    </div>
+                    <button id="apply-btn" class="w-full md:w-auto px-8 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-2xl text-sm font-medium transition-all backdrop-blur-xl shadow-[0_4px_16px_rgba(0,0,0,0.1)] flex items-center justify-center gap-2 group relative z-10">
+                        Apply
+                        <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
                 </div>
             </div>
-        </section>
-
-        <div class="mt-8 text-center text-sm text-white/50 font-medium pb-8 w-full">
-            &copy; 2026 DeRadar. All rights reserved.
         </div>
-    </main>
 
-    <!-- Soon / Working on it Modal -->
-    <div id="soon-modal" class="fixed inset-0 z-[110] hidden flex-col items-center justify-center p-4 sm:p-6">
-        <div class="absolute inset-0 bg-[#015c66]/80 backdrop-blur-md transition-opacity duration-300 opacity-0" id="soon-modal-backdrop"></div>
-        <div class="relative w-full max-w-sm z-10 flex flex-col">
-            <div class="liquid-glass w-full rounded-[2rem] transform scale-95 opacity-0 transition-all duration-300 shadow-[0_30px_60px_rgba(0,0,0,0.5)] border border-white/30 flex flex-col overflow-hidden text-center p-8" id="soon-modal-content">
-                <div class="mb-6 text-white">
-                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-white/20 shadow-inner">
-                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+        <!-- Job Openings -->
+        <div class="opacity-80">
+             <div class="flex items-center justify-between mb-5 px-2">
+                <h2 class="text-2xl font-light tracking-wide text-white/80">Open Roles</h2>
+            </div>
+            
+            <div class="p-[1px] rounded-[2.5rem] bg-gradient-to-b from-white/20 to-transparent shadow-[0_8px_32px_0_rgba(0,0,0,0.05)] backdrop-blur-2xl">
+                <div class="bg-white/[0.04] rounded-[2.5rem] p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)] relative overflow-hidden">
+                    <div class="flex items-center gap-6 relative z-10">
+                        <div class="w-16 h-16 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center shrink-0 backdrop-blur-md">
+                            <svg class="w-7 h-7 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-medium tracking-tight mb-1 text-white/80">Business Development</h3>
+                            <p class="text-white/50 font-light text-sm">Full-time • Remote</p>
+                        </div>
                     </div>
-                    <h3 class="text-2xl font-bold tracking-tight mb-2">Coming Soon</h3>
-                    <p class="text-white/70 text-sm leading-relaxed">We are actively working on this feature. Stay tuned for updates!</p>
+                    <button class="w-full md:w-auto px-6 py-3 bg-white/[0.03] border border-white/10 rounded-2xl text-sm font-light text-white/50 cursor-pointer flex items-center justify-center gap-2 soon-trigger hover:bg-white/10 transition-colors relative z-10">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                        Opens Soon
+                    </button>
                 </div>
-                <button id="close-soon-modal" class="w-full px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium transition-colors border border-white/20 shadow-sm">
-                    Got it
+            </div>
+        </div>
+
+    </section>
+
+    <div id="modal-backdrop" class="fixed inset-0 bg-[#027B88]/40 backdrop-blur-2xl z-40 opacity-0 pointer-events-none transition-opacity duration-500"></div>
+    <div id="application-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4">
+        <div id="modal-content" class="w-full max-w-lg bg-gradient-to-b from-white/20 to-white/10 backdrop-blur-[40px] border border-white/30 rounded-[2.5rem] p-8 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4)] scale-95 opacity-0 transition-all duration-500 flex flex-col relative overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)]">
+            
+            <div class="flex justify-between items-start mb-8 relative z-10">
+                <div>
+                    <span class="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/20 text-[10px] font-medium tracking-wider uppercase mb-4">Gig Application</span>
+                    <h2 class="text-3xl font-light tracking-tight mb-2">Crypto Twitter Account</h2>
+                    <p class="text-sm font-light text-white/70 leading-relaxed">Please provide the details of the account(s) you are offering. You can add multiple accounts if available.</p>
+                </div>
+                <button type="button" id="close-modal" class="p-2.5 rounded-full bg-white/10 hover:bg-white/20 border border-transparent hover:border-white/20 transition-all backdrop-blur-md">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12"></path></svg>
                 </button>
             </div>
+
+            <form id="apply-form" class="flex flex-col gap-4 relative z-10">
+                <div id="accounts-container" class="max-h-[40vh] overflow-y-auto pr-2 rounded-2xl">
+                    <!-- Base Account Entry -->
+                    <div class="account-entry bg-black/10 p-5 rounded-[1.5rem] border border-white/10 flex flex-col gap-4 shadow-[inset_0_1px_2px_rgba(0,0,0,0.1)] relative group transition-all">
+                        <div>
+                            <label class="block text-[10px] font-medium text-white/60 uppercase tracking-widest mb-2 ml-1">Profile Link (X / Twitter)</label>
+                            <input type="url" placeholder="https://x.com/your_handle" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-white/40 focus:bg-white/10 transition-all text-sm font-light shadow-inner" required>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-medium text-white/60 uppercase tracking-widest mb-2 ml-1">Asking Price (USDT / USDC)</label>
+                            <div class="relative">
+                                <span class="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 font-light">$</span>
+                                <input type="number" min="0" step="any" placeholder="0.00" class="w-full bg-white/5 border border-white/10 rounded-xl pl-8 pr-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-white/40 focus:bg-white/10 transition-all text-sm font-light shadow-inner" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <button type="button" id="add-account-btn" class="w-full py-3.5 border border-dashed border-white/30 text-white/70 hover:text-white hover:border-white/60 hover:bg-white/5 rounded-2xl text-sm font-light transition-all mt-2">
+                    + Add another account
+                </button>
+
+                <button type="submit" class="w-full py-4 bg-white text-[#027B88] rounded-2xl font-medium shadow-[0_8px_20px_0_rgba(255,255,255,0.15)] hover:bg-white/90 hover:scale-[1.02] transition-all mt-4 flex items-center justify-center gap-2">
+                    Submit Application
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                </button>
+            </form>
         </div>
     </div>
 
-    <!-- Application Modal -->
-    <div id="application-modal" class="fixed inset-0 z-[100] hidden flex-col items-center justify-center p-4 sm:p-6">
-        <!-- Backdrop -->
-        <div class="absolute inset-0 bg-[#015c66]/80 backdrop-blur-md transition-opacity duration-300 opacity-0" id="modal-backdrop"></div>
-        
-        <!-- Modal Content Wrapper (Constraints and Centering) -->
-        <div class="relative w-full max-w-lg z-10 flex flex-col max-h-[90vh] sm:max-h-[85vh]">
+    <div id="soon-modal-backdrop" class="fixed inset-0 bg-[#027B88]/40 backdrop-blur-2xl z-[60] opacity-0 pointer-events-none transition-opacity duration-500"></div>
+    <div id="soon-modal" class="fixed inset-0 z-[70] hidden items-center justify-center p-4">
+        <div id="soon-modal-content" class="w-full max-w-sm bg-gradient-to-b from-white/20 to-white/10 backdrop-blur-[40px] border border-white/30 rounded-[2.5rem] p-8 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.4)] scale-95 opacity-0 transition-all duration-500 text-center relative overflow-hidden shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)]">
             
-            <!-- The Glass Container -->
-            <div class="liquid-glass w-full rounded-[2rem] transform scale-95 opacity-0 transition-all duration-300 shadow-[0_30px_60px_rgba(0,0,0,0.5)] border border-white/30 flex flex-col overflow-hidden" id="modal-content">
+            <div class="w-16 h-16 bg-white/10 rounded-2xl flex items-center justify-center mx-auto mb-6 border border-white/20 relative z-10 shadow-inner">
+                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+            </div>
+            <h3 class="text-2xl font-light mb-2 relative z-10 tracking-tight">Working on it</h3>
+            <p class="text-white/70 font-light text-sm mb-8 relative z-10">This section is currently under construction. Stay tuned!</p>
+            <button type="button" id="close-soon-modal" class="w-full py-3.5 bg-white/10 hover:bg-white/20 border border-white/30 rounded-2xl text-sm font-medium transition-all backdrop-blur-md relative z-10 hover:scale-[1.02]">
+                Close
+            </button>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            
+            // --- SOON MODAL LOGIC ---
+            const soonModal = document.getElementById('soon-modal');
+            const soonBackdrop = document.getElementById('soon-modal-backdrop');
+            const soonContent = document.getElementById('soon-modal-content');
+            const closeSoonBtn = document.getElementById('close-soon-modal');
+            const soonTriggers = document.querySelectorAll('.soon-trigger');
+
+            function openSoonModal(e) {
+                if(e) e.preventDefault();
+                if(!soonModal) return;
+                soonModal.classList.remove('hidden');
+                soonModal.classList.add('flex');
+                void soonModal.offsetWidth; // Reflow
+                soonBackdrop.classList.remove('opacity-0');
+                soonBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+                soonContent.classList.remove('scale-95', 'opacity-0');
+                soonContent.classList.add('scale-100', 'opacity-100');
+                document.body.style.overflow = 'hidden';
+            }
+
+            function closeSoonModalFunc() {
+                if(!soonModal) return;
+                soonBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+                soonBackdrop.classList.add('opacity-0');
+                soonContent.classList.remove('scale-100', 'opacity-100');
+                soonContent.classList.add('scale-95', 'opacity-0');
                 
-                <!-- Scrollable Content Area -->
-                <div class="p-6 md:p-8 overflow-y-auto custom-modal-scrollbar flex-1 relative">
+                setTimeout(() => {
+                    soonModal.classList.add('hidden');
+                    soonModal.classList.remove('flex');
+                    const appModal = document.getElementById('application-modal');
+                    if(!appModal || appModal.classList.contains('hidden')) {
+                        document.body.style.overflow = '';
+                    }
+                }, 500);
+            }
+
+            if(soonTriggers) {
+                soonTriggers.forEach(trigger => trigger.addEventListener('click', openSoonModal));
+            }
+            if(closeSoonBtn) closeSoonBtn.addEventListener('click', closeSoonModalFunc);
+            if(soonBackdrop) soonBackdrop.addEventListener('click', closeSoonModalFunc);
+
+            // --- APPLICATION MODAL LOGIC ---
+            const applyBtn = document.getElementById('apply-btn');
+            const modal = document.getElementById('application-modal');
+            const modalBackdrop = document.getElementById('modal-backdrop');
+            const closeModalBtn = document.getElementById('close-modal');
+            const modalContent = document.getElementById('modal-content');
+            
+            function openModal() {
+                if(!modal) return;
+                modal.classList.remove('hidden');
+                modal.classList.add('flex'); 
+                void modal.offsetWidth; // Reflow
+                modalBackdrop.classList.remove('opacity-0');
+                modalBackdrop.classList.add('opacity-100', 'pointer-events-auto');
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+                document.body.style.overflow = 'hidden'; 
+            }
+
+            function closeModalFunc() {
+                if(!modal) return;
+                modalBackdrop.classList.remove('opacity-100', 'pointer-events-auto');
+                modalBackdrop.classList.add('opacity-0');
+                modalContent.classList.remove('scale-100', 'opacity-100');
+                modalContent.classList.add('scale-95', 'opacity-0');
+                
+                setTimeout(() => {
+                    modal.classList.add('hidden');
+                    modal.classList.remove('flex');
+                    document.body.style.overflow = '';
+                }, 500);
+            }
+
+            if(applyBtn) applyBtn.addEventListener('click', openModal);
+            if(closeModalBtn) closeModalBtn.addEventListener('click', closeModalFunc);
+            if(modalBackdrop) modalBackdrop.addEventListener('click', closeModalFunc);
+
+            // --- FORM LOGIC (MULTIPLE ACCOUNTS) ---
+            const addAccountBtn = document.getElementById('add-account-btn');
+            const accountsContainer = document.getElementById('accounts-container');
+            let accountCount = 1;
+
+            if(addAccountBtn && accountsContainer) {
+                addAccountBtn.addEventListener('click', () => {
+                    accountCount++;
+                    const newEntry = document.createElement('div');
+                    newEntry.className = 'account-entry bg-black/10 p-5 rounded-[1.5rem] border border-white/10 flex flex-col gap-4 shadow-[inset_0_1px_2px_rgba(0,0,0,0.1)] relative mt-4 animate-fadeIn';
                     
-                    <!-- Close Button -->
-                    <button id="close-modal" class="absolute top-6 right-6 z-20 text-white/50 hover:text-white transition-colors bg-white/5 hover:bg-white/10 p-2 rounded-full border border-transparent hover:border-white/20">
-                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
-                    </button>
-                    
-                    <!-- Header -->
-                    <div class="mb-6 pr-8">
-                        <span class="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs text-white font-semibold tracking-wide mb-3">Gig Application</span>
-                        <h3 class="text-2xl font-bold text-white tracking-tight mb-2">Crypto Twitter Account</h3>
-                        <p class="text-white/70 text-sm">Please provide the details of the account(s) you are offering. You can add multiple accounts if available.</p>
-                    </div>
-                    
-                    <!-- Form -->
-                    <form id="apply-form" class="space-y-5">
-                        <div id="accounts-container" class="space-y-4">
-                            <!-- Initial Account Entry -->
-                            <div class="account-entry bg-white/5 p-5 rounded-2xl border border-white/10 relative group transition-colors hover:bg-white/10">
-                                <div class="flex flex-col gap-4">
-                                    <div>
-                                        <label class="block text-xs font-semibold text-white/60 uppercase tracking-wider mb-1.5">Profile Link (X / Twitter)</label>
-                                        <input type="url" placeholder="https://x.com/your_handle" class="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-white/50 focus:bg-black/30 transition-all text-sm" required>
-                                    </div>
-                                    <div>
-                                        <label class="block text-xs font-semibold text-white/60 uppercase tracking-wider mb-1.5">Asking Price (USDT / USDC)</label>
-                                        <div class="relative">
-                                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 font-medium">$</span>
-                                            <input type="number" min="0" step="any" placeholder="0.00" class="w-full bg-black/20 border border-white/10 rounded-xl pl-8 pr-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-white/50 focus:bg-black/30 transition-all text-sm" required>
-                                        </div>
-                                    </div>
+                    newEntry.innerHTML = `
+                        <button type="button" class="remove-account-btn absolute top-4 right-4 text-white/30 hover:text-white bg-transparent hover:bg-white/10 p-1.5 rounded-full transition-colors z-10" title="Remove account">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                        </button>
+                        <div class="pr-6 flex flex-col gap-4">
+                            <div>
+                                <label class="block text-[10px] font-medium text-white/60 uppercase tracking-widest mb-2 ml-1">Profile Link (X / Twitter) #${accountCount}</label>
+                                <input type="url" placeholder="https://x.com/your_handle" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-white/40 focus:bg-white/10 transition-all text-sm font-light shadow-inner" required>
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-medium text-white/60 uppercase tracking-widest mb-2 ml-1">Asking Price (USDT / USDC)</label>
+                                <div class="relative">
+                                    <span class="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 font-light">$</span>
+                                    <input type="number" min="0" step="any" placeholder="0.00" class="w-full bg-white/5 border border-white/10 rounded-xl pl-8 pr-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-white/40 focus:bg-white/10 transition-all text-sm font-light shadow-inner" required>
                                 </div>
                             </div>
                         </div>
-                        
-                        <!-- Add More Button -->
-                        <button type="button" id="add-account-btn" class="w-full py-3 rounded-xl border border-dashed border-white/30 text-white/70 hover:text-white hover:border-white/60 hover:bg-white/5 transition-all flex items-center justify-center gap-2 text-sm font-medium">
-                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
-                            Add another account
-                        </button>
-
-                        <!-- Submit Action -->
-                        <div class="pt-4 mt-6 border-t border-white/10">
-                            <button type="submit" class="w-full px-6 py-4 rounded-xl bg-white text-[#027B88] font-bold text-base hover:bg-white/90 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all flex items-center justify-center gap-2">
-                                Submit Application
-                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Interactive script for slight 3D tilt effect on the giant window -->
-    <script>
-        const glassWindow = document.querySelector('.liquid-glass');
-        
-        document.addEventListener('mousemove', (e) => {
-            if(!glassWindow) return;
-            
-            const xAxis = (window.innerWidth / 2 - e.pageX) / 50;
-            const yAxis = (window.innerHeight / 2 - e.pageY) / 50;
-            
-            // Apply a very subtle rotation based on mouse position
-            glassWindow.style.transform = `perspective(1000px) rotateY(${xAxis}deg) rotateX(${yAxis}deg) scale3d(1.01, 1.01, 1.01)`;
-        });
-        
-        // Reset transform when mouse leaves
-        document.addEventListener('mouseleave', () => {
-            if(!glassWindow) return;
-            glassWindow.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)`;
-            glassWindow.style.transition = 'transform 0.5s ease';
-        });
-        
-        // Remove transition while moving for smooth effect
-        document.addEventListener('mouseenter', () => {
-             if(!glassWindow) return;
-             glassWindow.style.transition = 'none';
-        });
-
-        const soonModal = document.getElementById('soon-modal');
-        const soonBackdrop = document.getElementById('soon-modal-backdrop');
-        const soonContent = document.getElementById('soon-modal-content');
-        const closeSoonBtn = document.getElementById('close-soon-modal');
-        const soonTriggers = document.querySelectorAll('.soon-trigger');
-
-        function openSoonModal(e) {
-            if(e) e.preventDefault();
-            soonModal.classList.remove('hidden');
-            soonModal.classList.add('flex');
-            
-            // Trigger reflow
-            void soonModal.offsetWidth;
-            
-            soonBackdrop.classList.remove('opacity-0');
-            soonBackdrop.classList.add('opacity-100');
-            
-            soonContent.classList.remove('scale-95', 'opacity-0');
-            soonContent.classList.add('scale-100', 'opacity-100');
-            
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeSoonModal() {
-            soonBackdrop.classList.remove('opacity-100');
-            soonBackdrop.classList.add('opacity-0');
-            
-            soonContent.classList.remove('scale-100', 'opacity-100');
-            soonContent.classList.add('scale-95', 'opacity-0');
-            
-            setTimeout(() => {
-                soonModal.classList.add('hidden');
-                soonModal.classList.remove('flex');
-                
-                // Only restore overflow if the other modal isn't open
-                const appModal = document.getElementById('application-modal');
-                if(!appModal || appModal.classList.contains('hidden')) {
-                    document.body.style.overflow = '';
-                }
-            }, 300);
-        }
-
-        soonTriggers.forEach(trigger => {
-            trigger.addEventListener('click', openSoonModal);
-        });
-        closeSoonBtn.addEventListener('click', closeSoonModal);
-        soonBackdrop.addEventListener('click', closeSoonModal);
-
-        // Modal Logic
-        const applyBtn = document.getElementById('apply-btn');
-        const modal = document.getElementById('application-modal');
-        const modalBackdrop = document.getElementById('modal-backdrop');
-        const closeModalBtn = document.getElementById('close-modal');
-        const modalContent = document.getElementById('modal-content');
-        
-        function openModal() {
-            modal.classList.remove('hidden');
-            modal.classList.add('flex'); // Ensure flex is applied for perfect centering
-            
-            // Trigger reflow
-            void modal.offsetWidth;
-            
-            modalBackdrop.classList.remove('opacity-0');
-            modalBackdrop.classList.add('opacity-100');
-            
-            modalContent.classList.remove('scale-95', 'opacity-0');
-            modalContent.classList.add('scale-100', 'opacity-100');
-            
-            document.body.style.overflow = 'hidden'; // Prevent background scrolling
-        }
-
-        function closeModal() {
-            modalBackdrop.classList.remove('opacity-100');
-            modalBackdrop.classList.add('opacity-0');
-            
-            modalContent.classList.remove('scale-100', 'opacity-100');
-            modalContent.classList.add('scale-95', 'opacity-0');
-            
-            setTimeout(() => {
-                modal.classList.add('hidden');
-                modal.classList.remove('flex');
-                document.body.style.overflow = '';
-            }, 300); // Wait for transition to finish
-        }
-
-        applyBtn.addEventListener('click', openModal);
-        closeModalBtn.addEventListener('click', closeModal);
-        modalBackdrop.addEventListener('click', closeModal);
-
-        // Form Logic - Add multiple accounts
-        const addAccountBtn = document.getElementById('add-account-btn');
-        const accountsContainer = document.getElementById('accounts-container');
-        let accountCount = 1;
-
-        addAccountBtn.addEventListener('click', () => {
-            accountCount++;
-            
-            const newEntry = document.createElement('div');
-            newEntry.className = 'account-entry bg-white/5 p-5 rounded-2xl border border-white/10 relative group transition-colors hover:bg-white/10 animate-[fadeIn_0.3s_ease-out]';
-            
-            newEntry.innerHTML = `
-                <button type="button" class="remove-account-btn absolute top-3 right-3 text-white/40 hover:text-red-400 bg-black/20 hover:bg-black/40 p-1.5 rounded-full transition-colors" title="Remove account">
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
-                </button>
-                <div class="flex flex-col gap-4 pr-8">
-                    <div>
-                        <label class="block text-xs font-semibold text-white/60 uppercase tracking-wider mb-1.5">Profile Link (X / Twitter) #${accountCount}</label>
-                        <input type="url" placeholder="https://x.com/your_handle" class="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-white/50 focus:bg-black/30 transition-all text-sm" required>
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-white/60 uppercase tracking-wider mb-1.5">Asking Price (USDT / USDC)</label>
-                        <div class="relative">
-                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 font-medium">$</span>
-                            <input type="number" min="0" step="any" placeholder="0.00" class="w-full bg-black/20 border border-white/10 rounded-xl pl-8 pr-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-white/50 focus:bg-black/30 transition-all text-sm" required>
-                        </div>
-                    </div>
-                </div>
-            `;
-            
-            // Add remove functionality to the newly created button
-            const removeBtn = newEntry.querySelector('.remove-account-btn');
-            removeBtn.addEventListener('click', () => {
-                newEntry.style.opacity = '0';
-                newEntry.style.transform = 'scale(0.95)';
-                setTimeout(() => newEntry.remove(), 200);
-            });
-            
-            accountsContainer.appendChild(newEntry);
-        });
-
-        // Add simple fadeIn animation class to custom styles dynamically if not present
-        if(!document.getElementById('custom-animations')) {
-            const style = document.createElement('style');
-            style.id = 'custom-animations';
-            style.innerHTML = `
-                @keyframes fadeIn {
-                    from { opacity: 0; transform: translateY(-10px); }
-                    to { opacity: 1; transform: translateY(0); }
-                }
-            `;
-            document.head.appendChild(style);
-        }
-
-        // Handle form submission and send to Google Sheets
-        document.getElementById('apply-form').addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const submitBtn = e.target.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            // 1. Recolectar la data de los inputs
-            const accounts = [];
-            const entries = document.querySelectorAll('.account-entry');
-            
-            entries.forEach(entry => {
-                const linkInput = entry.querySelector('input[type="url"]');
-                const priceInput = entry.querySelector('input[type="number"]');
-                
-                if(linkInput.value && priceInput.value) {
-                    accounts.push({
-                        link: linkInput.value,
-                        price: priceInput.value
+                    `;
+                    
+                    const removeBtn = newEntry.querySelector('.remove-account-btn');
+                    removeBtn.addEventListener('click', () => {
+                        newEntry.style.opacity = '0';
+                        newEntry.style.transform = 'scale(0.95)';
+                        setTimeout(() => newEntry.remove(), 200);
                     });
-                }
-            });
-
-            if(accounts.length === 0) return;
-
-            // 2. Estado de carga
-            submitBtn.innerHTML = `<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-[#027B88]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Sending...`;
-            submitBtn.disabled = true;
-
-            const scriptURL = 'https://script.google.com/macros/s/AKfycbzdv6HOdpJq056kAIKprs1z8X4fO1nhCg55xHzCfwYHaGPPny8v23lZ1pE9iWhKrEWK0A/exec';
-            
-            try {
-                // Preparar datos en formato de formulario nativo (evita bloqueos de Google)
-                const formData = new URLSearchParams();
-                formData.append('data', JSON.stringify(accounts));
-
-                await fetch(scriptURL, {
-                    method: 'POST',
-                    mode: 'no-cors',
-                    body: formData
+                    
+                    accountsContainer.appendChild(newEntry);
+                    // Scroll to bottom
+                    accountsContainer.scrollTop = accountsContainer.scrollHeight;
                 });
+            }
 
-                // 4. Éxito!
-                submitBtn.innerHTML = `Success!`;
-                submitBtn.classList.replace('text-[#027B88]', 'text-green-500');
-                
-                setTimeout(() => {
-                    closeModal();
-                    // Resetear formulario después de cerrar
-                    setTimeout(() => {
-                        e.target.reset();
-                        submitBtn.innerHTML = originalText;
-                        submitBtn.classList.replace('text-green-500', 'text-[#027B88]');
-                        submitBtn.disabled = false;
+            // --- FORM SUBMISSION TO GOOGLE SHEETS ---
+            const applyForm = document.getElementById('apply-form');
+            if(applyForm) {
+                applyForm.addEventListener('submit', async (e) => {
+                    e.preventDefault();
+                    const submitBtn = e.target.querySelector('button[type="submit"]');
+                    const originalText = submitBtn.innerHTML;
+                    
+                    const accounts = [];
+                    const entries = document.querySelectorAll('.account-entry');
+                    
+                    entries.forEach(entry => {
+                        const linkInput = entry.querySelector('input[type="url"]');
+                        const priceInput = entry.querySelector('input[type="number"]');
+                        if(linkInput && priceInput && linkInput.value && priceInput.value) {
+                            accounts.push({
+                                link: linkInput.value,
+                                price: priceInput.value
+                            });
+                        }
+                    });
+
+                    if(accounts.length === 0) return;
+
+                    // Loading state
+                    submitBtn.innerHTML = `<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-[#027B88]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Sending...`;
+                    submitBtn.disabled = true;
+
+                    // Google Apps Script URL
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbzdv6HOdpJq056kAIKprs1z8X4fO1nhCg55xHzCfwYHaGPPny8v23lZ1pE9iWhKrEWK0A/exec';
+                    
+                    try {
+                        const formData = new URLSearchParams();
+                        formData.append('data', JSON.stringify(accounts));
+
+                        await fetch(scriptURL, {
+                            method: 'POST',
+                            mode: 'no-cors',
+                            body: formData
+                        });
+
+                        // Success state
+                        submitBtn.innerHTML = `Success!`;
+                        submitBtn.classList.add('!bg-green-500', '!text-white');
+                        submitBtn.classList.remove('bg-white', 'text-[#027B88]');
                         
-                        // Remover campos extras que el usuario haya agregado
-                        const extraAccounts = accountsContainer.querySelectorAll('.account-entry:not(:first-child)');
-                        extraAccounts.forEach(acc => acc.remove());
-                        accountCount = 1;
-                    }, 300);
-                }, 1500);
+                        setTimeout(() => {
+                            closeModalFunc();
+                            // Reset form
+                            setTimeout(() => {
+                                e.target.reset();
+                                submitBtn.innerHTML = originalText;
+                                submitBtn.classList.remove('!bg-green-500', '!text-white');
+                                submitBtn.classList.add('bg-white', 'text-[#027B88]');
+                                submitBtn.disabled = false;
+                                
+                                const extraAccounts = accountsContainer.querySelectorAll('.account-entry:not(:first-child)');
+                                extraAccounts.forEach(acc => acc.remove());
+                                accountCount = 1;
+                            }, 500);
+                        }, 1500);
 
-            } catch (error) {
-                // Si algo falla
-                console.error('Error al enviar form:', error);
-                submitBtn.innerHTML = `Error. Try again.`;
-                submitBtn.classList.replace('text-[#027B88]', 'text-red-500');
-                
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.classList.replace('text-red-500', 'text-[#027B88]');
-                    submitBtn.disabled = false;
-                }, 3000);
+                    } catch (error) {
+                        console.error('Error submitting form:', error);
+                        submitBtn.innerHTML = `Error. Try again.`;
+                        submitBtn.classList.add('!bg-red-500', '!text-white');
+                        submitBtn.classList.remove('bg-white', 'text-[#027B88]');
+                        
+                        setTimeout(() => {
+                            submitBtn.innerHTML = originalText;
+                            submitBtn.classList.remove('!bg-red-500', '!text-white');
+                            submitBtn.classList.add('bg-white', 'text-[#027B88]');
+                            submitBtn.disabled = false;
+                        }, 3000);
+                    }
+                });
             }
         });
     </script>
