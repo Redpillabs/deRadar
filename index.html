@@ -3,2625 +3,641 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <!-- SEO & Social Media Meta Tags -->
-    <title>DeRadar - Elite Web3 Services Studio</title>
-    <meta name="description" content="The ultimate development, growth, and creative studio for Web3 protocols, DeFi, NFTs, and DAOs. Build and scale your decentralized future.">
-    
-    <!-- Favicon -->
-    <link rel="icon" href="https://i.postimg.cc/Dz7CnbDj/Sin-titulo-1.png" type="image/png">
-
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://deradar.ai/">
-    <meta property="og:title" content="DeRadar - Web3 Development Studio">
-    <meta property="og:description" content="Smart contracts, Tokenomics, Marketing, and Community Growth for elite Web3 projects.">
-    <meta property="og:image" content="https://i.postimg.cc/JnwNYcgf/logo.jpg">
-    <meta itemprop="image" content="https://i.postimg.cc/JnwNYcgf/logo.jpg">
-
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://deradar.ai/">
-    <meta property="twitter:title" content="DeRadar - Web3 Development Studio">
-    <meta property="twitter:description" content="Smart contracts, Tokenomics, Marketing, and Community Growth for elite Web3 projects.">
-    <meta property="twitter:image" content="https://i.postimg.cc/JnwNYcgf/logo.jpg">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <!-- Main Sans-Serif Font -->
-    <link href="https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,700&display=swap" rel="stylesheet">
-    <!-- Luxury Serif Font Update (Bodoni Moda) -->
-    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <style>
-        /* CRYPTic WEB3 STYLES -> AP COLLECTIVE MONOCHROME GLOW STYLES */
-        :root {
-            --bg-color: #000000;
-            --bg-surface: #0a0a0a;
-            --text-primary: #FFFFFF;
-            --text-secondary: #a0a0a0;
-            --accent: #FFFFFF; /* Pure White Accent */
-            --accent-hover: #E0E0E0; 
-            --border-color: rgba(255, 255, 255, 0.1);
-            --border-light: rgba(255, 255, 255, 0.2);
-            --glow-white: 0 0 20px rgba(255, 255, 255, 0.15);
-            --glow-white-strong: 0 0 30px rgba(255, 255, 255, 0.4);
-            --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            --radius: 4px; /* Brutalist/Minimal sharp corners */
+    <title>DeRadar | Gigs</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            light: '#e0e0e0',
+                            DEFAULT: '#027B88',
+                            dark: '#015c66',
+                        },
+                        glass: {
+                            bg: 'rgba(2, 123, 136, 0.05)',
+                            border: 'rgba(2, 123, 136, 0.15)',
+                            highlight: 'rgba(255, 255, 255, 0.8)',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
         }
-
-        * {
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #027B88;
+            color: #ffffff;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
+            overflow-x: hidden;
+            background: 
+                radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.05) 0%, transparent 50%),
+                radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.08) 0%, transparent 50%),
+                #027B88;
+            min-height: 100vh;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: 'Satoshi', sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            line-height: 1.6;
-            font-weight: 400;
-            -webkit-font-smoothing: antialiased;
-        }
-
-        a {
-            text-decoration: none;
-            color: inherit;
-            transition: var(--transition);
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-        .section {
-            padding: 6rem 0;
-        }
-
-        .section-separator {
-            width: 100%;
-            height: 1px;
-            background: var(--border-color);
-            margin: 0;
+        .liquid-glass {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+            backdrop-filter: blur(25px) saturate(180%);
+            -webkit-backdrop-filter: blur(25px) saturate(180%);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 
+                0 15px 35px 0 rgba(0, 0, 0, 0.2),
+                inset 0 1px 0 0 rgba(255, 255, 255, 0.1);
             position: relative;
-            z-index: 10;
+            overflow: hidden;
         }
 
-        /* Fade Edges Effect for Text */
-        .fade-edges {
-            -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-            mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
-        }
-
-        /* Brutalist Buttons */
-        .btn {
-            display: inline-block;
-            padding: 0.85rem 1.75rem;
-            border-radius: var(--radius);
-            font-weight: 600;
-            font-size: 0.95rem;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: var(--transition);
-            border: 1px solid transparent;
-        }
-
-        .btn-primary {
-            background-color: var(--text-primary);
-            color: #000;
-        }
-
-        .btn-primary:hover {
-            background-color: var(--accent);
-            color: #000;
-            box-shadow: var(--glow-white-strong);
-            transform: translateY(-2px);
-        }
-
-        .btn-outline {
-            border-color: var(--border-color);
-            color: var(--text-primary);
-            background-color: transparent;
-        }
-
-        .btn-outline:hover {
-            background-color: rgba(255, 255, 255, 0.05);
-            border-color: var(--text-primary);
-        }
-
-        /* Glowing Request Buttons */
-        .btn-request-glowing {
-            position: relative;
-            background: rgba(255, 255, 255, 0.95) !important;
-            color: #000000 !important;
-            border: none !important;
-            font-weight: 700;
-            z-index: 1;
-            overflow: visible;
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
-            transition: all 0.3s ease;
-            margin-right: 35px; /* Espacio reservado para que el círculo quepa perfectamente */
-        }
-
-        .btn-request-glowing:hover {
-            background: #ffffff !important;
-            transform: translateY(-2px);
-            box-shadow: 0 0 20px rgba(255, 255, 255, 0.6);
-        }
-
-        .btn-request-glowing::before {
+        /* Subtle inner glow for the liquid glass */
+        .liquid-glass::before {
             content: '';
             position: absolute;
-            top: 50%;
-            right: -35px; /* Posicionado totalmente a la derecha, fuera del botón */
-            left: auto; 
-            width: 22px; /* Tamaño del círculo más pequeño y nítido */
-            height: 22px;
-            margin-top: -11px; /* Centrado vertical */
-            background: conic-gradient(from 0deg, transparent 0%, rgba(255, 255, 255, 0.2) 30%, #ffffff 80%, transparent 100%);
-            animation: rotateGlowAnim 1.2s linear infinite; /* Rotación ágil */
-            z-index: 10; /* Por encima para asegurar visibilidad */
-            border-radius: 50%;
-            box-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Glow sutil alrededor del círculo */
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border-radius: inherit;
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.05);
             pointer-events: none;
+            z-index: 1;
         }
 
-        @keyframes rotateGlowAnim {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        /* Apple Glass Pill Navbar */
-        .navbar {
-            position: fixed;
-            top: 2rem;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 92%;
-            max-width: 1200px;
-            background: rgba(5, 5, 5, 0.35); 
-            backdrop-filter: blur(20px) saturate(180%);
-            -webkit-backdrop-filter: blur(20px) saturate(180%);
-            z-index: 1000;
-            height: 70px;
-            display: flex;
-            align-items: center;
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 100px; 
-            padding: 0 2.5rem;
-            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
-        }
-
-        .scroll-header {
-            top: 1rem;
-            background: rgba(5, 5, 5, 0.55); 
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
-        }
-
-        .nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            position: relative;
-            padding: 0; 
-            max-width: 100%;
-        }
-
-        .logo {
-            display: flex;
-            align-items: center;
-            z-index: 10;
-            transition: var(--transition);
-        }
-
-        .logo img {
-            max-height: 44px; 
-            width: auto;
-            object-fit: contain;
-        }
-
-        .logo:hover {
-            transform: scale(1.05);
-        }
-
-        .nav-menu {
+        /* Animated gradient reflection */
+        .liquid-glass::after {
+            content: '';
             position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
-            display: flex;
-            align-items: center;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: conic-gradient(
+                from 0deg,
+                transparent 0%,
+                rgba(255, 255, 255, 0.1) 25%,
+                transparent 50%,
+                rgba(255, 255, 255, 0.1) 75%,
+                transparent 100%
+            );
+            animation: rotateReflection 20s linear infinite;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.8;
         }
 
-        .nav-list {
-            display: flex;
-            gap: 1.8rem; /* Reducido de 2.5rem para que quepan más opciones */
-            align-items: center;
+        @keyframes rotateReflection {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .content-z {
+            position: relative;
+            z-index: 10;
+        }
+
+        .text-gradient {
+            background: linear-gradient(to right, #ffffff, rgba(255,255,255,0.7));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
         }
 
         .nav-link {
-            font-size: 0.95rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            transition: color 0.3s ease;
-            white-space: nowrap; /* Evita que el texto baje a una segunda línea */
-        }
-
-        .nav-link:hover, .active-link {
-            color: var(--text-primary);
-            text-shadow: 0 0 10px rgba(255,255,255,0.3);
-        }
-
-        .nav-link-rewards {
-            color: var(--text-primary) !important;
-            font-weight: 600;
-            text-shadow: 0 0 12px rgba(255, 255, 255, 0.6), 0 0 20px rgba(255, 255, 255, 0.4);
-            position: relative;
-            animation: pulse-rewards 2s infinite alternate;
-            padding: 0.3rem 0.8rem;
-            border-radius: 50px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.15);
             transition: all 0.3s ease;
-        }
-
-        .nav-link-rewards:hover {
-            background: rgba(255, 255, 255, 0.15);
-            text-shadow: 0 0 15px rgba(255, 255, 255, 0.9), 0 0 25px rgba(255, 255, 255, 0.6);
-            transform: translateY(-2px);
-            box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-        }
-
-        @keyframes pulse-rewards {
-            0% { text-shadow: 0 0 8px rgba(255, 255, 255, 0.4); box-shadow: 0 0 0 rgba(255, 255, 255, 0); }
-            100% { text-shadow: 0 0 15px rgba(255, 255, 255, 0.8), 0 0 25px rgba(255, 255, 255, 0.5); box-shadow: 0 0 12px rgba(255, 255, 255, 0.15); }
-        }
-
-        .nav-right {
-            display: flex;
-            align-items: center;
-            gap: 1.5rem;
-            z-index: 10;
-        }
-
-        .nav-cta {
-            padding: 0.7rem 1.5rem;
-            font-size: 0.85rem;
-            border-radius: var(--radius);
-            background: var(--text-primary);
-            color: #000;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            box-shadow: var(--glow-white);
-            transition: var(--transition);
-        }
-
-        .nav-cta:hover { 
-            background: var(--accent); 
-            box-shadow: var(--glow-white-strong);
-            transform: translateY(-2px);
-        }
-
-        .nav-cta-disabled {
-            background: rgba(255, 255, 255, 0.05) !important;
-            color: var(--text-secondary) !important;
-            border: 1px solid var(--border-color);
-            cursor: not-allowed;
             position: relative;
         }
-        .nav-cta-disabled:hover {
-            box-shadow: none !important;
-            transform: none !important;
-        }
-        .badge-soon {
-            position: absolute;
-            top: -8px;
-            right: -12px;
-            background: var(--bg-color);
-            color: var(--text-primary);
-            font-size: 0.55rem;
-            padding: 2px 6px;
-            border-radius: 8px;
-            border: 1px solid var(--border-light);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-weight: 700;
-            box-shadow: var(--glow-white);
-            pointer-events: none;
-        }
-
-        .mobile-only {
-            display: none;
-        }
-
-        .nav-toggle, .nav-close {
-            display: none;
-            font-size: 1.5rem;
-            cursor: pointer;
-            color: var(--text-primary);
-        }
-
-        /* Hero Section - Cryptic Style */
-        .hero {
-            padding-top: 200px;
-            padding-bottom: 8rem;
-            position: relative;
-            overflow: hidden;
-            background-color: var(--bg-color);
-        }
-
-        .hero::before {
+        
+        .nav-link::after {
             content: '';
             position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
-            z-index: 1;
-            pointer-events: none;
+            bottom: -4px;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: #ffffff;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
         }
 
-        .hero::after {
-            content: '';
-            position: absolute;
-            top: 50%; left: 50%;
-            transform: translate(-50%, -50%);
-            width: 80vw; height: 80vh;
-            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 60%);
-            z-index: 1; pointer-events: none;
-        }
-
-        .hero-video {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            object-fit: cover;
-            z-index: 0;
-            opacity: 0.15;
-            filter: grayscale(100%) contrast(120%);
-            pointer-events: none;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: linear-gradient(to bottom, transparent 0%, var(--bg-color) 100%);
-            z-index: 2;
-        }
-
-        .hero-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            max-width: 900px;
-            position: relative;
-            z-index: 3;
-        }
-
-        .hero-title {
-            font-size: 4.5rem;
-            line-height: 1.1;
-            margin-bottom: 2rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            letter-spacing: -0.04em;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.5); 
-            display: inline-block;
-        }
-
-        .luxury-fade-text {
-            display: inline-block;
-            color: var(--text-primary);
-            font-family: 'Bodoni Moda', serif;
-            font-style: italic;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            text-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
-            transition: opacity 0.6s cubic-bezier(0.22, 1, 0.36, 1), transform 0.6s cubic-bezier(0.22, 1, 0.36, 1), filter 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-            will-change: opacity, transform, filter;
-        }
-
-        .luxury-fade-text.fade-out {
-            opacity: 0;
-            transform: translateY(10px);
-            filter: blur(6px);
-        }
-
-        .luxury-fade-text.fade-in {
-            opacity: 1;
-            transform: translateY(0);
-            filter: blur(0px);
-        }
-
-        .highlight-glow {
-            color: var(--text-primary);
-            border-bottom: 1px solid rgba(255,255,255,0.5);
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
-        }
-
-        .hero-description {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            margin-bottom: 3rem;
-            max-width: 650px;
-            line-height: 1.6;
-        }
-
-        .hero-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-bottom: 5rem;
-        }
-
-        .btn-glow {
-            background-color: var(--text-primary);
-            color: #000;
-            border: none;
-            font-weight: 600;
-            text-transform: uppercase;
-            box-shadow: var(--glow-white);
-            transition: var(--transition);
-        }
-        .btn-glow:hover { 
-            background-color: var(--accent); 
-            color: #000; 
-            box-shadow: var(--glow-white-strong);
-            transform: translateY(-2px);
-        }
-
-        .btn-white-glow {
-            background-color: transparent;
-            color: var(--text-primary);
-            border: 1px solid var(--border-color);
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        .btn-white-glow:hover { 
-            background-color: rgba(255,255,255,0.05); 
-            border-color: var(--text-primary); 
-            box-shadow: var(--glow-white);
-        }
-
-        /* Brands Section */
-        .brands-section { width: 100%; display: flex; flex-direction: column; align-items: center; margin-top: 2rem; overflow: hidden; position: relative; z-index: 3; }
-        
-        .logo-carousel { width: 100%; overflow: hidden; position: relative; padding: 1rem 0; mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color); background: var(--bg-color); }
-        .logo-track { display: flex; width: max-content; animation: scroll 30s linear infinite; gap: 5rem; }
-        .logo-carousel:hover .logo-track { animation-play-state: paused; }
-        .logo-item { display: flex; align-items: center; justify-content: center; width: 140px; filter: brightness(0) invert(1) opacity(0.3); transition: var(--transition); }
-        .logo-item img { max-height: 35px; width: auto; max-width: 100%; object-fit: contain; }
-        .logo-item i { font-size: 35px; line-height: 1; }
-        .logo-item:hover { filter: brightness(0) invert(1) opacity(1); }
-        @keyframes scroll { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-
-        /* Services Section (Large Apple Glass Scroll Effect) */
-        .section-header { text-align: center; margin-bottom: 3rem; }
-        .section-title { font-size: 2.75rem; font-weight: 600; margin-bottom: 1rem; color: var(--text-primary); letter-spacing: -0.03em; }
-        .section-subtitle { font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; font-weight: 400; }
-        
-        /* Contenedores para el efecto de Scroll */
-        .services-scroll-track { position: relative; height: 1100vh; background-color: var(--bg-color); }
-        .services-sticky-container { position: sticky; top: 0; height: 100vh; display: flex; flex-direction: column; justify-content: center; overflow: hidden; padding: 2rem 0; z-index: 1; }
-        .services-stack { position: relative; width: 100%; max-width: 1600px; margin: 0 auto; height: 580px; display: flex; align-items: center; justify-content: center; margin-top: 1rem; }
-        
-        /* Tarjetas de Servicio Grandes Apple Glass */
-        .scroll-card { 
-            position: absolute; 
-            top: 0; left: 0; 
-            width: 100%; 
-            height: 100%; 
-            z-index: 1; 
-            background: rgba(12, 12, 12, 0.45); 
-            backdrop-filter: blur(30px) saturate(180%); 
-            -webkit-backdrop-filter: blur(30px) saturate(180%); 
-            border: 1px solid rgba(255, 255, 255, 0.08); 
-            border-radius: 36px; 
-            padding: 4rem 6rem; 
-            display: flex; 
-            align-items: center; 
-            gap: 8rem; 
-            opacity: 0; 
-            transform: translateY(60px) scale(0.95); 
-            pointer-events: none; 
-            transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1); 
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4); 
-            overflow: hidden; 
-        }
-        
-        .scroll-card.active { 
-            opacity: 1; 
-            transform: translateY(0) scale(1); 
-            pointer-events: auto; 
-            z-index: 10; 
-            border-color: rgba(255, 255, 255, 0.2); 
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.8), inset 0 0 0 1px rgba(255,255,255,0.05), var(--glow-white); 
-        }
-        
-        /* Alternar Izquierda/Derecha */
-        .scroll-card:nth-child(even) { flex-direction: row-reverse; }
-
-        .card-content { flex: 1.15; text-align: left; display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
-        .card-visual { flex: 0.85; height: 100%; min-height: 480px; border-radius: 24px; overflow: hidden; position: relative; border: 1px solid rgba(255, 255, 255, 0.05); background: #050505; }
-        .card-visual img { width: 100%; height: 100%; object-fit: cover; opacity: 0.6; transition: transform 1.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.8s ease; }
-        .scroll-card.active .card-visual img { transform: scale(1.08); opacity: 0.9; }
-        .visual-overlay { position: absolute; inset: 0; background: linear-gradient(135deg, rgba(255,255,255,0.05) 0%, transparent 50%, rgba(0,0,0,0.5) 100%); pointer-events: none; }
-
-        .service-badge {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--text-primary);
-            font-size: 0.85rem;
-            font-weight: 600;
-            padding: 0.5rem 1.25rem;
-            border-radius: 50px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            border: 1px solid rgba(255, 255, 255, 0.15);
-            margin-bottom: 1.75rem;
-            display: inline-block;
-        }
-
-        .service-badge.featured {
-            background: var(--text-primary);
-            color: #000;
-            border-color: var(--text-primary);
-            box-shadow: var(--glow-white);
-        }
-
-        .service-icon-new {
-            width: 64px;
-            height: 64px;
-            border-radius: 16px;
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.75rem;
-            color: var(--text-primary);
-            margin-bottom: 1.5rem;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        .service-title-new {
-            font-size: 2.75rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 1rem;
-            letter-spacing: -0.02em;
-            line-height: 1.2;
-        }
-
-        .service-desc-new {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            line-height: 1.7;
-            margin-bottom: 2rem;
-            max-width: 95%;
-        }
-
-        .pack-features-new {
-            list-style: none;
-            padding: 0;
-            margin: 0 0 2.5rem 0;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 1.2rem;
+        .nav-link:hover::after {
             width: 100%;
         }
 
-        .pack-features-new li {
-            display: flex;
-            align-items: center;
-            gap: 0.75rem;
-            font-size: 1.05rem;
-            color: var(--text-secondary);
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: rgba(0,0,0,0.1);
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.2);
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255,255,255,0.4);
         }
 
-        .pack-features-new li i {
-            color: var(--text-primary);
-            text-shadow: var(--glow-white);
-            font-size: 0.85rem;
+        /* Specific scrollbar for the modal to protect rounded corners */
+        .custom-modal-scrollbar::-webkit-scrollbar {
+            width: 6px;
         }
-
-        /* Agentic Tech Section */
-        .agentic-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
-        .agentic-badge { display: inline-block; padding: 0.4rem 1rem; border: 1px solid var(--border-light); border-radius: 50px; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 1.5rem; background: rgba(255,255,255,0.05); color: var(--text-primary); }
-        .agentic-feature-list { display: flex; flex-direction: column; gap: 1.5rem; margin-top: 2.5rem; }
-        .agentic-feature { display: flex; gap: 1rem; align-items: flex-start; }
-        .agentic-feature-icon { width: 44px; height: 44px; border-radius: 12px; background: rgba(255,255,255,0.05); display: flex; align-items: center; justify-content: center; color: var(--text-primary); border: 1px solid var(--border-light); font-size: 1.2rem; flex-shrink: 0; box-shadow: var(--glow-white); }
-        .agentic-feature-text h4 { color: var(--text-primary); font-size: 1.1rem; margin-bottom: 0.25rem; font-weight: 600; letter-spacing: -0.01em; }
-        .agentic-feature-text p { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.6; margin: 0; }
-        
-        /* Apple Glass Core Engine Visual */
-        .agentic-visual { position: relative; height: auto; min-height: 480px; display: flex; align-items: center; justify-content: center; width: 100%; perspective: 1000px; }
-        .agent-network { 
-            position: relative; 
-            width: 100%; 
-            height: auto; 
-            border-radius: 24px;
-            border: 1px solid rgba(255,255,255,0.08); 
-            background: rgba(8, 8, 8, 0.7); /* Darker background for contrast */
-            backdrop-filter: blur(20px) saturate(120%);
-            -webkit-backdrop-filter: blur(20px) saturate(120%);
-            overflow: hidden; 
-            display: flex; 
-            flex-direction: column; 
-            padding: 2.5rem; 
-            box-shadow: 0 30px 60px rgba(0,0,0,0.8), inset 0 1px 0 rgba(255,255,255,0.05); 
-            transform-style: preserve-3d;
-            transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-        
-        .agent-network:hover {
-            transform: translateY(-5px) rotateX(2deg) rotateY(-2deg);
-            border-color: rgba(255,255,255,0.15);
-            box-shadow: 0 40px 80px rgba(0,0,0,0.9), inset 0 1px 0 rgba(255,255,255,0.1), 0 0 40px rgba(255,255,255,0.05);
-        }
-
-        .agent-network::before { 
-            content: ''; 
-            position: absolute; 
-            inset: 0; 
-            background: radial-gradient(circle at 50% 0%, rgba(255,255,255,0.05) 0%, transparent 70%); 
-            pointer-events: none; 
-        }
-
-        .network-header { 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            margin-bottom: 2.5rem; 
-            padding-bottom: 1.5rem; 
-            border-bottom: 1px solid rgba(255,255,255,0.05); 
-            position: relative; 
-            z-index: 2; 
-        }
-        
-        .network-title { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-size: 1rem; 
-            color: var(--text-primary); 
-            display: flex; 
-            align-items: center; 
-            gap: 0.75rem; 
-            font-weight: 600; 
-            letter-spacing: -0.01em; 
-        }
-        
-        .network-title i {
-            font-size: 1.1rem;
-            opacity: 0.7;
-        }
-
-        .status-pill {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 50px;
-            padding: 0.3rem 0.8rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .status-indicator { 
-            width: 6px; 
-            height: 6px; 
-            background: #ffffff; 
-            border-radius: 50%; 
-            box-shadow: 0 0 8px #ffffff; 
-            animation: pulse-apple 2s cubic-bezier(0.4, 0, 0.6, 1) infinite; 
-        }
-        
-        @keyframes pulse-apple { 
-            0%, 100% { opacity: 1; transform: scale(1); } 
-            50% { opacity: 0.3; transform: scale(0.8); } 
-        }
-        
-        .status-text {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-size: 0.65rem; 
-            color: var(--text-secondary); 
-            letter-spacing: 0.5px;
-            font-weight: 600;
-            text-transform: uppercase;
-        }
-        
-        .agent-cards { display: flex; flex-direction: column; gap: 1rem; position: relative; z-index: 2; }
-        
-        .agent-card { 
-            background: linear-gradient(180deg, rgba(20,20,20,0.8) 0%, rgba(10,10,10,0.9) 100%); 
-            border: 1px solid rgba(255,255,255,0.06); 
-            border-radius: 16px; 
-            padding: 1.25rem; 
-            display: flex; 
-            align-items: center; 
-            gap: 1.25rem; 
-            transform: translateX(20px); 
-            opacity: 0; 
-            animation: slideInRightApple 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards; 
-            transition: all 0.3s ease;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-        }
-        
-        .agent-card:hover {
-            border-color: rgba(255,255,255,0.12);
-            transform: translateX(0) scale(1.02) !important;
-            background: linear-gradient(180deg, rgba(25,25,25,0.9) 0%, rgba(15,15,15,1) 100%); 
-        }
-
-        .agent-card:nth-child(1) { animation-delay: 0.1s; }
-        .agent-card:nth-child(2) { animation-delay: 0.25s; }
-        .agent-card:nth-child(3) { animation-delay: 0.4s; }
-        
-        @keyframes slideInRightApple { to { transform: translateX(0); opacity: 1; } }
-        
-        .ac-icon { 
-            width: 48px; 
-            height: 48px; 
-            border-radius: 14px; 
-            background: linear-gradient(135deg, rgba(30,30,30,1) 0%, rgba(15,15,15,1) 100%); 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 1.25rem; 
-            color: rgba(255,255,255,0.9); 
-            border: 1px solid rgba(255,255,255,0.08); 
-            box-shadow: inset 0 1px 0 rgba(255,255,255,0.05), 0 4px 10px rgba(0,0,0,0.5);
-            flex-shrink: 0;
-        }
-        
-        .ac-info { flex: 1; display: flex; flex-direction: column; justify-content: center; }
-        
-        .ac-title { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-            font-size: 0.95rem; 
-            color: rgba(255,255,255,0.95); 
-            margin-bottom: 0.6rem; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center;
-            font-weight: 500;
-            letter-spacing: -0.01em;
-        }
-        
-        /* Nuevos estilos para los Gráficos de Trading Animados */
-        .ac-chart { 
-            width: 100%; 
-            height: 35px; 
-            margin-top: 2px; 
-            position: relative; 
-        }
-        
-        .trading-chart { 
-            width: 100%; 
-            height: 100%; 
-            overflow: visible; 
-            display: block; 
-        }
-        
-        .chart-line { 
-            stroke-dasharray: 200; 
-            stroke-dashoffset: 200; 
-            filter: drop-shadow(0 0 5px rgba(255,255,255,0.7)); 
-        }
-        
-        .chart-area { 
-            opacity: 0; 
-        }
-        
-        .chart-arrow { 
-            opacity: 0; 
-            filter: drop-shadow(0 0 6px #ffffff); 
-            transform-origin: center; 
-        }
-        
-        /* Diferentes velocidades para simular comportamientos independientes */
-        .agent-card:nth-child(1) .chart-line { animation: drawChart 3.5s 0.2s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
-        .agent-card:nth-child(1) .chart-area { animation: revealArea 3.5s 0.2s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
-        .agent-card:nth-child(1) .chart-arrow { animation: pulseArrow 3.5s 0.2s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
-        
-        .agent-card:nth-child(2) .chart-line { animation: drawChart 3.2s 0.6s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
-        .agent-card:nth-child(2) .chart-area { animation: revealArea 3.2s 0.6s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
-        .agent-card:nth-child(2) .chart-arrow { animation: pulseArrow 3.2s 0.6s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
-        
-        .agent-card:nth-child(3) .chart-line { animation: drawChart 3.8s 0.9s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
-        .agent-card:nth-child(3) .chart-area { animation: revealArea 3.8s 0.9s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
-        .agent-card:nth-child(3) .chart-arrow { animation: pulseArrow 3.8s 0.9s infinite cubic-bezier(0.3, 0.8, 0.4, 1); }
-        
-        @keyframes drawChart {
-            0% { stroke-dashoffset: 200; opacity: 0; }
-            5% { opacity: 1; stroke-dashoffset: 200; }
-            55% { stroke-dashoffset: 0; opacity: 1; }
-            85% { stroke-dashoffset: 0; opacity: 1; }
-            100% { stroke-dashoffset: 0; opacity: 0; }
-        }
-
-        @keyframes revealArea {
-            0%, 20% { opacity: 0; }
-            55% { opacity: 1; }
-            85% { opacity: 1; }
-            100% { opacity: 0; }
-        }
-
-        @keyframes pulseArrow {
-            0%, 50% { opacity: 0; transform: scale(0.5); }
-            55% { opacity: 1; transform: scale(1); }
-            65% { opacity: 1; transform: scale(1.3); }
-            85% { opacity: 1; transform: scale(1); }
-            100% { opacity: 0; transform: scale(0.5); }
-        }
-        
-        .ac-perf { 
-            color: #ffffff; 
-            font-size: 0.8rem; 
-            font-family: 'Satoshi', sans-serif; 
-            font-weight: 700; 
-            letter-spacing: 0.5px; 
-            text-shadow: 0 0 10px rgba(255,255,255,0.5); 
-            display: flex; 
-            align-items: center; 
-            gap: 0.25rem; 
-        }
-        
-        .ac-perf i {
-            font-size: 0.75rem;
-        }
-
-        /* Elegant background accents for the Engine */
-        .engine-glow-1 {
-            position: absolute;
-            top: -20%; right: -10%;
-            width: 300px; height: 300px;
-            background: radial-gradient(circle, rgba(255,255,255,0.05) 0%, transparent 70%);
-            border-radius: 50%;
-            filter: blur(40px);
-            z-index: 1;
-        }
-        .engine-glow-2 {
-            position: absolute;
-            bottom: -20%; left: -10%;
-            width: 250px; height: 250px;
-            background: radial-gradient(circle, rgba(255,255,255,0.03) 0%, transparent 70%);
-            border-radius: 50%;
-            filter: blur(30px);
-            z-index: 1;
-        }
-
-        /* Value Section */
-        .value { background-color: var(--bg-color); position: relative; overflow: hidden; padding: 8rem 0; z-index: 1; border-top: 1px solid var(--border-color); }
-        .value-container { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; position: relative; z-index: 1; }
-        .floating-img { width: 100%; max-width: 512px; height: auto; border-radius: var(--radius); border: 1px solid var(--border-color); box-shadow: var(--glow-white); }
-        .value-content .section-title { text-align: left; margin-bottom: 1.5rem; font-size: 3rem; color: var(--text-primary); letter-spacing: -0.04em; }
-        
-        .word-glow { 
-            color: var(--text-primary); 
-            font-family: 'Bodoni Moda', serif; 
-            font-style: italic; 
-            font-weight: 700; 
-            letter-spacing: -0.02em; 
-            text-shadow: 0 0 20px rgba(255, 255, 255, 0.4); 
-        }
-
-        .value-text { color: var(--text-secondary); margin-bottom: 2.5rem; font-size: 1.1rem; line-height: 1.8; }
-        .value-buttons { display: flex; gap: 1rem; flex-wrap: wrap; }
-        .btn-xl { display: inline-flex; align-items: center; justify-content: center; padding: 1rem 2rem; font-weight: 600; font-size: 0.95rem; letter-spacing: 0.5px; text-transform: uppercase; color: #000; background: var(--text-primary); border: none; border-radius: var(--radius); cursor: pointer; transition: var(--transition); box-shadow: var(--glow-white); }
-        .btn-xl:hover { background: var(--accent); color: #000; box-shadow: var(--glow-white-strong); transform: translateY(-2px); }
-
-        /* Work With Us Section */
-        .work-with-us { text-align: center; position: relative; overflow: hidden; padding: 8rem 0; background: var(--bg-surface); border-top: 1px solid var(--border-color); }
-
-        /* Footer */
-        .footer { background-color: var(--bg-color); color: var(--text-primary); padding: 6rem 0 0; position: relative; overflow: hidden; border-top: 1px solid var(--border-color); }
-        .footer-container { display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 4rem; margin-bottom: 4rem; position: relative; z-index: 1; }
-        
-        .footer-logo { 
-            font-family: 'Bodoni Moda', serif; 
-            font-style: italic; 
-            font-size: 2.5rem; 
-            font-weight: 700; 
-            color: var(--text-primary); 
-            display: inline-block; 
-            margin-bottom: 1.25rem; 
-            letter-spacing: -0.5px; 
-        }
-
-        .footer-brand p { color: var(--text-secondary); margin-bottom: 2rem; max-width: 380px; line-height: 1.7; font-size: 0.95rem; }
-        .social-links { display: flex; gap: 1rem; }
-        .social-links a { width: 40px; height: 40px; background-color: transparent; border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; border-radius: var(--radius); transition: var(--transition); color: var(--text-secondary); font-size: 1.1rem; }
-        .social-links a:hover { background-color: var(--text-primary); border-color: var(--text-primary); color: #000; }
-        .footer-links h3, .footer-contact h3 { font-size: 1rem; margin-bottom: 1.75rem; color: var(--text-primary); font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
-        .footer-links ul li, .footer-contact ul li { margin-bottom: 1rem; }
-        .footer-links a, .footer-contact a { color: var(--text-secondary); transition: var(--transition); display: inline-flex; align-items: center; gap: 0.5rem; font-size: 0.95rem; }
-        .footer-links a:hover { color: var(--text-primary); }
-        .footer-contact li i { color: var(--text-secondary); font-size: 1rem; }
-        .footer-bottom { border-top: 1px solid var(--border-color); padding: 2rem 0; background: var(--bg-color); }
-        .footer-bottom-content { display: flex; justify-content: space-between; align-items: center; color: var(--text-secondary); font-size: 0.85rem; }
-        .footer-legal { display: flex; gap: 2rem; }
-        .footer-legal a { color: var(--text-secondary); transition: var(--transition); }
-        .footer-legal a:hover { color: var(--text-primary); }
-
-        /* RESPONSIVE CSS */
-        @media screen and (max-width: 968px) {
-            .hero-title { font-size: 3.5rem; }
-            .scroll-card { flex-direction: column !important; gap: 2rem; padding: 2rem; height: auto; max-height: 85vh; overflow-y: auto; }
-            .card-visual { display: none !important; }
-            .card-content { flex: none; max-width: 100%; width: 100%; justify-content: center; }
-            .services-stack { height: auto; min-height: 600px; padding: 0 1rem; }
-            .service-title-new { font-size: 1.8rem; }
-            .agentic-grid { grid-template-columns: 1fr; gap: 3rem; }
-            .agentic-content .section-title { font-size: 2.75rem !important; }
-            .agentic-visual { height: auto; min-height: 400px; }
-            .footer-container { grid-template-columns: 1fr 1fr; gap: 3rem; }
-            .footer-brand { grid-column: 1 / -1; }
-        }
-
-        @media screen and (max-width: 768px) {
-            .navbar { top: 1rem; height: 60px; padding: 0 1.5rem; width: 95%; border-radius: 100px; }
-            .scroll-header { top: 0.5rem; }
-            .nav-menu { position: fixed; top: -100vh; left: 0; transform: none; width: 100%; background-color: var(--bg-color); padding: 6rem 2rem 4rem; border-bottom: 1px solid var(--border-color); transition: top 0.4s ease; z-index: 999; flex-direction: column; align-items: flex-start; }
-            .show-menu { top: 0; }
-            .nav-list { flex-direction: column; align-items: flex-start; gap: 2rem; width: 100%; }
-            .nav-link { font-size: 1.5rem; font-weight: 600; }
-            
-            .nav-link-rewards {
-                font-size: 1.5rem; /* Match mobile nav link size */
-                padding: 0.5rem 1rem;
-                display: inline-block;
-            }
-
-            .nav-toggle, .nav-close { display: block; z-index: 1001; }
-            .nav-close { position: absolute; top: 1.5rem; right: 1.5rem; }
-            .nav-right .nav-cta { display: none; } 
-            .mobile-only { display: block; width: 100%; margin-top: 1rem; }
-            .mobile-only .nav-cta { display: block; text-align: center; padding: 1rem; font-size: 1rem; }
-            .hero { padding-top: 150px; }
-            .hero-title { font-size: 2.75rem; }
-            .brands-title { font-size: 1.5rem; margin-bottom: 2rem; padding: 0 1rem; }
-            .hero-buttons { flex-direction: column; align-items: center; gap: 1rem; }
-            .btn-glow, .btn-white-glow { width: 100%; max-width: 280px; text-align: center; }
-            
-            /* --- MODIFICACIONES PARA MOBILE: Reducción 30% en descripciones de servicios --- */
-            .service-title-new { font-size: 1.5rem; }
-            .service-desc-new {
-                font-size: 0.8rem !important; /* Aproximadamente 30% menos que 1.15rem */
-                line-height: 1.5 !important;
-                margin-bottom: 1.25rem !important;
-            }
-            .pack-features-new li { font-size: 0.75rem !important; }
-            /* -------------------------------------------------------------------------------- */
-
-            .pack-features-new { grid-template-columns: 1fr; gap: 0.75rem; }
-            .services-scroll-track { height: 1100vh; display: block; }
-            .services-sticky-container { padding-top: 6rem; }
-            .scroll-card { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%) translateY(50px) scale(0.95); width: 92%; padding: 1.5rem; border-radius: 24px; }
-            .scroll-card.active { transform: translate(-50%, -50%) scale(1); }
-            .value-container { grid-template-columns: 1fr; text-align: center; gap: 3rem; }
-            .value-content .section-title { text-align: center; font-size: 2.5rem; }
-            .value-buttons { justify-content: center; flex-direction: column; align-items: center; }
-            .value-buttons button { width: 100%; max-width: 280px; }
-            .footer-container { grid-template-columns: 1fr; text-align: left; }
-            .footer-brand { align-items: flex-start; display: flex; flex-direction: column; }
-            .footer-bottom-content { flex-direction: column; gap: 1.5rem; align-items: flex-start; }
-            .fade-edges {
-                -webkit-mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
-                mask-image: linear-gradient(to right, transparent 0%, black 3%, black 97%, transparent 100%);
-            }
-        }
-
-        /* Modal Styles */
-        .modal-overlay { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.9); backdrop-filter: blur(5px); z-index: 2000; display: none; justify-content: center; align-items: center; opacity: 0; transition: opacity 0.3s ease; }
-        .modal-overlay.active { display: flex; opacity: 1; }
-        .modal-content { background: var(--bg-surface); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 2.5rem; width: 90%; max-width: 450px; position: relative; transform: translateY(20px); transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); display: none; }
-        .modal-content.active { display: block; transform: translateY(0); }
-        .modal-close { position: absolute; top: 1.5rem; right: 1.5rem; font-size: 1.5rem; color: var(--text-secondary); cursor: pointer; transition: color 0.3s ease; z-index: 50; }
-        .modal-close:hover { color: var(--text-primary); }
-        .modal-title { font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--text-primary); font-weight: 600; letter-spacing: -0.02em; }
-
-        .modal-form { display: flex; flex-direction: column; gap: 1.5rem; }
-        .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-        .form-group label { font-size: 0.85rem; color: var(--text-secondary); font-weight: 500; text-transform: uppercase; letter-spacing: 0.5px; }
-        .form-group input, .form-group select, .form-group textarea { background: var(--bg-color); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 1rem; color: var(--text-primary); font-size: 0.95rem; transition: var(--transition); font-family: inherit; width: 100%; }
-        .form-group input:focus, .form-group select:focus, .form-group textarea:focus { outline: none; border-color: var(--text-primary); }
-
-        .modal-content.modal-lg { max-width: 700px; width: 95%; height: 600px; max-height: 90vh; padding: 0; display: none; flex-direction: column; overflow: hidden; }
-        .modal-content.modal-lg.active { display: flex; }
-        .modal-content.modal-lg .modal-title { margin-top: 0; padding: 0; text-align: left; margin-bottom: 0.5rem;}
-        .modal-content.modal-lg .modal-close { top: 1.5rem; right: 1.5rem; z-index: 10; }
-
-        .scrollable-form { flex-grow: 1; display: flex; flex-direction: column; padding: 2rem 2.5rem; overflow-y: auto; }
-        .scrollable-form::-webkit-scrollbar { width: 4px; }
-        .scrollable-form::-webkit-scrollbar-track { background: transparent; }
-        .scrollable-form::-webkit-scrollbar-thumb { background: var(--border-light); border-radius: 4px; }
-        
-        .form-section { margin-bottom: 2rem; padding-bottom: 1.5rem; border-bottom: 1px solid var(--border-color); }
-        .minimal-section { border-bottom: none !important; margin-bottom: 0 !important; padding-bottom: 0 !important; }
-        .minimal-section h4 { font-size: 1.1rem; margin-bottom: 1rem; color: var(--text-primary); text-transform: uppercase; letter-spacing: 0.5px; }
-        .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
-        @media (max-width: 600px) { .form-grid { grid-template-columns: 1fr; } }
-        .form-group select option { background-color: var(--bg-color); color: var(--text-primary); }
-
-        .checkbox-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); gap: 0.75rem; }
-        .checkbox-item { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; color: var(--text-secondary); cursor: pointer; background: var(--bg-color); padding: 0.75rem 1rem; border-radius: var(--radius); border: 1px solid var(--border-color); transition: var(--transition); }
-        .checkbox-item:hover { border-color: var(--text-primary); color: var(--text-primary); }
-        .checkbox-item input[type="checkbox"], .checkbox-item input[type="radio"] { accent-color: var(--text-primary); width: 14px; height: 14px; }
-
-        .modal-header-minimal { padding: 2rem 2.5rem 1.5rem; border-bottom: 1px solid var(--border-color); background: transparent; }
-        .wizard-progress { display: flex; align-items: center; gap: 1rem; margin-top: 1rem; }
-        .progress-bar-bg { flex-grow: 1; height: 2px; background: var(--border-color); overflow: hidden; }
-        .progress-bar-fill { height: 100%; background: var(--text-primary); width: 20%; transition: width 0.3s ease; }
-        .steps-count { font-size: 0.8rem; color: var(--text-secondary); font-weight: 500; text-transform: uppercase; letter-spacing: 1px; }
-
-        .wizard-step-founder { display: none; animation: fadeIn 0.4s ease; }
-        .wizard-step-founder.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-
-        .wizard-navigation { display: flex; justify-content: center; gap: 1rem; padding: 1.5rem 2.5rem 2rem; border-top: 1px solid var(--border-color); background: transparent; margin-top: auto; }
-        .nav-btn { min-width: 140px; }
-
-        .modal-content.success-modal { text-align: center; padding: 3rem 2rem; max-width: 400px; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .success-icon-container { width: 64px; height: 64px; border-radius: var(--radius); border: 1px solid var(--border-color); display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; background: var(--bg-surface); box-shadow: var(--glow-white); }
-        .success-icon { font-size: 1.5rem; color: var(--text-primary); animation: check-bounce 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; transform: scale(0); text-shadow: 0 0 15px rgba(255,255,255,0.5); }
-        .success-title { font-size: 1.5rem; color: var(--text-primary); margin-bottom: 0.5rem; font-weight: 600; }
-        .success-desc { color: var(--text-secondary); margin-bottom: 2rem; font-size: 0.95rem; }
-        @keyframes check-bounce { 0% { transform: scale(0); opacity: 0; } 60% { transform: scale(1.2); opacity: 1; } 100% { transform: scale(1); opacity: 1; } }
-
-        /* Luxury Minimalist Loader */
-        #app-loader { position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: var(--bg-color); z-index: 9999; display: flex; justify-content: center; align-items: center; flex-direction: column; transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s; }
-        .loader-content { display: flex; flex-direction: column; align-items: center; gap: 2.5rem; }
-        .loader-logo-img { width: 60px; height: auto; animation: spin-radar 2s linear infinite; filter: drop-shadow(0 0 15px rgba(255, 255, 255, 0.2)); }
-        @keyframes spin-radar { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
-        .loader-progress-container { width: 220px; height: 1px; background: rgba(255, 255, 255, 0.1); position: relative; overflow: hidden; }
-        .loader-progress-bar { position: absolute; top: 0; left: 0; height: 100%; width: 0%; background: var(--text-primary); box-shadow: 0 0 15px rgba(255,255,255,1); animation: luxury-progress-bar 3s cubic-bezier(0.77, 0, 0.175, 1) forwards; }
-        @keyframes luxury-progress-bar { 0% { width: 0%; } 40% { width: 50%; } 70% { width: 80%; } 100% { width: 100%; } }
-
-        /* ==============================================================
-           REWARDS PAGE SPECIFIC CSS (CRYPTIC STYLE)
-           ============================================================== */
-        #rewards-page {
-            display: none;
-            min-height: 100vh;
-            padding-top: 150px;
-            padding-bottom: 6rem;
-            background-color: var(--bg-color);
-        }
-
-        .rewards-dashboard-container {
-            max-width: 800px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-            padding: 0 1.5rem;
-        }
-
-        .dashboard-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 3rem;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 2rem;
-        }
-
-        .points-pill {
-            background: rgba(255, 255, 255, 0.05);
-            border: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 0.6rem 1.25rem;
-            border-radius: var(--radius);
-            color: var(--text-primary);
-            font-weight: 600;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            font-size: 1rem;
-            box-shadow: var(--glow-white);
-        }
-
-        .raid-item {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            margin-bottom: 1rem;
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .raid-item:hover {
-            border-color: var(--border-light);
-        }
-
-        .raid-header {
-            display: flex;
-            justify-content: space-between;
-            padding: 1.5rem 2rem;
-            cursor: pointer;
-            align-items: center;
-        }
-
-        .raid-tag {
+        .custom-modal-scrollbar::-webkit-scrollbar-track {
             background: transparent;
-            color: var(--text-secondary);
-            border: 1px solid var(--border-color);
-            padding: 4px 10px;
-            border-radius: 2px;
-            font-size: 0.65rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            display: inline-block;
-            margin-bottom: 0.75rem;
+            margin: 1.5rem 0;
         }
-
-        .raid-title {
-            font-size: 1.15rem;
-            color: var(--text-primary);
-            margin: 0;
-            font-weight: 600;
+        .custom-modal-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255,255,255,0.2);
+            border-radius: 3px;
         }
-
-        .raid-points {
-            border: 1px solid var(--border-color);
-            padding: 6px 12px;
-            border-radius: 2px;
-            color: var(--text-primary);
-            font-weight: 600;
-            background: transparent;
-            font-size: 0.9rem;
-        }
-
-        .raid-body {
-            display: none;
-            padding: 0 2rem 2rem 2rem;
-            border-top: 1px solid var(--border-color);
-            background: var(--bg-color);
-            animation: fadeIn 0.3s ease;
-        }
-
-        .raid-body.active {
-            display: block;
-        }
-
-        .register-container {
-            background: var(--bg-surface);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius);
-            padding: 3rem;
-            max-width: 450px;
-            margin: 4rem auto;
-            position: relative;
-        }
-
-        @media (max-width: 600px) {
-            .dashboard-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-            .raid-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
-            .raid-points { align-self: flex-start; }
-            .register-container { padding: 2rem; width: 90%; }
+        .custom-modal-scrollbar::-webkit-scrollbar-thumb:hover {
+            background: rgba(255,255,255,0.4);
         }
     </style>
 </head>
-<body>
-    <!-- Loading Screen -->
-    <div id="app-loader">
-        <div class="loader-content">
-            <img src="https://i.postimg.cc/Dz7CnbDj/Sin-titulo-1.png" alt="DeRadar" class="loader-logo-img">
-            <div class="loader-progress-container">
-                <div class="loader-progress-bar"></div>
-            </div>
-        </div>
-    </div>
+<body class="antialiased flex flex-col min-h-screen">
 
-    <!-- Navbar -->
-    <nav class="navbar">
-        <div class="container nav-container">
-            <!-- Left: Logo -->
-            <a href="#" class="logo" onclick="goToHome(event)">
-                <img src="https://i.postimg.cc/Dz7CnbDj/Sin-titulo-1.png" alt="DeRadar">
-            </a>
-            
-            <!-- Center: Links -->
-            <div class="nav-menu" id="nav-menu">
-                <div class="nav-close" id="nav-close"><i class="fas fa-times"></i></div>
-                <ul class="nav-list">
-                    <li class="nav-item"><a href="#categories" class="nav-link" onclick="goToHomeAndScroll(event, 'categories')">Services</a></li>
-                    <li class="nav-item"><a href="#infrastructure" class="nav-link" onclick="goToHomeAndScroll(event, 'infrastructure')">Infrastructure</a></li>
-                    <li class="nav-item"><a href="#talent" class="nav-link" onclick="goToHomeAndScroll(event, 'talent')">Book a service</a></li>
-                    <li class="nav-item"><a href="#work-with-us" class="nav-link" onclick="goToHomeAndScroll(event, 'work-with-us')">Join our team</a></li>
-                    <li class="nav-item"><a href="#" id="btn-rewards" class="nav-link nav-link-rewards" onclick="goToRewards(event)"><i class="fas fa-gift" style="margin-right: 5px; font-size: 0.8em;"></i>Rewards</a></li>
-                    
-                    <!-- Mobile CTA -->
-                    <li class="nav-item mobile-only">
-                        <div class="nav-cta nav-cta-disabled" style="cursor: not-allowed;">
-                            Open App
-                            <span class="badge-soon">Soon</span>
-                        </div>
-                    </li>
-                </ul>
+    <nav class="fixed top-0 w-full z-50 border-b border-white/10 bg-[#027B88]/70 backdrop-blur-md shadow-sm">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <div class="flex items-center gap-2 cursor-pointer soon-trigger">
+                <img src="https://i.imgur.com/LqzmLQ8.jpeg" alt="DeRadar Logo" class="w-8 h-8 rounded-full object-cover">
+                <span class="text-xl font-medium tracking-tight text-white">DeRadar</span>
             </div>
 
-            <!-- Right: CTA & Menu Toggle -->
-            <div class="nav-right">
-                <div class="nav-cta nav-cta-disabled" style="cursor: not-allowed;">
-                    Open App
-                    <span class="badge-soon">Soon</span>
-                </div>
-                <div class="nav-toggle" id="nav-toggle">
-                    <i class="fas fa-bars"></i>
-                </div>
+            <!-- Desktop Menu -->
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-white/70">
+                <a href="#" class="nav-link hover:text-white soon-trigger">Discover</a>
+                <a href="#" class="nav-link text-white font-semibold soon-trigger">Gigs</a>
+                <a href="#" class="nav-link hover:text-white soon-trigger">Talent</a>
+                <a href="#" class="nav-link hover:text-white soon-trigger">Intelligence</a>
+            </div>
+
+            <!-- Actions -->
+            <div class="flex items-center gap-4">
+                <button class="hidden md:block text-sm font-medium text-white/70 hover:text-white transition-colors soon-trigger">Sign In</button>
+                <button class="px-5 py-2 rounded-full bg-white text-[#027B88] text-sm font-medium hover:bg-white/90 transition-colors shadow-[0_4px_15px_rgba(0,0,0,0.1)] soon-trigger">
+                    Connect Wallet
+                </button>
             </div>
         </div>
     </nav>
 
-    <!-- ==============================================
-         HOME VIEW (Main Content)
-         ============================================== -->
-    <div id="home-view">
-        <!-- Hero Section -->
-        <section class="hero" id="hero">
-            <!-- Using a solid color or placeholder if video fails in preview -->
-            <div class="hero-video" style="background: #111;"></div>
-            <div class="hero-overlay"></div>
-
-            <div class="container hero-container">
-                <h1 class="hero-title fade-edges">
-                    Launch Your MVP In <br>
-                    <span class="luxury-fade-text fade-in" id="rotating-text">record time</span>
-                </h1>
-                <p class="hero-description fade-edges">
-                    We engineer smart contracts, tokenomics, and top-tier UI/UX. Accelerated by Agentic Technology, autonomous AI Agents, and 24/7 expert support.
-                </p>
-                <div class="hero-buttons">
-                    <a href="#categories" class="btn btn-glow" style="font-size: 1.2rem; font-weight: 700;">Explore Services</a>
-                    <a href="#work-with-us" class="btn btn-white-glow" style="font-size: 1.2rem; font-weight: 700;">Join Dev Roster</a>
-                </div>
-            </div>
-
-            <div class="brands-section" style="position: relative; z-index: 3; margin-top: 0;">
-                <div class="logo-carousel">
-                    <div class="logo-track">
-                        <!-- Primer grupo de logos -->
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/telegram/white" alt="Telegram"></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/discord/white" alt="Discord"></div>
-                        <div class="logo-item"><i class="fas fa-globe" title="Website"></i></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/python/white" alt="Python"></div>
-                        <div class="logo-item"><i class="fas fa-robot" title="Bots"></i></div>
-                        <div class="logo-item"><i class="fas fa-pen-nib" title="Design"></i></div>
-                        <div class="logo-item"><i class="fas fa-leaf" title="Organic"></i></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/x/white" alt="X"></div>
-                        
-                        <!-- Segundo grupo de logos (Duplicado para el loop infinito) -->
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/telegram/white" alt="Telegram"></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/discord/white" alt="Discord"></div>
-                        <div class="logo-item"><i class="fas fa-globe" title="Website"></i></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/python/white" alt="Python"></div>
-                        <div class="logo-item"><i class="fas fa-robot" title="Bots"></i></div>
-                        <div class="logo-item"><i class="fas fa-pen-nib" title="Design"></i></div>
-                        <div class="logo-item"><i class="fas fa-leaf" title="Organic"></i></div>
-                        <div class="logo-item"><img src="https://cdn.simpleicons.org/x/white" alt="X"></div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Web3 Services Categories Section -->
-        <section class="services section" id="categories">
-            <div class="services-scroll-track">
-                <div class="services-sticky-container">
-                    <div class="container" style="max-width: 1650px; width: 96%;">
-                        <div class="section-header">
-                            <h2 class="section-title">Our Services</h2>
-                            <p class="section-subtitle">End-to-end decentralized solutions for protocols, founders, and DAOs</p>
-                        </div>
-                        
-                        <div class="services-stack">
-                            
-                            <!-- Service 1 -->
-                            <div class="scroll-card">
-                                <div class="card-content">
-                                    <span class="service-badge featured">Ultimate Suite</span>
-                                    <div class="service-icon-new" style="margin-bottom: 0.5rem;"><i class="fas fa-hard-hat"></i></div>
-                                    <h3 class="service-title-new" style="font-size: 1.5rem; margin-bottom: 0.2rem;">Builder Starter Pack</h3>
-                                    
-                                    <p class="service-desc-new" style="font-size: 0.85rem; font-weight: 500; color: var(--text-primary); margin-bottom: 0.75rem;">
-                                        A complete 50+ elite builder ecosystem.
-                                    </p>
-                                    
-                                    <ul class="pack-features-new" style="background: rgba(255,255,255,0.03); padding: 1rem; border-radius: 8px; border: 1px solid rgba(255,255,255,0.05); gap: 0.5rem; margin-bottom: 1.5rem;">
-                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Smart Contracts</strong> <span style="color:var(--text-secondary);">(Solidity/Rust)</span></li>
-                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">High-Perf Frontends</strong> <span style="color:var(--text-secondary);">(Next.js)</span></li>
-                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Tokenomics & Architecture</strong></li>
-                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Expert UI/UX Design</strong></li>
-                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Artists & Creatives</strong></li>
-                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Business Developers</strong></li>
-                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Ambassador Programs</strong></li>
-                                        <li style="font-size: 0.75rem;"><i class="fas fa-check" style="font-size: 0.65rem;"></i> <strong style="color: white;">Organic Engagement</strong></li>
-                                    </ul>
-                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20End-to-End%20Web3%20Dev" class="btn btn-request-glowing" target="_blank" style="padding: 0.6rem 1.2rem; font-size: 0.8rem;">Request Service</a>
-                                </div>
-                                <div class="card-visual">
-                                    <img src="https://i.postimg.cc/T350VvLS/banner1.png" alt="Web3 Development">
-                                    <div class="visual-overlay"></div>
-                                </div>
-                            </div>
-
-                            <!-- Service 2 -->
-                            <div class="scroll-card">
-                                <div class="card-content">
-                                    <span class="service-badge">Core Integration</span>
-                                    <div class="service-icon-new"><i class="fas fa-chart-pie"></i></div>
-                                    <h3 class="service-title-new">Tokenomics & Strategy</h3>
-                                    <p class="service-desc-new">Mathematical modeling, emission schedules, and utility design to ensure sustainable and robust token economies. We craft mathematical foundations that prevent inflation and drive value accumulation.</p>
-                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Tokenomics" class="btn btn-request-glowing" target="_blank">Request Service</a>
-                                </div>
-                                <div class="card-visual">
-                                    <img src="https://i.postimg.cc/3wMspBRW/banner2.png" alt="Tokenomics Strategy">
-                                    <div class="visual-overlay"></div>
-                                </div>
-                            </div>
-
-                            <!-- Service 3 -->
-                            <div class="scroll-card">
-                                <div class="card-content">
-                                    <span class="service-badge">Community & Growth</span>
-                                    <div class="service-icon-new"><i class="fas fa-users"></i></div>
-                                    <h3 class="service-title-new">Community Growth & Mgmt</h3>
-                                    <p class="service-desc-new">Setup and growth hacking for Twitter, Discord, and Telegram. Cultivating organic activity and ambassador programs to drive rapid MVP growth and validate your idea in less than 3 days.</p>
-                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Community%20Growth" class="btn btn-request-glowing" target="_blank">Request Service</a>
-                                </div>
-                                <div class="card-visual">
-                                    <img src="https://i.postimg.cc/mkQvm15H/banner3.png" alt="Community Growth">
-                                    <div class="visual-overlay"></div>
-                                </div>
-                            </div>
-
-                            <!-- Service 4 -->
-                            <div class="scroll-card">
-                                <div class="card-content">
-                                    <span class="service-badge">Design & Creative</span>
-                                    <div class="service-icon-new"><i class="fas fa-laptop-code"></i></div>
-                                    <h3 class="service-title-new">dApp UI/UX Design</h3>
-                                    <p class="service-desc-new">Frictionless, beautiful interfaces for Web3 applications. Connecting complex blockchain logic to intuitive user flows that maximize retention and Total Value Locked (TVL).</p>
-                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20dApp%20UI/UX" class="btn btn-request-glowing" target="_blank">Request Service</a>
-                                </div>
-                                <div class="card-visual">
-                                    <img src="https://i.postimg.cc/J04N29T7/banner4.png" alt="UI UX Design">
-                                    <div class="visual-overlay"></div>
-                                </div>
-                            </div>
-
-                            <!-- Service 5 -->
-                            <div class="scroll-card">
-                                <div class="card-content">
-                                    <span class="service-badge">AI Automation</span>
-                                    <div class="service-icon-new"><i class="fas fa-robot"></i></div>
-                                    <h3 class="service-title-new">AI Content & Marketing</h3>
-                                    <p class="service-desc-new">High-converting cinematic trailers, meme-creation, and AI shorts optimized for Web3 Twitter and viral campaigns, delivering unparalleled reach and engagement.</p>
-                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20AI%20Content" class="btn btn-request-glowing" target="_blank">Request Service</a>
-                                </div>
-                                <div class="card-visual">
-                                    <img src="https://i.postimg.cc/XqY58mLz/banner5.png" alt="AI Content Marketing">
-                                    <div class="visual-overlay"></div>
-                                </div>
-                            </div>
-
-                            <!-- Service 6 -->
-                            <div class="scroll-card">
-                                <div class="card-content">
-                                    <span class="service-badge">Engineering</span>
-                                    <div class="service-icon-new"><i class="fas fa-server"></i></div>
-                                    <h3 class="service-title-new">Full-Stack Web3 Dev</h3>
-                                    <p class="service-desc-new">Comprehensive end-to-end dApp engineering. Our complete dev stack includes robust Smart Contracts (Solidity & Rust), scalable backends, custom indexers (TheGraph), and high-performance frontends (React/Next.js) with seamless Web3 integration.</p>
-                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Full-Stack%20Web3" class="btn btn-request-glowing" target="_blank">Request Service</a>
-                                </div>
-                                <div class="card-visual">
-                                    <img src="https://i.postimg.cc/vHqNyd6j/bannr6.png" alt="Full Stack Web3">
-                                    <div class="visual-overlay"></div>
-                                </div>
-                            </div>
-
-                            <!-- Service 7 -->
-                            <div class="scroll-card">
-                                <div class="card-content">
-                                    <span class="service-badge">24/7 Support</span>
-                                    <div class="service-icon-new"><i class="fas fa-brain"></i></div>
-                                    <h3 class="service-title-new">AI Agent Deployment</h3>
-                                    <p class="service-desc-new">Deploy 24/7 autonomous AI agents across Discord, Telegram, or your website. They continuously learn from feedback, evolving to deliver increasingly accurate and intelligent community support.</p>
-                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20AI%20Agent%20Deployment" class="btn btn-request-glowing" target="_blank">Request Service</a>
-                                </div>
-                                <div class="card-visual">
-                                    <img src="https://i.postimg.cc/nLVD3YKf/banner7.png" alt="AI Agent Deployment">
-                                    <div class="visual-overlay"></div>
-                                </div>
-                            </div>
-
-                            <!-- Service 8 -->
-                            <div class="scroll-card">
-                                <div class="card-content">
-                                    <span class="service-badge">Digital Assets</span>
-                                    <div class="service-icon-new"><i class="fas fa-coins"></i></div>
-                                    <h3 class="service-title-new">Memecoins & DeFi Tokens</h3>
-                                    <p class="service-desc-new">End-to-end creation and launch of highly liquid tokens. Our expert team specializes in crafting viral memecoins and robust DeFi utility tokens, complete with strategic liquidity pool setups, fair launches, and anti-snipe mechanisms to ensure market dominance.</p>
-                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Memecoins%20and%20DeFi%20Tokens" class="btn btn-request-glowing" target="_blank">Request Service</a>
-                                </div>
-                                <div class="card-visual">
-                                    <img src="https://i.postimg.cc/bJ4YpDYZ/banner8.png" alt="Memecoins and DeFi Tokens">
-                                    <div class="visual-overlay"></div>
-                                </div>
-                            </div>
-
-                            <!-- Service 9 -->
-                            <div class="scroll-card">
-                                <div class="card-content">
-                                    <span class="service-badge">Networking</span>
-                                    <div class="service-icon-new"><i class="fas fa-bullhorn"></i></div>
-                                    <h3 class="service-title-new">KOL & Influencer Outreach</h3>
-                                    <p class="service-desc-new">Direct connections to top Web3 Alpha groups, Twitter Spaces hosts, and ecosystem influencers to boost your narrative and dominate the timeline.</p>
-                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20KOL%20Outreach" class="btn btn-request-glowing" target="_blank">Request Service</a>
-                                </div>
-                                <div class="card-visual">
-                                    <img src="https://i.postimg.cc/PqqcXdq5/banner9.png" alt="KOL Outreach">
-                                    <div class="visual-overlay"></div>
-                                </div>
-                            </div>
-
-                            <!-- Service 10 -->
-                            <div class="scroll-card">
-                                <div class="card-content">
-                                    <span class="service-badge">Security</span>
-                                    <div class="service-icon-new"><i class="fas fa-shield-alt"></i></div>
-                                    <h3 class="service-title-new">Protocol Audits</h3>
-                                    <p class="service-desc-new">Rigorous security assessments, penetration testing, and formal verification to protect your Total Value Locked (TVL) against critical vulnerabilities. We connect you directly with top-tier Web3 auditors, guaranteeing the highest standard of security to generate absolute trust with your investors.</p>
-                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Protocol%20Audits" class="btn btn-request-glowing" target="_blank">Request Service</a>
-                                </div>
-                                <div class="card-visual">
-                                    <img src="https://i.postimg.cc/43bdgbmd/banner10.png" alt="Protocol Audits">
-                                    <div class="visual-overlay"></div>
-                                </div>
-                            </div>
-
-                            <!-- Service 11 -->
-                            <div class="scroll-card">
-                                <div class="card-content">
-                                    <span class="service-badge">Media Production</span>
-                                    <div class="service-icon-new"><i class="fas fa-video"></i></div>
-                                    <h3 class="service-title-new">Elite Video Editing</h3>
-                                    <p class="service-desc-new">Our elite video editors adapt to the latest viral trends, combining AI-accelerated workflows con real-world expertise to craft high-retention, conversion-driven footage that captivates your audience and sells.</p>
-                                    <a href="https://t.me/xswapeth?text=I'm%20interested%20in%20Video%20Editing" class="btn btn-request-glowing" target="_blank">Request Service</a>
-                                </div>
-                                <div class="card-visual">
-                                    <img src="https://i.postimg.cc/G2j9RPgY/banner11.png" alt="Elite Video Editing">
-                                    <div class="visual-overlay"></div>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Agentic Technology Section -->
-        <section class="agentic-tech section" id="infrastructure" style="padding: 8rem 0; position: relative; overflow: hidden; background: var(--bg-surface); border-top: 1px solid var(--border-color);">
-            <!-- Subtle background glow -->
-            <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 800px; height: 800px; background: radial-gradient(circle, rgba(255,255,255,0.02) 0%, transparent 60%); z-index: 0; pointer-events: none;"></div>
+    <main class="flex-grow flex flex-col items-center justify-start pt-32 pb-20 px-4 md:px-8">
+        
+        <!-- Hero Section with Giant Liquid Glass Window -->
+        <section class="w-full max-w-5xl mx-auto flex flex-col items-center justify-center min-h-[50vh] mb-24 relative">
             
-            <div class="container agentic-grid" style="position: relative; z-index: 1;">
-                
-                <!-- Left: Text Content -->
-                <div class="agentic-content">
-                    <div class="agentic-badge">Agentic Infrastructure</div>
-                    <h2 class="section-title" style="font-size: 3.5rem; margin-bottom: 1.25rem; line-height: 1.1; text-align: left;">Build scalable dApps <span class="word-glow">instantly.</span></h2>
-                    <p style="font-size: 1.15rem; color: var(--text-secondary); line-height: 1.7; margin-bottom: 0;">
-                        We engineer smart contracts, tokenomics, and top-tier UI/UX for elite Web3 founders. Orchestrated by expert operators and powered by autonomous workflows.
+            <!-- Background Glow for emphasis -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[90%] h-[90%] bg-white/5 blur-[120px] rounded-full pointer-events-none"></div>
+
+            <!-- The Giant Glass Window -->
+            <div class="liquid-glass w-full rounded-[3rem] p-16 md:p-24 flex items-center justify-center transform transition-transform duration-700 hover:scale-[1.01]">
+                <div class="content-z text-center flex flex-col items-center">
+                    <p class="text-white/70 uppercase tracking-[0.3em] text-sm font-bold mb-6">Opportunities</p>
+                    <h1 class="text-7xl md:text-9xl font-extrabold tracking-tighter text-gradient mb-8 drop-shadow-sm">
+                        Gigs
+                    </h1>
+                    <p class="text-lg md:text-xl text-white/80 font-medium max-w-lg mx-auto leading-relaxed">
+                        Discover exclusive, high-value opportunities in the decentralized ecosystem.
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <section class="w-full max-w-4xl mx-auto flex flex-col gap-6 relative z-20 mt-8">
+            <div class="flex justify-between items-end mb-4 border-b border-white/20 pb-4">
+                <div class="flex flex-col">
+                    <h2 class="text-3xl font-medium tracking-tight text-white mb-1">Active Gigs</h2>
+                    <p class="text-white/60 text-sm">Short-term bounties and freelance missions.</p>
+                </div>
+                <span class="text-sm text-white font-semibold bg-white/10 px-4 py-1.5 rounded-full border border-white/20 backdrop-blur-sm">1 Available</span>
+            </div>
+
+            <!-- Gig Card 1 -->
+            <div class="liquid-glass rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 transition-all duration-300 hover:bg-white/10 hover:shadow-[0_0_30px_rgba(255,255,255,0.1)] cursor-pointer group border border-white/20">
+                <div class="content-z flex items-start gap-6 flex-grow w-full">
+                    <div class="w-16 h-16 rounded-2xl bg-gradient-to-br from-white/20 to-transparent border border-white/20 flex items-center justify-center flex-shrink-0 group-hover:border-white/50 transition-all shadow-sm backdrop-blur-sm relative overflow-hidden">
+                        <div class="absolute inset-0 bg-white/5 group-hover:bg-transparent transition-colors"></div>
+                        <svg class="w-7 h-7 text-white relative z-10" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/></svg>
+                    </div>
                     
-                    <div class="agentic-feature-list">
-                        <div class="agentic-feature">
-                            <div class="agentic-feature-icon"><i class="fas fa-bolt"></i></div>
-                            <div class="agentic-feature-text">
-                                <h4>Hyper-Accelerated Delivery</h4>
-                                <p>Tasks that traditionally take 1 hour take our specialized AI agents just 10 minutes. Go to market before the competition.</p>
-                            </div>
+                    <div class="flex flex-col gap-2 w-full">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <h3 class="text-xl font-semibold text-white group-hover:text-white/90 transition-colors">Looking for Crypto Twitter Account</h3>
+                            <span class="px-3 py-0.5 rounded-full bg-red-500/20 border border-red-500/30 text-xs text-red-300 font-bold tracking-wide uppercase">ASAP</span>
                         </div>
-                        <div class="agentic-feature">
-                            <div class="agentic-feature-icon"><i class="fas fa-layer-group"></i></div>
-                            <div class="agentic-feature-text">
-                                <h4>Autonomous Orchestration</h4>
-                                <p>Our proprietary infrastructure handles redundant coding, testing, and deployment, leaving human experts to perfect the strategy.</p>
-                            </div>
-                        </div>
-                        <div class="agentic-feature">
-                            <div class="agentic-feature-icon"><i class="fas fa-gem"></i></div>
-                            <div class="agentic-feature-text">
-                                <h4>Flawless Execution</h4>
-                                <p>Scale your protocol without friction. We blend the speed of machines with the precision of top 1% Web3 native operators.</p>
-                            </div>
+                        <p class="text-white/70 text-sm font-medium">Click "Apply" to securely submit your profile link and asking price directly through our platform. We need it asap!</p>
+                        <div class="flex flex-wrap items-center gap-2 mt-2">
+                            <span class="text-xs text-white/60 bg-white/5 px-2 py-1 rounded border border-white/10">Social Media</span>
+                            <span class="text-xs text-white/60 bg-white/5 px-2 py-1 rounded border border-white/10">Twitter</span>
+                            <span class="text-xs text-white/60 bg-white/5 px-2 py-1 rounded border border-white/10">Marketing</span>
                         </div>
                     </div>
                 </div>
-
-                <!-- Right: Visual Graphic (Apple Glass Engine) -->
-                <div class="agentic-visual">
-                    <div class="agent-network">
-                        <div class="engine-glow-1"></div>
-                        <div class="engine-glow-2"></div>
-                        
-                        <div class="network-header">
-                            <div class="network-title">
-                                <i class="fab fa-hubspot"></i> Recent MVP Results
-                            </div>
-                        </div>
-                        
-                        <div class="agent-cards">
-                            <!-- Agent 1 -->
-                            <div class="agent-card">
-                                <div class="ac-icon"><i class="fas fa-chart-line"></i></div>
-                                <div class="ac-info">
-                                    <div class="ac-title">
-                                        <span>Growth Hacking</span>
-                                        <span class="ac-perf"><i class="fas fa-arrow-trend-up"></i> +800%</span>
-                                    </div>
-                                    <div class="ac-chart">
-                                        <svg viewBox="0 0 100 30" class="trading-chart">
-                                            <defs>
-                                                <linearGradient id="gradChart1" x1="0%" y1="0%" x2="0%" y2="100%">
-                                                    <stop offset="0%" stop-color="rgba(255,255,255,0.25)" />
-                                                    <stop offset="100%" stop-color="rgba(255,255,255,0)" />
-                                                </linearGradient>
-                                            </defs>
-                                            <path class="chart-area" d="M0,30 L0,25 L20,22 L35,26 L55,15 L75,18 L100,5 L100,30 Z" fill="url(#gradChart1)" />
-                                            <path class="chart-line" d="M0,25 L20,22 L35,26 L55,15 L75,18 L100,5" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <polygon class="chart-arrow" points="94,8 100,5 96,2" fill="#ffffff" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <!-- Agent 2 -->
-                            <div class="agent-card">
-                                <div class="ac-icon"><i class="fas fa-rocket"></i></div>
-                                <div class="ac-info">
-                                    <div class="ac-title">
-                                        <span>Full Launch Strategy</span>
-                                        <span class="ac-perf"><i class="fas fa-arrow-trend-up"></i> +1,250%</span>
-                                    </div>
-                                    <div class="ac-chart">
-                                        <svg viewBox="0 0 100 30" class="trading-chart">
-                                            <defs>
-                                                <linearGradient id="gradChart2" x1="0%" y1="0%" x2="0%" y2="100%">
-                                                    <stop offset="0%" stop-color="rgba(255,255,255,0.25)" />
-                                                    <stop offset="100%" stop-color="rgba(255,255,255,0)" />
-                                                </linearGradient>
-                                            </defs>
-                                            <path class="chart-area" d="M0,30 L0,20 L15,12 L30,25 L50,22 L70,10 L85,15 L100,2 L100,30 Z" fill="url(#gradChart2)" />
-                                            <path class="chart-line" d="M0,20 L15,12 L30,25 L50,22 L70,10 L85,15 L100,2" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <polygon class="chart-arrow" points="94,5 100,2 96,-1" fill="#ffffff" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Agent 3 -->
-                            <div class="agent-card">
-                                <div class="ac-icon"><i class="fas fa-robot"></i></div>
-                                <div class="ac-info">
-                                    <div class="ac-title">
-                                        <span>AI Agents Process</span>
-                                        <span class="ac-perf"><i class="fas fa-arrow-trend-up"></i> +610%</span>
-                                    </div>
-                                    <div class="ac-chart">
-                                        <svg viewBox="0 0 100 30" class="trading-chart">
-                                            <defs>
-                                                <linearGradient id="gradChart3" x1="0%" y1="0%" x2="0%" y2="100%">
-                                                    <stop offset="0%" stop-color="rgba(255,255,255,0.25)" />
-                                                    <stop offset="100%" stop-color="rgba(255,255,255,0)" />
-                                                </linearGradient>
-                                            </defs>
-                                            <path class="chart-area" d="M0,30 L0,25 L20,10 L40,18 L60,8 L80,15 L100,4 L100,30 Z" fill="url(#gradChart3)" />
-                                            <path class="chart-line" d="M0,25 L20,10 L40,18 L60,8 L80,15 L100,4" fill="none" stroke="#ffffff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
-                                            <polygon class="chart-arrow" points="94,7 100,4 96,1" fill="#ffffff" />
-                                        </svg>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <div class="content-z w-full md:w-auto flex justify-end">
+                    <button id="apply-btn" class="px-8 py-3 rounded-full bg-white/10 hover:bg-white text-white hover:text-[#027B88] text-sm font-bold transition-all duration-300 border border-white/30 shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.4)] w-full md:w-auto whitespace-nowrap flex items-center justify-center gap-2">
+                        <span>Apply</span>
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                    </button>
                 </div>
-
             </div>
         </section>
 
-        <!-- Value Section -->
-        <section class="value section" id="talent">
-            <div class="container value-container">
-                <div class="value-image">
-                    <!-- Image successfully replaced the placeholder here -->
-                    <img src="https://i.postimg.cc/ZR1rgPQm/img.jpg" alt="Scale to the Next Level" class="floating-img">
+        <section class="w-full max-w-4xl mx-auto mt-32 mb-12 relative z-20">
+            <!-- Distinct Liquid Glass Window for Full-Time Jobs -->
+            <div class="liquid-glass rounded-[2.5rem] p-8 md:p-12 border-2 border-white/20 relative overflow-hidden shadow-[0_20px_50px_rgba(0,0,0,0.3)]">
+                
+                <!-- SOON Badge -->
+                <div class="absolute top-0 right-8 bg-gradient-to-b from-white/40 to-white/10 backdrop-blur-md border-x border-b border-white/30 text-white font-extrabold tracking-[0.2em] text-xs uppercase px-6 py-3 rounded-b-2xl shadow-xl z-30">
+                    Coming Soon
                 </div>
-                <div class="value-content">
-                    <div style="display: flex; gap: 0.5rem; margin-bottom: 1.5rem; flex-wrap: wrap;">
-                        <span class="agentic-badge" style="margin-bottom: 0; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.3);"><i class="fas fa-coins" style="margin-right: 5px;"></i> Memecoin Dev</span>
-                        <span class="agentic-badge" style="margin-bottom: 0; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.3);"><i class="fas fa-landmark" style="margin-right: 5px;"></i> DeFi Founder</span>
-                        <span class="agentic-badge" style="margin-bottom: 0; background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.3);"><i class="fas fa-building" style="margin-right: 5px;"></i> RWA Creator</span>
+
+                <!-- Window Inner Glow -->
+                <div class="absolute top-0 left-1/4 w-1/2 h-32 bg-white/10 blur-[60px] rounded-full pointer-events-none"></div>
+
+                <div class="content-z flex flex-col mb-10 border-b border-white/10 pb-8">
+                    <h2 class="text-4xl font-bold tracking-tight text-white mb-3">Careers & Jobs</h2>
+                    <p class="text-white/70 text-base max-w-lg">Full-time roles at top-tier organizations. Our dedicated jobs portal is launching soon. Here is a sneak peek.</p>
+                </div>
+
+                <!-- Premium Job Card (Disabled/Soon state) -->
+                <div class="content-z bg-white/5 border border-white/20 rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between gap-6 transition-all duration-300 hover:bg-white/10 relative overflow-hidden group">
+                    
+                    <!-- Subtle diagonal scanline effect for "locked" feel -->
+                    <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgc3Ryb2tlPSJyZ2JhKDI1NSwyNTUsMjU1LDAuMDUpIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiPjxwYXRoIGQ9Ik0tMjAgNjAgNjAgLTIwIi8+PC9nPjwvc3ZnPg==')] opacity-50 pointer-events-none"></div>
+
+                    <div class="flex items-start gap-6 flex-grow w-full relative z-10 opacity-80 group-hover:opacity-100 transition-opacity">
+                        <!-- Upgraded Company Logo -->
+                        <div class="w-16 h-16 rounded-xl bg-[#015c66] border border-white/30 flex items-center justify-center flex-shrink-0 shadow-inner">
+                            <svg class="w-8 h-8 text-white/90" fill="currentColor" viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                        </div>
+                        
+                        <!-- Job Details -->
+                        <div class="flex flex-col gap-1.5 w-full">
+                            <h3 class="text-xl font-bold text-white group-hover:text-white/90 transition-colors">Business Development Lead</h3>
+                            <p class="text-white/70 text-sm font-medium">Tier 1 Web3 Protocol • $120k - $150k + Equity</p>
+                            <div class="flex flex-wrap items-center gap-2 mt-2">
+                                <span class="text-xs text-white/60 bg-white/5 px-2 py-1 rounded border border-white/10">Full-Time</span>
+                                <span class="text-xs text-white/60 bg-white/5 px-2 py-1 rounded border border-white/10">Remote</span>
+                                <span class="text-xs text-white/60 bg-white/5 px-2 py-1 rounded border border-white/10">Sales</span>
+                            </div>
+                        </div>
                     </div>
-                    <h2 class="section-title" style="font-size: 2.8rem; margin-bottom: 1rem;">Scale to the <span class="word-glow">Next Level</span></h2>
-                    <p class="value-text" style="font-size: 1.15rem;">
-                        Whether you are launching a viral narrative, architecting complex decentralized finance protocols, or tokenizing Real World Assets, DeRadar is your elite execution partner. 
-                        <br><br>
-                        <span style="color: var(--text-primary); font-weight: 500;">Ready to dominate the timeline?</span> The next step is to start a <strong style="color: #fff; text-shadow: 0 0 15px rgba(255,255,255,0.8); text-transform: uppercase; letter-spacing: 0.5px; border-bottom: 1px dashed rgba(255,255,255,0.6);">FREE TRIAL</strong> with our core team. Experience hyper-accelerated engineering and aggressive go-to-market strategies today.
-                    </p>
-                    <div class="value-buttons" style="margin-top: 2rem;">
-                        <button id="btn-founder" class="btn btn-xl" style="box-shadow: 0 0 25px rgba(255, 255, 255, 0.4); border: 1px solid #fff;"><i class="fas fa-hard-hat" style="margin-right: 8px;"></i> Start Building</button>
-                        <!-- Updated Book a Call button pointing to Telegram @xswapeth with pre-filled message -->
-                        <a href="https://t.me/xswapeth?text=Hi!%20I%20would%20like%20to%20book%20a%20call.%20What%20day%20and%20time%20works%20best%20for%20you,%20and%20which%20platform%20(Telegram,%20Google%20Meet,%20etc.)%20do%20you%20prefer?" target="_blank" class="btn btn-xl btn-white-glow" style="display: inline-flex; align-items: center; gap: 0.5rem; backdrop-filter: blur(5px);"><i class="fas fa-calendar-alt"></i> Book a Call</a>
+
+                    <!-- Action Button (Disabled replaced with Soon Trigger) -->
+                    <div class="relative z-10 w-full md:w-auto flex justify-end">
+                        <button class="px-8 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white/80 text-sm font-bold border border-white/20 shadow-sm transition-colors w-full md:w-auto flex items-center justify-center gap-2 soon-trigger">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            Opens Soon
+                        </button>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Work With Us Section -->
-        <section class="work-with-us section" id="work-with-us">
-            <div class="container" style="position: relative; z-index: 1; max-width: 850px;">
-                <h2 class="section-title" style="font-size: 3rem; margin-bottom: 1.25rem;">Join Our <span class="word-glow">Builder Roster</span></h2>
-                
-                <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: 2rem; line-height: 1.7;">
-                    We selectively recruit top-tier professionals to collaborate on high-level Web3 and DeFi protocols. Our private Telegram network serves as our primary talent pool, where we frequently scout and hire experts for our upcoming projects and overflow work.
-                </p>
-                
-                <div style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 2.5rem; margin-bottom: 2.5rem; text-align: left; box-shadow: inset 0 0 20px rgba(0,0,0,0.5);">
-                    <h4 style="color: var(--text-primary); font-size: 1.05rem; margin-bottom: 1.5rem; text-transform: uppercase; letter-spacing: 1px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 1rem;">Eligible Roles for Application:</h4>
-                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem;">
-                        <!-- Technical -->
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-code" style="color: #666; width: 24px;"></i> Smart Contract Devs</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-laptop-code" style="color: #666; width: 24px;"></i> Full-Stack Web3 Devs</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-shield-alt" style="color: #666; width: 24px;"></i> Security Auditors</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-database" style="color: #666; width: 24px;"></i> Data / Indexer Engs</div>
-                        
-                        <!-- Design & Strategy -->
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-paint-brush" style="color: #666; width: 24px;"></i> UI/UX dApp Designers</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-chart-pie" style="color: #666; width: 24px;"></i> Tokenomics Architects</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-lightbulb" style="color: #666; width: 24px;"></i> Protocol Strategists</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-briefcase" style="color: #666; width: 24px;"></i> Business Developers</div>
-
-                        <!-- Growth & Community -->
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-rocket" style="color: #666; width: 24px;"></i> Growth Hackers</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-users" style="color: #666; width: 24px;"></i> Community Managers</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-user-shield" style="color: #666; width: 24px;"></i> Discord/TG Moderators</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-handshake" style="color: #666; width: 24px;"></i> Brand Ambassadors</div>
-                        
-                        <!-- Marketing & Media -->
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-video" style="color: #666; width: 24px;"></i> Elite Video Editors</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-brain" style="color: #666; width: 24px;"></i> AI Content Creators</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-comment-dots" style="color: #666; width: 24px;"></i> Professional Reply Guys</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-pen-nib" style="color: #666; width: 24px;"></i> Meme/Graphic Artists</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-cut" style="color: #666; width: 24px;"></i> Content Clippers</div>
-                        <div style="color: var(--text-secondary); font-size: 0.95rem; display: flex; align-items: center;"><i class="fas fa-headset" style="color: #666; width: 24px;"></i> Virtual Assistants</div>
-                    </div>
-                </div>
-
-                <div class="hero-buttons" style="margin-bottom: 0;">
-                    <a href="https://t.me/deradar" target="_blank" class="btn" style="background: #2a2a2a; color: #e0e0e0; border: 1px solid #444; box-shadow: 0 4px 15px rgba(0,0,0,0.5); transition: all 0.3s ease; text-transform: uppercase; font-size: 0.95rem; letter-spacing: 1px; padding: 1rem 2.5rem;" onmouseover="this.style.background='#3a3a3a'; this.style.color='#fff'; this.style.borderColor='#666';" onmouseout="this.style.background='#2a2a2a'; this.style.color='#e0e0e0'; this.style.borderColor='#444';"><i class="fab fa-telegram-plane" style="margin-right: 8px;"></i> Apply for Access</a>
-                </div>
-            </div>
-        </section>
-    </div> <!-- END HOME VIEW -->
-
-    <!-- ==============================================
-         REWARDS VIEW (SPA Page)
-         ============================================== -->
-    <main id="rewards-page">
-        <!-- Register View -->
-        <div id="rewards-register-view" class="register-container">
-            <div style="margin-bottom: 2rem;">
-                <h3 class="modal-title" style="margin-bottom: 0.5rem; font-size: 1.75rem;">Enter the Raids Center</h3>
-                <p style="color: var(--text-secondary); font-size: 0.95rem;">Register your wallet once to access Bounties and earn surprise airdrops.</p>
-            </div>
-            
-            <form id="form-rewards-register" class="modal-form">
-                <div class="form-group">
-                    <label>Telegram / Discord Username</label>
-                    <input type="text" id="reg-telegram" required placeholder="@username">
-                </div>
-                <div class="form-group">
-                    <label>Solana or EVM Wallet</label>
-                    <input type="text" id="reg-solana" required placeholder="0x... or SPL address">
-                </div>
-                <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
-                    ENTER DASHBOARD
-                </button>
-            </form>
-        </div>
-
-        <!-- Dashboard View -->
-        <div id="rewards-dashboard-view" class="rewards-dashboard-container" style="display: none;">
-            <div class="dashboard-header">
-                <div>
-                    <h2 class="hero-title" style="font-size: 2rem; margin-bottom: 0; text-align: left; letter-spacing: -0.02em;">Raids Center</h2>
-                    <p style="color: var(--text-secondary); font-size: 1rem; margin-top: 0.5rem;">Complete tasks. Farm Ecosystem Points.</p>
-                </div>
-                <div class="points-pill">
-                    <span id="user-points-display">0</span> XP
-                </div>
-            </div>
-
-            <div>
-                <h4 style="color: var(--text-primary); margin-bottom: 1.5rem; font-size: 1.25rem; font-weight: 500;">
-                    Active Bounties
-                </h4>
-                
-                <!-- NEW Raid 4 (Added based on user request) -->
-                <div class="raid-item" id="raid-4">
-                    <div class="raid-header" onclick="toggleRaid('raid-4')">
-                        <div>
-                            <span class="raid-tag" style="background: rgba(255,255,255,0.1); color: #fff; border-color: rgba(255,255,255,0.3);">Priority Task</span>
-                            <h3 class="raid-title">Like & Retweet Latest Update</h3>
-                        </div>
-                        <div class="raid-points" style="border-color: var(--text-primary);">+60 XP</div>
-                    </div>
-                    <div class="raid-body" id="raid-4-body">
-                        <div style="padding-top: 1rem;">
-                            <!-- Tweet Preview Context -->
-                            <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 2rem;">
-                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                    <div style="width: 40px; height: 40px; border-radius: 4px; background: var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-primary);">
-                                        <i class="fab fa-twitter"></i>
-                                    </div>
-                                    <div>
-                                        <div style="color: var(--text-primary); font-weight: 600; font-size: 0.95rem;">DeRadar Studio</div>
-                                        <div style="color: var(--text-secondary); font-size: 0.85rem;">@DeRadar_</div>
-                                    </div>
-                                </div>
-                                <p style="color: #ccc; font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">
-                                    Engage with our newest announcement to earn ecosystem points.
-                                </p>
-                            </div>
-
-                            <div id="raid-4-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                                <a href="https://x.com/deRadar_/status/2060594550742077685?s=20" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center;" onclick="startRaid('raid-4')">
-                                    1. Go to Tweet
-                                </a>
-                            </div>
-
-                            <div id="raid-4-verify" style="display: none; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                                <button class="btn btn-outline" id="raid-4-like" onclick="verifyTask('raid-4', 'like')" style="flex: 1; text-align: center;"><i class="fas fa-heart"></i> Confirm Like</button>
-                                <button class="btn btn-outline" id="raid-4-retweet" onclick="verifyTask('raid-4', 'retweet')" style="flex: 1; text-align: center;"><i class="fas fa-retweet"></i> Confirm Retweet</button>
-                            </div>
-
-                            <div id="raid-4-claim" style="display: none; margin-top: 1rem;">
-                                <button class="btn btn-primary" id="btn-claim-raid-4" style="width: 100%; text-align: center;" onclick="claimRaid('raid-4', 60)">
-                                    Claim 60 XP
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Raid 1 -->
-                <div class="raid-item" id="raid-1">
-                    <div class="raid-header" onclick="toggleRaid('raid-1')">
-                        <div>
-                            <span class="raid-tag">Ecosystem Task</span>
-                            <h3 class="raid-title">Like & Reply to Protocol Update</h3>
-                        </div>
-                        <div class="raid-points">+50 XP</div>
-                    </div>
-                    <div class="raid-body" id="raid-1-body">
-                        <div style="padding-top: 1rem;">
-                            <!-- Tweet Preview -->
-                            <div style="background: var(--bg-color); border: 1px solid var(--border-color); border-radius: var(--radius); padding: 1.5rem; margin-bottom: 2rem;">
-                                <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem;">
-                                    <div style="width: 40px; height: 40px; border-radius: 4px; background: var(--border-color); display: flex; align-items: center; justify-content: center; color: var(--text-primary);">
-                                        <i class="fas fa-cube"></i>
-                                    </div>
-                                    <div>
-                                        <div style="color: var(--text-primary); font-weight: 600; font-size: 0.95rem;">DeRadar Studio</div>
-                                        <div style="color: var(--text-secondary); font-size: 0.85rem;">@DeRadarStudio</div>
-                                    </div>
-                                </div>
-                                <p style="color: #ccc; font-size: 1rem; line-height: 1.5; margin-bottom: 1rem;">
-                                    Shipping highly optimized smart contracts for the next generation of DeFi. 🚀
-                                </p>
-                            </div>
-
-                            <div id="raid-1-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                                <a href="https://x.com/deRadar_" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center;" onclick="startRaid('raid-1')">
-                                    1. Go to Post
-                                </a>
-                            </div>
-
-                            <div id="raid-1-verify" style="display: none; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                                <button class="btn btn-outline" id="raid-1-like" onclick="verifyTask('raid-1', 'like')" style="flex: 1; text-align: center;">Confirm Like</button>
-                                <button class="btn btn-outline" id="raid-1-reply" onclick="verifyTask('raid-1', 'reply')" style="flex: 1; text-align: center;">Confirm Reply</button>
-                            </div>
-
-                            <div id="raid-1-claim" style="display: none; margin-top: 1rem;">
-                                <button class="btn btn-primary" id="btn-claim-raid-1" style="width: 100%; text-align: center;" onclick="claimRaid('raid-1', 50)">
-                                    Claim 50 XP
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Raid 2 -->
-                <div class="raid-item" id="raid-2">
-                    <div class="raid-header" onclick="toggleRaid('raid-2')">
-                        <div>
-                            <span class="raid-tag">Social Task</span>
-                            <h3 class="raid-title">Follow @DeRadarStudio</h3>
-                        </div>
-                        <div class="raid-points">+30 XP</div>
-                    </div>
-                    <div class="raid-body" id="raid-2-body">
-                        <div style="padding-top: 1rem;">
-                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">Follow our official X (Twitter) account to stay updated with the latest Web3 dev news and platform updates.</p>
-                            
-                            <div id="raid-2-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                                <a href="https://x.com/deRadar_" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center;" onclick="startRaid('raid-2')">
-                                    1. Follow Account
-                                </a>
-                            </div>
-
-                            <div id="raid-2-verify" style="display: none; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                                <button class="btn btn-outline" id="raid-2-follow" onclick="verifyTask('raid-2', 'follow')" style="flex: 1; text-align: center;">Confirm Follow</button>
-                            </div>
-
-                            <div id="raid-2-claim" style="display: none; margin-top: 1rem;">
-                                <button class="btn btn-primary" id="btn-claim-raid-2" style="width: 100%; text-align: center;" onclick="claimRaid('raid-2', 30)">
-                                    Claim 30 XP
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Raid Task 3 -->
-                <div class="raid-item" id="raid-3">
-                    <div class="raid-header" onclick="toggleRaid('raid-3')">
-                        <div>
-                            <span class="raid-tag">Community Task</span>
-                            <h3 class="raid-title">Join our Dev Network</h3>
-                        </div>
-                        <div class="raid-points">+40 XP</div>
-                    </div>
-                    <div class="raid-body" id="raid-3-body">
-                        <div style="padding-top: 1rem;">
-                            <p style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 1.5rem;">Join our Telegram builder network. Find daily Web3 gigs, discuss architecture, and coordinate projects securely.</p>
-
-                            <div id="raid-3-actions" style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                                <a href="https://t.me/deradar" target="_blank" class="btn btn-outline" style="flex: 1; text-align: center;" onclick="startRaid('raid-3')">
-                                    1. Join Group
-                                </a>
-                            </div>
-
-                            <div id="raid-3-verify" style="display: none; gap: 1rem; flex-wrap: wrap; margin-top: 1rem;">
-                                <button class="btn btn-outline" id="raid-3-join" onclick="verifyTask('raid-3', 'join')" style="flex: 1; text-align: center;">Confirm Join</button>
-                            </div>
-
-                            <div id="raid-3-claim" style="display: none; margin-top: 1rem;">
-                                <button class="btn btn-primary" id="btn-claim-raid-3" style="width: 100%; text-align: center;" onclick="claimRaid('raid-3', 40)">
-                                    Claim 40 XP
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
+        <div class="mt-8 text-center text-sm text-white/50 font-medium pb-8 w-full">
+            &copy; 2026 DeRadar. All rights reserved.
         </div>
     </main>
 
-    <!-- Modals Overlay -->
-    <div id="modal-overlay" class="modal-overlay">
-        <!-- Founder Modal -->
-        <div id="modal-founder" class="modal-content modal-lg">
-            <span class="modal-close" id="close-founder">&times;</span>
-            <div class="modal-header-minimal">
-                <h3 class="modal-title">Web3 Project Application</h3>
-                <div class="wizard-progress">
-                    <div class="progress-bar-bg"><div class="progress-bar-fill" id="progress-bar-founder"></div></div>
-                    <div class="steps-count">Step <span id="current-step-num-founder">1</span> of 5</div>
+    <!-- Soon / Working on it Modal -->
+    <div id="soon-modal" class="fixed inset-0 z-[110] hidden flex-col items-center justify-center p-4 sm:p-6">
+        <div class="absolute inset-0 bg-[#015c66]/80 backdrop-blur-md transition-opacity duration-300 opacity-0" id="soon-modal-backdrop"></div>
+        <div class="relative w-full max-w-sm z-10 flex flex-col">
+            <div class="liquid-glass w-full rounded-[2rem] transform scale-95 opacity-0 transition-all duration-300 shadow-[0_30px_60px_rgba(0,0,0,0.5)] border border-white/30 flex flex-col overflow-hidden text-center p-8" id="soon-modal-content">
+                <div class="mb-6 text-white">
+                    <div class="w-16 h-16 bg-white/10 rounded-full flex items-center justify-center mx-auto mb-4 border border-white/20 shadow-inner">
+                        <svg class="w-8 h-8 text-white/80" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="text-2xl font-bold tracking-tight mb-2">Coming Soon</h3>
+                    <p class="text-white/70 text-sm leading-relaxed">We are actively working on this feature. Stay tuned for updates!</p>
                 </div>
+                <button id="close-soon-modal" class="w-full px-6 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-medium transition-colors border border-white/20 shadow-sm">
+                    Got it
+                </button>
             </div>
-            <form id="form-founder" class="modal-form scrollable-form">
-                <div class="wizard-step-founder active" data-step="1">
-                    <div class="form-section minimal-section">
-                        <h4>Contact</h4>
-                        <div class="form-grid">
-                            <div class="form-group"><label>Telegram / Discord Handle *</label><input type="text" id="founder-telegram" required></div>
-                            <div class="form-group"><label>Protocol Twitter *</label><input type="text" id="founder-twitter" required></div>
-                        </div>
-                        <div class="form-group" style="margin-top: 1rem;"><label>Email (Optional)</label><input type="email" id="founder-email"></div>
-                    </div>
-                </div>
-                <div class="wizard-step-founder" data-step="2">
-                    <div class="form-section minimal-section">
-                        <h4>Protocol Details</h4>
-                        <div class="form-grid">
-                            <div class="form-group"><label>Project Name *</label><input type="text" id="founder-project-name" required></div>
-                            <div class="form-group"><label>Category *</label>
-                                <select id="founder-category" required>
-                                    <option value="" disabled selected>Select category</option>
-                                    <option value="DeFi / DEX">DeFi / DEX</option>
-                                    <option value="GameFi / Metaverse">GameFi / Metaverse</option>
-                                    <option value="NFT Collection">NFT Collection</option>
-                                    <option value="Infrastructure / L1 / L2">Infrastructure / L1 / L2</option>
-                                    <option value="Meme / SocialFi">Meme / SocialFi</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="form-group" style="margin-top: 1rem;"><label>Website or Docs Link (Optional)</label><input type="text" id="founder-website"></div>
-                        <div class="form-group" style="margin-top: 1rem;"><label>Vision & Mechanics *</label><textarea id="founder-description" rows="4" required placeholder="What are you building?"></textarea></div>
-                    </div>
-                </div>
-                <div class="wizard-step-founder" data-step="3">
-                    <div class="form-section minimal-section">
-                        <h4>Required Services</h4>
-                        <div class="checkbox-grid">
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Builder Starter Pack"> Builder Starter Pack</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Tokenomics & Strategy"> Tokenomics & Strategy</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Community Growth"> Community Growth</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="dApp UI/UX Design"> dApp UI/UX Design</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="AI Content & Marketing"> AI Content & Marketing</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Full-Stack Web3 Dev"> Full-Stack Web3 Dev</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="AI Agent Deployment"> AI Agent Deployment</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Memecoins & Tokens"> Memecoins & Tokens</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="KOL & Outreach"> KOL & Outreach</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Protocol Audits"> Protocol Audits</label>
-                            <label class="checkbox-item"><input type="checkbox" name="service" value="Elite Video Editing"> Elite Video Editing</label>
-                        </div>
-                    </div>
-                </div>
-                <div class="wizard-step-founder" data-step="4">
-                    <div class="form-section minimal-section">
-                        <h4>Budget & Scale</h4>
-                        <div class="form-group"><label>Estimated Budget (USD) *</label>
-                            <select id="founder-budget" required>
-                                <option value="" disabled selected>Select range</option>
-                                <option value="$1k - $5k">$1,000 - $5,000</option>
-                                <option value="$5k - $15k">$5k - $15k</option>
-                                <option value="$15k - $50k">$15k - $50k</option>
-                                <option value="$50k+">$50k+</option>
-                            </select>
-                        </div>
-                        <div class="form-group" style="margin-top: 1rem;"><label>Target Chain/Ecosystem *</label>
-                            <select id="founder-outcome" required>
-                                <option value="" disabled selected>Select chain</option>
-                                <option value="Ethereum / L2s">Ethereum / L2s</option>
-                                <option value="Solana">Solana</option>
-                                <option value="Cosmos">Cosmos</option>
-                                <option value="Multi-chain / Other">Multi-chain / Other</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-                <div class="wizard-step-founder" data-step="5">
-                    <div class="form-section minimal-section">
-                        <h4>Timeline & Urgency</h4>
-                        <div class="form-group"><label>Timeline *</label>
-                            <select id="founder-timeline" required>
-                                <option value="" disabled selected>Select expected delivery</option>
-                                <option value="< 1 Month">&lt; 1 Month</option>
-                                <option value="1-3 Months">1-3 Months</option>
-                                <option value="3+ Months">3+ Months</option>
-                            </select>
-                        </div>
-                        <div class="form-group" style="margin-top: 1.5rem;"><label>Production Urgency *</label>
-                            <div class="radio-list" style="display:flex; gap: 1rem;">
-                                <label class="checkbox-item"><input type="radio" name="urgency" value="Standard" required> <span>Standard</span></label>
-                                <label class="checkbox-item"><input type="radio" name="urgency" value="Priority" required> <span>Priority</span></label>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="wizard-navigation">
-                    <button type="button" class="btn btn-outline nav-btn" id="prevBtnFounder" style="display:none;">Back</button>
-                    <button type="button" class="btn btn-primary nav-btn" id="nextBtnFounder">Next</button>
-                    <button type="submit" class="btn btn-primary nav-btn" id="submitBtnFounder" style="display:none;">Submit Protocol</button>
-                </div>
-            </form>
         </div>
     </div>
 
-    <!-- Success Modal -->
-    <div id="modal-success" class="modal-overlay">
-        <div class="modal-content modal-sm success-modal">
-            <div class="success-icon-container">
-                <div class="success-icon">
-                    <i class="fas fa-check"></i>
-                </div>
-            </div>
-            <h3 class="success-title">Request Sent!</h3>
-            <p class="success-desc">Our technical leads will review your info and reach out shortly.</p>
-            <button class="btn btn-primary" id="btn-success-close">Close</button>
-        </div>
-    </div>
-
-    <!-- FOOTER -->
-    <footer class="footer section">
-        <div class="container footer-container">
-            <div class="footer-brand">
-                <a href="#" class="footer-logo">DeRadar</a>
-                <p>The ultimate Web3 powerhouse for the decentralized era. We turn your whitepapers into reality without friction.</p>
-                <div class="social-links">
-                    <a href="https://x.com/deRadar_" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                    <a href="https://t.me/deradar" target="_blank" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
-                    <a href="#" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
-                </div>
-            </div>
-            
-            <div class="footer-links">
-                <h3>Our Services</h3>
-                <ul>
-                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')">Builder Starter Pack</a></li>
-                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')">Tokenomics & Strategy</a></li>
-                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')">Community & Growth</a></li>
-                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')">Full-Stack Web3 Dev</a></li>
-                    <li><a href="#" onclick="goToHomeAndScroll(event, 'categories')">AI Content & Marketing</a></li>
-                </ul>
-            </div>
-            
-            <div class="footer-contact" id="contacto">
-                <h3>Support & Contact</h3>
-                <ul>
-                    <li><a href="https://t.me/deradar" target="_blank">Join Community</a></li>
-                    <li><a href="https://t.me/xswapeth" target="_blank">Contact Team</a></li>
-                    <li><a href="mailto:deradarcontact@gmail.com">deradarcontact@gmail.com</a></li>
-                </ul>
-            </div>
-        </div>
+    <!-- Application Modal -->
+    <div id="application-modal" class="fixed inset-0 z-[100] hidden flex-col items-center justify-center p-4 sm:p-6">
+        <!-- Backdrop -->
+        <div class="absolute inset-0 bg-[#015c66]/80 backdrop-blur-md transition-opacity duration-300 opacity-0" id="modal-backdrop"></div>
         
-        <div class="footer-bottom">
-            <div class="container footer-bottom-content">
-                <p>&copy; 2026 DeRadar Studio. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
+        <!-- Modal Content Wrapper (Constraints and Centering) -->
+        <div class="relative w-full max-w-lg z-10 flex flex-col max-h-[90vh] sm:max-h-[85vh]">
+            
+            <!-- The Glass Container -->
+            <div class="liquid-glass w-full rounded-[2rem] transform scale-95 opacity-0 transition-all duration-300 shadow-[0_30px_60px_rgba(0,0,0,0.5)] border border-white/30 flex flex-col overflow-hidden" id="modal-content">
+                
+                <!-- Scrollable Content Area -->
+                <div class="p-6 md:p-8 overflow-y-auto custom-modal-scrollbar flex-1 relative">
+                    
+                    <!-- Close Button -->
+                    <button id="close-modal" class="absolute top-6 right-6 z-20 text-white/50 hover:text-white transition-colors bg-white/5 hover:bg-white/10 p-2 rounded-full border border-transparent hover:border-white/20">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+                    </button>
+                    
+                    <!-- Header -->
+                    <div class="mb-6 pr-8">
+                        <span class="inline-block px-3 py-1 rounded-full bg-white/10 border border-white/20 text-xs text-white font-semibold tracking-wide mb-3">Gig Application</span>
+                        <h3 class="text-2xl font-bold text-white tracking-tight mb-2">Crypto Twitter Account</h3>
+                        <p class="text-white/70 text-sm">Please provide the details of the account(s) you are offering. You can add multiple accounts if available.</p>
+                    </div>
+                    
+                    <!-- Form -->
+                    <form id="apply-form" class="space-y-5">
+                        <div id="accounts-container" class="space-y-4">
+                            <!-- Initial Account Entry -->
+                            <div class="account-entry bg-white/5 p-5 rounded-2xl border border-white/10 relative group transition-colors hover:bg-white/10">
+                                <div class="flex flex-col gap-4">
+                                    <div>
+                                        <label class="block text-xs font-semibold text-white/60 uppercase tracking-wider mb-1.5">Profile Link (X / Twitter)</label>
+                                        <input type="url" placeholder="https://x.com/your_handle" class="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-white/50 focus:bg-black/30 transition-all text-sm" required>
+                                    </div>
+                                    <div>
+                                        <label class="block text-xs font-semibold text-white/60 uppercase tracking-wider mb-1.5">Asking Price (USDT / USDC)</label>
+                                        <div class="relative">
+                                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 font-medium">$</span>
+                                            <input type="number" min="0" step="any" placeholder="0.00" class="w-full bg-black/20 border border-white/10 rounded-xl pl-8 pr-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-white/50 focus:bg-black/30 transition-all text-sm" required>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Add More Button -->
+                        <button type="button" id="add-account-btn" class="w-full py-3 rounded-xl border border-dashed border-white/30 text-white/70 hover:text-white hover:border-white/60 hover:bg-white/5 transition-all flex items-center justify-center gap-2 text-sm font-medium">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6v6m0 0v6m0-6h6m-6 0H6"></path></svg>
+                            Add another account
+                        </button>
+
+                        <!-- Submit Action -->
+                        <div class="pt-4 mt-6 border-t border-white/10">
+                            <button type="submit" class="w-full px-6 py-4 rounded-xl bg-white text-[#027B88] font-bold text-base hover:bg-white/90 hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] transition-all flex items-center justify-center gap-2">
+                                Submit Application
+                                <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </footer>
+    </div>
 
+    <!-- Interactive script for slight 3D tilt effect on the giant window -->
     <script>
-        /* Loader & Base UI */
-        document.addEventListener('DOMContentLoaded', () => {
-            const loader = document.getElementById('app-loader');
-            setTimeout(() => {
-                if (loader) {
-                    loader.style.opacity = '0';
-                    loader.style.visibility = 'hidden';
-                    document.body.classList.add('loaded');
-                }
-            }, 3000);
+        const glassWindow = document.querySelector('.liquid-glass');
+        
+        document.addEventListener('mousemove', (e) => {
+            if(!glassWindow) return;
             
-            if(window.location.hash === '#rewards') {
-                showRewardsPage();
-            } else {
-                showHomePage();
-            }
+            const xAxis = (window.innerWidth / 2 - e.pageX) / 50;
+            const yAxis = (window.innerHeight / 2 - e.pageY) / 50;
+            
+            // Apply a very subtle rotation based on mouse position
+            glassWindow.style.transform = `perspective(1000px) rotateY(${xAxis}deg) rotateX(${yAxis}deg) scale3d(1.01, 1.01, 1.01)`;
+        });
+        
+        // Reset transform when mouse leaves
+        document.addEventListener('mouseleave', () => {
+            if(!glassWindow) return;
+            glassWindow.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)`;
+            glassWindow.style.transition = 'transform 0.5s ease';
+        });
+        
+        // Remove transition while moving for smooth effect
+        document.addEventListener('mouseenter', () => {
+             if(!glassWindow) return;
+             glassWindow.style.transition = 'none';
         });
 
-        /* --- SPA ROUTING LOGIC --- */
-        const homeView = document.getElementById('home-view');
-        const rewardsView = document.getElementById('rewards-page');
-        const navMenu = document.getElementById('nav-menu');
-        const navToggle = document.getElementById('nav-toggle');
-        const navClose = document.getElementById('nav-close');
+        const soonModal = document.getElementById('soon-modal');
+        const soonBackdrop = document.getElementById('soon-modal-backdrop');
+        const soonContent = document.getElementById('soon-modal-content');
+        const closeSoonBtn = document.getElementById('close-soon-modal');
+        const soonTriggers = document.querySelectorAll('.soon-trigger');
 
-        function showHomePage() {
-            homeView.style.display = 'block';
-            rewardsView.style.display = 'none';
+        function openSoonModal(e) {
+            if(e) e.preventDefault();
+            soonModal.classList.remove('hidden');
+            soonModal.classList.add('flex');
+            
+            // Trigger reflow
+            void soonModal.offsetWidth;
+            
+            soonBackdrop.classList.remove('opacity-0');
+            soonBackdrop.classList.add('opacity-100');
+            
+            soonContent.classList.remove('scale-95', 'opacity-0');
+            soonContent.classList.add('scale-100', 'opacity-100');
+            
+            document.body.style.overflow = 'hidden';
         }
 
-        function showRewardsPage() {
-            homeView.style.display = 'none';
-            rewardsView.style.display = 'block';
-            checkRewardsAuth();
-        }
-
-        window.goToHome = function(e) {
-            if(e) e.preventDefault();
-            window.location.hash = '';
-            showHomePage();
-            window.scrollTo(0, 0);
-            if(navMenu.classList.contains('show-menu')) navMenu.classList.remove('show-menu');
-        };
-
-        window.goToHomeAndScroll = function(e, sectionId) {
-            if(e) e.preventDefault();
-            window.location.hash = '';
-            showHomePage();
-            if(navMenu.classList.contains('show-menu')) navMenu.classList.remove('show-menu');
+        function closeSoonModal() {
+            soonBackdrop.classList.remove('opacity-100');
+            soonBackdrop.classList.add('opacity-0');
+            
+            soonContent.classList.remove('scale-100', 'opacity-100');
+            soonContent.classList.add('scale-95', 'opacity-0');
+            
             setTimeout(() => {
-                const target = document.getElementById(sectionId);
-                if (target) {
-                    const y = target.getBoundingClientRect().top + window.pageYOffset - 80;
-                    window.scrollTo({top: y, behavior: 'smooth'});
+                soonModal.classList.add('hidden');
+                soonModal.classList.remove('flex');
+                
+                // Only restore overflow if the other modal isn't open
+                const appModal = document.getElementById('application-modal');
+                if(!appModal || appModal.classList.contains('hidden')) {
+                    document.body.style.overflow = '';
                 }
-            }, 50);
-        };
-
-        window.goToRewards = function(e) {
-            if(e) e.preventDefault();
-            window.location.hash = '#rewards';
-            showRewardsPage();
-            window.scrollTo(0, 0);
-            if(navMenu.classList.contains('show-menu')) navMenu.classList.remove('show-menu');
-        };
-
-        if(navToggle){ navToggle.addEventListener('click', () => navMenu.classList.toggle('show-menu')) }
-        if(navClose){ navClose.addEventListener('click', () => navMenu.classList.remove('show-menu')) }
-
-        function scrollHeader(){
-            const nav = document.querySelector('.navbar')
-            if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
+            }, 300);
         }
-        window.addEventListener('scroll', scrollHeader)
 
-        const sections = document.querySelectorAll('section[id]')
-        function scrollActive(){
-            if(homeView.style.display === 'none') return; // Don't run active scroll logic if hidden
+        soonTriggers.forEach(trigger => {
+            trigger.addEventListener('click', openSoonModal);
+        });
+        closeSoonBtn.addEventListener('click', closeSoonModal);
+        soonBackdrop.addEventListener('click', closeSoonModal);
 
-            const scrollY = window.pageYOffset
-            sections.forEach(current =>{
-                const sectionHeight = current.offsetHeight
-                const sectionTop = current.offsetTop - 100;
-                const sectionId = current.getAttribute('id')
-                const navL = document.querySelector('.nav-menu a[onclick*="' + sectionId + '"]');
-                if(navL) {
-                    if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) navL.classList.add('active-link');
-                    else navL.classList.remove('active-link');
-                }
-            })
-        }
-        window.addEventListener('scroll', scrollActive)
-
-        /* General UI Effects */
-        const rotatingText = document.getElementById('rotating-text');
-        if (rotatingText) {
-            const words = ["record time", "under 3 days", "lightning speed"];
-            let wordIndex = 0;
+        // Modal Logic
+        const applyBtn = document.getElementById('apply-btn');
+        const modal = document.getElementById('application-modal');
+        const modalBackdrop = document.getElementById('modal-backdrop');
+        const closeModalBtn = document.getElementById('close-modal');
+        const modalContent = document.getElementById('modal-content');
+        
+        function openModal() {
+            modal.classList.remove('hidden');
+            modal.classList.add('flex'); // Ensure flex is applied for perfect centering
             
-            setInterval(() => {
-                rotatingText.classList.remove('fade-in');
-                rotatingText.classList.add('fade-out');
-                
-                setTimeout(() => {
-                    wordIndex = (wordIndex + 1) % words.length;
-                    rotatingText.textContent = words[wordIndex];
-                    
-                    rotatingText.classList.remove('fade-out');
-                    rotatingText.classList.add('fade-in');
-                }, 600); 
-            }, 2500); 
-        }
-
-        const playVideo = () => {
-            const videos = document.querySelectorAll('video');
-            videos.forEach(video => {
-                if (video.paused) video.play().catch(e => console.log("Video play failed:", e));
-            });
-            document.removeEventListener('click', playVideo);
-            document.removeEventListener('touchstart', playVideo);
-        };
-        document.addEventListener('click', playVideo);
-        document.addEventListener('touchstart', playVideo);
-
-        /* Services Sticky Scroll Animation */
-        const servicesTrack = document.querySelector('.services-scroll-track');
-        const serviceCards = document.querySelectorAll('.scroll-card');
-
-        if (servicesTrack && serviceCards.length > 0) {
-            const totalCards = serviceCards.length;
+            // Trigger reflow
+            void modal.offsetWidth;
             
-            const updateActiveCard = () => {
-                if (homeView.style.display === 'none') return;
-                const trackRect = servicesTrack.getBoundingClientRect();
-                const viewportHeight = window.innerHeight;
-                const trackHeight = servicesTrack.offsetHeight;
-                const scrollDistance = -trackRect.top;
-                const totalScrollableDistance = trackHeight - viewportHeight;
-                
-                if (totalScrollableDistance <= 0) return; 
-                let progress = scrollDistance / totalScrollableDistance;
-                progress = Math.max(0, Math.min(0.999, progress));
-                const activeIndex = Math.floor(progress * totalCards);
-                
-                serviceCards.forEach((card, index) => {
-                    if (index === activeIndex) {
-                        card.classList.add('active');
-                    } else {
-                        card.classList.remove('active');
-                    }
-                });
-            };
-            window.addEventListener('scroll', updateActiveCard);
-            window.addEventListener('resize', updateActiveCard);
-            updateActiveCard();
-        }
-
-        /* MODALS LOGIC */
-        const modalOverlay = document.getElementById('modal-overlay');
-        const btnFounder = document.getElementById('btn-founder');
-        const modalFounder = document.getElementById('modal-founder');
-        const closeButtons = document.querySelectorAll('.modal-close');
-
-        function openModal(modal) {
-            if (modalOverlay && modal) {
-                modalOverlay.classList.add('active');
-                document.querySelectorAll('.modal-content').forEach(c => c.classList.remove('active'));
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden'; 
-            }
+            modalBackdrop.classList.remove('opacity-0');
+            modalBackdrop.classList.add('opacity-100');
+            
+            modalContent.classList.remove('scale-95', 'opacity-0');
+            modalContent.classList.add('scale-100', 'opacity-100');
+            
+            document.body.style.overflow = 'hidden'; // Prevent background scrolling
         }
 
         function closeModal() {
-            if (modalOverlay) {
-                modalOverlay.classList.remove('active');
-                document.querySelectorAll('.modal-content').forEach(c => c.classList.remove('active'));
+            modalBackdrop.classList.remove('opacity-100');
+            modalBackdrop.classList.add('opacity-0');
+            
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            
+            setTimeout(() => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
                 document.body.style.overflow = '';
-            }
+            }, 300); // Wait for transition to finish
         }
 
-        closeButtons.forEach(btn => btn.addEventListener('click', closeModal));
-        if (modalOverlay) {
-            modalOverlay.addEventListener('click', (e) => { if (e.target === modalOverlay) closeModal(); });
-        }
+        applyBtn.addEventListener('click', openModal);
+        closeModalBtn.addEventListener('click', closeModal);
+        modalBackdrop.addEventListener('click', closeModal);
 
-        /* ==============================================
-           REWARDS SYSTEM LOGIC
-           ============================================== */
-        
-        const raidStates = {
-            'raid-4': { required: ['like', 'retweet'], completed: [] }, // NEW TASK Added at top
-            'raid-1': { required: ['like', 'reply'], completed: [] },
-            'raid-2': { required: ['follow'], completed: [] },
-            'raid-3': { required: ['join'], completed: [] }
-        };
+        // Form Logic - Add multiple accounts
+        const addAccountBtn = document.getElementById('add-account-btn');
+        const accountsContainer = document.getElementById('accounts-container');
+        let accountCount = 1;
 
-        function checkRewardsAuth() {
-            const isRegistered = localStorage.getItem('deradar_user_registered');
-            if (isRegistered === 'true') {
-                document.getElementById('rewards-register-view').style.display = 'none';
-                document.getElementById('rewards-dashboard-view').style.display = 'block';
-                updatePointsUI();
-            } else {
-                document.getElementById('rewards-register-view').style.display = 'block';
-                document.getElementById('rewards-dashboard-view').style.display = 'none';
-            }
-        }
-
-        function updatePointsUI() {
-            const pointsDisplay = document.getElementById('user-points-display');
-            if (pointsDisplay) {
-                const pts = localStorage.getItem('deradar_raid_points') || '0';
-                pointsDisplay.textContent = pts;
-            }
+        addAccountBtn.addEventListener('click', () => {
+            accountCount++;
             
-            // Added raid-4 here
-            const activeRaids = ['raid-4', 'raid-1', 'raid-2', 'raid-3'];
-            activeRaids.forEach(raidId => {
-                const actionsDiv = document.getElementById(raidId + '-actions');
-                const verifyDiv = document.getElementById(raidId + '-verify');
-                const claimDiv = document.getElementById(raidId + '-claim');
-
-                if (localStorage.getItem(raidId + '_claimed') === 'true') {
-                    if(actionsDiv) actionsDiv.style.display = 'none';
-                    if(verifyDiv) verifyDiv.style.display = 'none';
-                    if(claimDiv) {
-                        claimDiv.style.display = 'block';
-                        const btnClaim = document.getElementById('btn-claim-' + raidId);
-                        if(btnClaim) {
-                            btnClaim.innerHTML = 'Claimed';
-                            btnClaim.style.background = 'transparent';
-                            btnClaim.style.color = 'var(--text-secondary)';
-                            btnClaim.style.pointerEvents = 'none';
-                            btnClaim.style.borderColor = 'var(--border-color)';
-                        }
-                    }
-                } else if (localStorage.getItem(raidId + '_started') === 'true') {
-                    if(actionsDiv) actionsDiv.style.display = 'none';
-                    if(verifyDiv) verifyDiv.style.display = 'flex';
-                }
-            });
-        }
-
-        window.toggleRaid = function(raidId) {
-            const body = document.getElementById(raidId + '-body');
-            if(body.style.display === 'none' || body.style.display === '') {
-                body.style.display = 'block';
-            } else {
-                body.style.display = 'none';
-            }
-        };
-
-        const formRegRewards = document.getElementById('form-rewards-register');
-        if (formRegRewards) {
-            formRegRewards.addEventListener('submit', (e) => {
-                e.preventDefault();
-                const tg = document.getElementById('reg-telegram').value;
-                const sol = document.getElementById('reg-solana').value;
-                
-                if(tg && sol) {
-                    localStorage.setItem('deradar_user_registered', 'true');
-                    localStorage.setItem('deradar_user_tg', tg);
-                    localStorage.setItem('deradar_user_sol', sol);
-                    checkRewardsAuth();
-                }
-            });
-        }
-
-        window.startRaid = function(raidId) {
-            localStorage.setItem(raidId + '_started', 'true');
-            setTimeout(() => {
-                const actionsDiv = document.getElementById(raidId + '-actions');
-                const verifyDiv = document.getElementById(raidId + '-verify');
-                if(actionsDiv) actionsDiv.style.display = 'none';
-                if(verifyDiv) verifyDiv.style.display = 'flex';
-            }, 500);
-        };
-
-        window.verifyTask = function(raidId, task) {
-            const btn = document.getElementById(`${raidId}-${task}`);
-            if(!btn) return;
+            const newEntry = document.createElement('div');
+            newEntry.className = 'account-entry bg-white/5 p-5 rounded-2xl border border-white/10 relative group transition-colors hover:bg-white/10 animate-[fadeIn_0.3s_ease-out]';
             
-            btn.innerHTML = 'Verifying...';
-            btn.style.pointerEvents = 'none';
-
-            setTimeout(() => {
-                btn.innerHTML = 'Confirmed';
-                btn.style.background = 'transparent';
-                btn.style.color = 'var(--text-secondary)';
-                btn.style.borderColor = 'var(--border-color)';
-                
-                if (!raidStates[raidId].completed.includes(task)) {
-                    raidStates[raidId].completed.push(task);
-                }
-
-                if (raidStates[raidId].completed.length === raidStates[raidId].required.length) {
-                    setTimeout(() => {
-                        document.getElementById(raidId + '-verify').style.display = 'none';
-                        document.getElementById(raidId + '-claim').style.display = 'block';
-                    }, 500); 
-                }
-            }, 1500); 
-        };
-
-        window.claimRaid = function(raidId, points) {
-            if (localStorage.getItem(raidId + '_claimed') === 'true') return;
-
-            let currentPoints = parseInt(localStorage.getItem('deradar_raid_points') || '0');
-            currentPoints += points;
-            localStorage.setItem('deradar_raid_points', currentPoints.toString());
-            localStorage.setItem(raidId + '_claimed', 'true');
+            newEntry.innerHTML = `
+                <button type="button" class="remove-account-btn absolute top-3 right-3 text-white/40 hover:text-red-400 bg-black/20 hover:bg-black/40 p-1.5 rounded-full transition-colors" title="Remove account">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path></svg>
+                </button>
+                <div class="flex flex-col gap-4 pr-8">
+                    <div>
+                        <label class="block text-xs font-semibold text-white/60 uppercase tracking-wider mb-1.5">Profile Link (X / Twitter) #${accountCount}</label>
+                        <input type="url" placeholder="https://x.com/your_handle" class="w-full bg-black/20 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-white/50 focus:bg-black/30 transition-all text-sm" required>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-semibold text-white/60 uppercase tracking-wider mb-1.5">Asking Price (USDT / USDC)</label>
+                        <div class="relative">
+                            <span class="absolute left-4 top-1/2 -translate-y-1/2 text-white/50 font-medium">$</span>
+                            <input type="number" min="0" step="any" placeholder="0.00" class="w-full bg-black/20 border border-white/10 rounded-xl pl-8 pr-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-white/50 focus:bg-black/30 transition-all text-sm" required>
+                        </div>
+                    </div>
+                </div>
+            `;
             
-            updatePointsUI();
+            // Add remove functionality to the newly created button
+            const removeBtn = newEntry.querySelector('.remove-account-btn');
+            removeBtn.addEventListener('click', () => {
+                newEntry.style.opacity = '0';
+                newEntry.style.transform = 'scale(0.95)';
+                setTimeout(() => newEntry.remove(), 200);
+            });
             
-            setTimeout(() => {
-                const body = document.getElementById(raidId + '-body');
-                if(body) body.style.display = 'none';
-            }, 1000);
-        };
+            accountsContainer.appendChild(newEntry);
+        });
 
-        /* --- FOUNDER WIZARD FORM --- */
-
-        let currentStepFounder = 1;
-        const totalStepsFounder = 5;
-
-        function resetWizardFounder() {
-            currentStepFounder = 1;
-            showStepFounder(currentStepFounder);
+        // Add simple fadeIn animation class to custom styles dynamically if not present
+        if(!document.getElementById('custom-animations')) {
+            const style = document.createElement('style');
+            style.id = 'custom-animations';
+            style.innerHTML = `
+                @keyframes fadeIn {
+                    from { opacity: 0; transform: translateY(-10px); }
+                    to { opacity: 1; transform: translateY(0); }
+                }
+            `;
+            document.head.appendChild(style);
         }
 
-        function showStepFounder(step) {
-            const steps = document.querySelectorAll('.wizard-step-founder');
-            steps.forEach(s => {
-                s.classList.remove('active');
-                if (parseInt(s.dataset.step) === step) {
-                    s.classList.add('active');
-                }
-            });
-
-            const progressBar = document.getElementById('progress-bar-founder');
-            const stepNum = document.getElementById('current-step-num-founder');
-            if (progressBar && stepNum) {
-                const progress = (step / totalStepsFounder) * 100;
-                progressBar.style.width = `${progress}%`;
-                stepNum.textContent = step;
-            }
-
-            const prevBtn = document.getElementById('prevBtnFounder');
-            const nextBtn = document.getElementById('nextBtnFounder');
-            const submitBtn = document.getElementById('submitBtnFounder');
-
-            if (prevBtn && nextBtn && submitBtn) {
-                if (step === 1) { prevBtn.style.display = 'none'; } else { prevBtn.style.display = 'block'; }
-                if (step === totalStepsFounder) {
-                    if (nextBtn) nextBtn.style.display = 'none';
-                    if (submitBtn) submitBtn.style.display = 'block';
-                } else {
-                    if (nextBtn) nextBtn.style.display = 'block';
-                    if (submitBtn) submitBtn.style.display = 'none';
-                }
-            }
-        }
-
-        function validateStepFounder(step) {
-            const activeStep = document.querySelector(`.wizard-step-founder[data-step="${step}"]`);
-            if (!activeStep) return true;
-
-            const inputs = activeStep.querySelectorAll('input, select, textarea');
-            let isValid = true;
-            let missingField = false;
-
-            inputs.forEach(input => {
-                if (input.hasAttribute('required')) {
-                    if (input.type === 'radio') {
-                        const name = input.name;
-                        const isChecked = activeStep.querySelector(`input[name="${name}"]:checked`);
-                        if (!isChecked) {
-                            isValid = false;
-                            missingField = true;
-                            const container = input.closest('.radio-list') || input.parentElement;
-                            if (container) {
-                                container.style.border = '1px solid #ff4d4d';
-                                container.style.padding = '5px';
-                                container.style.borderRadius = '4px';
-                                const radios = activeStep.querySelectorAll(`input[name="${name}"]`);
-                                radios.forEach(r => {
-                                    r.addEventListener('change', () => {
-                                        container.style.border = '';
-                                        container.style.padding = '';
-                                        container.style.borderRadius = '';
-                                    }, { once: true });
-                                });
-                            }
-                        }
-                    } else if (input.type === 'checkbox') {
-                         if (!input.checked) { isValid = false; missingField = true; }
-                    } else {
-                        if (!input.value.trim()) {
-                            isValid = false;
-                            missingField = true;
-                            input.style.borderColor = '#ff4d4d';
-                            input.addEventListener('input', () => {
-                                input.style.borderColor = 'rgba(255, 255, 255, 0.1)';
-                            }, { once: true });
-                        }
-                    }
-                }
-            });
-
-            if (step === 3) {
-                const checkedServices = activeStep.querySelectorAll('input[name="service"]:checked');
-                if (checkedServices.length === 0) {
-                    isValid = false;
-                    alert("Please select at least one service needed.");
-                    return false;
-                }
-            }
-
-            if (!isValid && missingField) {
-                alert("Please fill in all required fields.");
-            }
-
-            return isValid;
-        }
-
-        const nextBtnFounder = document.getElementById('nextBtnFounder');
-        const prevBtnFounder = document.getElementById('prevBtnFounder');
-
-        if (nextBtnFounder) {
-            nextBtnFounder.addEventListener('click', () => {
-                if (validateStepFounder(currentStepFounder)) {
-                    if (currentStepFounder < totalStepsFounder) {
-                        currentStepFounder++;
-                        showStepFounder(currentStepFounder);
-                    }
-                }
-            });
-        }
-
-        if (prevBtnFounder) {
-            prevBtnFounder.addEventListener('click', () => {
-                if (currentStepFounder > 1) {
-                    currentStepFounder--;
-                    showStepFounder(currentStepFounder);
-                }
-            });
-        }
-
-        if (btnFounder) {
-            btnFounder.addEventListener('click', (e) => {
-                e.preventDefault();
-                resetWizardFounder();
-                openModal(modalFounder);
-            });
-        }
-
-        /* Success Modal Helper */
-        const modalSuccess = document.getElementById('modal-success');
-        const btnSuccessClose = document.getElementById('btn-success-close');
-        function showSuccessModal() { if (modalSuccess) modalSuccess.classList.add('active'); }
-        if (btnSuccessClose) btnSuccessClose.addEventListener('click', () => { if (modalSuccess) modalSuccess.classList.remove('active'); });
-
-        const submitBtnFounderGlobal = document.getElementById('submitBtnFounder');
-        if (submitBtnFounderGlobal) {
-            submitBtnFounderGlobal.addEventListener('click', (e) => {
-                e.preventDefault(); 
-                if (!validateStepFounder(currentStepFounder)) return;
-
-                const telegram = document.getElementById('founder-telegram').value;
-                const twitter = document.getElementById('founder-twitter').value;
-                const email = document.getElementById('founder-email').value || 'N/A';
+        // Handle form submission and send to Google Sheets
+        document.getElementById('apply-form').addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            
+            // 1. Recolectar la data de los inputs
+            const accounts = [];
+            const entries = document.querySelectorAll('.account-entry');
+            
+            entries.forEach(entry => {
+                const linkInput = entry.querySelector('input[type="url"]');
+                const priceInput = entry.querySelector('input[type="number"]');
                 
-                const projectName = document.getElementById('founder-project-name').value;
-                const website = document.getElementById('founder-website').value || 'N/A';
-                const category = document.getElementById('founder-category').value;
-                const description = document.getElementById('founder-description').value;
+                if(linkInput.value && priceInput.value) {
+                    accounts.push({
+                        link: linkInput.value,
+                        price: priceInput.value
+                    });
+                }
+            });
 
-                const services = Array.from(document.querySelectorAll('input[name="service"]:checked'))
-                    .map(cb => cb.value)
-                    .join(', ');
+            if(accounts.length === 0) return;
 
-                const budget = document.getElementById('founder-budget').value;
-                const outcome = document.getElementById('founder-outcome').value;
+            // 2. Estado de carga
+            submitBtn.innerHTML = `<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-[#027B88]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Sending...`;
+            submitBtn.disabled = true;
 
-                const timeline = document.getElementById('founder-timeline').value;
-                const urgency = document.querySelector('input[name="urgency"]:checked')?.value || 'N/A';
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbzdv6HOdpJq056kAIKprs1z8X4fO1nhCg55xHzCfwYHaGPPny8v23lZ1pE9iWhKrEWK0A/exec';
+            
+            try {
+                // Preparar datos en formato de formulario nativo (evita bloqueos de Google)
+                const formData = new URLSearchParams();
+                formData.append('data', JSON.stringify(accounts));
+
+                await fetch(scriptURL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    body: formData
+                });
+
+                // 4. Éxito!
+                submitBtn.innerHTML = `Success!`;
+                submitBtn.classList.replace('text-[#027B88]', 'text-green-500');
                 
-                const now = new Date().toLocaleString();
-                const text = `🚀 *New Web3 Protocol Inquiry*\n` +
-                    `📅 *Date*: ${now}\n\n` +
-                    `👤 *Contact Info*\n` +
-                    `• Telegram: ${telegram}\n` +
-                    `• Brand Twitter: ${twitter}\n` +
-                    `• Email: ${email}\n\n` +
-                    `🏢 *Protocol / Project Details*\n` +
-                    `• Name: ${projectName}\n` +
-                    `• Website: ${website}\n` +
-                    `• Category: ${category}\n` +
-                    `• Vision: ${description}\n\n` +
-                    `🛠 *Web3 Services Needed*\n${services || 'Not specified'}\n\n` +
-                    `💰 *Budget & Chain*\n` +
-                    `• Budget: ${budget}\n` +
-                    `• Chain: ${outcome}\n\n` +
-                    `⏳ *Timeline & Urgency*\n` +
-                    `• Timeline: ${timeline}\n` +
-                    `• Urgency: ${urgency}`;
-                    
-                const encodedText = encodeURIComponent(text);
-                const url = `https://t.me/xswapeth?text=${encodedText}`;
-                
-                const win = window.open(url, '_blank');
-                if (win) {
-                    win.focus();
+                setTimeout(() => {
                     closeModal();
-                    showSuccessModal();
-                } else {
-                     window.location.href = url;
-                }
-            });
-        }
+                    // Resetear formulario después de cerrar
+                    setTimeout(() => {
+                        e.target.reset();
+                        submitBtn.innerHTML = originalText;
+                        submitBtn.classList.replace('text-green-500', 'text-[#027B88]');
+                        submitBtn.disabled = false;
+                        
+                        // Remover campos extras que el usuario haya agregado
+                        const extraAccounts = accountsContainer.querySelectorAll('.account-entry:not(:first-child)');
+                        extraAccounts.forEach(acc => acc.remove());
+                        accountCount = 1;
+                    }, 300);
+                }, 1500);
+
+            } catch (error) {
+                // Si algo falla
+                console.error('Error al enviar form:', error);
+                submitBtn.innerHTML = `Error. Try again.`;
+                submitBtn.classList.replace('text-[#027B88]', 'text-red-500');
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.classList.replace('text-red-500', 'text-[#027B88]');
+                    submitBtn.disabled = false;
+                }, 3000);
+            }
+        });
     </script>
 </body>
 </html>
