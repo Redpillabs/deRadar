@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DeRadar | Jobs</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <script src="https://cdn.tailwindcss.com" defer></script>
+
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        
+        html { -webkit-text-size-adjust: 100%; overflow-x: hidden; }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; -webkit-tap-highlight-color: transparent; }
+        * { -webkit-tap-highlight-color: transparent; }
+
         /* Minimalist Scrollbar for the modal */
         ::-webkit-scrollbar {
             width: 4px;
@@ -21,7 +27,7 @@
             background: rgba(255, 255, 255, 0.2);
             border-radius: 10px;
         }
-        
+
         /* Fade In Animation */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(-10px); }
@@ -37,10 +43,40 @@
             opacity: 0;
             transition: opacity 0.5s ease-in-out;
         }
-        
+
         .view-section.active {
             display: block;
             opacity: 1;
+        }
+
+        /* Safari (iOS/macOS) still requires the -webkit- prefix to actually
+           render backdrop-filter blur — without it, glass panels can show up
+           unblurred or the browser falls back to extra repaint work. */
+        .backdrop-blur-sm { -webkit-backdrop-filter: blur(4px); }
+        .backdrop-blur { -webkit-backdrop-filter: blur(8px); }
+        .backdrop-blur-md { -webkit-backdrop-filter: blur(12px); }
+        .backdrop-blur-lg { -webkit-backdrop-filter: blur(16px); }
+        .backdrop-blur-xl { -webkit-backdrop-filter: blur(24px); }
+        .backdrop-blur-2xl { -webkit-backdrop-filter: blur(40px); }
+        .backdrop-blur-3xl { -webkit-backdrop-filter: blur(64px); }
+        .backdrop-blur-\[40px\] { -webkit-backdrop-filter: blur(40px); }
+        .backdrop-blur-\[50px\] { -webkit-backdrop-filter: blur(50px); }
+
+        /* Mobile performance: backdrop-filter blur is one of the most
+           expensive things a phone GPU can composite, and this page layers
+           it on dozens of cards. Capping the blur radius on small screens
+           keeps the frosted-glass look while cutting that cost drastically,
+           so scrolling and view transitions stay smooth on phones. Desktop
+           is untouched. !important is needed to win over the Tailwind CDN's
+           own utility classes, which are injected after this stylesheet. */
+        @media (max-width: 768px) {
+            [class*="backdrop-blur"] {
+                backdrop-filter: blur(10px) !important;
+                -webkit-backdrop-filter: blur(10px) !important;
+            }
+            .blur-\[120px\], .blur-\[100px\] { filter: blur(50px) !important; }
+            .blur-\[80px\], .blur-\[60px\] { filter: blur(36px) !important; }
+            .blur-\[50px\], .blur-\[40px\] { filter: blur(24px) !important; }
         }
     </style>
 </head>
@@ -2797,7 +2833,7 @@
                     submitBtn.innerHTML = `<svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-[#027B88]" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path></svg> Sending...`;
                     submitBtn.disabled = true;
 
-                    const scriptURL = 'https://script.google.com/macros/s/AKfycbzdv6HOdpJq056kAIKprs1z8X4fO1nhCg55xHzCfwYHaGPPny8v23lZ1pE9iWhKrEWK0A/exec';
+                    const scriptURL = 'https://script.google.com/macros/s/AKfycbz8QM309Nu0YZIAoJ-y71XYKwCBDqHvUFwHynavnBJ4u-Ev0itLiDbt51O76SfKiGKYqQ/exec';
                     
                     try {
                         const formData = new URLSearchParams();
